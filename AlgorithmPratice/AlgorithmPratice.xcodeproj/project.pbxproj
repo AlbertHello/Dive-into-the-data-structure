@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D11422FD2252311C0060F7A1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D1E9F726224DC887009721C6 /* AlgorithmPratice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgorithmPratice; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E9F729224DC887009721C6 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		D1E9F730224DCB6A009721C6 /* Recursive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Recursive.h; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 			children = (
 				D1E9F730224DCB6A009721C6 /* Recursive.h */,
 				D1E9F731224DCB6B009721C6 /* Recursive.c */,
+				D11422FD2252311C0060F7A1 /* README.md */,
 			);
 			path = "递归算法";
 			sourceTree = "<group>";
