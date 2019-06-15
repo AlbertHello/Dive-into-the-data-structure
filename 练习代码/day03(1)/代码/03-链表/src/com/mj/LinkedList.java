@@ -68,17 +68,19 @@ public class LinkedList<E> extends AbstractList<E> {
 	}
 
 	@Override
+	//返回某个元素的下标 
 	public int indexOf(E element) {
-		if (element == null) {
-			Node<E> node = first;
+		if (element == null) {//判断传入元素是否为null
+			Node<E> node = first;//默认从第一个元素开始遍历
 			for (int i = 0; i < size; i++) {
-				if (node.element == null) return i;
+				if (node.element == null) return i;//返回所在下标
 				
 				node = node.next;
 			}
 		} else {
 			Node<E> node = first;
 			for (int i = 0; i < size; i++) {
+				//用equals判断两个元素是否相等
 				if (element.equals(node.element)) return i;
 				
 				node = node.next;
