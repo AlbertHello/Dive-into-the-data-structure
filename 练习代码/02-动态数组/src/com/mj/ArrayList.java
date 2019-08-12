@@ -190,7 +190,6 @@ public class ArrayList<E> {//<E>代表泛型，可以放任何对象类型的元
 			if (i != 0) {
 				string.append(", ");
 			}
-			
 			string.append(elements[i]);
 			
 //			if (i != size - 1) {
