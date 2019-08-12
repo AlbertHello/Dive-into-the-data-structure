@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+/Users/wangzheng/Documents/GitHubProject/Mine/Dive-into-the-data-structure/DS_Code/.metadata/.plugins/org.eclipse.jdt.core
-1260282672.index
-1231190624.index
-1147532658.index
