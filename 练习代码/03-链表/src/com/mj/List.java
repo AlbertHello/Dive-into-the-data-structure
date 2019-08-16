@@ -13,6 +13,7 @@ public interface List<E> {
 	 */
 	int size();
 
+	
 	/**
 	 * 是否为空
 	 * @return
