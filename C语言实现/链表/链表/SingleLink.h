@@ -23,32 +23,32 @@ static  int g_size=0;
 struct Node {
     Element data;
     struct Node *next;
-}Node;
+};
 
-//typedef struct Node *Link;
+typedef struct Node *Link;
 //初始化
-//Status init_link(Link *link);
-////插入
-//int insert_element(Element elem,Link head);
-////在index下插入
-//Status insert_element_at_index(Element elem, int index, Link head);
-////获取index下的node
-//Status node_of_index(int index, Link head, struct Node** node);
-////删除
-//Status delete_element(int index,Element *data,Link head);
-////更新
-//Status update_ele(int index, Element ele, Link head);
-////根据ele查找index
-//int locate_ele_with_element(Element ele, Link head);
-////清空
-//Status clearLink(Link head);
-////打印
-//void printLink(Link link);
-////是否为空
-//bool is_empty(Link head);
-////获取链表长度
-//int get_link_length(void);
-////越界检查
-//bool boundary_check(int index);
+Status init_link(Link *link);
+//插入
+int insert_element(Element elem,Link head);
+//在index下插入
+Status insert_element_at_index(Element elem, int index, Link head);
+//获取index下的node
+Status node_of_index(int index, Link head, struct Node** node);
+//删除
+Status delete_element(int index,Element *data,Link head);
+//更新
+Status update_ele(int index, Element ele, Link head);
+//根据ele查找index
+int locate_ele_with_element(Element ele, Link head);
+//清空
+Status clearLink(Link head);
+//打印
+void printLink(Link link);
+//是否为空
+bool is_empty(Link head);
+//获取链表长度
+int get_link_length(void);
+//越界检查
+bool boundary_check(int index);
 
 #endif /* SingleLink_h */
