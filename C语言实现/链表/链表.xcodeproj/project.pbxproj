@@ -15,7 +15,7 @@
 		3763566523092D4E00C25BC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763566423092D4E00C25BC7 /* main.m */; };
 		3763566F23092D4F00C25BC7 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763566E23092D4F00C25BC7 /* __Tests.m */; };
 		3763567A23092D4F00C25BC7 /* __UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763567923092D4F00C25BC7 /* __UITests.m */; };
-		376356882309670D00C25BC7 /* 02线性表链式存储.c in Sources */ = {isa = PBXBuildFile; fileRef = 376356872309670D00C25BC7 /* 02线性表链式存储.c */; };
+		376356882309670D00C25BC7 /* 大话数据结构-链式存储.c in Sources */ = {isa = PBXBuildFile; fileRef = 376356872309670D00C25BC7 /* 大话数据结构-链式存储.c */; };
 		37D0D7832309711C003A2BC5 /* SingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D7822309711C003A2BC5 /* SingleLink.c */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 		3763567523092D4F00C25BC7 /* 链表UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "链表UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3763567923092D4F00C25BC7 /* __UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __UITests.m; sourceTree = "<group>"; };
 		3763567B23092D4F00C25BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		376356872309670D00C25BC7 /* 02线性表链式存储.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "02线性表链式存储.c"; sourceTree = "<group>"; };
+		376356872309670D00C25BC7 /* 大话数据结构-链式存储.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "大话数据结构-链式存储.c"; sourceTree = "<group>"; };
 		37D0D7812309711C003A2BC5 /* SingleLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLink.h; sourceTree = "<group>"; };
 		37D0D7822309711C003A2BC5 /* SingleLink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SingleLink.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,7 +141,7 @@
 		D162548C230F873E005716C8 /* 单链表 */ = {
 			isa = PBXGroup;
 			children = (
-				376356872309670D00C25BC7 /* 02线性表链式存储.c */,
+				376356872309670D00C25BC7 /* 大话数据结构-链式存储.c */,
 				37D0D7812309711C003A2BC5 /* SingleLink.h */,
 				37D0D7822309711C003A2BC5 /* SingleLink.c */,
 			);
@@ -280,7 +280,7 @@
 			files = (
 				3763565A23092D4D00C25BC7 /* ViewController.m in Sources */,
 				37D0D7832309711C003A2BC5 /* SingleLink.c in Sources */,
-				376356882309670D00C25BC7 /* 02线性表链式存储.c in Sources */,
+				376356882309670D00C25BC7 /* 大话数据结构-链式存储.c in Sources */,
 				3763566523092D4E00C25BC7 /* main.m in Sources */,
 				3763565723092D4D00C25BC7 /* AppDelegate.m in Sources */,
 			);
@@ -460,7 +460,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Albert.--";
+				PRODUCT_BUNDLE_IDENTIFIER = Albert.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -477,7 +477,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Albert.--";
+				PRODUCT_BUNDLE_IDENTIFIER = Albert.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

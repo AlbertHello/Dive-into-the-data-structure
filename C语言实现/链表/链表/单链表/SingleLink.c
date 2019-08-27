@@ -10,8 +10,8 @@
 
 //1、初始化一个链表
 Status init_link(Link *head){
-    (*head)=(Link)malloc(sizeof(struct Node));
-    if (head) {
+    *head=(Link)malloc(sizeof(struct Node));
+    if (*head) {
         (*head)->data=0;
         (*head)->next=NULL;
         g_size=0;
@@ -31,20 +31,19 @@ bool is_empty(Link head){
 }
 
 Status insert_element_at_index(Element elem, int index, Link head){
-    if (boundary_check(index)) return Error;
     //头结点
     Link head_node=head->next;
     //新节点
     struct Node * new_node=(struct Node *)malloc(sizeof(struct Node));
+    new_node->data=elem;//新节点赋值
     if (index==0) {//插入到最前面
-        new_node->data=elem;//新节点赋值
         new_node->next=head_node;//设置新节点->头结点
         head->next=new_node;//头指针指向这个新节点，那么这个新节点就成了新的头结点。
     }else{//插入到其他位置
         struct Node *pre_node;
-        node_of_index(index-1, head, &pre_node);//获取要插入点的前一个节点pre_node
+        if(node_of_index(index-1, head, &pre_node)==Error)//获取要插入点的前一个节点pre_node
+            return Error;
         new_node->next=pre_node->next;//新节点下一个节点是pre_node的下一个节点。
-        new_node->data=elem;//新节点赋值
         pre_node->next=new_node;//pre_node的下一个节点修改为这个新节点
     }
     g_size++;
@@ -56,11 +55,15 @@ Status insert_element_at_index(Element elem, int index, Link head){
 Status delete_element(int index,Element *data,Link head){
     struct Node *pre_node;
     struct Node *delete_node;
-    node_of_index(index-1, head, &pre_node);
-    delete_node=pre_node->next;
-    Element delete_data=delete_node->data;
-    pre_node->next=pre_node->next->next;
-    *data=delete_data;
+    if (index==0) {
+        delete_node=head->next;//这是头结点
+        head->next=delete_node->next;//重新设置头结点
+    }else{
+        if(node_of_index(index-1, head, &pre_node)==Error) return Error;
+        delete_node=pre_node->next;
+        pre_node->next=delete_node->next;
+    }
+    *data=delete_node->data;
     free(delete_node);
     printf("delete one node,index=%d.size=%d\n",index,g_size);
     g_size--;
@@ -69,9 +72,8 @@ Status delete_element(int index,Element *data,Link head){
 }
 //4、修改一个元素
 Status update_ele(int index, Element ele, Link head){
-
-    struct Node *node;
-    node_of_index(index, head, &node);
+    Link node;
+    if (node_of_index(index, head, &node)==Error)return Error;
     node->data=ele;
     return Success;
 }
@@ -80,12 +82,12 @@ int get_link_length(){
     return g_size;
 }
 //6、根据下标index查找元素Element
-Status node_of_index(int index, Link head, struct Node** node){
-    //    if (boundary_check(index)) return struct NULL;
+Status node_of_index(int index, Link head, Link *node){
+    if (boundary_check(index)) return Error;
     (*node) = head->next;//此时node表示头结点
     int i=0;
     while ((*node) && i<index) {
-        (*node)= (*node)->next;
+        (*node)= (*node)->next;//依次后移
         i++;
     }
     return Success;
@@ -115,12 +117,13 @@ Status clearLink(Link head){
     }
     head->next=NULL;
     g_size =0;
+    printf("链表被清空...\n");
     return Success;
 }
 //9、检查是否越界
 bool boundary_check(int index){
-    if (index<0 || index>g_size) {
-        printf("index out of bounds \n");
+    if (index<0 || index>=g_size) {
+        printf("index=%d out of bounds. size=%d \n",index,g_size);
         return true;
     }else{
         return false;
@@ -131,7 +134,7 @@ void printLink(Link link){
     int i=0;
     struct Node *node=link->next;
     while (node) {
-        printf("第%d个节点：data=%d, next=%p\n",i,node->data,node->next);
+        printf("第%d个节点：data=%d,本节点地址: %p 下个节点地址: %p\n",i+1,node->data,node,node->next);
         node=node->next;
         i++;
     }
