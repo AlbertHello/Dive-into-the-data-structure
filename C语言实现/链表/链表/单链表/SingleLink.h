@@ -19,7 +19,7 @@ typedef int Status;
 static  int g_size=0;
 #define Error 0
 #define Success 1
-//链表定义
+//单链表定义
 struct Node {
     Element data;
     struct Node *next;
