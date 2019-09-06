@@ -127,10 +127,9 @@
 				D162548C230F873E005716C8 /* 单链表 */,
 				37B78C75231DE54A0049BC59 /* 单向循环链表 */,
 				3741D314231F306600377EF2 /* 双向链表 */,
+				D11935D323220AEB00EA2200 /* 双向循环链表 */,
 				3763565523092D4D00C25BC7 /* AppDelegate.h */,
 				3763565623092D4D00C25BC7 /* AppDelegate.m */,
-				37D4FB3D2320920000D79032 /* CircleDoubleLink.h */,
-				37D4FB3E2320920000D79032 /* CircleDoubleLink.c */,
 				3763565823092D4D00C25BC7 /* ViewController.h */,
 				3763565923092D4D00C25BC7 /* ViewController.m */,
 				3763565B23092D4D00C25BC7 /* Main.storyboard */,
@@ -167,6 +166,15 @@
 				37B78C73231DD0E80049BC59 /* CircleSingleLink.c */,
 			);
 			path = "单向循环链表";
+			sourceTree = "<group>";
+		};
+		D11935D323220AEB00EA2200 /* 双向循环链表 */ = {
+			isa = PBXGroup;
+			children = (
+				37D4FB3D2320920000D79032 /* CircleDoubleLink.h */,
+				37D4FB3E2320920000D79032 /* CircleDoubleLink.c */,
+			);
+			path = "双向循环链表";
 			sourceTree = "<group>";
 		};
 		D162548C230F873E005716C8 /* 单链表 */ = {

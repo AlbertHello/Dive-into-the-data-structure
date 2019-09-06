@@ -135,7 +135,6 @@ Status doubleLinkNode_clearLink(DoubleLink head){
         head_node=head_node->next;
         printf("删除%d\n",temp->data);
         free(temp);
-        g_size_doubleLinkNode--;
     }
     head->pre=NULL;
     head->next=NULL;

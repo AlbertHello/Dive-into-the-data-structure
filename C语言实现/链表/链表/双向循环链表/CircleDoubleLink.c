@@ -37,24 +37,27 @@ Status circleDoubleLinkNode_insert_element_at_index(Element elem, int index, Cir
     struct CircleDoubleLinkNode * new_node=(struct CircleDoubleLinkNode *)malloc(sizeof(struct CircleDoubleLinkNode));
     new_node->data=elem;//新节点赋值
     if (index==0) {//插入到最前面
-        //旧头结点。此时旧头结点可能为null
-        CircleDoubleLink head_node=head->next;
-        new_node->pre=NULL;//设置新节点的pre为null
-        new_node->next=head_node;//设置新节点->旧头结点
-        //头指针
-        if (g_size_circleDoubleLinkNode==0) {
-            head->pre=new_node;//这是添加一个节点时。
+        if (g_size_circleDoubleLinkNode==0) {//这是添加整个链表中第一个节点时
+            head->pre=new_node;//头指针的pre和next都指向这个新节点
+            new_node->pre=new_node;//新节点的pre为指向自己
+            new_node->next=new_node;//新节点的next也指向自己
         }else{
-            head_node->pre=new_node;//旧头结点不为空时重新设置pre
+            //此处头结点head_node有值。
+            CircleDoubleLink head_node=head->next;
+            CircleDoubleLink last_node=head->pre;
+            new_node->pre=head_node->pre;//新节点的pre指向旧头结点的pre
+            new_node->next=head_node;//新节点的next也指向就头结点
+            head_node->pre=new_node;//旧头结点pre则指向这个新节点。
+            last_node->next=new_node;//最后一个节点next重新指向这个新节点
         }
         head->next=new_node;//头指针指向这个新节点，那么这个新节点就成了新的头结点。
     }else if (index==g_size_circleDoubleLinkNode){//插入到最后位置
-        struct CircleDoubleLinkNode *last_node;//旧尾节点
-        if(circleDoubleLinkNode_node_of_index(index-1, head, &last_node)==Error)
-            return Error;
-        last_node->next=new_node;//旧尾节点重新设置next
+        CircleDoubleLink head_node=head->next;
+        CircleDoubleLink last_node=head->pre;//旧尾节点
+        head_node->pre=new_node;//头结点的pre指向了新的尾结点
         new_node->pre=last_node;//新节点也就是新尾节点设置pre
-        new_node->next=NULL;//新节点也就是新尾节点设置next
+        new_node->next=last_node->next;//新节点也就是新尾节点设置next
+        last_node->next=new_node;//旧尾节点重新设置next
         head->pre=new_node;//头指针的pre重新设置
     }else{//插入到其他位置
         struct CircleDoubleLinkNode *current_node;//获取当前index的节点
@@ -72,17 +75,21 @@ Status circleDoubleLinkNode_insert_element_at_index(Element elem, int index, Cir
 
 //3、删除一个元素
 Status circleDoubleLinkNode_delete_element(int index,Element *data,CircleDoubleLink head){
-    struct CircleDoubleLinkNode *delete_node;
+    CircleDoubleLink delete_node=NULL;
     if (index==0) {
         delete_node=head->next;//这是头结点
-        head->next=delete_node->next;//重新设置头结点
         if (g_size_circleDoubleLinkNode==1) {
             head->pre=NULL;
+            head->next=NULL;
         }else{
-            delete_node->next->pre=NULL;
+            CircleDoubleLink last_node=head->pre;//旧尾节点
+            head->next=delete_node->next;//重新设置头结点
+            last_node->next=delete_node->next;//重新设置尾结点的next
+            delete_node->next->pre=delete_node->pre;//新头结点的pre从新设置
         }
     }else{
         if(circleDoubleLinkNode_node_of_index(index, head, &delete_node)==Error) return Error;
+        head->pre=delete_node->pre;
         delete_node->pre->next=delete_node->next;
         delete_node->next->pre=delete_node->pre;
     }
@@ -131,12 +138,13 @@ int circleDoubleLinkNode_locate_ele_with_element(Element ele, CircleDoubleLink h
 //8、清空链表
 Status circleDoubleLinkNode_clearLink(CircleDoubleLink head){
     CircleDoubleLink head_node=head->next;
-    while (head_node) {
+    int i=0;
+    while (head_node && i<g_size_circleDoubleLinkNode) {
         CircleDoubleLink temp=head_node;
         head_node=head_node->next;
         printf("删除%d\n",temp->data);
         free(temp);
-        g_size_circleDoubleLinkNode--;
+        i++;
     }
     head->pre=NULL;
     head->next=NULL;
@@ -157,7 +165,7 @@ bool circleDoubleLinkNode_boundary_check(int index){
 void circleDoubleLinkNode_printLink(CircleDoubleLink link){
     int i=0;
     struct CircleDoubleLinkNode *node=link->next;
-    while (node) {
+    while (node && i<g_size_circleDoubleLinkNode) {
         printf("第%d个节点：data=%d,本节点地址: %p 下个节点地址: %p 上个节点地址=%p\n",i+1,node->data,node,node->next,node->pre);
         node=node->next;
         i++;
