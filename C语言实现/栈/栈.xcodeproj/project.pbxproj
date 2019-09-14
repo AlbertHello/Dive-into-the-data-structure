@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D185C601232BC2BF00255234 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D185C600232BC2BF00255234 /* AppDelegate.m */; };
+		D185C604232BC2BF00255234 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D185C603232BC2BF00255234 /* ViewController.m */; };
+		D185C607232BC2BF00255234 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D185C605232BC2BF00255234 /* Main.storyboard */; };
+		D185C609232BC2C100255234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D185C608232BC2C100255234 /* Assets.xcassets */; };
+		D185C60C232BC2C100255234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D185C60A232BC2C100255234 /* LaunchScreen.storyboard */; };
+		D185C60F232BC2C100255234 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D185C60E232BC2C100255234 /* main.m */; };
+		D185C617232BC30F00255234 /* Stack.c in Sources */ = {isa = PBXBuildFile; fileRef = D185C616232BC30F00255234 /* Stack.c */; };
+		D185C61D232BC78D00255234 /* 大话数据结构-链式存储.c in Sources */ = {isa = PBXBuildFile; fileRef = D185C61A232BC78D00255234 /* 大话数据结构-链式存储.c */; };
+		D185C61E232BC78D00255234 /* SingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = D185C61B232BC78D00255234 /* SingleLink.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D185C5FC232BC2BF00255234 /* 栈.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "栈.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D185C5FF232BC2BF00255234 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D185C600232BC2BF00255234 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D185C602232BC2BF00255234 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D185C603232BC2BF00255234 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D185C606232BC2BF00255234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D185C608232BC2C100255234 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D185C60B232BC2C100255234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D185C60D232BC2C100255234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D185C60E232BC2C100255234 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D185C615232BC30F00255234 /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		D185C616232BC30F00255234 /* Stack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Stack.c; sourceTree = "<group>"; };
+		D185C61A232BC78D00255234 /* 大话数据结构-链式存储.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "大话数据结构-链式存储.c"; sourceTree = "<group>"; };
+		D185C61B232BC78D00255234 /* SingleLink.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SingleLink.c; sourceTree = "<group>"; };
+		D185C61C232BC78D00255234 /* SingleLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleLink.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D185C5F9232BC2BF00255234 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D185C5F3232BC2BF00255234 = {
+			isa = PBXGroup;
+			children = (
+				D185C5FE232BC2BF00255234 /* 栈 */,
+				D185C5FD232BC2BF00255234 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D185C5FD232BC2BF00255234 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D185C5FC232BC2BF00255234 /* 栈.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D185C5FE232BC2BF00255234 /* 栈 */ = {
+			isa = PBXGroup;
+			children = (
+				D185C5FF232BC2BF00255234 /* AppDelegate.h */,
+				D185C600232BC2BF00255234 /* AppDelegate.m */,
+				D185C602232BC2BF00255234 /* ViewController.h */,
+				D185C603232BC2BF00255234 /* ViewController.m */,
+				D185C618232BC76100255234 /* 栈 */,
+				D185C605232BC2BF00255234 /* Main.storyboard */,
+				D185C608232BC2C100255234 /* Assets.xcassets */,
+				D185C60A232BC2C100255234 /* LaunchScreen.storyboard */,
+				D185C60D232BC2C100255234 /* Info.plist */,
+				D185C60E232BC2C100255234 /* main.m */,
+			);
+			path = "栈";
+			sourceTree = "<group>";
+		};
+		D185C618232BC76100255234 /* 栈 */ = {
+			isa = PBXGroup;
+			children = (
+				D185C619232BC78D00255234 /* 单链表 */,
+				D185C615232BC30F00255234 /* Stack.h */,
+				D185C616232BC30F00255234 /* Stack.c */,
+			);
+			path = "栈";
+			sourceTree = "<group>";
+		};
+		D185C619232BC78D00255234 /* 单链表 */ = {
+			isa = PBXGroup;
+			children = (
+				D185C61A232BC78D00255234 /* 大话数据结构-链式存储.c */,
+				D185C61B232BC78D00255234 /* SingleLink.c */,
+				D185C61C232BC78D00255234 /* SingleLink.h */,
+			);
+			name = "单链表";
+			path = "../../../链表/链表/单链表";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D185C5FB232BC2BF00255234 /* 栈 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D185C612232BC2C100255234 /* Build configuration list for PBXNativeTarget "栈" */;
+			buildPhases = (
+				D185C5F8232BC2BF00255234 /* Sources */,
+				D185C5F9232BC2BF00255234 /* Frameworks */,
+				D185C5FA232BC2BF00255234 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "栈";
+			productName = "栈";
+			productReference = D185C5FC232BC2BF00255234 /* 栈.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D185C5F4232BC2BF00255234 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = 58;
+				TargetAttributes = {
+					D185C5FB232BC2BF00255234 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = D185C5F7232BC2BF00255234 /* Build configuration list for PBXProject "栈" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D185C5F3232BC2BF00255234;
+			productRefGroup = D185C5FD232BC2BF00255234 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D185C5FB232BC2BF00255234 /* 栈 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D185C5FA232BC2BF00255234 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D185C60C232BC2C100255234 /* LaunchScreen.storyboard in Resources */,
+				D185C609232BC2C100255234 /* Assets.xcassets in Resources */,
+				D185C607232BC2BF00255234 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D185C5F8232BC2BF00255234 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D185C604232BC2BF00255234 /* ViewController.m in Sources */,
+				D185C61E232BC78D00255234 /* SingleLink.c in Sources */,
+				D185C60F232BC2C100255234 /* main.m in Sources */,
+				D185C617232BC30F00255234 /* Stack.c in Sources */,
+				D185C61D232BC78D00255234 /* 大话数据结构-链式存储.c in Sources */,
+				D185C601232BC2BF00255234 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D185C605232BC2BF00255234 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D185C606232BC2BF00255234 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D185C60A232BC2C100255234 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D185C60B232BC2C100255234 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D185C610232BC2C100255234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D185C611232BC2C100255234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D185C613232BC2C100255234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "栈/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AlbertWang.-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D185C614232BC2C100255234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "栈/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AlbertWang.-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D185C5F7232BC2BF00255234 /* Build configuration list for PBXProject "栈" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D185C610232BC2C100255234 /* Debug */,
+				D185C611232BC2C100255234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D185C612232BC2C100255234 /* Build configuration list for PBXNativeTarget "栈" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D185C613232BC2C100255234 /* Debug */,
+				D185C614232BC2C100255234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D185C5F4232BC2BF00255234 /* Project object */;
+}
