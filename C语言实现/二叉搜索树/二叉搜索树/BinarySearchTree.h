@@ -26,6 +26,11 @@ void clear(void);
 bool contains(int ele);
 int size(void);
 bool is_empty(void);
+int compare(int current, int new);
+void print_tree_preorder(void);
+void print_tree_inorder(void);
+void print_tree_backorder(void);
+
 
 
 

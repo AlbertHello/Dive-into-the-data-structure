@@ -20,8 +20,18 @@
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor brownColor];
     
-    BinarySearchNode *node=(BinarySearchNode *)malloc(sizeof(BinarySearchNode));
-    
+    add(9);
+    add(8);
+    add(5);
+    add(10);
+    add(7);
+    add(15);
+    add(13);
+    add(3);
+    add(1);
+    print_tree_preorder();
+    print_tree_inorder();
+    print_tree_backorder();
 }
 
 
