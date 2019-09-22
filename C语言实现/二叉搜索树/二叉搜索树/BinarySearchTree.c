@@ -16,6 +16,8 @@ void print_preorder(BinarySearchNode *node);
 void print_inorder(BinarySearchNode *node);
 //后序遍历
 void print_backorder(BinarySearchNode *node);
+//层序遍历
+void print_levelorder(BinarySearchNode *node);
 
 void add(int ele){
     if (!root) {
@@ -62,7 +64,7 @@ void add(int ele){
 void delete_ele(int ele){
     
 }
-void clear(void){
+void clearTree(void){
     
 }
 bool contains(int ele){
@@ -73,7 +75,7 @@ bool contains(int ele){
 
 
 
-int size(void){
+int size_of_tree(void){
     return count;
 }
 bool is_empty(void){
@@ -94,6 +96,10 @@ void print_tree_backorder(void){
     printf("***后序遍历如下：***\n");
     print_backorder(root);
 }
+void print_tree_levelorder(void){
+    printf("***层序遍历如下：***\n");
+    print_levelorder(root);
+}
 void print_preorder(BinarySearchNode *node){
     if (node==NULL) return;
     printf("%d\n",node->data);
@@ -111,4 +117,20 @@ void print_backorder(BinarySearchNode *node){
     print_backorder(node->left);
     print_backorder(node->right);
     printf("%d\n",node->data);
+}
+void print_levelorder(BinarySearchNode *node){
+//    if (node==NULL) return;
+//    enQueue(node->data);
+//    while (!isEmpty()) {
+//        DoubleLink delete_node=NULL;
+//
+//        int data=deQueue();
+//        printf("%d\n",data);
+//        if (node->left != NULL) {
+//            enQueue(node->left->data);
+//        }
+//        if (node->right != NULL) {
+//            enQueue(node->right->data);
+//        }
+//    }
 }
