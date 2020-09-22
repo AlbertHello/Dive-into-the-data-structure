@@ -11,6 +11,7 @@
 #include "CircleSingleLink.h"
 #include "DoubleLink.h"
 #include "CircleDoubleLink.h"
+#include "ReverseLink.h"
 
 
 
@@ -34,7 +35,10 @@
     //双向链表
 //    [self testDoubleLink];
     //双向循环链表
-    [self testCircleDoubleLink];
+//    [self testCircleDoubleLink];
+    
+    //逆置单链表
+    [self reverseLinkDemo];
 }
 
 -(void)testSingleLink{
@@ -288,6 +292,29 @@
     NSLog(@"此时双向循环链表长度：%d",circleDoubleLinkNode_get_link_length());
 }
 
+-(void)reverseLinkDemo{
+    Link head = NULL;//头节点
+    Status ret = init_link(&head);
+    if (ret!=Success) {
+        printf("linklist init error \n");
+        return;
+    }
+    //追加元素
+    insert_element(20,head);
+    insert_element(30,head);
+    insert_element(50,head);
+    insert_element(60,head);
+    insert_element(70,head);
+    insert_element(80,head);
+    printf("链表逆置前 \n");
+    printLink(head);
+    
+    ReverseLinkWithHeadNode(&head);
+//    ReverseLinkWithoutHeadNode(&head);
+    printf("链表逆置后 \n");
+    printLink(head);
+    
+}
 
 
 @end

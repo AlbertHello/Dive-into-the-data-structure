@@ -20,6 +20,7 @@
 		37B78C74231DD0E80049BC59 /* CircleSingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37B78C73231DD0E80049BC59 /* CircleSingleLink.c */; };
 		37D0D7832309711C003A2BC5 /* SingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D7822309711C003A2BC5 /* SingleLink.c */; };
 		37D4FB3F2320920000D79032 /* CircleDoubleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FB3E2320920000D79032 /* CircleDoubleLink.c */; };
+		D1B6AF08239BAB1500EF5DCC /* ReverseLink.c in Sources */ = {isa = PBXBuildFile; fileRef = D1B6AF07239BAB1500EF5DCC /* ReverseLink.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		37D0D7822309711C003A2BC5 /* SingleLink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SingleLink.c; sourceTree = "<group>"; };
 		37D4FB3D2320920000D79032 /* CircleDoubleLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleDoubleLink.h; sourceTree = "<group>"; };
 		37D4FB3E2320920000D79032 /* CircleDoubleLink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CircleDoubleLink.c; sourceTree = "<group>"; };
+		D1B6AF06239BAB1500EF5DCC /* ReverseLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReverseLink.h; sourceTree = "<group>"; };
+		D1B6AF07239BAB1500EF5DCC /* ReverseLink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ReverseLink.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3730EA8E251A005100702CD1 /* 倒转链表 */ = {
+			isa = PBXGroup;
+			children = (
+				D1B6AF06239BAB1500EF5DCC /* ReverseLink.h */,
+				D1B6AF07239BAB1500EF5DCC /* ReverseLink.c */,
+			);
+			path = "倒转链表";
+			sourceTree = "<group>";
+		};
 		3741D314231F306600377EF2 /* 双向链表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +140,7 @@
 				37B78C75231DE54A0049BC59 /* 单向循环链表 */,
 				3741D314231F306600377EF2 /* 双向链表 */,
 				D11935D323220AEB00EA2200 /* 双向循环链表 */,
+				3730EA8E251A005100702CD1 /* 倒转链表 */,
 				3763565523092D4D00C25BC7 /* AppDelegate.h */,
 				3763565623092D4D00C25BC7 /* AppDelegate.m */,
 				3763565823092D4D00C25BC7 /* ViewController.h */,
@@ -325,6 +338,7 @@
 				3763565723092D4D00C25BC7 /* AppDelegate.m in Sources */,
 				37D4FB3F2320920000D79032 /* CircleDoubleLink.c in Sources */,
 				3741D313231F1FB800377EF2 /* DoubleLink.c in Sources */,
+				D1B6AF08239BAB1500EF5DCC /* ReverseLink.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,13 +510,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EFH63YDHFL;
+				DEVELOPMENT_TEAM = GMMYPU4PHU;
 				INFOPLIST_FILE = "链表/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Albert.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.58.wbvideok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
