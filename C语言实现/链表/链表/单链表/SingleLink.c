@@ -65,8 +65,8 @@ Status delete_element(int index,Element *data,Link head){
     }
     *data=delete_node->data;
     free(delete_node);
-    printf("delete one node,index=%d.size=%d\n",index,g_size);
     g_size--;
+    printf("delete one node,index=%d.size=%d\n",index,g_size);
 
     return Success;
 }

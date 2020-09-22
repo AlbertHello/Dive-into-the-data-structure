@@ -87,8 +87,8 @@ Status doubleLinkNode_delete_element(int index,Element *data,DoubleLink head){
     }
     *data=delete_node->data;
     free(delete_node);
-    printf("delete one node,index=%d.size=%d\n",index,g_size_doubleLinkNode);
     g_size_doubleLinkNode--;
+    printf("delete one node,index=%d.size=%d\n",index,g_size_doubleLinkNode);
 
     return Success;
 }
