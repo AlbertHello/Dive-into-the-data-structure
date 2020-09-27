@@ -30,9 +30,9 @@
     add(3);
     add(1);
 //    print_tree_preorder();
-//    print_tree_inorder();
+    print_tree_inorder();
 //    print_tree_backorder();
-    print_tree_levelorder();
+//    print_tree_levelorder();
 }
 
 

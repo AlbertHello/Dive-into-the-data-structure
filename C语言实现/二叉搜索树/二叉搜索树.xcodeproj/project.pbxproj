@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		376074E225208B9B007C5556 /* MJInorderPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 376074D925208B9B007C5556 /* MJInorderPrinter.m */; };
+		376074E325208B9B007C5556 /* MJLevelOrderPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 376074DB25208B9B007C5556 /* MJLevelOrderPrinter.m */; };
+		376074E425208B9B007C5556 /* MJPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 376074DC25208B9B007C5556 /* MJPrinter.m */; };
+		376074E525208B9B007C5556 /* MJBinaryTrees.m in Sources */ = {isa = PBXBuildFile; fileRef = 376074E025208B9B007C5556 /* MJBinaryTrees.m */; };
+		376074E625208B9B007C5556 /* NSString+Trees.m in Sources */ = {isa = PBXBuildFile; fileRef = 376074E125208B9B007C5556 /* NSString+Trees.m */; };
 		D1BF654A2331092D000E877E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BF65492331092D000E877E /* AppDelegate.m */; };
 		D1BF654D2331092D000E877E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BF654C2331092D000E877E /* ViewController.m */; };
 		D1BF65502331092D000E877E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BF654E2331092D000E877E /* Main.storyboard */; };
@@ -17,6 +22,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		376074D625208B9B007C5556 /* MJBinaryTrees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJBinaryTrees.h; sourceTree = "<group>"; };
+		376074D825208B9B007C5556 /* MJLevelOrderPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJLevelOrderPrinter.h; sourceTree = "<group>"; };
+		376074D925208B9B007C5556 /* MJInorderPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJInorderPrinter.m; sourceTree = "<group>"; };
+		376074DA25208B9B007C5556 /* MJPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPrinter.h; sourceTree = "<group>"; };
+		376074DB25208B9B007C5556 /* MJLevelOrderPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJLevelOrderPrinter.m; sourceTree = "<group>"; };
+		376074DC25208B9B007C5556 /* MJPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPrinter.m; sourceTree = "<group>"; };
+		376074DD25208B9B007C5556 /* MJInorderPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJInorderPrinter.h; sourceTree = "<group>"; };
+		376074DE25208B9B007C5556 /* NSString+Trees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Trees.h"; sourceTree = "<group>"; };
+		376074DF25208B9B007C5556 /* MJBinaryTreeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJBinaryTreeInfo.h; sourceTree = "<group>"; };
+		376074E025208B9B007C5556 /* MJBinaryTrees.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJBinaryTrees.m; sourceTree = "<group>"; };
+		376074E125208B9B007C5556 /* NSString+Trees.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trees.m"; sourceTree = "<group>"; };
 		D1BF65452331092D000E877E /* 二叉搜索树.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "二叉搜索树.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BF65482331092D000E877E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D1BF65492331092D000E877E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +58,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		376074D525208B9B007C5556 /* MJBinaryTrees */ = {
+			isa = PBXGroup;
+			children = (
+				376074D725208B9B007C5556 /* MJPrinter */,
+				376074D625208B9B007C5556 /* MJBinaryTrees.h */,
+				376074E025208B9B007C5556 /* MJBinaryTrees.m */,
+				376074DF25208B9B007C5556 /* MJBinaryTreeInfo.h */,
+				376074E125208B9B007C5556 /* NSString+Trees.m */,
+				376074DE25208B9B007C5556 /* NSString+Trees.h */,
+			);
+			path = MJBinaryTrees;
+			sourceTree = "<group>";
+		};
+		376074D725208B9B007C5556 /* MJPrinter */ = {
+			isa = PBXGroup;
+			children = (
+				376074D825208B9B007C5556 /* MJLevelOrderPrinter.h */,
+				376074D925208B9B007C5556 /* MJInorderPrinter.m */,
+				376074DA25208B9B007C5556 /* MJPrinter.h */,
+				376074DB25208B9B007C5556 /* MJLevelOrderPrinter.m */,
+				376074DC25208B9B007C5556 /* MJPrinter.m */,
+				376074DD25208B9B007C5556 /* MJInorderPrinter.h */,
+			);
+			path = MJPrinter;
+			sourceTree = "<group>";
+		};
 		D1BF653C2331092D000E877E = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +109,7 @@
 				D1BF654C2331092D000E877E /* ViewController.m */,
 				D1BF655E233109AC000E877E /* BinarySearchTree.h */,
 				D1BF655F233109AC000E877E /* BinarySearchTree.c */,
+				376074D525208B9B007C5556 /* MJBinaryTrees */,
 				D1BF654E2331092D000E877E /* Main.storyboard */,
 				D1BF65512331092E000E877E /* Assets.xcassets */,
 				D1BF65532331092E000E877E /* LaunchScreen.storyboard */,
@@ -147,9 +190,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1BF654D2331092D000E877E /* ViewController.m in Sources */,
+				376074E525208B9B007C5556 /* MJBinaryTrees.m in Sources */,
 				D1BF65582331092E000E877E /* main.m in Sources */,
 				D1BF6560233109AC000E877E /* BinarySearchTree.c in Sources */,
+				376074E325208B9B007C5556 /* MJLevelOrderPrinter.m in Sources */,
 				D1BF654A2331092D000E877E /* AppDelegate.m in Sources */,
+				376074E625208B9B007C5556 /* NSString+Trees.m in Sources */,
+				376074E225208B9B007C5556 /* MJInorderPrinter.m in Sources */,
+				376074E425208B9B007C5556 /* MJPrinter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

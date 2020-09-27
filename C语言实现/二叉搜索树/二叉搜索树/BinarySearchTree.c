@@ -30,18 +30,22 @@ void add(int ele){
         return;
     }
     BinarySearchNode *parent_node=root;
-    BinarySearchNode *son_node=parent_node;
+    BinarySearchNode *node=root;
     int cmp=0;
-    while (son_node!=NULL) {
-        cmp=compare(son_node->data, ele);
+    while (node!=NULL) {
+        cmp=compare(node->data, ele);
         if (cmp<0) {
-            //右子树
-            parent_node=son_node;
-            son_node=parent_node->right;
+            //父节点指针随之跟着变换
+            parent_node=node;
+            //ele大于node->data，所以在右子树中找。直到node为null时，
+            //说明找到了右子树中最大的那个node, 那么此时node的父节点就被定位了。
+            //后面直接父节点->right=新节点
+            node=parent_node->right;
         }else if (cmp>0){
-            //左子树
-            parent_node=son_node;
-            son_node=parent_node->left;
+            //父节点指针随之跟着变换
+            parent_node=node;
+            //ele小于node->data，所以在左子树中找
+            node=parent_node->left;
         }else{
             //相等
             printf("重复添加了：%d",ele);
@@ -58,7 +62,6 @@ void add(int ele){
     }else{
         parent_node->left=new_node;
     }
-    parent_node->parent=parent_node;
     count++;
 }
 void delete_ele(int ele){
@@ -68,12 +71,9 @@ void clearTree(void){
     
 }
 bool contains(int ele){
+    
     return 0;
 }
-
-
-
-
 
 int size_of_tree(void){
     return count;
@@ -81,8 +81,8 @@ int size_of_tree(void){
 bool is_empty(void){
     return count==0;
 }
-int compare(int current, int new){
-    return current-new;//返回负数放右侧，返回正数放左侧。返回0直接替换。
+int compare(int current, int next){
+    return current-next;//返回负数放右侧，返回正数放左侧。返回0直接替换。
 }
 void print_tree_preorder(void){
     printf("***前序遍历如下：***\n");
