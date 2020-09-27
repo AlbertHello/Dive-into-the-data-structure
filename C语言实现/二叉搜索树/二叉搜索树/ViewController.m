@@ -20,20 +20,25 @@
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor brownColor];
     
-    add(9);
-    add(8);
-    add(5);
-    add(10);
-    add(7);
-    add(15);
-    add(13);
-    add(3);
-    add(1);
-//    print_tree_preorder();
-    print_tree_inorder();
-//    print_tree_backorder();
-//    print_tree_levelorder();
+    
+    [self testLowestCommonAncestor];
+    
+    
 }
 
+-(void)testLowestCommonAncestor{
+    int num[]={6,2,8,0,4,7,9,3,5};
+    int length=sizeof(num)/sizeof(int);
+    for (int i = 0;i<length; i++) {
+        add(num[i]);
+    }
+    BinarySearchNode *root=getNode(6);
+    BinarySearchNode *p_node=getNode(2);
+    BinarySearchNode *q_node=getNode(8);
+    BinarySearchNode *ancestor=lowestCommonAncestor(root,
+                                                    p_node,
+                                                    q_node);
+    printf("ancestor is: %d \n",ancestor->data);
+}
 
 @end

@@ -21,6 +21,7 @@ typedef struct Node {
 } BinarySearchNode;
 
 void add(int ele);
+BinarySearchNode* getNode(int ele);
 void delete_ele(int ele);
 void clear(void);
 bool contains(int ele);
@@ -32,6 +33,9 @@ void print_tree_inorder(void);
 void print_tree_backorder(void);
 void print_tree_levelorder(void);
 
+BinarySearchNode* lowestCommonAncestor(BinarySearchNode* root,
+                                       BinarySearchNode* p,
+                                       BinarySearchNode* q);
 
 
 

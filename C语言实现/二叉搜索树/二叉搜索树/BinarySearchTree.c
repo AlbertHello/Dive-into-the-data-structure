@@ -134,3 +134,48 @@ void print_levelorder(BinarySearchNode *node){
 //        }
 //    }
 }
+BinarySearchNode* getNode(int ele){
+    if (!root) return NULL;
+    BinarySearchNode *node = root;
+    while (node->data != ele) {
+        int cmp=compare(node->data, ele);
+        if (cmp < 0) {
+            node=node->right;
+            if (!node) break;
+        }else if (cmp >0){
+            node=node->left;
+            if (!node) break;;
+        }else{
+            break;
+        }
+    }
+    return node;
+}
+
+
+/**
+ leetcode:
+ 二叉搜索树的最近公共祖先
+ 算法思想：
+ 1、从根节点开始遍历；
+ 2、如果当前节点的值大于p和q的值，说明p和q应该在当前节点的左子树，因此将当前节点移动到它的左子节点
+ 3、如果当前节点的值小于p和q的值，说明p和q应该在当前节点的右子树，因此将当前节点移动到它的右子节点
+ 4、如果当前节点的值不满足上述两条要求，那么说明当前节点就是「分岔点」。此时p和q要么在当前节点的不同的子树中，要么其中一个就是当前节点。
+ 
+ 链接：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/solution/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-26/
+ */
+BinarySearchNode* lowestCommonAncestor(BinarySearchNode* root,
+                                       BinarySearchNode* p,
+                                       BinarySearchNode* q) {
+    BinarySearchNode *ancestor=root;
+    while (true){
+        if(p->data<ancestor->data && q->data<ancestor->data){
+            ancestor=ancestor->left;
+        }else if(p->data>ancestor->data && q->data>ancestor->data){
+            ancestor=ancestor->right;
+        }else{
+            break;
+        }
+    }
+    return ancestor;
+}
