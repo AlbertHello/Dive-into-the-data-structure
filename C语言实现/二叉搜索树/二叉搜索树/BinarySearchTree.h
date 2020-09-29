@@ -13,11 +13,20 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+struct Node0 {
+    int val;
+    struct Node0 *left;
+    struct Node0 *right;
+    struct Node0 *next;
+};
+
+
 typedef struct Node {
     int data;
     struct Node *parent;
     struct Node *left;
     struct Node *right;
+    struct Node *next;
 } BinarySearchNode;
 
 void add(int ele);
@@ -36,6 +45,8 @@ void print_tree_levelorder(void);
 BinarySearchNode* lowestCommonAncestor(BinarySearchNode* root,
                                        BinarySearchNode* p,
                                        BinarySearchNode* q);
+
+struct Node0* connects(struct Node0 *root);
 
 
 
