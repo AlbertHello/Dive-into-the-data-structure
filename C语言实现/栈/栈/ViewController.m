@@ -27,9 +27,10 @@
     push(14);
     
     
-    peek();
+    int top_data= peek();
+    printf("栈顶元素的值： %d",top_data);
     
-    print_stack();
+//    print_stack();
     
     
 }

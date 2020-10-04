@@ -47,7 +47,6 @@ Status insert_element_at_index(Element elem, int index, Link head){
         pre_node->next=new_node;//pre_node的下一个节点修改为这个新节点
     }
     g_size++;
-    printf("insert one node at index=%d,size=%d\n",index,g_size);
     return Success;
 }
 
@@ -66,8 +65,6 @@ Status delete_element(int index,Element *data,Link head){
     *data=delete_node->data;
     free(delete_node);
     g_size--;
-    printf("delete one node,index=%d.size=%d\n",index,g_size);
-
     return Success;
 }
 //4、修改一个元素
@@ -117,7 +114,6 @@ Status clearLink(Link head){
     }
     head->next=NULL;
     g_size =0;
-    printf("链表被清空...\n");
     return Success;
 }
 //9、检查是否越界

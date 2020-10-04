@@ -26,9 +26,19 @@ int peek(void){
     if (!stack) {
         if (!init_stack()) return -1;
     }
+    struct Node *top_node;
+    if(node_of_index(size()-1, stack, &top_node)==Error){
+        return -1;
+    }
+    return top_node->data;
+}
+int pop(void){
+    if (!stack) {
+        if (!init_stack()) return -1;
+    }
     Element data=0;
     if (delete_element(get_link_length()-1, &data, stack)==Error) {
-        printf("get top element failed ,and exit 'peek' func !");
+        printf("get top element failed ,and exit 'pop' func !");
         return -1;
     }
     return data;

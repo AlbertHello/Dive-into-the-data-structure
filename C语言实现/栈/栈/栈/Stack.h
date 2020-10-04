@@ -12,10 +12,21 @@
 #include <stdio.h>
 #include "SingleLink.h"
 
+/// 压栈
 void push(int);
+
+/// 返回栈顶元素
 int  peek(void);
+
+/// 栈顶元素出栈
+int  pop(void);
+
+/// 栈大小
 int  size(void);
+
+/// 栈是否空
 bool isEmety(void);
+
 void print_stack(void);
 
 

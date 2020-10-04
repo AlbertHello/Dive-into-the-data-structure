@@ -118,6 +118,24 @@ void print_backorder(BinarySearchNode *node){
     print_backorder(node->right);
     printf("%d\n",node->data);
 }
+void print_backorder_1(BinarySearchNode *node){
+    BinarySearchNode *stack[100];
+    BinarySearchNode *current=node;
+    int i=0;
+    stack[i++]=node;
+    int length=sizeof(stack)/sizeof(BinarySearchNode *);
+    while (length != 0) {
+        BinarySearchNode *node=stack[i--];
+        if (node->right) {
+            stack[i++]=node->right;
+        }else if (node->left){
+            stack[i++]=node->left;
+        }else{
+            printf("%d \n",node->data);
+            node=stack[i--];
+        }
+    }
+}
 void print_levelorder(BinarySearchNode *node){
 //    if (node==NULL) return;
 //    enQueue(node->data);
