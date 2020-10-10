@@ -26,6 +26,9 @@ struct Node {
 };
 
 typedef struct Node *Link;
+
+Link create_link(void);
+
 //初始化
 Status init_link(Link *link);
 //插入

@@ -8,6 +8,15 @@
 
 #include "SingleLink.h"
 
+
+Link create_link(void){
+    Link link=(Link)malloc(sizeof(struct Node));
+    link->data=0;
+    link->next=NULL;
+    g_size=0;
+    return link;
+}
+
 //1、初始化一个链表
 Status init_link(Link *head){
     *head=(Link)malloc(sizeof(struct Node));
@@ -20,7 +29,6 @@ Status init_link(Link *head){
         return Error;
     }
 }
-
 //2、增加一个元素
 int insert_element(Element elem,Link head){
     insert_element_at_index(elem,g_size, head);
