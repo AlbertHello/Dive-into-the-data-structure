@@ -19,6 +19,9 @@
 		376356882309670D00C25BC7 /* 大话数据结构-链式存储.c in Sources */ = {isa = PBXBuildFile; fileRef = 376356872309670D00C25BC7 /* 大话数据结构-链式存储.c */; };
 		378C44B425318DE70009349B /* 237_DeleteNodeinLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C44B325318DE70009349B /* 237_DeleteNodeinLinkedList.swift */; };
 		378C44C325318E770009349B /* 237_DeleteNodeinLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 378C44C225318E770009349B /* 237_DeleteNodeinLinkedList.c */; };
+		378C44C8253191110009349B /* 206_ReverseLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C44C7253191110009349B /* 206_ReverseLinkedList.swift */; };
+		378C44CD253191B20009349B /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C44CC253191B20009349B /* ListNode.swift */; };
+		378C44DA25319D640009349B /* 206_ReverseLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 378C44D925319D640009349B /* 206_ReverseLinkedList.c */; };
 		37B78C74231DD0E80049BC59 /* CircleSingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37B78C73231DD0E80049BC59 /* CircleSingleLink.c */; };
 		37D0D7832309711C003A2BC5 /* SingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D7822309711C003A2BC5 /* SingleLink.c */; };
 		37D4FB3F2320920000D79032 /* CircleDoubleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FB3E2320920000D79032 /* CircleDoubleLink.c */; };
@@ -66,6 +69,11 @@
 		378C44B325318DE70009349B /* 237_DeleteNodeinLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 237_DeleteNodeinLinkedList.swift; sourceTree = "<group>"; };
 		378C44C125318E770009349B /* 237_DeleteNodeinLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 237_DeleteNodeinLinkedList.h; sourceTree = "<group>"; };
 		378C44C225318E770009349B /* 237_DeleteNodeinLinkedList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 237_DeleteNodeinLinkedList.c; sourceTree = "<group>"; };
+		378C44C7253191110009349B /* 206_ReverseLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 206_ReverseLinkedList.swift; sourceTree = "<group>"; };
+		378C44CC253191B20009349B /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
+		378C44D4253192550009349B /* ListNode_C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNode_C.h; sourceTree = "<group>"; };
+		378C44D825319D640009349B /* 206_ReverseLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 206_ReverseLinkedList.h; sourceTree = "<group>"; };
+		378C44D925319D640009349B /* 206_ReverseLinkedList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 206_ReverseLinkedList.c; sourceTree = "<group>"; };
 		37B78C72231DD0E80049BC59 /* CircleSingleLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleSingleLink.h; sourceTree = "<group>"; };
 		37B78C73231DD0E80049BC59 /* CircleSingleLink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CircleSingleLink.c; sourceTree = "<group>"; };
 		37D0D7812309711C003A2BC5 /* SingleLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLink.h; sourceTree = "<group>"; };
@@ -192,8 +200,11 @@
 		378C44B125318DE70009349B /* c */ = {
 			isa = PBXGroup;
 			children = (
+				378C44D4253192550009349B /* ListNode_C.h */,
 				378C44C125318E770009349B /* 237_DeleteNodeinLinkedList.h */,
 				378C44C225318E770009349B /* 237_DeleteNodeinLinkedList.c */,
+				378C44D825319D640009349B /* 206_ReverseLinkedList.h */,
+				378C44D925319D640009349B /* 206_ReverseLinkedList.c */,
 			);
 			path = c;
 			sourceTree = "<group>";
@@ -201,7 +212,9 @@
 		378C44B225318DE70009349B /* swift */ = {
 			isa = PBXGroup;
 			children = (
+				378C44CC253191B20009349B /* ListNode.swift */,
 				378C44B325318DE70009349B /* 237_DeleteNodeinLinkedList.swift */,
+				378C44C7253191110009349B /* 206_ReverseLinkedList.swift */,
 			);
 			path = swift;
 			sourceTree = "<group>";
@@ -365,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378C44C8253191110009349B /* 206_ReverseLinkedList.swift in Sources */,
 				3763565A23092D4D00C25BC7 /* ViewController.m in Sources */,
 				37B78C74231DD0E80049BC59 /* CircleSingleLink.c in Sources */,
 				378C44B425318DE70009349B /* 237_DeleteNodeinLinkedList.swift in Sources */,
@@ -372,6 +386,8 @@
 				376356882309670D00C25BC7 /* 大话数据结构-链式存储.c in Sources */,
 				3763566523092D4E00C25BC7 /* main.m in Sources */,
 				378C44C325318E770009349B /* 237_DeleteNodeinLinkedList.c in Sources */,
+				378C44DA25319D640009349B /* 206_ReverseLinkedList.c in Sources */,
+				378C44CD253191B20009349B /* ListNode.swift in Sources */,
 				3763565723092D4D00C25BC7 /* AppDelegate.m in Sources */,
 				37D4FB3F2320920000D79032 /* CircleDoubleLink.c in Sources */,
 				3741D313231F1FB800377EF2 /* DoubleLink.c in Sources */,

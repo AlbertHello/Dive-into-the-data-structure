@@ -18,16 +18,9 @@ import Foundation
  解释：给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -> 1 -> 9.
  
  */
-public class ListNode {
-    public var val: Int
-    public var next: ListNode?
-    public init(_ val: Int) {
-      self.val = val
-      self.next = nil
-    }
-}
-class Solution {
-    func deleteNode(_ node: ListNode?) {
+
+class Solution_1 {
+    func deleteNode(_ node: ListNode_Swfit?) {
         guard let current_node = node, let next_node = node?.next else {
             return;
         }

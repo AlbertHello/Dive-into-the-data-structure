@@ -10,11 +10,8 @@
 #define _37_DeleteNodeinLinkedList_h
 
 #include <stdio.h>
+#include "ListNode_C.h"
 
-struct ListNode {
-    int val;
-    struct ListNode *next;
-};
-void deleteNode(struct ListNode* node)
+void deleteNode(struct ListNode_C* node);
 
 #endif /* _37_DeleteNodeinLinkedList_h */
