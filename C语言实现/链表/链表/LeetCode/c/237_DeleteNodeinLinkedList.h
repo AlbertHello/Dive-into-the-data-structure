@@ -12,6 +12,6 @@
 #include <stdio.h>
 #include "ListNode_C.h"
 
-void deleteNode(struct ListNode_C* node);
+void deleteNode(SingleLink* node);
 
 #endif /* _37_DeleteNodeinLinkedList_h */

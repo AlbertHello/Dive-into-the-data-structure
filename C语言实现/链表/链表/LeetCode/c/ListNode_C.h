@@ -14,5 +14,8 @@ struct ListNode_C {
     int val;
     struct ListNode_C *next;
 };
+typedef struct ListNode_C SingleLink;
+
+
 
 #endif /* ListNode_C_h */
