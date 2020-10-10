@@ -9,6 +9,7 @@
 #ifndef ListNode_C_h
 #define ListNode_C_h
 
+#include <stdbool.h>
 
 struct ListNode_C {
     int val;

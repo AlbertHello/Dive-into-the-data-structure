@@ -29,9 +29,11 @@ typedef struct NodeOfCircleSingle *CircleSingleLink;
 
 ///NOTE：
 //1、单向循环链表和单链表相比需要着重处理的是在index=0处添加、删除元素，因为此处需要处理尾节点的next指向，要谨记在改变头结点之前先获取尾节点，然后再操作。
-//2、另外需要主要的就是在打印和清空链表时有个循环，循环条件就不能在单单判断当前node是否不为空，因为此链表是循环链表，尾节点next不为空，所以没法结束循环，此时需要再加一个判断条件index<g_size_of_circleSingleLink(链表程度)即可。
+//2、另外需要主要的就是在打印和清空链表时有个循环，循环条件就不能在单单判断当前node是否不为空，因为此链表是循环链表，尾节点next不为空，所以没法结束循环，此时需要再加一个判断条件index<g_size_of_circleSingleLink(链表长度)即可。
 
-//初始化
+//创建
+CircleSingleLink create_single_circle_link(void);
+//创建
 Status circleSingleLink_init_link(CircleSingleLink *link);
 //插入
 int circleSingleLink_insert_element(Element elem,CircleSingleLink head);

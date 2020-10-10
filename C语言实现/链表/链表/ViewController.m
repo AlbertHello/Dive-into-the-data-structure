@@ -29,9 +29,9 @@
     self.view.backgroundColor=[UIColor redColor];
     
     //单链表
-    [self testSingleLink];
+//    [self testSingleLink];
     //单向循环链表
-//    [self testCircleSingleLink];
+    [self testCircleSingleLink];
     //双向链表
 //    [self testDoubleLink];
     //双向循环链表
@@ -108,17 +108,19 @@
 }
 
 -(void)testCircleSingleLink{
-    CircleSingleLink head_ptr = NULL;//头指针
-     Status ret = circleSingleLink_init_link(&head_ptr);
-     if (ret!=Success) {
-         printf("linklist init error \n");
-     }
-     if (circleSingleLink_is_empty(head_ptr)) {
-         NSLog(@"链表为空");
-     }else{
-         NSLog(@"链表不是空");
-     }
-     NSLog(@"此时链表长度：%d",circleSingleLink_get_link_length());
+//    CircleSingleLink head_ptr = NULL;//头指针
+//     Status ret = circleSingleLink_init_link(&head_ptr);
+//     if (ret!=Success) {
+//         printf("linklist init error \n");
+//     }
+//     if (circleSingleLink_is_empty(head_ptr)) {
+//         NSLog(@"链表为空");
+//     }else{
+//         NSLog(@"链表不是空");
+//     }
+//     NSLog(@"此时链表长度：%d",circleSingleLink_get_link_length());
+    
+    CircleSingleLink head_ptr = create_single_circle_link();
      
      //追加元素
      circleSingleLink_insert_element(20,head_ptr);

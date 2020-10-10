@@ -8,7 +8,17 @@
 
 #include "CircleSingleLink.h"
 
-//1、初始化一个链表
+
+//1、创建
+CircleSingleLink create_single_circle_link(void){
+    CircleSingleLink link=(CircleSingleLink)malloc(sizeof(struct NodeOfCircleSingle));
+    link->data=0;
+    link->next=NULL;
+    g_size_of_circleSingleLink=0;
+    return link;
+}
+
+//1、创建
 Status circleSingleLink_init_link(CircleSingleLink *head){
     *head=(CircleSingleLink)malloc(sizeof(struct NodeOfCircleSingle));
     if (*head) {
@@ -56,7 +66,7 @@ Status circleSingleLink_insert_element_at_index(Element elem, int index, CircleS
         pre_node->next=new_node;//pre_node的下一个节点修改为这个新节点
     }
     g_size_of_circleSingleLink++;
-    printf("insert one node at index=%d,size=%d\n",index,g_size_of_circleSingleLink);
+//    printf("insert one node at index=%d,size=%d\n",index,g_size_of_circleSingleLink);
     return Success;
 }
 
@@ -81,7 +91,7 @@ Status circleSingleLink_delete_element(int index,Element *data,CircleSingleLink 
     }
     *data=delete_node->data;//返回要删除的该节点的值
     free(delete_node);//释放节点
-    printf("delete one node,index=%d.size=%d\n",index,g_size_of_circleSingleLink);
+//    printf("delete one node,index=%d.size=%d\n",index,g_size_of_circleSingleLink);
     g_size_of_circleSingleLink--;
 
     return Success;
