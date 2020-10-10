@@ -135,12 +135,16 @@ bool boundary_check(int index){
 }
 //10、打印链表
 void printLink(Link link){
-    int i=0;
+    printf("单链表打印：size: %d, [",g_size);
+    char string[100]={0};
+    char temp[10]={0};
     struct Node *node=link->next;
     while (node) {
-        printf("第%d个节点：data=%d,本节点地址: %p 下个节点地址: %p\n",i+1,node->data,node,node->next);
+        sprintf(temp, "%d->" ,node->data);
+        strcat(string,temp);
         node=node->next;
-        i++;
     }
-    printf("size=%d\n",g_size);
+    strcat(string,"null");
+    printf("%s",string);
+    printf("]\n");
 }
