@@ -11,4 +11,10 @@
 
 #include <stdio.h>
 
+struct ListNode {
+    int val;
+    struct ListNode *next;
+};
+void deleteNode(struct ListNode* node)
+
 #endif /* _37_DeleteNodeinLinkedList_h */

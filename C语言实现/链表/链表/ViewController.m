@@ -29,7 +29,7 @@
     self.view.backgroundColor=[UIColor redColor];
     
     //单链表
-//    [self testSingleLink];
+    [self testSingleLink];
     //单向循环链表
 //    [self testCircleSingleLink];
     //双向链表
@@ -38,15 +38,18 @@
 //    [self testCircleDoubleLink];
     
     //逆置单链表
-    [self reverseLinkDemo];
+//    [self reverseLinkDemo];
 }
 
 -(void)testSingleLink{
-    Link head_ptr = NULL;//头指针
-    Status ret = init_link(&head_ptr);
-    if (ret!=Success) {
-        printf("linklist init error \n");
-    }
+//    Link head_ptr = NULL;//头指针
+//    Status ret = init_link(&head_ptr);
+//    if (ret!=Success) {
+//        printf("linklist init error \n");
+//    }
+    
+    Link head_ptr = create_link();
+    
     if (is_empty(head_ptr)) {
         NSLog(@"链表为空");
     }else{
@@ -66,10 +69,11 @@
     if(insert_element_at_index(40,0, head_ptr)){
         printLink(head_ptr);
     }
+    
     //删除
     int data=0;
     if(delete_element(0, &data, head_ptr)){
-        printLink(head_ptr);
+//        printLink(head_ptr);
         NSLog(@"删除的元素是：%d",data);
     }
 

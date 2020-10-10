@@ -17,6 +17,8 @@
 		3763566F23092D4F00C25BC7 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763566E23092D4F00C25BC7 /* __Tests.m */; };
 		3763567A23092D4F00C25BC7 /* __UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763567923092D4F00C25BC7 /* __UITests.m */; };
 		376356882309670D00C25BC7 /* 大话数据结构-链式存储.c in Sources */ = {isa = PBXBuildFile; fileRef = 376356872309670D00C25BC7 /* 大话数据结构-链式存储.c */; };
+		378C44B425318DE70009349B /* 237_DeleteNodeinLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C44B325318DE70009349B /* 237_DeleteNodeinLinkedList.swift */; };
+		378C44C325318E770009349B /* 237_DeleteNodeinLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 378C44C225318E770009349B /* 237_DeleteNodeinLinkedList.c */; };
 		37B78C74231DD0E80049BC59 /* CircleSingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37B78C73231DD0E80049BC59 /* CircleSingleLink.c */; };
 		37D0D7832309711C003A2BC5 /* SingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D7822309711C003A2BC5 /* SingleLink.c */; };
 		37D4FB3F2320920000D79032 /* CircleDoubleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FB3E2320920000D79032 /* CircleDoubleLink.c */; };
@@ -60,6 +62,10 @@
 		3763567923092D4F00C25BC7 /* __UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __UITests.m; sourceTree = "<group>"; };
 		3763567B23092D4F00C25BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		376356872309670D00C25BC7 /* 大话数据结构-链式存储.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "大话数据结构-链式存储.c"; sourceTree = "<group>"; };
+		378C44A1253189170009349B /* 链表-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "链表-Bridging-Header.h"; sourceTree = "<group>"; };
+		378C44B325318DE70009349B /* 237_DeleteNodeinLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 237_DeleteNodeinLinkedList.swift; sourceTree = "<group>"; };
+		378C44C125318E770009349B /* 237_DeleteNodeinLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 237_DeleteNodeinLinkedList.h; sourceTree = "<group>"; };
+		378C44C225318E770009349B /* 237_DeleteNodeinLinkedList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 237_DeleteNodeinLinkedList.c; sourceTree = "<group>"; };
 		37B78C72231DD0E80049BC59 /* CircleSingleLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleSingleLink.h; sourceTree = "<group>"; };
 		37B78C73231DD0E80049BC59 /* CircleSingleLink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CircleSingleLink.c; sourceTree = "<group>"; };
 		37D0D7812309711C003A2BC5 /* SingleLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLink.h; sourceTree = "<group>"; };
@@ -145,11 +151,13 @@
 				3763565623092D4D00C25BC7 /* AppDelegate.m */,
 				3763565823092D4D00C25BC7 /* ViewController.h */,
 				3763565923092D4D00C25BC7 /* ViewController.m */,
+				378C44A7253189310009349B /* LeetCode */,
 				3763565B23092D4D00C25BC7 /* Main.storyboard */,
 				3763565E23092D4E00C25BC7 /* Assets.xcassets */,
 				3763566023092D4E00C25BC7 /* LaunchScreen.storyboard */,
 				3763566323092D4E00C25BC7 /* Info.plist */,
 				3763566423092D4E00C25BC7 /* main.m */,
+				378C44A1253189170009349B /* 链表-Bridging-Header.h */,
 			);
 			path = "链表";
 			sourceTree = "<group>";
@@ -170,6 +178,32 @@
 				3763567B23092D4F00C25BC7 /* Info.plist */,
 			);
 			path = "链表UITests";
+			sourceTree = "<group>";
+		};
+		378C44A7253189310009349B /* LeetCode */ = {
+			isa = PBXGroup;
+			children = (
+				378C44B125318DE70009349B /* c */,
+				378C44B225318DE70009349B /* swift */,
+			);
+			path = LeetCode;
+			sourceTree = "<group>";
+		};
+		378C44B125318DE70009349B /* c */ = {
+			isa = PBXGroup;
+			children = (
+				378C44C125318E770009349B /* 237_DeleteNodeinLinkedList.h */,
+				378C44C225318E770009349B /* 237_DeleteNodeinLinkedList.c */,
+			);
+			path = c;
+			sourceTree = "<group>";
+		};
+		378C44B225318DE70009349B /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				378C44B325318DE70009349B /* 237_DeleteNodeinLinkedList.swift */,
+			);
+			path = swift;
 			sourceTree = "<group>";
 		};
 		37B78C75231DE54A0049BC59 /* 单向循环链表 */ = {
@@ -267,6 +301,7 @@
 				TargetAttributes = {
 					3763565123092D4D00C25BC7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1200;
 					};
 					3763566923092D4F00C25BC7 = {
 						CreatedOnToolsVersion = 10.1;
@@ -332,9 +367,11 @@
 			files = (
 				3763565A23092D4D00C25BC7 /* ViewController.m in Sources */,
 				37B78C74231DD0E80049BC59 /* CircleSingleLink.c in Sources */,
+				378C44B425318DE70009349B /* 237_DeleteNodeinLinkedList.swift in Sources */,
 				37D0D7832309711C003A2BC5 /* SingleLink.c in Sources */,
 				376356882309670D00C25BC7 /* 大话数据结构-链式存储.c in Sources */,
 				3763566523092D4E00C25BC7 /* main.m in Sources */,
+				378C44C325318E770009349B /* 237_DeleteNodeinLinkedList.c in Sources */,
 				3763565723092D4D00C25BC7 /* AppDelegate.m in Sources */,
 				37D4FB3F2320920000D79032 /* CircleDoubleLink.c in Sources */,
 				3741D313231F1FB800377EF2 /* DoubleLink.c in Sources */,
@@ -509,6 +546,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GMMYPU4PHU;
 				INFOPLIST_FILE = "链表/Info.plist";
@@ -518,6 +556,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.58.wbvideok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "链表/链表-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -526,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EFH63YDHFL;
 				INFOPLIST_FILE = "链表/Info.plist";
@@ -535,6 +577,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Albert.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "链表/链表-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -542,6 +586,7 @@
 		3763568223092D4F00C25BC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EFH63YDHFL;
@@ -561,6 +606,7 @@
 		3763568323092D4F00C25BC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EFH63YDHFL;
@@ -580,6 +626,7 @@
 		3763568523092D4F00C25BC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EFH63YDHFL;
 				INFOPLIST_FILE = "链表UITests/Info.plist";
@@ -598,6 +645,7 @@
 		3763568623092D4F00C25BC7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EFH63YDHFL;
 				INFOPLIST_FILE = "链表UITests/Info.plist";

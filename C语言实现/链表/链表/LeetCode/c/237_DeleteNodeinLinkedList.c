@@ -7,3 +7,8 @@
 //
 
 #include "237_DeleteNodeinLinkedList.h"
+
+void deleteNode(struct ListNode* node) {
+    node->val=node->next->val;
+    node->next=node->next->next;
+}
