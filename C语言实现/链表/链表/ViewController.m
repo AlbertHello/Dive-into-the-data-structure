@@ -12,6 +12,7 @@
 #include "DoubleLink.h"
 #include "CircleDoubleLink.h"
 #include "ReverseLink.h"
+#include "141_LinkedListCycle.h"
 
 
 
@@ -31,7 +32,7 @@
     //单链表
 //    [self testSingleLink];
     //单向循环链表
-    [self testCircleSingleLink];
+//    [self testCircleSingleLink];
     //双向链表
 //    [self testDoubleLink];
     //双向循环链表
@@ -39,7 +40,43 @@
     
     //逆置单链表
 //    [self reverseLinkDemo];
+    
+    [self findCircleTest];
+    
+    
+    
 }
+
+
+-(void)findCircleTest{
+    SingleLink_C *link=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+    link->val=-1;
+    link->next=NULL;
+    
+//    SingleLink_C *node0=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+//    node0->val=1;
+//    node0->next=NULL;
+//
+//    SingleLink_C *node1=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+//    node1->val=2;
+//    node1->next=NULL;
+    
+//    link->next=node0;
+//    node0->next=node1;
+    
+    
+    bool circle = hasCycle(link->next);
+    
+    NSLog(@"222");
+    
+}
+
+
+
+
+
+
+
 
 -(void)testSingleLink{
 //    Link head_ptr = NULL;//头指针

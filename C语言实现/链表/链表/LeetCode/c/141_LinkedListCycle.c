@@ -16,16 +16,17 @@
 // 快慢指针原理：
 // 好比在操场跑圈，跑的快的人一个会和跑的慢的人相遇的，如果快慢指针相遇了则存在环。
 // 慢指针走一步，快指针走两步
-bool hasCycle(SingleLink *head) {
-    SingleLink *slow=head;
-    SingleLink *fast=head->next;
-    //fast为空则代表走到头了，因为下面有fast->next->next，则需要判断fast->next是否为空
-    while (fast != NULL || fast->next != NULL) {
+bool hasCycle(SingleLink_C *head) {
+    if (head==NULL) return false;
+    SingleLink_C *slow=head;
+    SingleLink_C *fast=head->next;
+    //fast为空则代表走到头了
+    while (fast != NULL) {
+        //因为下面有fast->next->next，则需要判断fast->next是否为空
+        if (fast->next == NULL) return false;
         slow=slow->next;
         fast=fast->next->next;
-        if (slow == fast) {
-            return true;
-        }
+        if (slow == fast) return true;
     }
     return  false;
 }

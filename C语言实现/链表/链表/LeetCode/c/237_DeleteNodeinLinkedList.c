@@ -19,7 +19,7 @@
  */
 
 
-void deleteNode(SingleLink* node) {
+void deleteNode(SingleLink_C* node) {
     //拿node后面的节点值直接覆盖当前要删掉的节点的值，不就相当于把当前node删掉了吗
     node->val=node->next->val;
     //同时把当前要删掉的node的next指向下一个的下一个节点。

@@ -15,7 +15,11 @@ struct ListNode_C {
     int val;
     struct ListNode_C *next;
 };
-typedef struct ListNode_C SingleLink;
+typedef struct ListNode_C SingleLink_C;
+
+
+SingleLink_C *create_link_C(void);
+
 
 
 
