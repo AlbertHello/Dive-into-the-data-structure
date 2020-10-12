@@ -34,9 +34,9 @@
     //单向循环链表
 //    [self testCircleSingleLink];
     //双向链表
-    [self testDoubleLink];
+//    [self testDoubleLink];
     //双向循环链表
-//    [self testCircleDoubleLink];
+    [self testCircleDoubleLink];
     
     //逆置单链表
 //    [self reverseLinkDemo];
@@ -257,62 +257,52 @@
 }
 
 -(void)testCircleDoubleLink{
-    CircleDoubleLink head_ptr = NULL;//头指针
-    Status ret = circleDoubleLinkNode_init_link(&head_ptr);
-    if (ret!=Success) {
-        printf("linklist init error \n");
-    }
-    if (circleDoubleLinkNode_is_empty(head_ptr)) {
-        NSLog(@"双向循环链表为空");
-    }else{
-        NSLog(@"双向循环链表不是空");
-    }
-    NSLog(@"此时双向循环链表长度：%d",get_link_length());
+    CircleDoubleLink cd_link=create_circle_double_link();
     
     //追加元素
-    circleDoubleLinkNode_insert_element(20,head_ptr);
-    circleDoubleLinkNode_insert_element(30,head_ptr);
-    circleDoubleLinkNode_insert_element(50,head_ptr);
-    circleDoubleLinkNode_insert_element(60,head_ptr);
-    circleDoubleLinkNode_insert_element(70,head_ptr);
-    circleDoubleLinkNode_insert_element(80,head_ptr);
-    circleDoubleLinkNode_printLink(head_ptr);
+    circleDoubleLinkNode_insert_element(20,cd_link);
+    circleDoubleLinkNode_insert_element(30,cd_link);
+    circleDoubleLinkNode_insert_element(50,cd_link);
+    circleDoubleLinkNode_insert_element(60,cd_link);
+    circleDoubleLinkNode_insert_element(70,cd_link);
+    circleDoubleLinkNode_insert_element(80,cd_link);
+    circleDoubleLinkNode_printLink(cd_link);
     //在指定位置添加元素
-    if(circleDoubleLinkNode_insert_element_at_index(40,0, head_ptr)){
-        circleDoubleLinkNode_printLink(head_ptr);
+    if(circleDoubleLinkNode_insert_element_at_index(40,0, cd_link)){
+        circleDoubleLinkNode_printLink(cd_link);
     }
     //删除
     int data=0;
-    if(circleDoubleLinkNode_delete_element(0, &data, head_ptr)){
+    if(circleDoubleLinkNode_delete_element(0, &data, cd_link)){
         NSLog(@"删除的元素是：%d",data);
-        circleDoubleLinkNode_printLink(head_ptr);
+        circleDoubleLinkNode_printLink(cd_link);
     }
     
     //根据index查找ele
-    CircleDoubleLink node;
-    if(circleDoubleLinkNode_node_of_index(0, head_ptr, &node)){
+    CircleDoubleLinkNode node;
+    if(circleDoubleLinkNode_node_of_index(0, cd_link, &node)){
         NSLog(@"查找的第0个节点元素是：%d 地址是：%p",node->data,node);
     }
     
     //修改指定位置元素
-    if(circleDoubleLinkNode_update_ele(6, 90, head_ptr)){
+    if(circleDoubleLinkNode_update_ele(6, 90, cd_link)){
         NSLog(@"修改第7个节点元素越界");
     }else{
-        if(circleDoubleLinkNode_update_ele(5, 90, head_ptr)){
+        if(circleDoubleLinkNode_update_ele(5, 90, cd_link)){
             NSLog(@"第6个节点元素被修改为90");
-            circleDoubleLinkNode_printLink(head_ptr);
+            circleDoubleLinkNode_printLink(cd_link);
         }
     }
     //根据元素查找下标
-    int index=circleDoubleLinkNode_locate_ele_with_element(30, head_ptr);
+    int index=circleDoubleLinkNode_locate_ele_with_element(30, cd_link);
     NSLog(@"30是在第%d个节点",index+1);
-    int index1=circleDoubleLinkNode_locate_ele_with_element(55, head_ptr);
+    int index1=circleDoubleLinkNode_locate_ele_with_element(55, cd_link);
     if (index1==-1) {
         NSLog(@"双向循环链表中没有元素是55的节点");
     }
     
-    circleDoubleLinkNode_clearLink(head_ptr);
-    if (circleDoubleLinkNode_is_empty(head_ptr)) {
+    circleDoubleLinkNode_clearLink(cd_link);
+    if (circleDoubleLinkNode_is_empty(cd_link)) {
         NSLog(@"双向循环链表为空");
     }else{
         NSLog(@"双向循环链表不是空");

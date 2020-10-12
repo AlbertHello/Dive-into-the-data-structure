@@ -101,11 +101,27 @@ int doubleLinkNode_get_link_length(DoubleLink d_link){
 //6、根据下标index查找元素Element
 Status doubleLinkNode_node_of_index(int index, DoubleLink d_link, DoubleLinkNode *node){
     if (doubleLinkNode_boundary_check(index, d_link)) return Error;
-    (*node) = d_link->first;//此时node表示头结点
-    int i=0;
-    while ((*node) && i<index) {
-        (*node)= (*node)->next;//依次后移
-        i++;
+    
+    // 1、方法1 从头遍历
+//    (*node) = d_link->first;//此时node表示头结点
+//    int i=0;
+//    while ((*node) && i<index) {
+//        (*node)= (*node)->next;//依次后移
+//        i++;
+//    }
+//    return Success;
+    
+    // 2、方法2 遍历一半
+    if (index < d_link->size/2) { // index 小于size的一半，也就是遍历前半部分
+        (*node) = d_link->first;
+        for (int i=0; i<index; i++) {
+            (*node)=(*node)->next;
+        }
+    }else{ // index 大于等于于size的一半，也就是遍历后半部分
+        (*node) = d_link->last;
+        for (int i = d_link->size-1; i>index; i--) {
+            (*node)=(*node)->pre;
+        }
     }
     return Success;
 }
