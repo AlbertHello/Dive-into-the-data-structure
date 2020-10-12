@@ -17,7 +17,7 @@ CircleDoubleLink create_circle_double_link(void){
 }
 //2、增加一个元素
 int circleDoubleLinkNode_insert_element(Element elem,CircleDoubleLink cd_link){
-    circleDoubleLinkNode_insert_element_at_index(elem,g_size_circleDoubleLinkNode, cd_link);
+    circleDoubleLinkNode_insert_element_at_index(elem,cd_link->size, cd_link);
     return Success;
 }
 bool circleDoubleLinkNode_is_empty(CircleDoubleLink cd_link){
@@ -30,7 +30,7 @@ Status circleDoubleLinkNode_insert_element_at_index(Element elem, int index, Cir
     CircleDoubleLinkNode new_node=(CircleDoubleLinkNode)malloc(sizeof(struct CircleDoubleLinkNode));
     new_node->data=elem;//新节点赋值
     if (index==0) {//插入到最前面
-        if (g_size_circleDoubleLinkNode==0) {//这是添加整个链表中第一个节点时
+        if (cd_link->size==0) {//这是添加整个链表中第一个节点时
             cd_link->last=new_node;//头指针的first和last都指向这个新节点
             new_node->pre=new_node;//新节点的pre为指向自己
             new_node->next=new_node;//新节点的next也指向自己
@@ -44,7 +44,7 @@ Status circleDoubleLinkNode_insert_element_at_index(Element elem, int index, Cir
             last_node->next=new_node;//最后一个节点next重新指向这个新节点
         }
         cd_link->first=new_node;//头指针指向这个新节点，那么这个新节点就成了新的头结点。
-    }else if (index==g_size_circleDoubleLinkNode){//插入到最后位置
+    }else if (index==cd_link->size){//插入到最后位置
         CircleDoubleLinkNode head_node=cd_link->first;
         CircleDoubleLinkNode last_node=cd_link->last;//旧尾节点
         head_node->pre=new_node;//头结点的pre指向了新的尾结点
@@ -61,8 +61,7 @@ Status circleDoubleLinkNode_insert_element_at_index(Element elem, int index, Cir
         new_node->next=current_node;//新节点的next
         current_node->pre=new_node;//当前节点的pre
     }
-    g_size_circleDoubleLinkNode++;
-    printf("insert one node at index=%d,size=%d\n",index,g_size_circleDoubleLinkNode);
+    cd_link->size++;
     return Success;
 }
 
@@ -71,7 +70,7 @@ Status circleDoubleLinkNode_delete_element(int index,Element *data,CircleDoubleL
     CircleDoubleLinkNode delete_node=NULL;
     if (index==0) {
         delete_node=cd_link->first;//这是头结点
-        if (g_size_circleDoubleLinkNode==1) {
+        if (cd_link->size==1) {
             cd_link->first=NULL;
             cd_link->last=NULL;
         }else{
@@ -88,9 +87,8 @@ Status circleDoubleLinkNode_delete_element(int index,Element *data,CircleDoubleL
     }
     *data=delete_node->data;
     free(delete_node);
-    printf("delete one node,index=%d.size=%d\n",index,g_size_circleDoubleLinkNode);
-    g_size_circleDoubleLinkNode--;
-
+    printf("delete one node,index=%d.size=%d\n",index,cd_link->size);
+    cd_link->size--;
     return Success;
 }
 //4、修改一个元素
@@ -101,12 +99,12 @@ Status circleDoubleLinkNode_update_ele(int index, Element ele, CircleDoubleLink 
     return Success;
 }
 //5、获取链表长度
-int circleDoubleLinkNode_get_link_length(){
-    return g_size_circleDoubleLinkNode;
+int circleDoubleLinkNode_get_link_length(CircleDoubleLink cd_link){
+    return cd_link->size;
 }
 //6、根据下标index查找元素Element
 Status circleDoubleLinkNode_node_of_index(int index, CircleDoubleLink cd_link, CircleDoubleLinkNode *node){
-    if (circleDoubleLinkNode_boundary_check(index)) return Error;
+    if (circleDoubleLinkNode_boundary_check(index,cd_link)) return Error;
     (*node) = cd_link->first;//此时node表示头结点
     int i=0;
     while ((*node) && i<index) {
@@ -119,7 +117,7 @@ Status circleDoubleLinkNode_node_of_index(int index, CircleDoubleLink cd_link, C
 int circleDoubleLinkNode_locate_ele_with_element(Element ele, CircleDoubleLink cd_link){
     int index=-1;
     struct CircleDoubleLinkNode *node=cd_link->first;
-    for (int i=0; i<g_size_circleDoubleLinkNode; i++) {
+    for (int i=0; i<cd_link->size; i++) {
         if ((node->data == ele) && node) {
             index=i;
             break;
@@ -132,7 +130,7 @@ int circleDoubleLinkNode_locate_ele_with_element(Element ele, CircleDoubleLink c
 Status circleDoubleLinkNode_clearLink(CircleDoubleLink cd_link){
     CircleDoubleLinkNode head_node=cd_link->first;
     int i=0;
-    while (head_node && i<g_size_circleDoubleLinkNode) {
+    while (head_node && i<cd_link->size) {
         CircleDoubleLinkNode temp=head_node;
         head_node=head_node->next;
         printf("删除%d\n",temp->data);
@@ -141,14 +139,14 @@ Status circleDoubleLinkNode_clearLink(CircleDoubleLink cd_link){
     }
     cd_link->first=NULL;
     cd_link->last=NULL;
-    g_size_circleDoubleLinkNode =0;
+    cd_link->size=0;
     printf("链表被清空...\n");
     return Success;
 }
 //9、检查是否越界
-bool circleDoubleLinkNode_boundary_check(int index){
-    if (index<0 || index>=g_size_circleDoubleLinkNode) {
-        printf("index=%d out of bounds. size=%d \n",index,g_size_circleDoubleLinkNode);
+bool circleDoubleLinkNode_boundary_check(int index,CircleDoubleLink cd_link){
+    if (index<0 || index>=cd_link->size) {
+        printf("index=%d out of bounds. size=%d \n",index,cd_link->size);
         return true;
     }else{
         return false;
@@ -158,10 +156,10 @@ bool circleDoubleLinkNode_boundary_check(int index){
 void circleDoubleLinkNode_printLink(CircleDoubleLink cd_link){
     int i=0;
     CircleDoubleLinkNode node=cd_link->first;
-    while (node && i<g_size_circleDoubleLinkNode) {
+    while (node && i<cd_link->size) {
         printf("第%d个节点：data=%d,本节点地址: %p 下个节点地址: %p 上个节点地址=%p\n",i+1,node->data,node,node->next,node->pre);
         node=node->next;
         i++;
     }
-    printf("size=%d\n",g_size_circleDoubleLinkNode);
+    printf("size=%d\n",cd_link->size);
 }

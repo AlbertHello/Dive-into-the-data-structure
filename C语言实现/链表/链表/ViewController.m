@@ -307,7 +307,7 @@
     }else{
         NSLog(@"双向循环链表不是空");
     }
-    NSLog(@"此时双向循环链表长度：%d",circleDoubleLinkNode_get_link_length());
+    NSLog(@"此时双向循环链表长度：%d",circleDoubleLinkNode_get_link_length(cd_link));
 }
 
 -(void)reverseLinkDemo{

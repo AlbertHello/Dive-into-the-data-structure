@@ -16,7 +16,6 @@
 
 typedef int Element;
 typedef int Status;
-static  int g_size_circleDoubleLinkNode=0;
 #define Error 0
 #define Success 1
 //双向链表节点定义
@@ -57,8 +56,8 @@ void circleDoubleLinkNode_printLink(CircleDoubleLink cd_link);
 //是否为空
 bool circleDoubleLinkNode_is_empty(CircleDoubleLink cd_link);
 //获取链表长度
-int circleDoubleLinkNode_get_link_length(void);
+int circleDoubleLinkNode_get_link_length(CircleDoubleLink cd_link);
 //越界检查
-bool circleDoubleLinkNode_boundary_check(int index);
+bool circleDoubleLinkNode_boundary_check(int index,CircleDoubleLink cd_link);
 
 #endif /* CircleDoubleLink_h */

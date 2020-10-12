@@ -16,7 +16,6 @@
 
 typedef int Element;
 typedef int Status;
-static  int g_size_doubleLinkNode=0;
 #define Error 0
 #define Success 1
 //双向链表节点定义

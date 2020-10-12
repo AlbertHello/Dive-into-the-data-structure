@@ -149,7 +149,7 @@ Status doubleLinkNode_clearLink(DoubleLink d_link){
     }
     d_link->first=NULL;
     d_link->last=NULL;
-    d_link->size =0;
+    d_link->size=0;
     printf("链表被清空...\n");
     return Success;
 }
