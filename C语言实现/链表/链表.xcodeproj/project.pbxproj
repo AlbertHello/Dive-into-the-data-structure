@@ -24,6 +24,7 @@
 		378C44DA25319D640009349B /* 206_ReverseLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 378C44D925319D640009349B /* 206_ReverseLinkedList.c */; };
 		378C44E02531EB470009349B /* 141_LinkedListCycle.c in Sources */ = {isa = PBXBuildFile; fileRef = 378C44DF2531EB470009349B /* 141_LinkedListCycle.c */; };
 		378C44E525329ECA0009349B /* ListNode_C.c in Sources */ = {isa = PBXBuildFile; fileRef = 378C44E425329ECA0009349B /* ListNode_C.c */; };
+		37A141F425342A2D00582462 /* 203_RemoveLinkedListElements.c in Sources */ = {isa = PBXBuildFile; fileRef = 37A141F325342A2D00582462 /* 203_RemoveLinkedListElements.c */; };
 		37B78C74231DD0E80049BC59 /* CircleSingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37B78C73231DD0E80049BC59 /* CircleSingleLink.c */; };
 		37D0D7832309711C003A2BC5 /* SingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D7822309711C003A2BC5 /* SingleLink.c */; };
 		37D4FB3F2320920000D79032 /* CircleDoubleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FB3E2320920000D79032 /* CircleDoubleLink.c */; };
@@ -79,6 +80,8 @@
 		378C44DE2531EB470009349B /* 141_LinkedListCycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 141_LinkedListCycle.h; sourceTree = "<group>"; };
 		378C44DF2531EB470009349B /* 141_LinkedListCycle.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 141_LinkedListCycle.c; sourceTree = "<group>"; };
 		378C44E425329ECA0009349B /* ListNode_C.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ListNode_C.c; sourceTree = "<group>"; };
+		37A141F225342A2D00582462 /* 203_RemoveLinkedListElements.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 203_RemoveLinkedListElements.h; sourceTree = "<group>"; };
+		37A141F325342A2D00582462 /* 203_RemoveLinkedListElements.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 203_RemoveLinkedListElements.c; sourceTree = "<group>"; };
 		37B78C72231DD0E80049BC59 /* CircleSingleLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleSingleLink.h; sourceTree = "<group>"; };
 		37B78C73231DD0E80049BC59 /* CircleSingleLink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CircleSingleLink.c; sourceTree = "<group>"; };
 		37D0D7812309711C003A2BC5 /* SingleLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLink.h; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				378C44D925319D640009349B /* 206_ReverseLinkedList.c */,
 				378C44DE2531EB470009349B /* 141_LinkedListCycle.h */,
 				378C44DF2531EB470009349B /* 141_LinkedListCycle.c */,
+				37A141F225342A2D00582462 /* 203_RemoveLinkedListElements.h */,
+				37A141F325342A2D00582462 /* 203_RemoveLinkedListElements.c */,
 			);
 			path = c;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 				37D4FB3F2320920000D79032 /* CircleDoubleLink.c in Sources */,
 				3741D313231F1FB800377EF2 /* DoubleLink.c in Sources */,
 				D1B6AF08239BAB1500EF5DCC /* ReverseLink.c in Sources */,
+				37A141F425342A2D00582462 /* 203_RemoveLinkedListElements.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

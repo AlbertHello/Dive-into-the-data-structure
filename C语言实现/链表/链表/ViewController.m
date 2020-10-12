@@ -13,6 +13,8 @@
 #include "CircleDoubleLink.h"
 #include "ReverseLink.h"
 #include "141_LinkedListCycle.h"
+#include "203_RemoveLinkedListElements.h"
+
 
 
 
@@ -36,37 +38,54 @@
     //双向链表
 //    [self testDoubleLink];
     //双向循环链表
-    [self testCircleDoubleLink];
+//    [self testCircleDoubleLink];
     
     //逆置单链表
 //    [self reverseLinkDemo];
     
-//    [self findCircleTest];
     
-    
-    
+    [self tempTest];
 }
 
 
 
--(void)findCircleTest{
+-(void)tempTest{
     SingleLink_C *link=(SingleLink_C *)malloc(sizeof(SingleLink_C));
-    link->val=-1;
+    link->val=5;
     link->next=NULL;
     
-//    SingleLink_C *node0=(SingleLink_C *)malloc(sizeof(SingleLink_C));
-//    node0->val=1;
-//    node0->next=NULL;
+    SingleLink_C *node0=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+    node0->val=4;
+    node0->next=NULL;
 //
-//    SingleLink_C *node1=(SingleLink_C *)malloc(sizeof(SingleLink_C));
-//    node1->val=2;
-//    node1->next=NULL;
+    SingleLink_C *node1=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+    node1->val=3;
+    node1->next=NULL;
     
-//    link->next=node0;
-//    node0->next=node1;
+    SingleLink_C *node2=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+    node2->val=2;
+    node2->next=NULL;
+    
+    SingleLink_C *node3=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+    node3->val=1;
+    node3->next=NULL;
+    
+    SingleLink_C *node4=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+    node4->val=1;
+    node4->next=NULL;
+    
+    link->next=node0;
+    node0->next=node1;
+    node1->next=node2;
+    node3->next=node4;
+    node4->next=NULL;
     
     
-    bool circle = hasCycle(link->next);
+    
+//    bool circle = hasCycle(link->next);
+    
+    SingleLink_C *new_linl =  removeElements(link, 1);
+    
     
     NSLog(@"222");
     
