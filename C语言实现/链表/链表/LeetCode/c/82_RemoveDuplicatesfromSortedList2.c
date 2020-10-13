@@ -26,38 +26,39 @@
  */
 
 SingleNode_1* deleteDuplicates(SingleNode_1* head){
-    if (head == NULL || head->next == NULL) return head;
-    SingleNode_1 *node=head;
-    SingleNode_1 *ptr=head;
-    while(node->next != NULL){ //至少2个元素
-        if(node->val == node->next->val){
-            if (node->next->next == NULL && ptr == head) {
-                head = NULL;
-                return head;
-            }else{
-                //把这俩都去掉
-                ptr->next=node->next->next;
-                node=ptr->next;
-                if (node == NULL) return head;
-            }
-        }else{
-            ptr=node;
-            node=node->next;
+    if(!head || !head->next) return head;
+    //新创建一个节点，放在最前面
+    SingleNode_1 *dummyhead = (SingleNode_1 *)malloc(sizeof(SingleNode_1));
+    dummyhead -> next = head;
+    //再设置一个指针，指向这个最前面的节点
+    SingleNode_1 *prev = dummyhead;
+    while(prev && prev->next)
+    {
+        SingleNode_1 *curr = prev -> next; //curr是pre的后一个
+        //拿pre的后一个和后一个的后一个比较
+        //如果curr到最后一位了或者当前curr所指元素没有重复值
+        if(!curr->next || curr->next->val != curr->val) prev = curr;
+        else
+        {
+            // 将curr定位到一串重复元素的最后一位
+            while(curr->next && curr->next->val == curr->val) curr = curr -> next;
+            // prev->next跳过中间所有的重复元素
+            prev -> next = curr -> next;
         }
     }
-    return head;
+    return dummyhead -> next;
 }
 
 void deleteDuplicatesTest(){
     
     SingleLink_1 *link=create_single_link_1();
-    add_for_single_node_1(1, link);
-    add_for_single_node_1(1, link);
-    add_for_single_node_1(1, link);
-    add_for_single_node_1(2, link);
-    add_for_single_node_1(3, link);
-    add_for_single_node_1(4, link);
     add_for_single_node_1(5, link);
+    add_for_single_node_1(4, link);
+    add_for_single_node_1(3, link);
+    add_for_single_node_1(2, link);
+    add_for_single_node_1(1, link);
+    add_for_single_node_1(1, link);
+    add_for_single_node_1(1, link);
     
     SingleNode_1 *head=deleteDuplicates(link->first);
     link->first=head;

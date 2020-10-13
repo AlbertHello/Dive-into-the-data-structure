@@ -163,3 +163,4 @@ void circleDoubleLinkNode_printLink(CircleDoubleLink cd_link){
     }
     printf("size=%d\n",cd_link->size);
 }
+
