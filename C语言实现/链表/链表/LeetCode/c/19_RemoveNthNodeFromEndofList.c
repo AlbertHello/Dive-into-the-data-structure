@@ -9,6 +9,9 @@
 #include "19_RemoveNthNodeFromEndofList.h"
 
 
+// 两次遍历
+//1、获取长度
+//2、然后根据索引遍历
 SingleNode_1* removeNthFromEnd1(SingleNode_1 * head, int n){
         
     //1、遍历求链表长度
@@ -38,16 +41,58 @@ SingleNode_1* removeNthFromEnd1(SingleNode_1 * head, int n){
     return head;
 }
 
+/**
+ 一次遍历
+ 
+ 一次遍历法需要使用两个指针而不是一个指针。
+ 第一个指针从列表的开头向前移动n+1步，而第二个指针将从列表的开头出发。现在，这两个指针被n个结点分开。
+ 我们通过同时移动两个指针向前来保持这个恒定的间隔，直到第一个指针到达最后一个结点。
+ 此时第二个指针将指向从最后一个结点数起的第n个结点。我们重新链接第二个指针所引用的结点的
+ next指针指向该结点的下下个结点。
+
+ */
+SingleNode_1* removeNthFromEnd2(SingleNode_1 * head, int n){
+    SingleNode_1 *node1=head;
+    SingleNode_1 *node2=head;
+    SingleNode_1 *node3=head; // node3一直是node1前面的一个节点
+    int interval=0;
+    while (node2 != NULL) {
+        node2=node2->next;
+        interval++;
+        if (interval > n) {
+            node3=node1;
+            node1=node1->next;
+        }
+    }
+    
+    if (node1->next==NULL && node1 == head) {
+        //这是处理链表长度等于1的情况。
+        head = NULL;
+        return head;
+    }else if (node1->next == NULL){
+        //这是处理链表长度大于1的情况。
+        //第一个指针已经走到了null.第二个指针走到了最后一个节点
+        //也就是处理n=1的时候
+        node3->next=NULL;
+        return head;
+    }else{
+        node1->val=node1->next->val;
+        node1->next=node1->next->next;
+        return head;
+    }
+}
+
+
 void remove_nth_from_end_test(){
     
     SingleLink_1 *link=create_single_link_1();
     add_for_single_node_1(5, link);
-    add_for_single_node_1(4, link);
-    add_for_single_node_1(3, link);
-    add_for_single_node_1(2, link);
-    add_for_single_node_1(1, link);
+//    add_for_single_node_1(4, link);
+//    add_for_single_node_1(3, link);
+//    add_for_single_node_1(2, link);
+//    add_for_single_node_1(1, link);
     
-    SingleNode_1 *head=removeNthFromEnd1(link->first, 1);
+    SingleNode_1 *head=removeNthFromEnd2(link->first, 1);
     
     link->first=head;
     print_single_link_1(link);
