@@ -15,6 +15,7 @@
 #include "141_LinkedListCycle.h"
 #include "203_RemoveLinkedListElements.h"
 #include "2_AddTwoNumbers.h"
+#include "19_RemoveNthNodeFromEndofList.h"
 
 
 
@@ -52,8 +53,8 @@
 
 -(void)leetcodeTest{
     
-    add_two_numbers_test();
-    NSLog(@"222");
+//    add_two_numbers_test();
+    remove_nth_from_end_test();
 }
 
 -(void)testSingleLink{

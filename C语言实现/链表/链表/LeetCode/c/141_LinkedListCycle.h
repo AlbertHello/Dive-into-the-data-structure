@@ -12,6 +12,6 @@
 #include <stdio.h>
 #include "ListNode_C.h"
 
-bool hasCycle(SingleLink_C *head);
+bool hasCycle(SingleNode_1 *head);
 
 #endif /* _41_LinkedListCycle_h */

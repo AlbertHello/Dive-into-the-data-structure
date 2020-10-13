@@ -12,5 +12,6 @@
 #include <stdio.h>
 #include "ListNode_C.h"
 
+void remove_nth_from_end_test(void);
 
 #endif /* _9_RemoveNthNodeFromEndofList_h */

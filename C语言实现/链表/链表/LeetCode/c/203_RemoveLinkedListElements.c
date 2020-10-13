@@ -29,10 +29,10 @@
  
  */
 
-SingleLink_C* removeElements(SingleLink_C* head, int val){
+SingleNode_1* removeElements(SingleNode_1* head, int val){
     if (head == NULL ) return NULL;
-    SingleLink_C *node=head;
-    SingleLink_C *last_node=head;
+    SingleNode_1 *node=head;
+    SingleNode_1 *last_node=head;
     while (node->next != NULL){
         if (node->val == val){
             //直接拿下一个的值覆盖当前值，就是删除了当前值啊

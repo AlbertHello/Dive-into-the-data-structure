@@ -12,6 +12,6 @@
 #include <stdio.h>
 #include "ListNode_C.h"
 
-SingleLink_C* removeElements(SingleLink_C* head, int val);
+SingleNode_1* removeElements(SingleNode_1* head, int val);
 
 #endif /* _03_RemoveLinkedListElements_h */

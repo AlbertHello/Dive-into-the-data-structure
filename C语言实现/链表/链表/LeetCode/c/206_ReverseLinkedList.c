@@ -19,13 +19,13 @@
  */
 
 // 递归
-SingleLink_C *reverseList_C1(SingleLink_C* head){
+SingleNode_1 *reverseList_C1(SingleNode_1* head){
     
     if (head == NULL || head->next == NULL){
         return head; // 当开始返回时，说明传进来的head=1
     }
     // 返回的new_head = 1，说明调用reverseList_C1传进去的是1，那么head=2
-    SingleLink_C *new_head=reverseList_C1(head->next);
+    SingleNode_1 *new_head=reverseList_C1(head->next);
     
     // 此时head是2，则head->next->next=head 就是2->next=1,1->next=2
     head->next->next=head;
@@ -38,15 +38,15 @@ SingleLink_C *reverseList_C1(SingleLink_C* head){
 }
 
 // 迭代
-SingleLink_C* reverseList_C2(SingleLink_C* head){
+SingleNode_1* reverseList_C2(SingleNode_1* head){
     if (head == NULL || head->next == NULL){
         return head;
     }
     //head=1,new_head = null
-    SingleLink_C *new_head=NULL;
+    SingleNode_1 *new_head=NULL;
     while(head != NULL){
         //tmp指向的一直是head的下一个，比如此时tmp=2
-        SingleLink_C *tmp_node=head->next;
+        SingleNode_1 *tmp_node=head->next;
         //1的next=null,连起来则是：head=1->null
         //2的next=new,连起来则是：head=2->new=1->null，也就是head=2->1->null
         head->next=new_head;

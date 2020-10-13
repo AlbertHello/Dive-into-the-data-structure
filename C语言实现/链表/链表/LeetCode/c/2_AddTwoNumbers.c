@@ -28,13 +28,13 @@
 //获取两个链表所对应的长度
 //在较短的链表末尾补零
 //对齐相加考虑进位
-SingleLink_C *addTwoNumbers1(SingleLink_C* l1, SingleLink_C* l2){
+SingleNode_1 *addTwoNumbers1(SingleNode_1* l1, SingleNode_1* l2){
     
 //    1、获取链表长度
     int len1=0;
     int len2=0;
-    SingleLink_C *link1=l1;
-    SingleLink_C *link2=l2;
+    SingleNode_1 *link1=l1;
+    SingleNode_1 *link2=l2;
     while (link1->next != NULL) {
         len1++;
         link1=link1->next;
@@ -49,7 +49,7 @@ SingleLink_C *addTwoNumbers1(SingleLink_C* l1, SingleLink_C* l2){
 //    2、统一长度，短的补零
     if (len1<len2) {
         while (len1 < len2) {
-            SingleLink_C *node=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+            SingleNode_1 *node=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
             node->val=0;
             node->next=NULL;
             len1++;
@@ -58,7 +58,7 @@ SingleLink_C *addTwoNumbers1(SingleLink_C* l1, SingleLink_C* l2){
         }
     }else{
         while (len2 < len1) {
-            SingleLink_C *node=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+            SingleNode_1 *node=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
             node->val=0;
             node->next=NULL;
             len2++;
@@ -70,11 +70,11 @@ SingleLink_C *addTwoNumbers1(SingleLink_C* l1, SingleLink_C* l2){
 //    3、相同索引下的值相加，记录进位
     link1=l1;
     link2=l2;
-    SingleLink_C *l3=NULL;
-    SingleLink_C *link3=NULL;
+    SingleNode_1 *l3=NULL;
+    SingleNode_1 *link3=NULL;
     int count=0;
     while (link1 != NULL) {
-        SingleLink_C *node=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+        SingleNode_1 *node=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
         count = link1->val+link2->val + (count>=10 ? 1: 0);
         node->val=(count%10);
         node->next=NULL;
@@ -86,7 +86,7 @@ SingleLink_C *addTwoNumbers1(SingleLink_C* l1, SingleLink_C* l2){
     }
 //    4、记录最后一个索引的进位
     if (count>=10) {
-        SingleLink_C *node=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+        SingleNode_1 *node=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
         node->val=1;
         node->next=NULL;
         link3->next=node;
@@ -97,16 +97,16 @@ SingleLink_C *addTwoNumbers1(SingleLink_C* l1, SingleLink_C* l2){
 
 // 不进行补齐操作，直接相同index相加，当然需要进行节点判空
 // 进位记录照样
-SingleLink_C *addTwoNumbers2(SingleLink_C* l1, SingleLink_C* l2){
+SingleNode_1 *addTwoNumbers2(SingleNode_1* l1, SingleNode_1* l2){
     
-    SingleLink_C *link1=l1;
-    SingleLink_C* link2=l2;
-    SingleLink_C *l3=NULL;
-    SingleLink_C *link3=NULL;
+    SingleNode_1 *link1=l1;
+    SingleNode_1* link2=l2;
+    SingleNode_1 *l3=NULL;
+    SingleNode_1 *link3=NULL;
     int count=0;
     // 不进行补齐，
     while (link1 != NULL || link2 != NULL) {
-        SingleLink_C *node=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+        SingleNode_1 *node=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
         int num1=(link1 == NULL)? 0:link1->val;
         int num2=(link2 == NULL)? 0:link2->val;
         count = num1 + num2 + (count>=10 ? 1: 0);
@@ -120,7 +120,7 @@ SingleLink_C *addTwoNumbers2(SingleLink_C* l1, SingleLink_C* l2){
     }
 //    记录最后一个索引的进位
     if (count>=10) {
-        SingleLink_C *node=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+        SingleNode_1 *node=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
         node->val=1;
         node->next=NULL;
         link3->next=node;
@@ -129,27 +129,27 @@ SingleLink_C *addTwoNumbers2(SingleLink_C* l1, SingleLink_C* l2){
 }
 
 void add_two_numbers_test(void){
-    SingleLink_C *link1=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+    SingleNode_1 *link1=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
     link1->val=5;
     link1->next=NULL;
     
-    SingleLink_C *node0=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+    SingleNode_1 *node0=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
     node0->val=4;
     node0->next=NULL;
 
-    SingleLink_C *link2=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+    SingleNode_1 *link2=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
     link2->val=1;
     link2->next=NULL;
     
-    SingleLink_C *node2=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+    SingleNode_1 *node2=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
     node2->val=4;
     node2->next=NULL;
     
-    SingleLink_C *node3=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+    SingleNode_1 *node3=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
     node3->val=3;
     node3->next=NULL;
     
-    SingleLink_C *node4=(SingleLink_C *)malloc(sizeof(SingleLink_C));
+    SingleNode_1 *node4=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
     node4->val=1;
     node4->next=NULL;
     
@@ -159,9 +159,9 @@ void add_two_numbers_test(void){
     node2->next=node3;
     node3->next=node4;
     
-//    SingleLink_C *link=addTwoNumbers1(link1, link2);
+//    SingleNode_1 *link=addTwoNumbers1(link1, link2);
     
-    SingleLink_C *link=addTwoNumbers2(link1, link2);
+    SingleNode_1 *link=addTwoNumbers2(link1, link2);
     
     printf("123\n");
 }

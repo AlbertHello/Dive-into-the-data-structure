@@ -9,17 +9,29 @@
 #ifndef ListNode_C_h
 #define ListNode_C_h
 
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 
-struct ListNode_C {
+
+struct SingleLinkNode_1 {
     int val;
-    struct ListNode_C *next;
+    struct SingleLinkNode_1 *next;
 };
-typedef struct ListNode_C SingleLink_C;
+typedef struct SingleLinkNode_1 SingleNode_1;
+
+struct SingleLink_1 {
+    int size;
+    SingleNode_1 *first;
+};
+typedef struct SingleLink_1 SingleLink_1;
 
 
-SingleLink_C *create_link_C(void);
+
+SingleLink_1 *create_single_link_1(void);
+void add_for_single_node_1(int val, SingleLink_1 *link);
+void print_single_link_1(SingleLink_1 *link);
 
 
 
