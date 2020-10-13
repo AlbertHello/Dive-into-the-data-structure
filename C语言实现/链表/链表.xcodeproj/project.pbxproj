@@ -18,6 +18,7 @@
 		3763567A23092D4F00C25BC7 /* __UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763567923092D4F00C25BC7 /* __UITests.m */; };
 		376356882309670D00C25BC7 /* 大话数据结构-链式存储.c in Sources */ = {isa = PBXBuildFile; fileRef = 376356872309670D00C25BC7 /* 大话数据结构-链式存储.c */; };
 		377F2F9A2535D02A00405A49 /* 61_RotateList.c in Sources */ = {isa = PBXBuildFile; fileRef = 377F2F992535D02A00405A49 /* 61_RotateList.c */; };
+		377F2FA02535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.c in Sources */ = {isa = PBXBuildFile; fileRef = 377F2F9F2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.c */; };
 		378C44B425318DE70009349B /* 237_DeleteNodeinLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C44B325318DE70009349B /* 237_DeleteNodeinLinkedList.swift */; };
 		378C44C325318E770009349B /* 237_DeleteNodeinLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 378C44C225318E770009349B /* 237_DeleteNodeinLinkedList.c */; };
 		378C44C8253191110009349B /* 206_ReverseLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C44C7253191110009349B /* 206_ReverseLinkedList.swift */; };
@@ -73,6 +74,8 @@
 		376356872309670D00C25BC7 /* 大话数据结构-链式存储.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "大话数据结构-链式存储.c"; sourceTree = "<group>"; };
 		377F2F982535D02A00405A49 /* 61_RotateList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 61_RotateList.h; sourceTree = "<group>"; };
 		377F2F992535D02A00405A49 /* 61_RotateList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 61_RotateList.c; sourceTree = "<group>"; };
+		377F2F9E2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 82_RemoveDuplicatesfromSortedList2.h; sourceTree = "<group>"; };
+		377F2F9F2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 82_RemoveDuplicatesfromSortedList2.c; sourceTree = "<group>"; };
 		378C44A1253189170009349B /* 链表-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "链表-Bridging-Header.h"; sourceTree = "<group>"; };
 		378C44B325318DE70009349B /* 237_DeleteNodeinLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 237_DeleteNodeinLinkedList.swift; sourceTree = "<group>"; };
 		378C44C125318E770009349B /* 237_DeleteNodeinLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 237_DeleteNodeinLinkedList.h; sourceTree = "<group>"; };
@@ -233,6 +236,8 @@
 				37A142232534627800582462 /* 19_RemoveNthNodeFromEndofList.c */,
 				377F2F982535D02A00405A49 /* 61_RotateList.h */,
 				377F2F992535D02A00405A49 /* 61_RotateList.c */,
+				377F2F9E2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.h */,
+				377F2F9F2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.c */,
 			);
 			path = c;
 			sourceTree = "<group>";
@@ -411,6 +416,7 @@
 				378C44E525329ECA0009349B /* ListNode_C.c in Sources */,
 				3763565A23092D4D00C25BC7 /* ViewController.m in Sources */,
 				37B78C74231DD0E80049BC59 /* CircleSingleLink.c in Sources */,
+				377F2FA02535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.c in Sources */,
 				378C44B425318DE70009349B /* 237_DeleteNodeinLinkedList.swift in Sources */,
 				37D0D7832309711C003A2BC5 /* SingleLink.c in Sources */,
 				376356882309670D00C25BC7 /* 大话数据结构-链式存储.c in Sources */,

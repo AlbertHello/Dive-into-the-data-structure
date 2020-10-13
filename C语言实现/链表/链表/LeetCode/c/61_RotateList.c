@@ -87,3 +87,6 @@ void rotate_right_test(){
     link->first=head;
     print_single_link_1(link);
 }
+
+
+
