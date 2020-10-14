@@ -7,7 +7,6 @@
 //
 
 #include "82_RemoveDuplicatesfromSortedList2.h"
-
 /**
  给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 没有重复出现 的数字。
 
@@ -53,20 +52,23 @@ SingleNode_1* deleteDuplicates(SingleNode_1* head){
     // new_head 不是实际的head，要返回下一个才是真实的head
     return new_head -> next;
 }
+    
 
 void deleteDuplicatesTest(){
     
-    SingleLink_1 *link=create_single_link_1();
-    add_for_single_node_1(5, link);
-    add_for_single_node_1(4, link);
-    add_for_single_node_1(3, link);
-    add_for_single_node_1(2, link);
-    add_for_single_node_1(1, link);
-    add_for_single_node_1(1, link);
-    add_for_single_node_1(1, link);
-    
-    SingleNode_1 *head=deleteDuplicates(link->first);
-    link->first=head;
-    
-    print_single_link_1(link);
+//    SingleLink_1 *link=create_single_link_1();
+//    add_for_single_node_1(5, link);
+//    add_for_single_node_1(4, link);
+//    add_for_single_node_1(3, link);
+//    add_for_single_node_1(2, link);
+//    add_for_single_node_1(1, link);
+//    add_for_single_node_1(1, link);
+//    add_for_single_node_1(1, link);
+//
+//    SingleNode_1 *head=deleteDuplicates(link->first);
+//    link->first=head;
+//
+//    print_single_link_1(link);
 }
+
+

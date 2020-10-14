@@ -29,6 +29,7 @@
 		37A141F425342A2D00582462 /* 203_RemoveLinkedListElements.c in Sources */ = {isa = PBXBuildFile; fileRef = 37A141F325342A2D00582462 /* 203_RemoveLinkedListElements.c */; };
 		37A1420C25344E5200582462 /* 2_AddTwoNumbers.c in Sources */ = {isa = PBXBuildFile; fileRef = 37A1420B25344E5200582462 /* 2_AddTwoNumbers.c */; };
 		37A142242534627800582462 /* 19_RemoveNthNodeFromEndofList.c in Sources */ = {isa = PBXBuildFile; fileRef = 37A142232534627800582462 /* 19_RemoveNthNodeFromEndofList.c */; };
+		37A9D0122536D21000A2B9C2 /* 1002_Find_Common_Characters.c in Sources */ = {isa = PBXBuildFile; fileRef = 37A9D0112536D21000A2B9C2 /* 1002_Find_Common_Characters.c */; };
 		37B78C74231DD0E80049BC59 /* CircleSingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37B78C73231DD0E80049BC59 /* CircleSingleLink.c */; };
 		37D0D7832309711C003A2BC5 /* SingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D7822309711C003A2BC5 /* SingleLink.c */; };
 		37D4FB3F2320920000D79032 /* CircleDoubleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FB3E2320920000D79032 /* CircleDoubleLink.c */; };
@@ -94,6 +95,8 @@
 		37A1420B25344E5200582462 /* 2_AddTwoNumbers.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 2_AddTwoNumbers.c; sourceTree = "<group>"; };
 		37A142222534627800582462 /* 19_RemoveNthNodeFromEndofList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 19_RemoveNthNodeFromEndofList.h; sourceTree = "<group>"; };
 		37A142232534627800582462 /* 19_RemoveNthNodeFromEndofList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 19_RemoveNthNodeFromEndofList.c; sourceTree = "<group>"; };
+		37A9D0102536D21000A2B9C2 /* 1002_Find_Common_Characters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 1002_Find_Common_Characters.h; sourceTree = "<group>"; };
+		37A9D0112536D21000A2B9C2 /* 1002_Find_Common_Characters.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 1002_Find_Common_Characters.c; sourceTree = "<group>"; };
 		37B78C72231DD0E80049BC59 /* CircleSingleLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleSingleLink.h; sourceTree = "<group>"; };
 		37B78C73231DD0E80049BC59 /* CircleSingleLink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CircleSingleLink.c; sourceTree = "<group>"; };
 		37D0D7812309711C003A2BC5 /* SingleLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLink.h; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 				377F2F992535D02A00405A49 /* 61_RotateList.c */,
 				377F2F9E2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.h */,
 				377F2F9F2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.c */,
+				37A9D0102536D21000A2B9C2 /* 1002_Find_Common_Characters.h */,
+				37A9D0112536D21000A2B9C2 /* 1002_Find_Common_Characters.c */,
 			);
 			path = c;
 			sourceTree = "<group>";
@@ -411,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A9D0122536D21000A2B9C2 /* 1002_Find_Common_Characters.c in Sources */,
 				378C44C8253191110009349B /* 206_ReverseLinkedList.swift in Sources */,
 				377F2F9A2535D02A00405A49 /* 61_RotateList.c in Sources */,
 				378C44E525329ECA0009349B /* ListNode_C.c in Sources */,
