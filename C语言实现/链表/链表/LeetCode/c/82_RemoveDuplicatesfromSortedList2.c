@@ -25,13 +25,17 @@
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
+
+// 算法思想
+// 再创建一个节点，当做新的head，那么，这个head是不参与比较的。
+//
 SingleNode_1* deleteDuplicates(SingleNode_1* head){
     if(!head || !head->next) return head;
     //新创建一个节点，放在最前面
-    SingleNode_1 *dummyhead = (SingleNode_1 *)malloc(sizeof(SingleNode_1));
-    dummyhead -> next = head;
+    SingleNode_1 *new_head = (SingleNode_1 *)malloc(sizeof(SingleNode_1));
+    new_head -> next = head;
     //再设置一个指针，指向这个最前面的节点
-    SingleNode_1 *prev = dummyhead;
+    SingleNode_1 *prev = new_head;
     while(prev && prev->next)
     {
         SingleNode_1 *curr = prev -> next; //curr是pre的后一个
@@ -46,7 +50,8 @@ SingleNode_1* deleteDuplicates(SingleNode_1* head){
             prev -> next = curr -> next;
         }
     }
-    return dummyhead -> next;
+    // new_head 不是实际的head，要返回下一个才是真实的head
+    return new_head -> next;
 }
 
 void deleteDuplicatesTest(){
