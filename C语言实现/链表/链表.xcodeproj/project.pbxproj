@@ -19,6 +19,8 @@
 		376356882309670D00C25BC7 /* 大话数据结构-链式存储.c in Sources */ = {isa = PBXBuildFile; fileRef = 376356872309670D00C25BC7 /* 大话数据结构-链式存储.c */; };
 		3778470325371D3000981298 /* 1_TwoSum.c in Sources */ = {isa = PBXBuildFile; fileRef = 3778470225371D3000981298 /* 1_TwoSum.c */; };
 		377847092537262800981298 /* 21_MergeTwoSortedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 377847082537262800981298 /* 21_MergeTwoSortedList.c */; };
+		3778470F25372F2C00981298 /* 5_LongestPalindromicSubstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 3778470E25372F2C00981298 /* 5_LongestPalindromicSubstring.c */; };
+		3778475A2537320900981298 /* 4_MedianofTwoSortedArrays.c in Sources */ = {isa = PBXBuildFile; fileRef = 377847592537320900981298 /* 4_MedianofTwoSortedArrays.c */; };
 		377F2F9A2535D02A00405A49 /* 61_RotateList.c in Sources */ = {isa = PBXBuildFile; fileRef = 377F2F992535D02A00405A49 /* 61_RotateList.c */; };
 		377F2FA02535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.c in Sources */ = {isa = PBXBuildFile; fileRef = 377F2F9F2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.c */; };
 		378C44B425318DE70009349B /* 237_DeleteNodeinLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C44B325318DE70009349B /* 237_DeleteNodeinLinkedList.swift */; };
@@ -79,6 +81,10 @@
 		3778470225371D3000981298 /* 1_TwoSum.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 1_TwoSum.c; sourceTree = "<group>"; };
 		377847072537262800981298 /* 21_MergeTwoSortedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 21_MergeTwoSortedList.h; sourceTree = "<group>"; };
 		377847082537262800981298 /* 21_MergeTwoSortedList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 21_MergeTwoSortedList.c; sourceTree = "<group>"; };
+		3778470D25372F2C00981298 /* 5_LongestPalindromicSubstring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 5_LongestPalindromicSubstring.h; sourceTree = "<group>"; };
+		3778470E25372F2C00981298 /* 5_LongestPalindromicSubstring.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 5_LongestPalindromicSubstring.c; sourceTree = "<group>"; };
+		377847582537320900981298 /* 4_MedianofTwoSortedArrays.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 4_MedianofTwoSortedArrays.h; sourceTree = "<group>"; };
+		377847592537320900981298 /* 4_MedianofTwoSortedArrays.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 4_MedianofTwoSortedArrays.c; sourceTree = "<group>"; };
 		377F2F982535D02A00405A49 /* 61_RotateList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 61_RotateList.h; sourceTree = "<group>"; };
 		377F2F992535D02A00405A49 /* 61_RotateList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 61_RotateList.c; sourceTree = "<group>"; };
 		377F2F9E2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 82_RemoveDuplicatesfromSortedList2.h; sourceTree = "<group>"; };
@@ -253,6 +259,10 @@
 				3778470225371D3000981298 /* 1_TwoSum.c */,
 				377847072537262800981298 /* 21_MergeTwoSortedList.h */,
 				377847082537262800981298 /* 21_MergeTwoSortedList.c */,
+				3778470D25372F2C00981298 /* 5_LongestPalindromicSubstring.h */,
+				3778470E25372F2C00981298 /* 5_LongestPalindromicSubstring.c */,
+				377847582537320900981298 /* 4_MedianofTwoSortedArrays.h */,
+				377847592537320900981298 /* 4_MedianofTwoSortedArrays.c */,
 			);
 			path = c;
 			sourceTree = "<group>";
@@ -443,7 +453,9 @@
 				378C44E02531EB470009349B /* 141_LinkedListCycle.c in Sources */,
 				37A142242534627800582462 /* 19_RemoveNthNodeFromEndofList.c in Sources */,
 				378C44CD253191B20009349B /* ListNode.swift in Sources */,
+				3778470F25372F2C00981298 /* 5_LongestPalindromicSubstring.c in Sources */,
 				377847092537262800981298 /* 21_MergeTwoSortedList.c in Sources */,
+				3778475A2537320900981298 /* 4_MedianofTwoSortedArrays.c in Sources */,
 				3763565723092D4D00C25BC7 /* AppDelegate.m in Sources */,
 				37D4FB3F2320920000D79032 /* CircleDoubleLink.c in Sources */,
 				37A1420C25344E5200582462 /* 2_AddTwoNumbers.c in Sources */,
