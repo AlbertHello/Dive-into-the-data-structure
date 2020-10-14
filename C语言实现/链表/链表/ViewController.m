@@ -18,6 +18,7 @@
 #include "19_RemoveNthNodeFromEndofList.h"
 #include "61_RotateList.h"
 #include "82_RemoveDuplicatesfromSortedList2.h"
+#include "1_TwoSum.h"
 
 
 
@@ -58,7 +59,8 @@
 //    add_two_numbers_test();
 //    remove_nth_from_end_test();
 //    rotate_right_test();
-    deleteDuplicatesTest();
+//    deleteDuplicatesTest();
+    twoSumTest();
 }
 
 -(void)testSingleLink{
