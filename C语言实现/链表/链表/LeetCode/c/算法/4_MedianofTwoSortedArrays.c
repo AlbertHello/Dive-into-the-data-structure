@@ -139,6 +139,15 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
     }
 }
 
+
+double findMedianSortedArrays2(int* nums1, int nums1Size, int* nums2, int nums2Size){
+    
+    
+    
+    return 0;
+}
+
+
 void findMedianSortedArraysTest(){
     int nums1[]={1,2,3};
     int nums2[]={2,4,1};
