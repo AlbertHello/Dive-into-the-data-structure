@@ -17,24 +17,9 @@
 		3763566F23092D4F00C25BC7 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763566E23092D4F00C25BC7 /* __Tests.m */; };
 		3763567A23092D4F00C25BC7 /* __UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3763567923092D4F00C25BC7 /* __UITests.m */; };
 		376356882309670D00C25BC7 /* 大话数据结构-链式存储.c in Sources */ = {isa = PBXBuildFile; fileRef = 376356872309670D00C25BC7 /* 大话数据结构-链式存储.c */; };
-		3778470325371D3000981298 /* 1_TwoSum.c in Sources */ = {isa = PBXBuildFile; fileRef = 3778470225371D3000981298 /* 1_TwoSum.c */; };
-		377847092537262800981298 /* 21_MergeTwoSortedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 377847082537262800981298 /* 21_MergeTwoSortedList.c */; };
-		3778470F25372F2C00981298 /* 5_LongestPalindromicSubstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 3778470E25372F2C00981298 /* 5_LongestPalindromicSubstring.c */; };
-		3778475A2537320900981298 /* 4_MedianofTwoSortedArrays.c in Sources */ = {isa = PBXBuildFile; fileRef = 377847592537320900981298 /* 4_MedianofTwoSortedArrays.c */; };
-		377847602538282900981298 /* 20_ValidParentheses.c in Sources */ = {isa = PBXBuildFile; fileRef = 3778475F2538282900981298 /* 20_ValidParentheses.c */; };
-		377F2F9A2535D02A00405A49 /* 61_RotateList.c in Sources */ = {isa = PBXBuildFile; fileRef = 377F2F992535D02A00405A49 /* 61_RotateList.c */; };
-		377F2FA02535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.c in Sources */ = {isa = PBXBuildFile; fileRef = 377F2F9F2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.c */; };
 		378C44B425318DE70009349B /* 237_DeleteNodeinLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C44B325318DE70009349B /* 237_DeleteNodeinLinkedList.swift */; };
-		378C44C325318E770009349B /* 237_DeleteNodeinLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 378C44C225318E770009349B /* 237_DeleteNodeinLinkedList.c */; };
 		378C44C8253191110009349B /* 206_ReverseLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C44C7253191110009349B /* 206_ReverseLinkedList.swift */; };
 		378C44CD253191B20009349B /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C44CC253191B20009349B /* ListNode.swift */; };
-		378C44DA25319D640009349B /* 206_ReverseLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 378C44D925319D640009349B /* 206_ReverseLinkedList.c */; };
-		378C44E02531EB470009349B /* 141_LinkedListCycle.c in Sources */ = {isa = PBXBuildFile; fileRef = 378C44DF2531EB470009349B /* 141_LinkedListCycle.c */; };
-		378C44E525329ECA0009349B /* ListNode_C.c in Sources */ = {isa = PBXBuildFile; fileRef = 378C44E425329ECA0009349B /* ListNode_C.c */; };
-		37A141F425342A2D00582462 /* 203_RemoveLinkedListElements.c in Sources */ = {isa = PBXBuildFile; fileRef = 37A141F325342A2D00582462 /* 203_RemoveLinkedListElements.c */; };
-		37A1420C25344E5200582462 /* 2_AddTwoNumbers.c in Sources */ = {isa = PBXBuildFile; fileRef = 37A1420B25344E5200582462 /* 2_AddTwoNumbers.c */; };
-		37A142242534627800582462 /* 19_RemoveNthNodeFromEndofList.c in Sources */ = {isa = PBXBuildFile; fileRef = 37A142232534627800582462 /* 19_RemoveNthNodeFromEndofList.c */; };
-		37A9D0122536D21000A2B9C2 /* 1002_Find_Common_Characters.c in Sources */ = {isa = PBXBuildFile; fileRef = 37A9D0112536D21000A2B9C2 /* 1002_Find_Common_Characters.c */; };
 		37B78C74231DD0E80049BC59 /* CircleSingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37B78C73231DD0E80049BC59 /* CircleSingleLink.c */; };
 		37D0D7832309711C003A2BC5 /* SingleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37D0D7822309711C003A2BC5 /* SingleLink.c */; };
 		37D4FB3F2320920000D79032 /* CircleDoubleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 37D4FB3E2320920000D79032 /* CircleDoubleLink.c */; };
@@ -78,40 +63,10 @@
 		3763567923092D4F00C25BC7 /* __UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __UITests.m; sourceTree = "<group>"; };
 		3763567B23092D4F00C25BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		376356872309670D00C25BC7 /* 大话数据结构-链式存储.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "大话数据结构-链式存储.c"; sourceTree = "<group>"; };
-		3778470125371D3000981298 /* 1_TwoSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 1_TwoSum.h; sourceTree = "<group>"; };
-		3778470225371D3000981298 /* 1_TwoSum.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 1_TwoSum.c; sourceTree = "<group>"; };
-		377847072537262800981298 /* 21_MergeTwoSortedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 21_MergeTwoSortedList.h; sourceTree = "<group>"; };
-		377847082537262800981298 /* 21_MergeTwoSortedList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 21_MergeTwoSortedList.c; sourceTree = "<group>"; };
-		3778470D25372F2C00981298 /* 5_LongestPalindromicSubstring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 5_LongestPalindromicSubstring.h; sourceTree = "<group>"; };
-		3778470E25372F2C00981298 /* 5_LongestPalindromicSubstring.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 5_LongestPalindromicSubstring.c; sourceTree = "<group>"; };
-		377847582537320900981298 /* 4_MedianofTwoSortedArrays.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 4_MedianofTwoSortedArrays.h; sourceTree = "<group>"; };
-		377847592537320900981298 /* 4_MedianofTwoSortedArrays.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 4_MedianofTwoSortedArrays.c; sourceTree = "<group>"; };
-		3778475E2538282900981298 /* 20_ValidParentheses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 20_ValidParentheses.h; sourceTree = "<group>"; };
-		3778475F2538282900981298 /* 20_ValidParentheses.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 20_ValidParentheses.c; sourceTree = "<group>"; };
-		377F2F982535D02A00405A49 /* 61_RotateList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 61_RotateList.h; sourceTree = "<group>"; };
-		377F2F992535D02A00405A49 /* 61_RotateList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 61_RotateList.c; sourceTree = "<group>"; };
-		377F2F9E2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 82_RemoveDuplicatesfromSortedList2.h; sourceTree = "<group>"; };
-		377F2F9F2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 82_RemoveDuplicatesfromSortedList2.c; sourceTree = "<group>"; };
 		378C44A1253189170009349B /* 链表-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "链表-Bridging-Header.h"; sourceTree = "<group>"; };
 		378C44B325318DE70009349B /* 237_DeleteNodeinLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 237_DeleteNodeinLinkedList.swift; sourceTree = "<group>"; };
-		378C44C125318E770009349B /* 237_DeleteNodeinLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 237_DeleteNodeinLinkedList.h; sourceTree = "<group>"; };
-		378C44C225318E770009349B /* 237_DeleteNodeinLinkedList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 237_DeleteNodeinLinkedList.c; sourceTree = "<group>"; };
 		378C44C7253191110009349B /* 206_ReverseLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 206_ReverseLinkedList.swift; sourceTree = "<group>"; };
 		378C44CC253191B20009349B /* ListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
-		378C44D4253192550009349B /* ListNode_C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNode_C.h; sourceTree = "<group>"; };
-		378C44D825319D640009349B /* 206_ReverseLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 206_ReverseLinkedList.h; sourceTree = "<group>"; };
-		378C44D925319D640009349B /* 206_ReverseLinkedList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 206_ReverseLinkedList.c; sourceTree = "<group>"; };
-		378C44DE2531EB470009349B /* 141_LinkedListCycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 141_LinkedListCycle.h; sourceTree = "<group>"; };
-		378C44DF2531EB470009349B /* 141_LinkedListCycle.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 141_LinkedListCycle.c; sourceTree = "<group>"; };
-		378C44E425329ECA0009349B /* ListNode_C.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ListNode_C.c; sourceTree = "<group>"; };
-		37A141F225342A2D00582462 /* 203_RemoveLinkedListElements.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 203_RemoveLinkedListElements.h; sourceTree = "<group>"; };
-		37A141F325342A2D00582462 /* 203_RemoveLinkedListElements.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 203_RemoveLinkedListElements.c; sourceTree = "<group>"; };
-		37A1420A25344E5200582462 /* 2_AddTwoNumbers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 2_AddTwoNumbers.h; sourceTree = "<group>"; };
-		37A1420B25344E5200582462 /* 2_AddTwoNumbers.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 2_AddTwoNumbers.c; sourceTree = "<group>"; };
-		37A142222534627800582462 /* 19_RemoveNthNodeFromEndofList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 19_RemoveNthNodeFromEndofList.h; sourceTree = "<group>"; };
-		37A142232534627800582462 /* 19_RemoveNthNodeFromEndofList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 19_RemoveNthNodeFromEndofList.c; sourceTree = "<group>"; };
-		37A9D0102536D21000A2B9C2 /* 1002_Find_Common_Characters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 1002_Find_Common_Characters.h; sourceTree = "<group>"; };
-		37A9D0112536D21000A2B9C2 /* 1002_Find_Common_Characters.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 1002_Find_Common_Characters.c; sourceTree = "<group>"; };
 		37B78C72231DD0E80049BC59 /* CircleSingleLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleSingleLink.h; sourceTree = "<group>"; };
 		37B78C73231DD0E80049BC59 /* CircleSingleLink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CircleSingleLink.c; sourceTree = "<group>"; };
 		37D0D7812309711C003A2BC5 /* SingleLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLink.h; sourceTree = "<group>"; };
@@ -226,82 +181,12 @@
 			path = "链表UITests";
 			sourceTree = "<group>";
 		};
-		377847642538283300981298 /* 栈 */ = {
-			isa = PBXGroup;
-			children = (
-				3778475E2538282900981298 /* 20_ValidParentheses.h */,
-				3778475F2538282900981298 /* 20_ValidParentheses.c */,
-			);
-			path = "栈";
-			sourceTree = "<group>";
-		};
-		377847652538286700981298 /* 字符串 */ = {
-			isa = PBXGroup;
-			children = (
-				37A9D0102536D21000A2B9C2 /* 1002_Find_Common_Characters.h */,
-				37A9D0112536D21000A2B9C2 /* 1002_Find_Common_Characters.c */,
-				3778470D25372F2C00981298 /* 5_LongestPalindromicSubstring.h */,
-				3778470E25372F2C00981298 /* 5_LongestPalindromicSubstring.c */,
-			);
-			path = "字符串";
-			sourceTree = "<group>";
-		};
-		377847692538288F00981298 /* 算法 */ = {
-			isa = PBXGroup;
-			children = (
-				3778470125371D3000981298 /* 1_TwoSum.h */,
-				3778470225371D3000981298 /* 1_TwoSum.c */,
-				377847582537320900981298 /* 4_MedianofTwoSortedArrays.h */,
-				377847592537320900981298 /* 4_MedianofTwoSortedArrays.c */,
-			);
-			path = "算法";
-			sourceTree = "<group>";
-		};
-		37784770253828CE00981298 /* 链表 */ = {
-			isa = PBXGroup;
-			children = (
-				378C44D4253192550009349B /* ListNode_C.h */,
-				378C44E425329ECA0009349B /* ListNode_C.c */,
-				378C44C125318E770009349B /* 237_DeleteNodeinLinkedList.h */,
-				378C44C225318E770009349B /* 237_DeleteNodeinLinkedList.c */,
-				378C44D825319D640009349B /* 206_ReverseLinkedList.h */,
-				378C44D925319D640009349B /* 206_ReverseLinkedList.c */,
-				378C44DE2531EB470009349B /* 141_LinkedListCycle.h */,
-				378C44DF2531EB470009349B /* 141_LinkedListCycle.c */,
-				37A141F225342A2D00582462 /* 203_RemoveLinkedListElements.h */,
-				37A141F325342A2D00582462 /* 203_RemoveLinkedListElements.c */,
-				37A1420A25344E5200582462 /* 2_AddTwoNumbers.h */,
-				37A1420B25344E5200582462 /* 2_AddTwoNumbers.c */,
-				37A142222534627800582462 /* 19_RemoveNthNodeFromEndofList.h */,
-				37A142232534627800582462 /* 19_RemoveNthNodeFromEndofList.c */,
-				377F2F982535D02A00405A49 /* 61_RotateList.h */,
-				377F2F992535D02A00405A49 /* 61_RotateList.c */,
-				377F2F9E2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.h */,
-				377F2F9F2535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.c */,
-				377847072537262800981298 /* 21_MergeTwoSortedList.h */,
-				377847082537262800981298 /* 21_MergeTwoSortedList.c */,
-			);
-			path = "链表";
-			sourceTree = "<group>";
-		};
 		378C44A7253189310009349B /* LeetCode */ = {
 			isa = PBXGroup;
 			children = (
-				378C44B125318DE70009349B /* c */,
 				378C44B225318DE70009349B /* swift */,
 			);
 			path = LeetCode;
-			sourceTree = "<group>";
-		};
-		378C44B125318DE70009349B /* c */ = {
-			isa = PBXGroup;
-			children = (
-				377847692538288F00981298 /* 算法 */,
-				37784770253828CE00981298 /* 链表 */,
-				377847652538286700981298 /* 字符串 */,
-				377847642538283300981298 /* 栈 */,
-			);
-			path = c;
 			sourceTree = "<group>";
 		};
 		378C44B225318DE70009349B /* swift */ = {
@@ -473,33 +358,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A9D0122536D21000A2B9C2 /* 1002_Find_Common_Characters.c in Sources */,
 				378C44C8253191110009349B /* 206_ReverseLinkedList.swift in Sources */,
-				377F2F9A2535D02A00405A49 /* 61_RotateList.c in Sources */,
-				378C44E525329ECA0009349B /* ListNode_C.c in Sources */,
 				3763565A23092D4D00C25BC7 /* ViewController.m in Sources */,
-				3778470325371D3000981298 /* 1_TwoSum.c in Sources */,
 				37B78C74231DD0E80049BC59 /* CircleSingleLink.c in Sources */,
-				377F2FA02535DDB300405A49 /* 82_RemoveDuplicatesfromSortedList2.c in Sources */,
 				378C44B425318DE70009349B /* 237_DeleteNodeinLinkedList.swift in Sources */,
 				37D0D7832309711C003A2BC5 /* SingleLink.c in Sources */,
-				377847602538282900981298 /* 20_ValidParentheses.c in Sources */,
 				376356882309670D00C25BC7 /* 大话数据结构-链式存储.c in Sources */,
 				3763566523092D4E00C25BC7 /* main.m in Sources */,
-				378C44C325318E770009349B /* 237_DeleteNodeinLinkedList.c in Sources */,
-				378C44DA25319D640009349B /* 206_ReverseLinkedList.c in Sources */,
-				378C44E02531EB470009349B /* 141_LinkedListCycle.c in Sources */,
-				37A142242534627800582462 /* 19_RemoveNthNodeFromEndofList.c in Sources */,
 				378C44CD253191B20009349B /* ListNode.swift in Sources */,
-				3778470F25372F2C00981298 /* 5_LongestPalindromicSubstring.c in Sources */,
-				377847092537262800981298 /* 21_MergeTwoSortedList.c in Sources */,
-				3778475A2537320900981298 /* 4_MedianofTwoSortedArrays.c in Sources */,
 				3763565723092D4D00C25BC7 /* AppDelegate.m in Sources */,
 				37D4FB3F2320920000D79032 /* CircleDoubleLink.c in Sources */,
-				37A1420C25344E5200582462 /* 2_AddTwoNumbers.c in Sources */,
 				3741D313231F1FB800377EF2 /* DoubleLink.c in Sources */,
 				D1B6AF08239BAB1500EF5DCC /* ReverseLink.c in Sources */,
-				37A141F425342A2D00582462 /* 203_RemoveLinkedListElements.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

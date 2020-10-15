@@ -97,3 +97,8 @@ bool isValid(char* s) {
 }
 
 
+void validParenthesesTest(){
+    char *str="}}{}{()()";
+    bool res=isValid(str);
+    printf("res= %d\n",res);
+}

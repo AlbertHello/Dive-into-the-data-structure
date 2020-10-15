@@ -12,16 +12,6 @@
 #include "DoubleLink.h"
 #include "CircleDoubleLink.h"
 #include "ReverseLink.h"
-#include "141_LinkedListCycle.h"
-#include "203_RemoveLinkedListElements.h"
-#include "2_AddTwoNumbers.h"
-#include "19_RemoveNthNodeFromEndofList.h"
-#include "61_RotateList.h"
-#include "82_RemoveDuplicatesfromSortedList2.h"
-#include "1_TwoSum.h"
-#include "21_MergeTwoSortedList.h"
-
-
 
 
 
@@ -51,18 +41,6 @@
     //逆置单链表
 //    [self reverseLinkDemo];
     
-    [self leetcodeTest];
-}
-
-
-
--(void)leetcodeTest{
-    
-//    add_two_numbers_test();
-//    remove_nth_from_end_test();
-//    rotate_right_test();
-//    deleteDuplicatesTest();
-    twoSumTest();
 }
 
 -(void)testSingleLink{

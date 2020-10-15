@@ -12,6 +12,6 @@
 #include <stdio.h>
 #include "ListNode_C.h"
 
-
+void validParenthesesTest(void);
 
 #endif /* _0_ValidParentheses_h */

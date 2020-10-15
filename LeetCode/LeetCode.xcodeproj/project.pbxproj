@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37CF43862538357900CBBDEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43852538357900CBBDEF /* AppDelegate.m */; };
+		37CF43892538357900CBBDEF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43882538357900CBBDEF /* SceneDelegate.m */; };
+		37CF438C2538357900CBBDEF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF438B2538357900CBBDEF /* ViewController.m */; };
+		37CF438F2538357900CBBDEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37CF438D2538357900CBBDEF /* Main.storyboard */; };
+		37CF43912538357A00CBBDEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37CF43902538357A00CBBDEF /* Assets.xcassets */; };
+		37CF43942538357A00CBBDEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37CF43922538357A00CBBDEF /* LaunchScreen.storyboard */; };
+		37CF43972538357A00CBBDEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43962538357A00CBBDEF /* main.m */; };
+		37CF43C12538362700CBBDEF /* 1_TwoSum.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43A02538362700CBBDEF /* 1_TwoSum.c */; };
+		37CF43C22538362700CBBDEF /* 4_MedianofTwoSortedArrays.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43A32538362700CBBDEF /* 4_MedianofTwoSortedArrays.c */; };
+		37CF43C32538362700CBBDEF /* ListNode_C.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43A82538362700CBBDEF /* ListNode_C.c */; };
+		37CF43C42538362700CBBDEF /* 2_AddTwoNumbers.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43AF2538362700CBBDEF /* 2_AddTwoNumbers.c */; };
+		37CF43C52538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43B02538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c */; };
+		37CF43C62538362700CBBDEF /* 141_LinkedListCycle.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43B12538362700CBBDEF /* 141_LinkedListCycle.c */; };
+		37CF43C72538362700CBBDEF /* 237_DeleteNodeinLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43B22538362700CBBDEF /* 237_DeleteNodeinLinkedList.c */; };
+		37CF43C82538362700CBBDEF /* 21_MergeTwoSortedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43B32538362700CBBDEF /* 21_MergeTwoSortedList.c */; };
+		37CF43C92538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43B42538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.c */; };
+		37CF43CA2538362700CBBDEF /* 203_RemoveLinkedListElements.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43B62538362700CBBDEF /* 203_RemoveLinkedListElements.c */; };
+		37CF43CB2538362700CBBDEF /* 61_RotateList.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43B72538362700CBBDEF /* 61_RotateList.c */; };
+		37CF43CC2538362700CBBDEF /* 206_ReverseLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43B82538362700CBBDEF /* 206_ReverseLinkedList.c */; };
+		37CF43CD2538362700CBBDEF /* 5_LongestPalindromicSubstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43BB2538362700CBBDEF /* 5_LongestPalindromicSubstring.c */; };
+		37CF43CE2538362700CBBDEF /* 1002_Find_Common_Characters.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43BC2538362700CBBDEF /* 1002_Find_Common_Characters.c */; };
+		37CF43CF2538362700CBBDEF /* 20_ValidParentheses.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43C02538362700CBBDEF /* 20_ValidParentheses.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		37CF43812538357900CBBDEF /* LeetCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37CF43842538357900CBBDEF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		37CF43852538357900CBBDEF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		37CF43872538357900CBBDEF /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		37CF43882538357900CBBDEF /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		37CF438A2538357900CBBDEF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		37CF438B2538357900CBBDEF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		37CF438E2538357900CBBDEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37CF43902538357A00CBBDEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37CF43932538357A00CBBDEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		37CF43952538357A00CBBDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37CF43962538357A00CBBDEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37CF43A02538362700CBBDEF /* 1_TwoSum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 1_TwoSum.c; sourceTree = "<group>"; };
+		37CF43A12538362700CBBDEF /* 4_MedianofTwoSortedArrays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 4_MedianofTwoSortedArrays.h; sourceTree = "<group>"; };
+		37CF43A22538362700CBBDEF /* 1_TwoSum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 1_TwoSum.h; sourceTree = "<group>"; };
+		37CF43A32538362700CBBDEF /* 4_MedianofTwoSortedArrays.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 4_MedianofTwoSortedArrays.c; sourceTree = "<group>"; };
+		37CF43A52538362700CBBDEF /* 2_AddTwoNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 2_AddTwoNumbers.h; sourceTree = "<group>"; };
+		37CF43A62538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 19_RemoveNthNodeFromEndofList.h; sourceTree = "<group>"; };
+		37CF43A72538362700CBBDEF /* 203_RemoveLinkedListElements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 203_RemoveLinkedListElements.h; sourceTree = "<group>"; };
+		37CF43A82538362700CBBDEF /* ListNode_C.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ListNode_C.c; sourceTree = "<group>"; };
+		37CF43A92538362700CBBDEF /* 237_DeleteNodeinLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 237_DeleteNodeinLinkedList.h; sourceTree = "<group>"; };
+		37CF43AA2538362700CBBDEF /* 141_LinkedListCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 141_LinkedListCycle.h; sourceTree = "<group>"; };
+		37CF43AB2538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 82_RemoveDuplicatesfromSortedList2.h; sourceTree = "<group>"; };
+		37CF43AC2538362700CBBDEF /* 21_MergeTwoSortedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 21_MergeTwoSortedList.h; sourceTree = "<group>"; };
+		37CF43AD2538362700CBBDEF /* 206_ReverseLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 206_ReverseLinkedList.h; sourceTree = "<group>"; };
+		37CF43AE2538362700CBBDEF /* 61_RotateList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 61_RotateList.h; sourceTree = "<group>"; };
+		37CF43AF2538362700CBBDEF /* 2_AddTwoNumbers.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 2_AddTwoNumbers.c; sourceTree = "<group>"; };
+		37CF43B02538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 19_RemoveNthNodeFromEndofList.c; sourceTree = "<group>"; };
+		37CF43B12538362700CBBDEF /* 141_LinkedListCycle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 141_LinkedListCycle.c; sourceTree = "<group>"; };
+		37CF43B22538362700CBBDEF /* 237_DeleteNodeinLinkedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 237_DeleteNodeinLinkedList.c; sourceTree = "<group>"; };
+		37CF43B32538362700CBBDEF /* 21_MergeTwoSortedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 21_MergeTwoSortedList.c; sourceTree = "<group>"; };
+		37CF43B42538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 82_RemoveDuplicatesfromSortedList2.c; sourceTree = "<group>"; };
+		37CF43B52538362700CBBDEF /* ListNode_C.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListNode_C.h; sourceTree = "<group>"; };
+		37CF43B62538362700CBBDEF /* 203_RemoveLinkedListElements.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 203_RemoveLinkedListElements.c; sourceTree = "<group>"; };
+		37CF43B72538362700CBBDEF /* 61_RotateList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 61_RotateList.c; sourceTree = "<group>"; };
+		37CF43B82538362700CBBDEF /* 206_ReverseLinkedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 206_ReverseLinkedList.c; sourceTree = "<group>"; };
+		37CF43BA2538362700CBBDEF /* 1002_Find_Common_Characters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 1002_Find_Common_Characters.h; sourceTree = "<group>"; };
+		37CF43BB2538362700CBBDEF /* 5_LongestPalindromicSubstring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 5_LongestPalindromicSubstring.c; sourceTree = "<group>"; };
+		37CF43BC2538362700CBBDEF /* 1002_Find_Common_Characters.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 1002_Find_Common_Characters.c; sourceTree = "<group>"; };
+		37CF43BD2538362700CBBDEF /* 5_LongestPalindromicSubstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 5_LongestPalindromicSubstring.h; sourceTree = "<group>"; };
+		37CF43BF2538362700CBBDEF /* 20_ValidParentheses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 20_ValidParentheses.h; sourceTree = "<group>"; };
+		37CF43C02538362700CBBDEF /* 20_ValidParentheses.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 20_ValidParentheses.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37CF437E2538357900CBBDEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37CF43782538357900CBBDEF = {
+			isa = PBXGroup;
+			children = (
+				37CF43832538357900CBBDEF /* LeetCode */,
+				37CF43822538357900CBBDEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37CF43822538357900CBBDEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37CF43812538357900CBBDEF /* LeetCode.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37CF43832538357900CBBDEF /* LeetCode */ = {
+			isa = PBXGroup;
+			children = (
+				37CF439E2538362700CBBDEF /* c */,
+				37CF43842538357900CBBDEF /* AppDelegate.h */,
+				37CF43852538357900CBBDEF /* AppDelegate.m */,
+				37CF43872538357900CBBDEF /* SceneDelegate.h */,
+				37CF43882538357900CBBDEF /* SceneDelegate.m */,
+				37CF438A2538357900CBBDEF /* ViewController.h */,
+				37CF438B2538357900CBBDEF /* ViewController.m */,
+				37CF438D2538357900CBBDEF /* Main.storyboard */,
+				37CF43902538357A00CBBDEF /* Assets.xcassets */,
+				37CF43922538357A00CBBDEF /* LaunchScreen.storyboard */,
+				37CF43952538357A00CBBDEF /* Info.plist */,
+				37CF43962538357A00CBBDEF /* main.m */,
+			);
+			path = LeetCode;
+			sourceTree = "<group>";
+		};
+		37CF439E2538362700CBBDEF /* c */ = {
+			isa = PBXGroup;
+			children = (
+				37CF439F2538362700CBBDEF /* 算法 */,
+				37CF43A42538362700CBBDEF /* 链表 */,
+				37CF43B92538362700CBBDEF /* 字符串 */,
+				37CF43BE2538362700CBBDEF /* 栈 */,
+			);
+			path = c;
+			sourceTree = "<group>";
+		};
+		37CF439F2538362700CBBDEF /* 算法 */ = {
+			isa = PBXGroup;
+			children = (
+				37CF43A02538362700CBBDEF /* 1_TwoSum.c */,
+				37CF43A22538362700CBBDEF /* 1_TwoSum.h */,
+				37CF43A12538362700CBBDEF /* 4_MedianofTwoSortedArrays.h */,
+				37CF43A32538362700CBBDEF /* 4_MedianofTwoSortedArrays.c */,
+			);
+			path = "算法";
+			sourceTree = "<group>";
+		};
+		37CF43A42538362700CBBDEF /* 链表 */ = {
+			isa = PBXGroup;
+			children = (
+				37CF43B52538362700CBBDEF /* ListNode_C.h */,
+				37CF43A82538362700CBBDEF /* ListNode_C.c */,
+				37CF43A52538362700CBBDEF /* 2_AddTwoNumbers.h */,
+				37CF43AF2538362700CBBDEF /* 2_AddTwoNumbers.c */,
+				37CF43A62538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.h */,
+				37CF43B02538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c */,
+				37CF43AC2538362700CBBDEF /* 21_MergeTwoSortedList.h */,
+				37CF43B32538362700CBBDEF /* 21_MergeTwoSortedList.c */,
+				37CF43AE2538362700CBBDEF /* 61_RotateList.h */,
+				37CF43B72538362700CBBDEF /* 61_RotateList.c */,
+				37CF43AB2538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.h */,
+				37CF43B42538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.c */,
+				37CF43AA2538362700CBBDEF /* 141_LinkedListCycle.h */,
+				37CF43B12538362700CBBDEF /* 141_LinkedListCycle.c */,
+				37CF43A72538362700CBBDEF /* 203_RemoveLinkedListElements.h */,
+				37CF43B62538362700CBBDEF /* 203_RemoveLinkedListElements.c */,
+				37CF43AD2538362700CBBDEF /* 206_ReverseLinkedList.h */,
+				37CF43B82538362700CBBDEF /* 206_ReverseLinkedList.c */,
+				37CF43A92538362700CBBDEF /* 237_DeleteNodeinLinkedList.h */,
+				37CF43B22538362700CBBDEF /* 237_DeleteNodeinLinkedList.c */,
+			);
+			path = "链表";
+			sourceTree = "<group>";
+		};
+		37CF43B92538362700CBBDEF /* 字符串 */ = {
+			isa = PBXGroup;
+			children = (
+				37CF43BD2538362700CBBDEF /* 5_LongestPalindromicSubstring.h */,
+				37CF43BB2538362700CBBDEF /* 5_LongestPalindromicSubstring.c */,
+				37CF43BA2538362700CBBDEF /* 1002_Find_Common_Characters.h */,
+				37CF43BC2538362700CBBDEF /* 1002_Find_Common_Characters.c */,
+			);
+			path = "字符串";
+			sourceTree = "<group>";
+		};
+		37CF43BE2538362700CBBDEF /* 栈 */ = {
+			isa = PBXGroup;
+			children = (
+				37CF43BF2538362700CBBDEF /* 20_ValidParentheses.h */,
+				37CF43C02538362700CBBDEF /* 20_ValidParentheses.c */,
+			);
+			path = "栈";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37CF43802538357900CBBDEF /* LeetCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37CF439A2538357A00CBBDEF /* Build configuration list for PBXNativeTarget "LeetCode" */;
+			buildPhases = (
+				37CF437D2538357900CBBDEF /* Sources */,
+				37CF437E2538357900CBBDEF /* Frameworks */,
+				37CF437F2538357900CBBDEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeetCode;
+			productName = LeetCode;
+			productReference = 37CF43812538357900CBBDEF /* LeetCode.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37CF43792538357900CBBDEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					37CF43802538357900CBBDEF = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 37CF437C2538357900CBBDEF /* Build configuration list for PBXProject "LeetCode" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37CF43782538357900CBBDEF;
+			productRefGroup = 37CF43822538357900CBBDEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37CF43802538357900CBBDEF /* LeetCode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37CF437F2538357900CBBDEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37CF43942538357A00CBBDEF /* LaunchScreen.storyboard in Resources */,
+				37CF43912538357A00CBBDEF /* Assets.xcassets in Resources */,
+				37CF438F2538357900CBBDEF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37CF437D2538357900CBBDEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37CF438C2538357900CBBDEF /* ViewController.m in Sources */,
+				37CF43CB2538362700CBBDEF /* 61_RotateList.c in Sources */,
+				37CF43CE2538362700CBBDEF /* 1002_Find_Common_Characters.c in Sources */,
+				37CF43C12538362700CBBDEF /* 1_TwoSum.c in Sources */,
+				37CF43C42538362700CBBDEF /* 2_AddTwoNumbers.c in Sources */,
+				37CF43C52538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c in Sources */,
+				37CF43CD2538362700CBBDEF /* 5_LongestPalindromicSubstring.c in Sources */,
+				37CF43C62538362700CBBDEF /* 141_LinkedListCycle.c in Sources */,
+				37CF43C82538362700CBBDEF /* 21_MergeTwoSortedList.c in Sources */,
+				37CF43862538357900CBBDEF /* AppDelegate.m in Sources */,
+				37CF43C72538362700CBBDEF /* 237_DeleteNodeinLinkedList.c in Sources */,
+				37CF43C92538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.c in Sources */,
+				37CF43CF2538362700CBBDEF /* 20_ValidParentheses.c in Sources */,
+				37CF43C22538362700CBBDEF /* 4_MedianofTwoSortedArrays.c in Sources */,
+				37CF43972538357A00CBBDEF /* main.m in Sources */,
+				37CF43C32538362700CBBDEF /* ListNode_C.c in Sources */,
+				37CF43892538357900CBBDEF /* SceneDelegate.m in Sources */,
+				37CF43CC2538362700CBBDEF /* 206_ReverseLinkedList.c in Sources */,
+				37CF43CA2538362700CBBDEF /* 203_RemoveLinkedListElements.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		37CF438D2538357900CBBDEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37CF438E2538357900CBBDEF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37CF43922538357A00CBBDEF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37CF43932538357A00CBBDEF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37CF43982538357A00CBBDEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		37CF43992538357A00CBBDEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37CF439B2538357A00CBBDEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XUC32UBH2K;
+				INFOPLIST_FILE = LeetCode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Albert.LeetCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37CF439C2538357A00CBBDEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XUC32UBH2K;
+				INFOPLIST_FILE = LeetCode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Albert.LeetCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37CF437C2538357900CBBDEF /* Build configuration list for PBXProject "LeetCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37CF43982538357A00CBBDEF /* Debug */,
+				37CF43992538357A00CBBDEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37CF439A2538357A00CBBDEF /* Build configuration list for PBXNativeTarget "LeetCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37CF439B2538357A00CBBDEF /* Debug */,
+				37CF439C2538357A00CBBDEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37CF43792538357900CBBDEF /* Project object */;
+}
