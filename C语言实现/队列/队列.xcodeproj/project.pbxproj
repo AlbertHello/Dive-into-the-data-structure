@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3726460C25385B5D00AA9D61 /* DoubleEndedQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 3726460B25385B5D00AA9D61 /* DoubleEndedQueue.c */; };
 		372A3191233676C6009C97CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 372A3190233676C6009C97CD /* AppDelegate.m */; };
 		372A3194233676C6009C97CD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 372A3193233676C6009C97CD /* SceneDelegate.m */; };
 		372A3197233676C6009C97CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 372A3196233676C6009C97CD /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3726460A25385B5D00AA9D61 /* DoubleEndedQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleEndedQueue.h; sourceTree = "<group>"; };
+		3726460B25385B5D00AA9D61 /* DoubleEndedQueue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DoubleEndedQueue.c; sourceTree = "<group>"; };
 		372A318C233676C6009C97CD /* 队列.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "队列.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		372A318F233676C6009C97CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		372A3190233676C6009C97CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3726461025385B6100AA9D61 /* 双端队列 */ = {
+			isa = PBXGroup;
+			children = (
+				3726460A25385B5D00AA9D61 /* DoubleEndedQueue.h */,
+				3726460B25385B5D00AA9D61 /* DoubleEndedQueue.c */,
+			);
+			path = "双端队列";
+			sourceTree = "<group>";
+		};
 		372A3183233676C6009C97CD = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +128,7 @@
 				372A3193233676C6009C97CD /* SceneDelegate.m */,
 				372A3195233676C6009C97CD /* ViewController.h */,
 				372A3196233676C6009C97CD /* ViewController.m */,
+				3726461025385B6100AA9D61 /* 双端队列 */,
 				372A31C723367764009C97CD /* 队列 */,
 				372A3198233676C6009C97CD /* Main.storyboard */,
 				372A319B233676C7009C97CD /* Assets.xcassets */,
@@ -295,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				372A31C623367708009C97CD /* Queue.c in Sources */,
+				3726460C25385B5D00AA9D61 /* DoubleEndedQueue.c in Sources */,
 				372A3197233676C6009C97CD /* ViewController.m in Sources */,
 				372A31CB23367786009C97CD /* DoubleLink.c in Sources */,
 				372A3191233676C6009C97CD /* AppDelegate.m in Sources */,

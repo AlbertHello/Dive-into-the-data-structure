@@ -34,7 +34,7 @@
     //单向循环链表
 //    [self testCircleSingleLink];
     //双向链表
-//    [self testDoubleLink];
+    [self testDoubleLink];
     //双向循环链表
 //    [self testCircleDoubleLink];
     

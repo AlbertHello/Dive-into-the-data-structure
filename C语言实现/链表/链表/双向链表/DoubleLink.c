@@ -67,6 +67,7 @@ Status doubleLinkNode_insert_element_at_index(Element elem, int index, DoubleLin
 
 //3、删除一个元素
 Status doubleLinkNode_delete_element(int index,Element *data,DoubleLink d_link){
+    if (d_link->first == NULL) return Error;
     struct DoubleLinkNode *delete_node;
     if (index==0) {
         delete_node=d_link->first;//这是头结点
@@ -79,7 +80,12 @@ Status doubleLinkNode_delete_element(int index,Element *data,DoubleLink d_link){
     }else{
         if(doubleLinkNode_node_of_index(index, d_link, &delete_node)==Error) return Error;
         delete_node->pre->next=delete_node->next;
-        delete_node->next->pre=delete_node->pre;
+        if (index == d_link->size-1) {
+            //如果是删除的最后一个
+            d_link->last=delete_node->pre;
+        }else{
+            delete_node->next->pre=delete_node->pre;
+        }
     }
     *data=delete_node->data;
     free(delete_node);

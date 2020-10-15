@@ -10,57 +10,43 @@
 
 static DoubleLink queue=NULL;
 
-void initDoubleLink(){
+void check_queue_link(void){
     if (!queue) {
-        if (doubleLinkNode_init_link(&queue) == Error) {
-            return;
-        }
-        queue->data=-1;
-        queue->next=NULL;
-        queue->pre=NULL;
+        queue=create_double_link();
     }
 }
 int size(void){
-    if (queue == NULL) return -1;
-    return doubleLinkNode_get_link_length();
+    check_queue_link();
+    return doubleLinkNode_get_link_length(queue);
 }
 bool isEmpty(void){
-    if (!queue) {
-        initDoubleLink();
-    }
+    check_queue_link();
     return doubleLinkNode_is_empty(queue);
 }
 void enQueue(int ele){
-    if (!queue) {
-        initDoubleLink();
-    }
+    check_queue_link();
     doubleLinkNode_insert_element(ele, queue);
 }
 int deQueue(void){
-    if (!queue) {
-        initDoubleLink();
-    }
+    check_queue_link();
     int data=0;
     doubleLinkNode_delete_element(0, &data, queue);
     return data;
 }
 int front(void){
-    if (!queue) {
-        initDoubleLink();
+    check_queue_link();
+    if (queue->first) {
+        return queue->first->data;
     }
-    DoubleLink node=NULL;
-    doubleLinkNode_node_of_index(0, queue, &node);
-    return node->data;
+    return -1;
 }
 void clear(void){
-    if (!queue) {
-        initDoubleLink();
-    }
+    check_queue_link();
     doubleLinkNode_clearLink(queue);
+    free(queue);
+    queue=NULL;
 }
 void printQueue(void){
-    if (!queue) {
-        initDoubleLink();
-    }
+    check_queue_link();
     doubleLinkNode_printLink(queue);
 }
