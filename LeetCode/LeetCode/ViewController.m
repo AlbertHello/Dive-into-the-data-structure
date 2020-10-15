@@ -15,6 +15,8 @@
 #include "1_TwoSum.h"
 #include "21_MergeTwoSortedList.h"
 #include "20_ValidParentheses.h"
+#include "70_ClimbingStairs.h"
+
 
 
 @interface ViewController ()
@@ -27,10 +29,14 @@
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor systemPinkColor];
     
+    
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self leetcodeTest];
 }
 -(void)leetcodeTest{
-    validParenthesesTest();
+//    validParenthesesTest();
+    climbStairsTest();
 }
 
 @end
