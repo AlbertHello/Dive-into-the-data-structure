@@ -67,4 +67,6 @@ int maxSubArray(int* nums, int numsSize){
     return 0;
 }
 
+//方法二：分治法
+
 

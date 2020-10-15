@@ -60,9 +60,10 @@ int fib(int x){
 }
 
 
-//2、迭代
+//2、迭代（动态规划）
 //时间复杂度：循环执行n 次，每次花费常数的时间代价，故渐进时间复杂度为O(n)。
 //空间复杂度：这里只用了常数个变量作为辅助空间，故渐进空间复杂度为O(1)。
+//用「滚动数组思想」把空间复杂度优化成O(1)
 int fib2(int n){
     int first =1;
     int second=1;
@@ -84,6 +85,9 @@ int fib3(int n){
     double fibn = pow((1 + sqrt5) / 2, n + 1) - pow((1 - sqrt5) / 2, n + 1);
     return (int)(fibn / sqrt5);
 }
+//4、矩阵快速幂
+
+
 
 int climbStairs(int n){
     if (n==1) return 1;
