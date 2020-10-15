@@ -64,7 +64,7 @@ int maxSubArray(int* nums, int numsSize){
         //有点儿像滚动数组的意思
         maxAns = find_max(maxAns, pre);
     }
-    return 0;
+    return maxAns;
 }
 
 //方法二：分治法
