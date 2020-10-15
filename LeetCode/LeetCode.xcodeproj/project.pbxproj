@@ -30,6 +30,7 @@
 		37CF43CE2538362700CBBDEF /* 1002_Find_Common_Characters.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43BC2538362700CBBDEF /* 1002_Find_Common_Characters.c */; };
 		37CF43CF2538362700CBBDEF /* 20_ValidParentheses.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43C02538362700CBBDEF /* 20_ValidParentheses.c */; };
 		37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */; };
+		37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,8 @@
 		37CF43C02538362700CBBDEF /* 20_ValidParentheses.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 20_ValidParentheses.c; sourceTree = "<group>"; };
 		37CF4419253838EC00CBBDEF /* 70_ClimbingStairs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 70_ClimbingStairs.h; sourceTree = "<group>"; };
 		37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 70_ClimbingStairs.c; sourceTree = "<group>"; };
+		37CF44202538475D00CBBDEF /* 53_MaximumSubarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 53_MaximumSubarray.h; sourceTree = "<group>"; };
+		37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 53_MaximumSubarray.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 				37CF43A22538362700CBBDEF /* 1_TwoSum.h */,
 				37CF43A12538362700CBBDEF /* 4_MedianofTwoSortedArrays.h */,
 				37CF43A32538362700CBBDEF /* 4_MedianofTwoSortedArrays.c */,
+				37CF44202538475D00CBBDEF /* 53_MaximumSubarray.h */,
+				37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */,
 				37CF4419253838EC00CBBDEF /* 70_ClimbingStairs.h */,
 				37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */,
 			);
@@ -273,6 +278,7 @@
 				37CF43C52538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c in Sources */,
 				37CF43CD2538362700CBBDEF /* 5_LongestPalindromicSubstring.c in Sources */,
 				37CF43C62538362700CBBDEF /* 141_LinkedListCycle.c in Sources */,
+				37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */,
 				37CF43C82538362700CBBDEF /* 21_MergeTwoSortedList.c in Sources */,
 				37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */,
 				37CF43862538357900CBBDEF /* AppDelegate.m in Sources */,
