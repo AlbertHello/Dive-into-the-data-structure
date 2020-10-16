@@ -19,6 +19,8 @@
 		372A31B7233676C7009C97CD /* __UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 372A31B6233676C7009C97CD /* __UITests.m */; };
 		372A31C623367708009C97CD /* Queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 372A31C523367708009C97CD /* Queue.c */; };
 		372A31CB23367786009C97CD /* DoubleLink.c in Sources */ = {isa = PBXBuildFile; fileRef = 372A31CA23367786009C97CD /* DoubleLink.c */; };
+		378107A025399E0F009777D1 /* CircleQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 3781079F25399E0F009777D1 /* CircleQueue.c */; };
+		378107AA2539AA61009777D1 /* CircleDoubleEndedQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 378107A92539AA61009777D1 /* CircleDoubleEndedQueue.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,10 @@
 		372A31C523367708009C97CD /* Queue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Queue.c; sourceTree = "<group>"; };
 		372A31C923367786009C97CD /* DoubleLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleLink.h; sourceTree = "<group>"; };
 		372A31CA23367786009C97CD /* DoubleLink.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DoubleLink.c; sourceTree = "<group>"; };
+		3781079E25399E0F009777D1 /* CircleQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleQueue.h; sourceTree = "<group>"; };
+		3781079F25399E0F009777D1 /* CircleQueue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CircleQueue.c; sourceTree = "<group>"; };
+		378107A82539AA61009777D1 /* CircleDoubleEndedQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleDoubleEndedQueue.h; sourceTree = "<group>"; };
+		378107A92539AA61009777D1 /* CircleDoubleEndedQueue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CircleDoubleEndedQueue.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,8 @@
 				372A3193233676C6009C97CD /* SceneDelegate.m */,
 				372A3195233676C6009C97CD /* ViewController.h */,
 				372A3196233676C6009C97CD /* ViewController.m */,
+				378107AE2539AA66009777D1 /* 循环双端队列 */,
+				378107A425399E14009777D1 /* 循环队列 */,
 				3726461025385B6100AA9D61 /* 双端队列 */,
 				372A31C723367764009C97CD /* 队列 */,
 				372A3198233676C6009C97CD /* Main.storyboard */,
@@ -175,6 +183,24 @@
 			);
 			name = "双向链表";
 			path = "../../../链表/链表/双向链表";
+			sourceTree = "<group>";
+		};
+		378107A425399E14009777D1 /* 循环队列 */ = {
+			isa = PBXGroup;
+			children = (
+				3781079E25399E0F009777D1 /* CircleQueue.h */,
+				3781079F25399E0F009777D1 /* CircleQueue.c */,
+			);
+			path = "循环队列";
+			sourceTree = "<group>";
+		};
+		378107AE2539AA66009777D1 /* 循环双端队列 */ = {
+			isa = PBXGroup;
+			children = (
+				378107A82539AA61009777D1 /* CircleDoubleEndedQueue.h */,
+				378107A92539AA61009777D1 /* CircleDoubleEndedQueue.c */,
+			);
+			path = "循环双端队列";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,9 +335,11 @@
 			files = (
 				372A31C623367708009C97CD /* Queue.c in Sources */,
 				3726460C25385B5D00AA9D61 /* DoubleEndedQueue.c in Sources */,
+				378107AA2539AA61009777D1 /* CircleDoubleEndedQueue.c in Sources */,
 				372A3197233676C6009C97CD /* ViewController.m in Sources */,
 				372A31CB23367786009C97CD /* DoubleLink.c in Sources */,
 				372A3191233676C6009C97CD /* AppDelegate.m in Sources */,
+				378107A025399E0F009777D1 /* CircleQueue.c in Sources */,
 				372A31A2233676C7009C97CD /* main.m in Sources */,
 				372A3194233676C6009C97CD /* SceneDelegate.m in Sources */,
 			);
