@@ -79,10 +79,10 @@ void print_array(void){
     printf(" ]\n");
 }
 void ensureCapacity(int cur_size) {
-    int oldCapacity = cur_size;
-    if (oldCapacity <= array_capaticty) return;
+    int oldCapacity = array_capaticty;
+    if (oldCapacity >= cur_size) return;
     // 新容量为旧容量的1.5倍
-    int newCapacity = array_size + (array_size >> 1);
+    int newCapacity = oldCapacity + (oldCapacity >> 1);
     array_capaticty=newCapacity;
     int *new_array=(int *)malloc(sizeof(int)*newCapacity);
     for (int i = 0; i < array_size; i++) {

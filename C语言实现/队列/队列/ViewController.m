@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #include "Queue.h"
 #include "DoubleEndedQueue.h"
+#include "CircleQueue.h"
+
 
 
 
@@ -22,9 +24,27 @@
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor redColor];
     
-//    [self queueTest];
-    [self d_queueTest];
+
     
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    [self queueTest];
+//    [self d_queueTest];
+    [self c_queueTest];
+}
+-(void)c_queueTest{
+    for (int i=0; i<10; i++) {
+        circle_queue_enQueue(i);
+    }
+    circle_queue_print();
+    for (int i=0; i<5; i++) {
+        circle_queue_deQueue();
+    }
+    circle_queue_print();
+    for (int i=15; i<23; i++) {
+        circle_queue_enQueue(i);
+    }
+    circle_queue_print();
 }
 -(void)d_queueTest{
     doubleEndedQueue_enQueueRear(1);
