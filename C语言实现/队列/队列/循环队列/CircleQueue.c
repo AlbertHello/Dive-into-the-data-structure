@@ -11,7 +11,7 @@
 
 
 static int * c_queue=NULL;
-static int array_capaticty = 4;
+static int array_capaticty = 10;
 static int array_size = 0;
 static int front = 0; // 对头index索引值
 
@@ -26,7 +26,20 @@ int get_new_index(int index){
     //front代表对头元素的索引，所以可能是数组中任意一个index，不一定是数组的头部
     //入队时：index=(front+size)%array_capaticty
     //所以出队时：front = (front+1)%array_capaticty
-    //因为模的效率不高，换成下面的公式
+    //因为模的效率不高，换成下面的公式n = n - (n >= m ? m : 0)
+    /**
+     其实模的操作可以拆成下面的式子
+     int n = 13;
+     int m = 7;
+     int result=0
+     if (n >= m) { // 这里注意的是n<2m才能满足n - m
+        result = n - m;
+     } else {
+        result = n;
+     }
+     
+     n%m 等价于 n – (m > n ? 0 : m) 的前提条件： n < 2m
+     */
     index += front;
     return index - (index >= array_capaticty ? array_capaticty : 0);
 }
@@ -36,7 +49,6 @@ void ensureCapacity(int cur_size) {
     
     // 新容量为旧容量的1.5倍
     int newCapacity = oldCapacity + (oldCapacity >> 1);
-    array_capaticty=newCapacity;
     int *new_c_queue=(int *)malloc(sizeof(int)*array_capaticty);
     memset(new_c_queue,0,sizeof(int)*array_capaticty);
     for (int i = 0; i < array_size; i++) {
@@ -46,6 +58,7 @@ void ensureCapacity(int cur_size) {
     }
     free(c_queue);
     c_queue = new_c_queue;
+    array_capaticty=newCapacity;
     // 重置front
     front = 0;
     printf("循环队列已扩容：oldSize: %d, newSize: %d\n",oldCapacity,newCapacity);

@@ -3,4 +3,22 @@
    uuid = "CFF67629-6ECC-44CA-A75B-C68313D9C439"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B9BBCBA-B7C1-430D-B6E8-0FCA0EE37400"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x961f;&#x5217;/&#x5faa;&#x73af;&#x53cc;&#x7aef;&#x961f;&#x5217;/CircleDoubleEndedQueue.c"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "circle_d_queue_ensure_capacity(cur_size)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

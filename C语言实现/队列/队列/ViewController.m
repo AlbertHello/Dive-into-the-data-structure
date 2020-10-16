@@ -10,6 +10,7 @@
 #include "Queue.h"
 #include "DoubleEndedQueue.h"
 #include "CircleQueue.h"
+#include "CircleDoubleEndedQueue.h"
 
 
 
@@ -31,17 +32,39 @@
 //    [self queueTest];
 //    [self d_queueTest];
     [self c_queueTest];
+//    [self c_d_queueTest];
+}
+-(void)c_d_queueTest{
+    // 头 8 7 6  5 4 3 2 1  100 101 102 103 104 105 106 107 108 109 null null 10 9 尾
+    for (int i = 0; i < 10; i++) {
+        circle_d_queue_enQueueFront(i+1);
+        circle_d_queue_enQueueRear(i+100);
+    }
+    circle_d_queue_print();
+    // 头 null 7 6  5 4 3 2 1  100 101 102 103 104 105 106 null null null null null null null 尾
+    for (int i = 0; i < 3; i++) {
+        circle_d_queue_deQueueFront();
+        circle_d_queue_deQueueRear();
+    }
+    circle_d_queue_print();
+    // 头 11 7 6  5 4 3 2 1  100 101 102 103 104 105 106 null null null null null null 12 尾
+    circle_d_queue_enQueueFront(11);
+    circle_d_queue_enQueueFront(12);
+    circle_d_queue_print();
 }
 -(void)c_queueTest{
-    for (int i=0; i<10; i++) {
-        circle_queue_enQueue(i);
+    // 1 2 3 4 5 6 7 8 9 10
+    for (int i = 0; i < 10; i++) {
+        circle_queue_enQueue(i+1);
     }
     circle_queue_print();
-    for (int i=0; i<5; i++) {
+    // null null null null null 6 7 8 9 10
+    for (int i = 0; i < 5; i++) {
         circle_queue_deQueue();
     }
     circle_queue_print();
-    for (int i=15; i<23; i++) {
+    // 15 16 17 18 19 6 7 8 9 10
+    for (int i = 15; i < 20; i++) {
         circle_queue_enQueue(i);
     }
     circle_queue_print();
