@@ -39,6 +39,7 @@
     bool con = contains(6);
     
     clear();
+    
     print_array();
     
     add_element_at(0, 9);

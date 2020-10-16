@@ -24,6 +24,7 @@ void create_dynamic_array_list_with_capaticty(int capaticty){
     create_dynamic_array_list();
 }
 void clear(void){
+    //array_size=0即可。但如果存储的是对象元素，那么情况时需要遍历释放对对象强引用
     array_size=0;
 }
 int size(void){
@@ -73,7 +74,7 @@ void print_array(void){
     if (array_size==0) return;
     int i=0;
     printf("size= %d, [",array_size);
-    while (i<array_size) {
+    while (i<array_capaticty) {
         printf(" %d",d_array[i++]);
     }
     printf(" ]\n");
@@ -83,7 +84,6 @@ void ensureCapacity(int cur_size) {
     if (oldCapacity >= cur_size) return;
     // 新容量为旧容量的1.5倍
     int newCapacity = oldCapacity + (oldCapacity >> 1);
-    array_capaticty=newCapacity;
     int *new_array=(int *)malloc(sizeof(int)*newCapacity);
     for (int i = 0; i < array_size; i++) {
         new_array[i] = d_array[i]; //把旧数组中的元素全部拷贝到新
@@ -91,6 +91,7 @@ void ensureCapacity(int cur_size) {
 //    memcpy(new_array,d_array,sizeof(int)*array_size);
     free(d_array); // 释放旧数组
     d_array = new_array;
+    array_capaticty=newCapacity;
     printf("数组已扩容：oldSize: %d, newSize: %d\n",array_size,newCapacity);
 }
 int range_check(int index){
