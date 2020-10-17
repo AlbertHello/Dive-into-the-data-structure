@@ -142,8 +142,8 @@
 		37CF439F2538362700CBBDEF /* 算法 */ = {
 			isa = PBXGroup;
 			children = (
-				37CF43A02538362700CBBDEF /* 1_TwoSum.c */,
 				37CF43A22538362700CBBDEF /* 1_TwoSum.h */,
+				37CF43A02538362700CBBDEF /* 1_TwoSum.c */,
 				37CF43A12538362700CBBDEF /* 4_MedianofTwoSortedArrays.h */,
 				37CF43A32538362700CBBDEF /* 4_MedianofTwoSortedArrays.c */,
 				37CF44202538475D00CBBDEF /* 53_MaximumSubarray.h */,
