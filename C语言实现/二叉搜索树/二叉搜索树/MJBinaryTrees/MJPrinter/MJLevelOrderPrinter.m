@@ -268,7 +268,7 @@ static NSUInteger const MIN_SPACE = 1;
         
         [string appendString:rowString];
     }
-    
+    [string appendString:@"\n"];
     return string;
 }
 
@@ -366,7 +366,14 @@ static NSUInteger const MIN_SPACE = 1;
             rowLength += cornerSpace;
         }
         // 删除所有的null
-        [rowNodes removeObject:[NSNull null]];
+        NSMutableArray *arr=[NSMutableArray array];
+        for (MJLOPNode *node in rowNodes) {
+            if (![node isKindOfClass:[NSNull class]]) {
+                [arr addObject:node];
+            }
+        }
+        [rowNodes removeAllObjects];
+        [rowNodes addObjectsFromArray:arr];
     }
 }
 
