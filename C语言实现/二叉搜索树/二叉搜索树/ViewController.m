@@ -36,6 +36,10 @@
     
     NSLog(@"bst height: %lu",(unsigned long)[bst height]);
     
+//    [MJBinaryTrees print:bst];
+    
+    [bst invertTree4:bst.root];
+    
     [MJBinaryTrees print:bst];
 }
 

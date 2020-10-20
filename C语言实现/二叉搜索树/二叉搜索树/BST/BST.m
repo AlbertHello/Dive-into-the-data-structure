@@ -46,8 +46,6 @@
 
 
 @interface BST()
-
-@property(strong, nonatomic,nullable)BSTNode *root;
 @property(assign, nonatomic)NSUInteger count;
 @end
 
@@ -102,6 +100,7 @@
     new_node.data=ele;
     new_node.left=NULL;
     new_node.right=NULL;
+    new_node.parent=parent_node;
     if (cmp<0) {
         parent_node.right=new_node;
     }else{
@@ -244,14 +243,23 @@
     return cur_node.parent;
 }
 //遍历 - 递归
--(void)print_tree_preorder{
-    
+-(void)print_tree_preorder:(BSTNode *)node{
+    if (!node) return;
+    NSLog(@"node.data: %ld",node.data);
+    [self print_tree_preorder:node.left];
+    [self print_tree_preorder:node.right];
 }
--(void)print_tree_inorder{
-    
+-(void)print_tree_inorder:(BSTNode *)node{
+    if (!node) return;
+    [self print_tree_inorder:node.left];
+    NSLog(@"node.data: %ld",node.data);
+    [self print_tree_inorder:node.right];
 }
--(void)print_tree_backorder{
-    
+-(void)print_tree_backorder:(BSTNode *)node{
+    if (!node) return;
+    [self print_tree_backorder:node.left];
+    [self print_tree_backorder:node.right];
+    NSLog(@"node.data: %ld",node.data);
 }
 //层序遍历
 -(void)print_tree_levelorder{
@@ -304,5 +312,84 @@
     BSTNode *n=(BSTNode *)node;
     return @(n.data);
 }
+
+/**
+ 226. 翻转二叉树
+ 难度 简单
+ 翻转一棵二叉树。
+
+ 示例：
+
+ 输入：
+      4
+    /   \
+   2     7
+  / \   / \
+ 1   3 6   9
+ 输出：
+
+      4
+    /   \
+   7     2
+  / \   / \
+ 9   6 3   1
+ 
+ https://leetcode-cn.com/problems/invert-binary-tree/
+ 
+ */
+
+//1、递归处理。三种遍历方式都可以
+-(BSTNode *)invertTree1:(BSTNode *)root{
+    if (root == NULL) return root;
+    BSTNode *node=root.left;
+    root.left=root.right;
+    root.right=node;
+    [self invertTree1:root.left];
+    [self invertTree1:root.right];
+    return root;
+}
+
+-(BSTNode *)invertTree2:(BSTNode *)root{
+    if (root == NULL) return root;
+    [self invertTree2:root.left];
+    BSTNode *node=root.left;
+    root.left=root.right;
+    root.right=node;
+    [self invertTree2:root.left];
+    return root;
+}
+-(BSTNode *)invertTree3:(BSTNode *)root{
+    if (root == NULL) return root;
+    [self invertTree3:root.left];
+    [self invertTree3:root.right];
+    BSTNode *node=root.left;
+    root.left=root.right;
+    root.right=node;
+    return root;
+}
+
+//迭代-使用队列这里使用数组代替,其实就是二叉树的层序遍历
+-(BSTNode *)invertTree4:(BSTNode *)root{
+    if (root == NULL) return root;
+    NSMutableArray *queue=[NSMutableArray array];
+    [queue addObject:root];
+    
+    while (queue.count != 0) {
+        BSTNode *node = queue.firstObject;
+        BSTNode *tmp = node.left;
+        node.left = node.right;
+        node.right = tmp;
+        [queue removeObjectAtIndex:0];
+        
+        if (node.left != NULL) {
+            [queue addObject:node.left];
+        }
+        if (node.right != NULL) {
+            [queue addObject:node.right];
+        }
+    }
+    return root;
+}
+
 
 @end

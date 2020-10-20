@@ -13,6 +13,7 @@
 		376074E525208B9B007C5556 /* MJBinaryTrees.m in Sources */ = {isa = PBXBuildFile; fileRef = 376074E025208B9B007C5556 /* MJBinaryTrees.m */; };
 		376074E625208B9B007C5556 /* NSString+Trees.m in Sources */ = {isa = PBXBuildFile; fileRef = 376074E125208B9B007C5556 /* NSString+Trees.m */; };
 		37C75ADA253E8560006564C1 /* BST.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C75AD9253E8560006564C1 /* BST.m */; };
+		37C75B53253EECD3006564C1 /* BinarySearchTree.c in Sources */ = {isa = PBXBuildFile; fileRef = 37C75B51253EECD3006564C1 /* BinarySearchTree.c */; };
 		D1BF654A2331092D000E877E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BF65492331092D000E877E /* AppDelegate.m */; };
 		D1BF654D2331092D000E877E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BF654C2331092D000E877E /* ViewController.m */; };
 		D1BF65502331092D000E877E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BF654E2331092D000E877E /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 		376074E125208B9B007C5556 /* NSString+Trees.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trees.m"; sourceTree = "<group>"; };
 		37C75AD8253E8560006564C1 /* BST.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BST.h; sourceTree = "<group>"; };
 		37C75AD9253E8560006564C1 /* BST.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BST.m; sourceTree = "<group>"; };
+		37C75B51253EECD3006564C1 /* BinarySearchTree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BinarySearchTree.c; sourceTree = "<group>"; };
+		37C75B52253EECD3006564C1 /* BinarySearchTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearchTree.h; sourceTree = "<group>"; };
 		D1BF65452331092D000E877E /* 二叉搜索树.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "二叉搜索树.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BF65482331092D000E877E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D1BF65492331092D000E877E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 		37C75AD6253E84E2006564C1 /* BST */ = {
 			isa = PBXGroup;
 			children = (
+				37C75B51253EECD3006564C1 /* BinarySearchTree.c */,
+				37C75B52253EECD3006564C1 /* BinarySearchTree.h */,
 				37C75AD8253E8560006564C1 /* BST.h */,
 				37C75AD9253E8560006564C1 /* BST.m */,
 			);
@@ -205,6 +210,7 @@
 				D1BF654A2331092D000E877E /* AppDelegate.m in Sources */,
 				376074E625208B9B007C5556 /* NSString+Trees.m in Sources */,
 				376074E225208B9B007C5556 /* MJInorderPrinter.m in Sources */,
+				37C75B53253EECD3006564C1 /* BinarySearchTree.c in Sources */,
 				376074E425208B9B007C5556 /* MJPrinter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

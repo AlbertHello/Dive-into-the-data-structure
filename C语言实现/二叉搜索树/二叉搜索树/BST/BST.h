@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BST : NSObject<MJBinaryTreeInfo>
 
+@property(strong, nonatomic,nullable)BSTNode *root;
+
 //接口
 -(void)add:(NSInteger)ele;
 -(void)delete_ele:(NSInteger)ele;
@@ -32,6 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(BSTNode*)successor:(BSTNode *)cur_node;
 
 
+#pragma mark - 打印相关
+
 - (id)root;
 /**
  * how to get the left child of the node
@@ -45,6 +49,12 @@ NS_ASSUME_NONNULL_BEGIN
  * how to print the node
  */
 - (id)string:(id)node;
+
+#pragma mark - 算法相关
+-(BSTNode *)invertTree1:(BSTNode *)root;
+-(BSTNode *)invertTree2:(BSTNode *)root;
+-(BSTNode *)invertTree3:(BSTNode *)root;
+-(BSTNode *)invertTree4:(BSTNode *)root;
 
 
 

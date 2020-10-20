@@ -298,7 +298,7 @@ static NSUInteger const MIN_SPACE = 1;
         
         BOOL notNull = NO;
         for (MJLOPNode *node in preRowNodes) {
-            if ([node isEqual:[NSNull null]]) {
+            if ([node isKindOfClass:[NSNull class]]) {
                 [rowNodes addObject:[NSNull null]];
                 [rowNodes addObject:[NSNull null]];
             } else {
