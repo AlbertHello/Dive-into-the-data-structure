@@ -24,9 +24,11 @@
     
 //    [self testLowestCommonAncestor];
     
+    
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self BSTTest];
 }
-
 -(void)BSTTest{
     BST *bst = [[BST alloc]init];
     for (int i = 0; i < 15; i++) {
@@ -36,11 +38,12 @@
     
     NSLog(@"bst height: %lu",(unsigned long)[bst height]);
     
-//    [MJBinaryTrees print:bst];
-    
-    [bst invertTree4:bst.root];
-    
     [MJBinaryTrees print:bst];
+    
+//    [bst print_tree_preorder_no_recurse:bst.root];
+    [bst print_tree_preorder_no_recurse2:bst.root];
+//    [bst print_tree_inorder_no_recurse:bst.root];
+//    [bst print_tree_postorder_no_recurse:bst.root];
 }
 
 -(void)testLowestCommonAncestor{

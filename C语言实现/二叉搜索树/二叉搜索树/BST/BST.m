@@ -242,24 +242,127 @@
     }
     return cur_node.parent;
 }
-//遍历 - 递归
+//前序遍历 - 递归
 -(void)print_tree_preorder:(BSTNode *)node{
     if (!node) return;
     NSLog(@"node.data: %ld",node.data);
     [self print_tree_preorder:node.left];
     [self print_tree_preorder:node.right];
 }
+//前序遍历 - 迭代
+//打印顺序是：先根、次左、后右
+-(void)print_tree_preorder_no_recurse:(BSTNode *)node{
+    if (!node) return;
+    //用栈实现。主要是判断一个节点是否有右节点，有则先把右节点入栈，再把左节点入栈
+    NSMutableArray *stack=[NSMutableArray array];
+    //根节点入栈
+    [stack addObject:self.root];
+    while (stack.count != 0) {
+        //栈顶元素出栈
+        BSTNode *node=stack.lastObject;
+        [stack removeObject:node];
+        // 访问node节点
+        NSLog(@"node.data: %ld",node.data);
+        
+        if (node.right != NULL) { // 先判断右节点
+            //把右节点入栈，出栈时肯定晚于左节点
+            [stack addObject:node.right];
+        }
+        if (node.left != NULL) { // 先判断左节点
+            //再把左节点入栈，出栈时肯定早于右节点
+            [stack addObject:node.left];
+        }
+    }
+}
+// 栈中保存的都是右节点
+-(void)print_tree_preorder_no_recurse2:(BSTNode *)node{
+    BSTNode *n = node;
+    NSMutableArray *stack=[NSMutableArray array];
+    while (true) {
+        if (n != NULL) {
+            // 访问node节点
+            NSLog(@"node.data: %ld",n.data); //先访问
+            // 将右子节点入栈
+            if (n.right != NULL) { //然后找个节点如果有有右节点，顺便压进去
+                [stack addObject:n.right];// 栈中保存的都是右节点
+            }
+            // 该节点继续向左走
+            n = n.left; //一直走到null，左侧节点全部访问完成，下一步弹出栈顶元素，栈元素都是右节点
+        } else if (stack.count == 0) {
+            return;
+        } else {
+            // 处理右边
+            n=stack.lastObject; //弹出右节点
+            [stack removeObject:n];
+        }
+    }
+}
+
 -(void)print_tree_inorder:(BSTNode *)node{
     if (!node) return;
     [self print_tree_inorder:node.left];
     NSLog(@"node.data: %ld",node.data);
     [self print_tree_inorder:node.right];
 }
--(void)print_tree_backorder:(BSTNode *)node{
+//中序遍历 - 迭代
+//打印顺序是：先左、次根、后右
+-(void)print_tree_inorder_no_recurse:(BSTNode *)node{
     if (!node) return;
-    [self print_tree_backorder:node.left];
-    [self print_tree_backorder:node.right];
+    //用栈实现。主要是判断一个节点是否有右节点，有则先把右节点入栈，再把左节点入栈
+    NSMutableArray *stack=[NSMutableArray array];
+    BSTNode *n = node;
+    while (true) {
+        if (n != NULL) {
+            [stack addObject:n];
+            // 向左走,一直把所有最左侧的节点入栈，知道最左侧的节点为null
+            n = n.left;
+        } else if (stack.count == 0) {
+            return;
+        } else { //最左侧的节点为null时
+            n=stack.lastObject; //取出栈顶元素，此时这个node正好是为空的那个节点的父节点。
+            [stack removeObject:n];
+            // 访问node节点
+            NSLog(@"node.data: %ld",n.data);
+            // 让右节点进行中序遍历
+            n = n.right; //在赋值栈顶节点的右节点，下一轮开始
+        }
+    }
+}
+-(void)print_tree_postorder:(BSTNode *)node{
+    if (!node) return;
+    [self print_tree_postorder:node.left];
+    [self print_tree_postorder:node.right];
     NSLog(@"node.data: %ld",node.data);
+}
+//中序遍历 - 迭代
+//打印顺序是：先左、次后、后跟
+-(void)print_tree_postorder_no_recurse:(BSTNode *)node{
+    if (!node) return;
+    // 记录上一次弹出访问的节点
+    //当访问完右节点后，栈顶元素其实就是该节点的父节点，且该父节点肯定不是叶子节点
+    //当栈顶元素出栈时判断下前一次访问的节点跟目前的栈顶元素是不是父子关系
+    //要不然栈顶元素既不是叶子也没有判断就会再次把右节点压进栈
+    BSTNode *prev = NULL;
+    NSMutableArray *stack=[NSMutableArray array];
+    [stack addObject:node];
+    while (stack.count != 0) {
+        BSTNode *top=stack.lastObject;
+        if (top.isLeaf || (prev != NULL && prev.parent == top)) {
+            //第一次来到此处说明根节点的左子树已经全部压进了栈中
+            //且此时栈顶元素top是叶子节点
+            prev = stack.lastObject; //出栈
+            [stack removeObject:prev];
+            // 访问节点
+            NSLog(@"node.data: %ld",prev.data);
+        } else {
+            if (top.right != NULL) {
+                [stack addObject:top.right];
+            }
+            if (top.left != NULL) {
+                [stack addObject:top.left];
+            }
+        }
+    }
 }
 //层序遍历
 -(void)print_tree_levelorder{
