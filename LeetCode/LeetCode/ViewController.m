@@ -16,6 +16,8 @@
 #include "21_MergeTwoSortedList.h"
 #include "20_ValidParentheses.h"
 #include "70_ClimbingStairs.h"
+#import "15_ThreeSum.h"
+
 
 
 
@@ -36,7 +38,8 @@
 }
 -(void)leetcodeTest{
 //    validParenthesesTest();
-    climbStairsTest();
+//    climbStairsTest();
+    [_5_ThreeSum threeSumTest];
 }
 
 @end
