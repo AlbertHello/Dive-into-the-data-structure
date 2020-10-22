@@ -74,6 +74,30 @@
     return length;
 }
 
+//哈希表原理
+/**
+ 1、把字母元素的ASCII码当做下标，每个字母对应的值默认是-1
+ 2、依次遍历字符串，存储下每个字符对应的下标。并且计算个数
+ 3、同样的字符ASCII是一样的，当重复的字母出现时，字符下标i肯定比上一个同样的字符大，所以判定是同样的字符
+ 4、start更新为重复字符的下一个位置
+ */
+int lengthOfLongestSubstring(char * s) {
+    int hset[128]; //存储字母下标
+    int start = 0, count = 0, max = 0;
+    memset(hset, -1, sizeof(hset)); //初始值-1
+    for (int i = 0; i < strlen(s); i++) {
+        if (hset[s[i]] >= start) { //如果后来的元素与之前的元素重复，那么势必索引i比之前存储的更大
+            start = hset[s[i]] + 1; // 更新为重复字符的下一个位置
+            count = i - start; //长度
+        }
+        hset[s[i]] = i;//字母对应的ASCII码作为hset的下标，存储的是元素下标
+        count++;
+        if (count > max) {
+            max = count;
+        }
+    }
+    return max;
+}
 
 
 @end
