@@ -81,7 +81,7 @@
  3、同样的字符ASCII是一样的，当重复的字母出现时，字符下标i肯定比上一个同样的字符大，所以判定是同样的字符
  4、start更新为重复字符的下一个位置
  */
-int lengthOfLongestSubstring(char * s) {
+int lengthOfLongestSubstring_c(char * s) {
     int hset[128]; //存储字母下标
     int start = 0, count = 0, max = 0;
     memset(hset, -1, sizeof(hset)); //初始值-1
