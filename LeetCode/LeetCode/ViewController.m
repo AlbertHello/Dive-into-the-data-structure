@@ -31,8 +31,10 @@
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor systemPinkColor];
     
+    NSLog(@"%ld",(long)[self lengthOfLongestSubstring:@"ab"]);
     
 }
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self leetcodeTest];
 }

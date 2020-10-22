@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */; };
 		37C75B5825400B96006564C1 /* 15_ThreeSum.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C75B5725400B96006564C1 /* 15_ThreeSum.m */; };
 		37CF43862538357900CBBDEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43852538357900CBBDEF /* AppDelegate.m */; };
 		37CF43892538357900CBBDEF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43882538357900CBBDEF /* SceneDelegate.m */; };
@@ -35,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		373632C825413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 3_LongestSubstringWithoutRepeatingCharacters.h; sourceTree = "<group>"; };
+		373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 3_LongestSubstringWithoutRepeatingCharacters.m; sourceTree = "<group>"; };
 		37C75B5625400B96006564C1 /* 15_ThreeSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 15_ThreeSum.h; sourceTree = "<group>"; };
 		37C75B5725400B96006564C1 /* 15_ThreeSum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 15_ThreeSum.m; sourceTree = "<group>"; };
 		37CF43812538357900CBBDEF /* LeetCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +150,8 @@
 			children = (
 				37CF43A22538362700CBBDEF /* 1_TwoSum.h */,
 				37CF43A02538362700CBBDEF /* 1_TwoSum.c */,
+				373632C825413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.h */,
+				373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */,
 				37CF43A12538362700CBBDEF /* 4_MedianofTwoSortedArrays.h */,
 				37CF43A32538362700CBBDEF /* 4_MedianofTwoSortedArrays.c */,
 				37C75B5625400B96006564C1 /* 15_ThreeSum.h */,
@@ -291,6 +296,7 @@
 				37CF43C92538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.c in Sources */,
 				37CF43CF2538362700CBBDEF /* 20_ValidParentheses.c in Sources */,
 				37CF43C22538362700CBBDEF /* 4_MedianofTwoSortedArrays.c in Sources */,
+				373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */,
 				37CF43972538357A00CBBDEF /* main.m in Sources */,
 				37CF43C32538362700CBBDEF /* ListNode_C.c in Sources */,
 				37CF43892538357900CBBDEF /* SceneDelegate.m in Sources */,
