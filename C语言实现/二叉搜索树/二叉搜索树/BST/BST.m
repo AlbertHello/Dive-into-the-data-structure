@@ -95,6 +95,7 @@
             return;
         }
     }
+    BSTNode *inorder=(__bridge BSTNode *)malloc(sizeof(BSTNode *)*501);
     
     BSTNode *new_node=[[BSTNode alloc]init];
     new_node.data=ele;
@@ -308,7 +309,7 @@
 //打印顺序是：先左、次根、后右
 -(void)print_tree_inorder_no_recurse:(BSTNode *)node{
     if (!node) return;
-    //用栈实现。主要是判断一个节点是否有右节点，有则先把右节点入栈，再把左节点入栈
+    //用栈实现。
     NSMutableArray *stack=[NSMutableArray array];
     BSTNode *n = node;
     while (true) {
@@ -328,13 +329,45 @@
         }
     }
 }
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+};
+// C 语言实现中序遍历
+int* inorderTraversal(struct TreeNode* root, int* returnSize){
+    if (root == NULL){
+        *returnSize=0;
+        return NULL;
+    }
+    struct TreeNode **inorder=(struct TreeNode **)malloc(sizeof(struct TreeNode *)*100);
+    int *valArr=(int *)malloc(sizeof(int)*100);
+    int i=0;
+    int j=0;
+    struct TreeNode* node=root;
+    while (true){
+        if(node != NULL){
+            inorder[i++]=node;
+            node=node->left;
+        }else if(i == 0){
+            break;
+        }else{
+            node=inorder[--i];
+            valArr[j++]=node->val;
+            node=node->right;
+        }
+    }
+    *returnSize=j;
+    return valArr;
+}
+
 -(void)print_tree_postorder:(BSTNode *)node{
     if (!node) return;
     [self print_tree_postorder:node.left];
     [self print_tree_postorder:node.right];
     NSLog(@"node.data: %ld",node.data);
 }
-//中序遍历 - 迭代
+//后序遍历 - 迭代
 //打印顺序是：先左、次后、后跟
 -(void)print_tree_postorder_no_recurse:(BSTNode *)node{
     if (!node) return;
