@@ -36,7 +36,9 @@
  链接：https://leetcode-cn.com/problems/find-common-characters
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-
+int min(int a, int b){
+    return a<b?a:b;
+}
 char** commonChars(char** A, int ASize, int* returnSize) {
     
     int minfreq[26]={0};
@@ -56,7 +58,7 @@ char** commonChars(char** A, int ASize, int* returnSize) {
         for (int j = 0; j < 26; ++j) {
             //每隔字符串中可能相同的字符重复的次数不同
             //所以需要取重复最小次
-            minfreq[j] = fmin(minfreq[j], freq[j]);
+            minfreq[j] = min(minfreq[j], freq[j]);
         }
     }
     int sum = 0;
@@ -64,12 +66,12 @@ char** commonChars(char** A, int ASize, int* returnSize) {
         //计算重复的这些字母需要占用多大空间，为了下面的创建ans
         sum += minfreq[i];
     }
-    char** ans = malloc(sizeof(char*) * sum);
+    char** ans = (char**)malloc(sizeof(char*) * sum);
     *returnSize = 0;
     for (int i = 0; i < 26; ++i) {
         for (int j = 0; j < minfreq[i]; ++j) {
-            //每个字符串2两个字节，也就是字符+结束符共两个字节
-            ans[*returnSize] = malloc(sizeof(char) * 2);
+            //每个字符串2两个字节，也就是字符+结束'\0'共两个字节
+            ans[*returnSize] = (char *)malloc(sizeof(char) * 2);
             //字符串的第一个字符就是重复的那个字符串
             ans[*returnSize][0] = i + 'a';
             //字符串的第二个字符就是结束符'\0'

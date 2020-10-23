@@ -56,7 +56,6 @@
     NSLog(@"sizeof(NSUInteger)  : %lu",sizeof(NSUInteger));
     NSLog(@"INT_MAX             : %d",INT_MAX);
     NSLog(@"INT_MIN             : %d",INT_MIN);
-
 }
 
 @end
