@@ -153,12 +153,8 @@
 			children = (
 				37CF43A22538362700CBBDEF /* 1_TwoSum.h */,
 				37CF43A02538362700CBBDEF /* 1_TwoSum.c */,
-				373632C825413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.h */,
-				373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */,
 				37CF43A12538362700CBBDEF /* 4_MedianofTwoSortedArrays.h */,
 				37CF43A32538362700CBBDEF /* 4_MedianofTwoSortedArrays.c */,
-				3736330525419FB20039E4A6 /* 8_StringtoInteger.h */,
-				3736330625419FB20039E4A6 /* 8_StringtoInteger.m */,
 				37C75B5625400B96006564C1 /* 15_ThreeSum.h */,
 				37C75B5725400B96006564C1 /* 15_ThreeSum.m */,
 				37CF44202538475D00CBBDEF /* 53_MaximumSubarray.h */,
@@ -199,6 +195,10 @@
 		37CF43B92538362700CBBDEF /* 字符串 */ = {
 			isa = PBXGroup;
 			children = (
+				373632C825413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.h */,
+				373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */,
+				3736330525419FB20039E4A6 /* 8_StringtoInteger.h */,
+				3736330625419FB20039E4A6 /* 8_StringtoInteger.m */,
 				37CF43BD2538362700CBBDEF /* 5_LongestPalindromicSubstring.h */,
 				37CF43BB2538362700CBBDEF /* 5_LongestPalindromicSubstring.c */,
 				37CF43BA2538362700CBBDEF /* 1002_Find_Common_Characters.h */,
