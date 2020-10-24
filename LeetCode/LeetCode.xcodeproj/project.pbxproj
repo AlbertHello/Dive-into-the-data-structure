@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35CF22312543E2910044632E /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CF22302543E2910044632E /* BubbleSort.m */; };
 		373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */; };
 		3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3736330625419FB20039E4A6 /* 8_StringtoInteger.m */; };
 		37C75B5825400B96006564C1 /* 15_ThreeSum.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C75B5725400B96006564C1 /* 15_ThreeSum.m */; };
@@ -37,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35CF222F2543E2910044632E /* BubbleSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
+		35CF22302543E2910044632E /* BubbleSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort.m; sourceTree = "<group>"; };
 		373632C825413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 3_LongestSubstringWithoutRepeatingCharacters.h; sourceTree = "<group>"; };
 		373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 3_LongestSubstringWithoutRepeatingCharacters.m; sourceTree = "<group>"; };
 		3736330525419FB20039E4A6 /* 8_StringtoInteger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 8_StringtoInteger.h; sourceTree = "<group>"; };
@@ -102,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35CF22332543E2990044632E /* 排序 */ = {
+			isa = PBXGroup;
+			children = (
+				35CF222F2543E2910044632E /* BubbleSort.h */,
+				35CF22302543E2910044632E /* BubbleSort.m */,
+			);
+			path = "排序";
+			sourceTree = "<group>";
+		};
 		37CF43782538357900CBBDEF = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +156,7 @@
 				37CF43A42538362700CBBDEF /* 链表 */,
 				37CF43B92538362700CBBDEF /* 字符串 */,
 				37CF43BE2538362700CBBDEF /* 栈 */,
+				35CF22332543E2990044632E /* 排序 */,
 			);
 			path = c;
 			sourceTree = "<group>";
@@ -291,6 +304,7 @@
 				37CF43C12538362700CBBDEF /* 1_TwoSum.c in Sources */,
 				37CF43C42538362700CBBDEF /* 2_AddTwoNumbers.c in Sources */,
 				37CF43C52538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c in Sources */,
+				35CF22312543E2910044632E /* BubbleSort.m in Sources */,
 				37CF43CD2538362700CBBDEF /* 5_LongestPalindromicSubstring.c in Sources */,
 				37CF43C62538362700CBBDEF /* 141_LinkedListCycle.c in Sources */,
 				37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */,

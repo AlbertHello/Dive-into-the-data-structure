@@ -18,6 +18,8 @@
 #include "70_ClimbingStairs.h"
 #import "15_ThreeSum.h"
 #import "8_StringtoInteger.h"
+#import "BubbleSort.h"
+
 
 
 
@@ -33,18 +35,20 @@
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor systemPinkColor];
     
-    [self test];
+//    [self test];
+    [self leetcodeTest];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self leetcodeTest];
+//    [self leetcodeTest];
 }
 
 -(void)leetcodeTest{
 //    validParenthesesTest();
 //    climbStairsTest();
 //    [_5_ThreeSum threeSumTest];
-    [_StringtoInteger myAtoiTest];
+//    [_StringtoInteger myAtoiTest];
+    [BubbleSort bubbleSortTest];
 }
 -(void)test{
     NSLog(@"sizeof(int)         : %lu",sizeof(int));
