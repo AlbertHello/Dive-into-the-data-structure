@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35CF22312543E2910044632E /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CF22302543E2910044632E /* BubbleSort.m */; };
+		35836D2425452C7F006A1BF3 /* BubbleSort2.m in Sources */ = {isa = PBXBuildFile; fileRef = 35836D2325452C7F006A1BF3 /* BubbleSort2.m */; };
+		35836D2C25452CD8006A1BF3 /* Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 35836D2B25452CD8006A1BF3 /* Sort.m */; };
+		3586A3FC2545632300CD2C61 /* BubbleSort3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3586A3FB2545632300CD2C61 /* BubbleSort3.m */; };
+		35CF22312543E2910044632E /* BubbleSort1.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CF22302543E2910044632E /* BubbleSort1.m */; };
 		373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */; };
 		3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3736330625419FB20039E4A6 /* 8_StringtoInteger.m */; };
 		37C75B5825400B96006564C1 /* 15_ThreeSum.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C75B5725400B96006564C1 /* 15_ThreeSum.m */; };
@@ -38,8 +41,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		35CF222F2543E2910044632E /* BubbleSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
-		35CF22302543E2910044632E /* BubbleSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort.m; sourceTree = "<group>"; };
+		35836D2225452C7F006A1BF3 /* BubbleSort2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort2.h; sourceTree = "<group>"; };
+		35836D2325452C7F006A1BF3 /* BubbleSort2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort2.m; sourceTree = "<group>"; };
+		35836D2A25452CD8006A1BF3 /* Sort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sort.h; sourceTree = "<group>"; };
+		35836D2B25452CD8006A1BF3 /* Sort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sort.m; sourceTree = "<group>"; };
+		3586A3FA2545632300CD2C61 /* BubbleSort3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort3.h; sourceTree = "<group>"; };
+		3586A3FB2545632300CD2C61 /* BubbleSort3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort3.m; sourceTree = "<group>"; };
+		35CF222F2543E2910044632E /* BubbleSort1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort1.h; sourceTree = "<group>"; };
+		35CF22302543E2910044632E /* BubbleSort1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort1.m; sourceTree = "<group>"; };
 		373632C825413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 3_LongestSubstringWithoutRepeatingCharacters.h; sourceTree = "<group>"; };
 		373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 3_LongestSubstringWithoutRepeatingCharacters.m; sourceTree = "<group>"; };
 		3736330525419FB20039E4A6 /* 8_StringtoInteger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 8_StringtoInteger.h; sourceTree = "<group>"; };
@@ -108,8 +117,14 @@
 		35CF22332543E2990044632E /* 排序 */ = {
 			isa = PBXGroup;
 			children = (
-				35CF222F2543E2910044632E /* BubbleSort.h */,
-				35CF22302543E2910044632E /* BubbleSort.m */,
+				35CF222F2543E2910044632E /* BubbleSort1.h */,
+				35CF22302543E2910044632E /* BubbleSort1.m */,
+				35836D2225452C7F006A1BF3 /* BubbleSort2.h */,
+				35836D2325452C7F006A1BF3 /* BubbleSort2.m */,
+				3586A3FA2545632300CD2C61 /* BubbleSort3.h */,
+				3586A3FB2545632300CD2C61 /* BubbleSort3.m */,
+				35836D2A25452CD8006A1BF3 /* Sort.h */,
+				35836D2B25452CD8006A1BF3 /* Sort.m */,
 			);
 			path = "排序";
 			sourceTree = "<group>";
@@ -302,11 +317,14 @@
 				37CF43CB2538362700CBBDEF /* 61_RotateList.c in Sources */,
 				37CF43CE2538362700CBBDEF /* 1002_Find_Common_Characters.c in Sources */,
 				37CF43C12538362700CBBDEF /* 1_TwoSum.c in Sources */,
+				35836D2425452C7F006A1BF3 /* BubbleSort2.m in Sources */,
+				35836D2C25452CD8006A1BF3 /* Sort.m in Sources */,
 				37CF43C42538362700CBBDEF /* 2_AddTwoNumbers.c in Sources */,
 				37CF43C52538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c in Sources */,
-				35CF22312543E2910044632E /* BubbleSort.m in Sources */,
+				35CF22312543E2910044632E /* BubbleSort1.m in Sources */,
 				37CF43CD2538362700CBBDEF /* 5_LongestPalindromicSubstring.c in Sources */,
 				37CF43C62538362700CBBDEF /* 141_LinkedListCycle.c in Sources */,
+				3586A3FC2545632300CD2C61 /* BubbleSort3.m in Sources */,
 				37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */,
 				37CF43C82538362700CBBDEF /* 21_MergeTwoSortedList.c in Sources */,
 				37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */,

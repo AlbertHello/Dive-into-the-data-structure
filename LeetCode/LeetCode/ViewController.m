@@ -18,7 +18,9 @@
 #include "70_ClimbingStairs.h"
 #import "15_ThreeSum.h"
 #import "8_StringtoInteger.h"
-#import "BubbleSort.h"
+#import "BubbleSort1.h"
+#import "BubbleSort2.h"
+
 
 
 
@@ -36,7 +38,8 @@
     self.view.backgroundColor=[UIColor systemPinkColor];
     
 //    [self test];
-    [self leetcodeTest];
+//    [self leetcodeTest];
+    [self sortTest];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -48,7 +51,23 @@
 //    climbStairsTest();
 //    [_5_ThreeSum threeSumTest];
 //    [_StringtoInteger myAtoiTest];
-    [BubbleSort bubbleSortTest];
+}
+-(void)sortTest{
+    int arr1[1000]={0},arr2[1000]={0};
+    for (int i=0; i<1000; i++) {
+        int rand=arc4random()%1000;
+        arr1[i]=rand;
+        arr2[i]=rand;
+    }
+    
+//    BubbleSort1 *b1=[[BubbleSort1 alloc]init];
+//    [b1 bubbleSort1:arr1 length:1000];
+//    NSLog(@"%@",b1);
+    
+    BubbleSort2 *b2=[[BubbleSort2 alloc]init];
+    [b2 bubbleSort2:arr2 length:1000];
+    NSLog(@"%@",b2);
+    
 }
 -(void)test{
     NSLog(@"sizeof(int)         : %lu",sizeof(int));
