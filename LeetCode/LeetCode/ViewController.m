@@ -20,6 +20,7 @@
 #import "1_TwoSums.h"
 #import "BubbleSort1.h"
 #import "BubbleSort2.h"
+#import "149_Max_Points_on_a_Line.h"
 
 
 
@@ -38,8 +39,8 @@
     self.view.backgroundColor=[UIColor systemPinkColor];
     
 //    [self test];
-//    [self leetcodeTest];
-    [self sortTest];
+    [self leetcodeTest];
+//    [self sortTest];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -51,6 +52,7 @@
 //    climbStairsTest();
 //    [_5_ThreeSum threeSumTest];
 //    [_StringtoInteger myAtoiTest];
+    [_49_Max_Points_on_a_Line maxPointsTests];
 }
 -(void)sortTest{
     int arr1[1000]={0},arr2[1000]={0};
