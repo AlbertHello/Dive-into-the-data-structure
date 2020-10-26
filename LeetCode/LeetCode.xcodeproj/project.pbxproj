@@ -13,6 +13,7 @@
 		35CF22312543E2910044632E /* BubbleSort1.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CF22302543E2910044632E /* BubbleSort1.m */; };
 		373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */; };
 		3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3736330625419FB20039E4A6 /* 8_StringtoInteger.m */; };
+		3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDC92546DA70003C8105 /* 1_TwoSums.m */; };
 		37C75B5825400B96006564C1 /* 15_ThreeSum.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C75B5725400B96006564C1 /* 15_ThreeSum.m */; };
 		37CF43862538357900CBBDEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43852538357900CBBDEF /* AppDelegate.m */; };
 		37CF43892538357900CBBDEF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43882538357900CBBDEF /* SceneDelegate.m */; };
@@ -21,7 +22,6 @@
 		37CF43912538357A00CBBDEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37CF43902538357A00CBBDEF /* Assets.xcassets */; };
 		37CF43942538357A00CBBDEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37CF43922538357A00CBBDEF /* LaunchScreen.storyboard */; };
 		37CF43972538357A00CBBDEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43962538357A00CBBDEF /* main.m */; };
-		37CF43C12538362700CBBDEF /* 1_TwoSum.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43A02538362700CBBDEF /* 1_TwoSum.c */; };
 		37CF43C22538362700CBBDEF /* 4_MedianofTwoSortedArrays.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43A32538362700CBBDEF /* 4_MedianofTwoSortedArrays.c */; };
 		37CF43C32538362700CBBDEF /* ListNode_C.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43A82538362700CBBDEF /* ListNode_C.c */; };
 		37CF43C42538362700CBBDEF /* 2_AddTwoNumbers.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43AF2538362700CBBDEF /* 2_AddTwoNumbers.c */; };
@@ -53,6 +53,8 @@
 		373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 3_LongestSubstringWithoutRepeatingCharacters.m; sourceTree = "<group>"; };
 		3736330525419FB20039E4A6 /* 8_StringtoInteger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 8_StringtoInteger.h; sourceTree = "<group>"; };
 		3736330625419FB20039E4A6 /* 8_StringtoInteger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 8_StringtoInteger.m; sourceTree = "<group>"; };
+		3776CDC82546DA70003C8105 /* 1_TwoSums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 1_TwoSums.h; sourceTree = "<group>"; };
+		3776CDC92546DA70003C8105 /* 1_TwoSums.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 1_TwoSums.m; sourceTree = "<group>"; };
 		37C75B5625400B96006564C1 /* 15_ThreeSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 15_ThreeSum.h; sourceTree = "<group>"; };
 		37C75B5725400B96006564C1 /* 15_ThreeSum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 15_ThreeSum.m; sourceTree = "<group>"; };
 		37CF43812538357900CBBDEF /* LeetCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,9 +69,7 @@
 		37CF43932538357A00CBBDEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37CF43952538357A00CBBDEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37CF43962538357A00CBBDEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		37CF43A02538362700CBBDEF /* 1_TwoSum.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 1_TwoSum.c; sourceTree = "<group>"; };
 		37CF43A12538362700CBBDEF /* 4_MedianofTwoSortedArrays.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 4_MedianofTwoSortedArrays.h; sourceTree = "<group>"; };
-		37CF43A22538362700CBBDEF /* 1_TwoSum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 1_TwoSum.h; sourceTree = "<group>"; };
 		37CF43A32538362700CBBDEF /* 4_MedianofTwoSortedArrays.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 4_MedianofTwoSortedArrays.c; sourceTree = "<group>"; };
 		37CF43A52538362700CBBDEF /* 2_AddTwoNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 2_AddTwoNumbers.h; sourceTree = "<group>"; };
 		37CF43A62538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = 19_RemoveNthNodeFromEndofList.h; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 		37CF439F2538362700CBBDEF /* 算法 */ = {
 			isa = PBXGroup;
 			children = (
-				37CF43A22538362700CBBDEF /* 1_TwoSum.h */,
-				37CF43A02538362700CBBDEF /* 1_TwoSum.c */,
+				3776CDC82546DA70003C8105 /* 1_TwoSums.h */,
+				3776CDC92546DA70003C8105 /* 1_TwoSums.m */,
 				37CF43A12538362700CBBDEF /* 4_MedianofTwoSortedArrays.h */,
 				37CF43A32538362700CBBDEF /* 4_MedianofTwoSortedArrays.c */,
 				37C75B5625400B96006564C1 /* 15_ThreeSum.h */,
@@ -316,8 +316,8 @@
 				37CF438C2538357900CBBDEF /* ViewController.m in Sources */,
 				37CF43CB2538362700CBBDEF /* 61_RotateList.c in Sources */,
 				37CF43CE2538362700CBBDEF /* 1002_Find_Common_Characters.c in Sources */,
-				37CF43C12538362700CBBDEF /* 1_TwoSum.c in Sources */,
 				35836D2425452C7F006A1BF3 /* BubbleSort2.m in Sources */,
+				3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */,
 				35836D2C25452CD8006A1BF3 /* Sort.m in Sources */,
 				37CF43C42538362700CBBDEF /* 2_AddTwoNumbers.c in Sources */,
 				37CF43C52538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c in Sources */,

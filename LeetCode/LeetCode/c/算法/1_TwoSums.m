@@ -1,12 +1,13 @@
 //
-//  1_TwoSum.c
-//  链表
+//  1_TwoSums.m
+//  LeetCode
 //
-//  Created by 58 on 2020/10/14.
-//  Copyright © 2020 58. All rights reserved.
+//  Created by 58 on 2020/10/26.
 //
 
-#include "1_TwoSum.h"
+#import "1_TwoSums.h"
+
+@implementation __TwoSums
 
 /**
  给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
@@ -71,6 +72,32 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
  这样我们创建一个哈希表，对于每一个 x，我们首先查询哈希表中是否存在 target - x，然后将 x 插入到哈希表中，即可保证不会让 x 和自己匹配。
  
  */
+
+
+-(int *)twoSum:(int*)nums
+          size:(int)numsSize
+        target:(int)target
+    returnSize:(int*) returnSize{
+    //以字典当做哈希
+    NSMutableDictionary *dict=[NSMutableDictionary dictionary];
+    for (int i=0; i<numsSize; i++) {
+        int cmp=target-nums[i];
+        NSString *key=@(cmp).stringValue;
+        if ([dict.allKeys containsObject:key]) {
+            int index=[dict[key] intValue];
+            int *arr=(int *)malloc(sizeof(int)*2);
+            arr[0]=index;
+            arr[1]=i;
+            return arr;
+        }else{
+            dict[key]=@(nums[i]);
+        }
+    }
+    return NULL;
+}
+
+
+
 //struct hashTable {
 //    int key;
 //    int val;
@@ -123,3 +150,5 @@ void twoSumTest(){
         printf(" null \n");
     }
 }
+
+@end

@@ -12,12 +12,12 @@
 #include "19_RemoveNthNodeFromEndofList.h"
 #include "61_RotateList.h"
 #include "82_RemoveDuplicatesfromSortedList2.h"
-#include "1_TwoSum.h"
 #include "21_MergeTwoSortedList.h"
 #include "20_ValidParentheses.h"
 #include "70_ClimbingStairs.h"
 #import "15_ThreeSum.h"
 #import "8_StringtoInteger.h"
+#import "1_TwoSums.h"
 #import "BubbleSort1.h"
 #import "BubbleSort2.h"
 
