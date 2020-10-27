@@ -10,7 +10,7 @@
 @implementation BubbleSort2
 
 
--(void)bubbleSort2:(int *)arr length:(int)len;{
+-(void)bubbleSort2:(int *)arr length:(int)len{
     self.time=CFAbsoluteTimeGetCurrent();
     for (int i=len; i>0; i--) {
         bool flag = true; //如果一轮遍历后该值没有变化，说明已经拍好顺序，提前结束便利
