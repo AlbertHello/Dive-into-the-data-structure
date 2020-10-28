@@ -58,13 +58,14 @@
     [_49_Max_Points_on_a_Line maxPointsTests];
 }
 -(void)sortTest{
-    int arr1[1000]={0},arr2[1000]={0},arr3[1000]={0},arr4[1000]={0};
+    int arr1[1000]={0},arr2[1000]={0},arr3[1000]={0},arr4[1000]={0},arr5[1000]={0};
     for (int i=0; i<1000; i++) {
         int rand=arc4random()%1000;
         arr1[i]=rand;
         arr2[i]=rand;
         arr3[i]=rand;
         arr4[i]=rand;
+        arr5[i]=rand;
     }
 //
     BubbleSort1 *b1=[[BubbleSort1 alloc]init];
@@ -83,11 +84,9 @@
     [select selectSort:arr4 length:1000];
     NSLog(@"%@",select);
     
-//    NSArray *arrrrr=@[@(88), @(44), @(53), @(41), @(16), @(6), @(70), @(18), @(85), @(98), @(81), @(23), @(36), @(43), @(37)];
-//    HeapSort *heapsort=[[HeapSort alloc]init];
-//    NSMutableArray *arr5=[NSMutableArray arrayWithArray:arrrrr];
-//    [heapsort heapifyWith:arr5];
-//    NSLog(@"%@",arr5);
+    HeapSort *heap=[[HeapSort alloc]init];
+    [heap heapifyWith:arr5 length:1000];
+    NSLog(@"%@",heap);
     
 }
 -(void)test{

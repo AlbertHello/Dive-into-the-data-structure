@@ -58,6 +58,7 @@
     NSString *cmpCount=[NSString stringWithFormat:@"%ld",self.cmpCount];
     NSString *swapCount=[NSString stringWithFormat:@"%ld",self.swapCount];
     NSString *str=[NSString stringWithFormat:@"\n Sort: %@\n 耗时：%@\t 比较次数：%@\t 交换次数：%@\t",class,time,cmpCount,swapCount];
+    printf("************************************************\n");
     return str;
 }
 @end

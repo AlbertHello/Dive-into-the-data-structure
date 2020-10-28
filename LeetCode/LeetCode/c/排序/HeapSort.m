@@ -7,7 +7,12 @@
 
 #import "HeapSort.h"
 
-@interface HeapSort ()
+static id object=NULL;
+static int * g_array=NULL;
+
+@interface HeapSort (){
+    
+}
 
 @property(nonatomic,assign)NSUInteger size;
 @property(nonatomic,assign)NSUInteger bigHeap;//是否是大顶堆，默认是YES
@@ -16,6 +21,12 @@
 @end
 
 @implementation HeapSort
+-(instancetype)init{
+    if (self=[super init]) {
+        object=self;
+    }
+    return self;
+}
 
 /**
  堆排序可以认为是对选择排序的一种优化
@@ -84,8 +95,53 @@
     NSString *cmpCount=[NSString stringWithFormat:@"%ld",self.cmpCount];
     NSString *swapCount=[NSString stringWithFormat:@"%ld",self.swapCount];
     NSString *str=[NSString stringWithFormat:@"\n Sort: %@\n 耗时：%@\t 比较次数：%@\t 交换次数：%@\t",class,time,cmpCount,swapCount];
+    printf("************************************************\n");
     return str;
 }
 
 
+//************************** C 语言实现 ***************************************
+-(void)heapifyWith:(int *)arr length:(int)len{
+    self.time=CFAbsoluteTimeGetCurrent();
+    // 原地建堆,直接把外部传入的数组进行排列。不需要额外申请空间拷贝
+    g_array=arr;
+    self.size=len;
+    // 从非叶子节点开始 i = (self.size >> 1) - 1
+    //自下而上的下虑
+    for (int i = (len >> 1) - 1; i >= 0; i--) {
+        shiftDown(i);
+    }//这样处理完后只是建立了一个局部有序的大顶堆。还需要继续排序
+    while (len > 1) {
+        // 交换堆顶元素和尾部元素
+        --len;
+        [self swap:&g_array[0] with:&g_array[len]];
+//        [self swapObj:self.array[0] with:self.array[self.size]];
+        // 对0位置进行siftDown（恢复堆的性质）
+        //因为此时size已经减一，再进行下虑不会再把最后一个最大的值给弄上去
+        //只会把第二大的值弄到堆顶
+        shiftDown(0);
+    }
+    self.time=CFAbsoluteTimeGetCurrent()-self.time;
+}
+void shiftDown(int index){
+    HeapSort *obj=(HeapSort *)object;
+    int ele = g_array[index];
+    int half = (int) obj.size >> 1;
+    while (index < half) { // index必须是非叶子节点
+        // 默认是左边跟父节点比
+        int childIndex = (index << 1) + 1;
+        int child = g_array[childIndex];
+        
+        int rightIndex = childIndex + 1;
+        // 右子节点比左子节点大
+        if (rightIndex < obj.size && [obj cmp:g_array[rightIndex] to:child] > 0) {
+            child = g_array[childIndex = rightIndex];
+        }
+        // 大于等于子节点
+        if ([obj cmp:ele to:child] >= 0) break;
+        g_array[index] = child;
+        index = childIndex;
+    }
+    g_array[index] = ele;
+}
 @end
