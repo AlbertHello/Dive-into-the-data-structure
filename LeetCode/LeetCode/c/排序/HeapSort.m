@@ -31,6 +31,7 @@
  */
 
 -(void)heapifyWith:(NSMutableArray *)array{
+    self.time=CFAbsoluteTimeGetCurrent();
     // 原地建堆,直接把外部传入的数组进行排列。不需要额外申请空间拷贝
     self.array=array;
     self.size = array.count;
@@ -52,6 +53,7 @@
         //只会把第二大的值弄到堆顶
         [self shiftDown:0];
     }
+    self.time=CFAbsoluteTimeGetCurrent()-self.time;
 }
 -(void)shiftDown:(int)index{
     int ele  = [self.array[index] intValue];

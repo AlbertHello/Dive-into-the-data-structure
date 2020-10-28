@@ -21,6 +21,7 @@
 #import "BubbleSort1.h"
 #import "BubbleSort2.h"
 #import "BubbleSort3.h"
+#import "SelectSort.h"
 #import "HeapSort.h"
 #import "149_Max_Points_on_a_Line.h"
 
@@ -57,31 +58,36 @@
     [_49_Max_Points_on_a_Line maxPointsTests];
 }
 -(void)sortTest{
-//    int arr1[1000]={0},arr2[1000]={0},arr3[1000]={0};
-//    for (int i=0; i<1000; i++) {
-//        int rand=arc4random()%1000;
-//        arr1[i]=rand;
-//        arr2[i]=rand;
-//        arr3[i]=rand;
-//    }
+    int arr1[1000]={0},arr2[1000]={0},arr3[1000]={0},arr4[1000]={0};
+    for (int i=0; i<1000; i++) {
+        int rand=arc4random()%1000;
+        arr1[i]=rand;
+        arr2[i]=rand;
+        arr3[i]=rand;
+        arr4[i]=rand;
+    }
 //
-//    BubbleSort1 *b1=[[BubbleSort1 alloc]init];
-//    [b1 bubbleSort1:arr1 length:1000];
-//    NSLog(@"%@",b1);
-//
-//    BubbleSort2 *b2=[[BubbleSort2 alloc]init];
-//    [b2 bubbleSort2:arr2 length:1000];
-//    NSLog(@"%@",b2);
-//
-//    BubbleSort3 *b3=[[BubbleSort3 alloc]init];
-//    [b3 bubbleSort3:arr3 length:1000];
-//    NSLog(@"%@",b3);
+    BubbleSort1 *b1=[[BubbleSort1 alloc]init];
+    [b1 bubbleSort1:arr1 length:1000];
+    NSLog(@"%@",b1);
+
+    BubbleSort2 *b2=[[BubbleSort2 alloc]init];
+    [b2 bubbleSort2:arr2 length:1000];
+    NSLog(@"%@",b2);
+
+    BubbleSort3 *b3=[[BubbleSort3 alloc]init];
+    [b3 bubbleSort3:arr3 length:1000];
+    NSLog(@"%@",b3);
     
-    NSArray *arrrrr=@[@(88), @(44), @(53), @(41), @(16), @(6), @(70), @(18), @(85), @(98), @(81), @(23), @(36), @(43), @(37)];
-    HeapSort *heapsort=[[HeapSort alloc]init];
-    NSMutableArray *arr4=[NSMutableArray arrayWithArray:arrrrr];
-    [heapsort heapifyWith:arr4];
-    NSLog(@"%@",arr4);
+    SelectSort *select=[[SelectSort alloc]init];
+    [select selectSort:arr4 length:1000];
+    NSLog(@"%@",select);
+    
+//    NSArray *arrrrr=@[@(88), @(44), @(53), @(41), @(16), @(6), @(70), @(18), @(85), @(98), @(81), @(23), @(36), @(43), @(37)];
+//    HeapSort *heapsort=[[HeapSort alloc]init];
+//    NSMutableArray *arr5=[NSMutableArray arrayWithArray:arrrrr];
+//    [heapsort heapifyWith:arr5];
+//    NSLog(@"%@",arr5);
     
 }
 -(void)test{
