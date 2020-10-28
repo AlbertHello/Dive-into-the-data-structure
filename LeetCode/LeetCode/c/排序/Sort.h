@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(int )cmp:(int)v1 to:(int)v2;
 -(void)swap:(int *) v1 with:(int *) v2;
-
+-(void)swapObj:(NSObject *)obj1 with:(NSObject *)obj2;
 @end
 
 NS_ASSUME_NONNULL_END

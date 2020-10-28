@@ -20,5 +20,11 @@
     *v1=*v2;
     *v2=temp;
 }
+-(void)swapObj:(NSObject *)obj1 with:(NSObject *)obj2{
+//    self.swapCount++;
+//    NSObject *temp= obj1;
+//    obj1=obj2;
+//    obj2=temp;
+}
 
 @end

@@ -9,7 +9,10 @@
 
 @implementation BubbleSort2
 
-
+/**
+ 优化1
+ 如果序列已经完全有序，可以提前终止冒泡排序
+ */
 -(void)bubbleSort2:(int *)arr length:(int)len{
     self.time=CFAbsoluteTimeGetCurrent();
     for (int i=len; i>0; i--) {
