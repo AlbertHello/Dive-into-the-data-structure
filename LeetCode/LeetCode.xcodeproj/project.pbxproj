@@ -18,6 +18,7 @@
 		3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDD22547CC4B003C8105 /* 146_LRU_Cache.m */; };
 		378C998B2549112D00B64B92 /* HeapSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C998A2549112D00B64B92 /* HeapSort.m */; };
 		378C99AE254925FD00B64B92 /* SelectSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C99AD254925FD00B64B92 /* SelectSort.m */; };
+		378C9F5A254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C9F59254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m */; };
 		37C75B5825400B96006564C1 /* 15_ThreeSum.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C75B5725400B96006564C1 /* 15_ThreeSum.m */; };
 		37CF43862538357900CBBDEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43852538357900CBBDEF /* AppDelegate.m */; };
 		37CF43892538357900CBBDEF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43882538357900CBBDEF /* SceneDelegate.m */; };
@@ -67,6 +68,8 @@
 		378C998A2549112D00B64B92 /* HeapSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeapSort.m; sourceTree = "<group>"; };
 		378C99AC254925FD00B64B92 /* SelectSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectSort.h; sourceTree = "<group>"; };
 		378C99AD254925FD00B64B92 /* SelectSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectSort.m; sourceTree = "<group>"; };
+		378C9F58254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 380_Insert_Delete_GetRandom.h; sourceTree = "<group>"; };
+		378C9F59254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 380_Insert_Delete_GetRandom.m; sourceTree = "<group>"; };
 		37C75B5625400B96006564C1 /* 15_ThreeSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 15_ThreeSum.h; sourceTree = "<group>"; };
 		37C75B5725400B96006564C1 /* 15_ThreeSum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 15_ThreeSum.m; sourceTree = "<group>"; };
 		37CF43812538357900CBBDEF /* LeetCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,6 +212,8 @@
 				3776CDD22547CC4B003C8105 /* 146_LRU_Cache.m */,
 				3776CDCD2546EF5E003C8105 /* 149_Max_Points_on_a_Line.h */,
 				3776CDCE2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m */,
+				378C9F58254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.h */,
+				378C9F59254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m */,
 			);
 			path = "算法";
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378C9F5A254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m in Sources */,
 				37CF438C2538357900CBBDEF /* ViewController.m in Sources */,
 				37CF43CB2538362700CBBDEF /* 61_RotateList.c in Sources */,
 				37CF43CE2538362700CBBDEF /* 1002_Find_Common_Characters.c in Sources */,
