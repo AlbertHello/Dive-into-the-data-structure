@@ -12,7 +12,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class BSTNode;
+@interface BSTNode : NSObject
+
+@property(assign, nonatomic)NSInteger data;
+@property(strong, nonatomic,nullable)BSTNode *parent;
+@property(strong, nonatomic,nullable)BSTNode *left;
+@property(strong, nonatomic,nullable)BSTNode *right;
+
+-(BOOL)isLeaf;
+-(BOOL)hasTwoChildren;
+-(BOOL)isRightChild;
+-(BOOL)isLeftChild;
+-(BSTNode *)sibling;
+
+@end
+
 
 @interface BST : NSObject<MJBinaryTreeInfo>
 

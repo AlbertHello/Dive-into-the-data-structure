@@ -8,18 +8,6 @@
 
 #import "BST.h"
 
-@interface BSTNode : NSObject
-
-@property(assign, nonatomic)NSInteger data;
-@property(strong, nonatomic,nullable)BSTNode *parent;
-@property(strong, nonatomic,nullable)BSTNode *left;
-@property(strong, nonatomic,nullable)BSTNode *right;
-
--(BOOL)isLeaf;
--(BOOL)hasTwoChildren;
-
-@end
-
 @implementation BSTNode
 
 - (instancetype)init
@@ -38,6 +26,21 @@
 }
 -(BOOL)hasTwoChildren{
     return self.left != NULL && self.right != NULL;
+}
+-(BOOL)isLeftChild{
+    return self.parent != NULL && self == self.parent.left;
+}
+-(BOOL)isRightChild{
+    return self.parent != NULL && self == self.parent.right;
+}
+-(BSTNode *)sibling{
+    if ([self isLeftChild]) {
+        return self.parent.right;
+    }
+    if ([self isRightChild]) {
+        return self.parent.left;
+    }
+    return NULL;
 }
 -(void)dealloc{
 //    NSLog(@"BSTNode dealloc");
@@ -95,7 +98,6 @@
             return;
         }
     }
-    BSTNode *inorder=(__bridge BSTNode *)malloc(sizeof(BSTNode *)*501);
     
     BSTNode *new_node=[[BSTNode alloc]init];
     new_node.data=ele;
