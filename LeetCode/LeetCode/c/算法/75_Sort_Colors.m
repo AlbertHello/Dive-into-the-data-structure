@@ -103,7 +103,7 @@ void sortColors(int *nums, int numsSize) {
  遇0则交换 当前元素 和 p0空间的值，并 使得 p0指针 指向 下一个0应该存放的位置，遍历下一个元素
  遇2则交换 当前元素 和 p2空间的值，并 使得 p2指针 指向 下一个2应该存放的位置，继续遍历 交换后的当前元素
  //复杂度分析
- //时间复杂度：O(n)，其中n 是数组nums 的长度。
+ //时间复杂度：O(n)
  //空间复杂度：(1)。
  */
 void sortColors2(int *nums, int numsSize){
