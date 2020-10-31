@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 -(void)insertSort:(int *)arr length:(int)len;
+-(void)insertSort2:(int *)arr length:(int)len;
+-(void)insertSort3:(int *)arr length:(int)len;
 
 @end
 

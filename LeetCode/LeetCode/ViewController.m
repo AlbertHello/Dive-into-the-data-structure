@@ -59,47 +59,57 @@
     [_49_Max_Points_on_a_Line maxPointsTests];
 }
 -(void)sortTest{
-//    int arr1[1000]={0},arr2[1000]={0},arr3[1000]={0},arr4[1000]={0},arr5[1000]={0};
-//    for (int i=0; i<1000; i++) {
-//        int rand=arc4random()%1000;
-//        arr1[i]=rand;
-//        arr2[i]=rand;
-//        arr3[i]=rand;
-//        arr4[i]=rand;
-//        arr5[i]=rand;
-//    }
+//    int arr1[10]={90,56,23,4,1,45,57,29,40,39};
+    int arr1[1000]={0},arr2[1000]={0},arr3[1000]={0},arr4[1000]={0},arr5[1000]={0};
+    int arr6[1000]={0},arr7[1000]={0},arr8[1000]={0},arr9[1000]={0},arr10[1000]={0};
+    int len=1000;
+    for (int i=0; i<len; i++) {
+        int rand=arc4random()%len;
+        arr1[i]=rand;
+        arr2[i]=rand;
+        arr3[i]=rand;
+        arr4[i]=rand;
+        arr5[i]=rand;
+        arr6[i]=rand;
+        arr7[i]=rand;
+        arr8[i]=rand;
+        arr9[i]=rand;
+        arr10[i]=rand;
+    }
 //
-//    BubbleSort1 *b1=[[BubbleSort1 alloc]init];
-//    [b1 bubbleSort1:arr1 length:1000];
-//    NSLog(@"%@",b1);
-//
-//    BubbleSort2 *b2=[[BubbleSort2 alloc]init];
-//    [b2 bubbleSort2:arr2 length:1000];
-//    NSLog(@"%@",b2);
-//
-//    BubbleSort3 *b3=[[BubbleSort3 alloc]init];
-//    [b3 bubbleSort3:arr3 length:1000];
-//    NSLog(@"%@",b3);
-//
-//    SelectSort *select=[[SelectSort alloc]init];
-//    [select selectSort:arr4 length:1000];
-//    NSLog(@"%@",select);
-//
-//    HeapSort *heap=[[HeapSort alloc]init];
-//    [heap heapifyWith:arr5 length:1000];
-//    NSLog(@"%@",heap);
-    
-    
-    int arr1[10]={90,56,23,4,1,45,57,29,40,39};
+    BubbleSort1 *b1=[[BubbleSort1 alloc]init];
+    [b1 bubbleSort1:arr1 length:len];
+    NSLog(@"%@",b1);
+
+    BubbleSort2 *b2=[[BubbleSort2 alloc]init];
+    [b2 bubbleSort2:arr2 length:len];
+    NSLog(@"%@",b2);
+
+    BubbleSort3 *b3=[[BubbleSort3 alloc]init];
+    [b3 bubbleSort3:arr3 length:len];
+    NSLog(@"%@",b3);
+
+    SelectSort *select=[[SelectSort alloc]init];
+    [select selectSort:arr4 length:len];
+    NSLog(@"%@",select);
+
+    HeapSort *heap=[[HeapSort alloc]init];
+    [heap heapifyWith:arr5 length:len];
+    NSLog(@"%@",heap);
     
     InsertSort *insert=[[InsertSort alloc]init];
-    [insert insertSort:arr1 length:10];
+//    [insert insertSort:arr1 length:len];
+//    [insert insertSort2:arr1 length:len];
+    [insert insertSort3:arr6 length:len];
     NSLog(@"%@",insert);
-    for (int i=0; i<10; i++) {
-        printf("%d ",arr1[i]);
-    }
-    printf("\n");
     
+    
+    
+    
+//    for (int i=0; i<10; i++) {
+//        printf("%d ",arr1[i]);
+//    }
+//    printf("\n");
 }
 -(void)test{
     NSLog(@"sizeof(int)         : %lu",sizeof(int));
