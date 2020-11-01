@@ -121,6 +121,7 @@ value:  2  4  8  8  8  12  14
             end = mid;
         } else {
             //当前值大于等于中间值时，begin往后挪，直到begin=end结束
+            //能找到第1个大于 v 的元素位置
             begin = mid + 1;
         }
     }
