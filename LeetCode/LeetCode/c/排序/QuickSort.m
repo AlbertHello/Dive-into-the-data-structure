@@ -1,0 +1,128 @@
+//
+//  QuickSort.m
+//  LeetCode
+//
+//  Created by Albert on 2020/11/1.
+//
+
+#import "QuickSort.h"
+
+@interface QuickSort ()
+
+@property(nonatomic,strong)NSMutableArray *array;
+
+@end
+
+@implementation QuickSort
+
+
+/**
+ 执行流程：
+ 
+ 1、从序列中选择一个轴点元素（pivot）
+ ✓ 假设每次选择 0 位置的元素为轴点元素
+ 
+ 2、利用 pivot 将序列分割成 2 个子序列
+ ✓ 将小于 pivot 的元素放在pivot前面（左侧）
+ ✓ 将大于 pivot 的元素放在pivot后面（右侧）
+ ✓ 等于pivot的元素放哪边都可以。
+ 
+ 3、对子序列进行 ① ② 操作
+ ✓ 直到不能再分割（子序列中只剩下1个元素）
+ 
+ 快速排序的本质
+ 逐渐将每一个元素都转换成轴点元素
+ 
+ 在轴点左右元素数量比较均匀的情况下，同时也是最好的情况
+ T n = 2 ∗ T n/2 + O n = O(nlogn)
+ 
+ 如果轴点左右元素数量极度不均匀，最坏情况
+  T n = T n − 1 + O n = O(n2)
+ 
+ 为了降低最坏情况的出现概率，一般采取的做法是
+ 随机选择轴点元素
+ 
+ 最好、平均时间复杂度： O(nlogn)
+ ◼ 最坏时间复杂度： O(n2)
+ ◼ 由于递归调用的缘故，空间复杂度： O(logn)
+ ◼ 属于不稳定排序
+ */
+-(void)quickSort:(NSMutableArray *)array{
+    self.time=CFAbsoluteTimeGetCurrent();
+    self.array=array;
+    [self sort:0 end:(int)self.array.count];
+    self.time=CFAbsoluteTimeGetCurrent()-self.time;
+}
+//对 [begin, end) 范围的数据进行归并排序
+-(void)sort:(int)begin end:(int)end {
+    if (end - begin < 2) return;
+    // 确定轴点位置 O(n)
+    int mid = [self pivotIndex:begin end:end];
+    // 对子序列进行快速排序
+    [self sort:begin end:mid];
+    [self sort:mid+1 end:mid];
+}
+-(int)pivotIndex:(int)begin end:(int)end{
+    // 随机选择一个元素跟begin位置进行交换，降低最坏情况出现的概率
+    int randomIndex=(arc4random()%(end-begin)) + begin;
+    NSNumber *temp=self.array[begin];
+    self.array[begin]=self.array[randomIndex];
+    self.array[randomIndex]=temp;
+    
+    // 备份begin位置的元素
+    int pivot = [self.array[begin] intValue];
+    // end指向最后一个元素
+    end--;
+    
+    while (begin < end) {
+        while (begin < end) {
+            // 右边元素 > 轴点元素
+            // 如果小于号改成小于等于号，则可能就会导致最坏情况发生
+            if ([self cmp:pivot to:[self.array[end] intValue] ] < 0) {
+                end--;
+            } else { // 右边元素 <= 轴点元素
+                self.array[begin++] = self.array[end];
+                break;
+            }
+        }
+        while (begin < end) {
+            // 左边元素 < 轴点元素
+            // 如果大于号改成大于等于号，则可能就会导致最坏情况发生
+            if ([self cmp:pivot to:[self.array[begin] intValue]] > 0) {
+                begin++;
+            } else { // 左边元素 >= 轴点元素
+                self.array[end--] = self.array[begin];
+                break;
+            }
+        }
+    }
+    // 将轴点元素放入最终的位置
+    self.array[begin] = @(pivot);
+    // 返回轴点元素的位置
+    return begin;
+}
+
+/*
+ 与轴点相等的元素
+ 如果序列中的所有元素都与轴点元素相等，利用目前的算法实现，轴点元素可以将序列分割成 2 个均匀的子序列
+ 如果不加等于号：
+ 比如：6𝑎 6𝑏 6c 6𝑑 6𝑒 六个数中，以6a当作标准值，
+ 排序完后：6𝑒 6𝑑 6𝑎 6𝑐 6𝑏
+ 如果加等于号，则排序完成：
+ 6𝑎 6𝑏 6c 6𝑑 6𝑒 则这歌情况轴点元素分割出来的子序列极度不均匀， 左子序列是0个元素，右子序列有n-1个元素，
+ 下一轮右边有n-2个元素。。。。。
+ 导致出现最坏时间复杂度 O(n2)
+ 
+ 
+ */
+-(NSString *)description{
+    NSString *class=NSStringFromClass([self class]);
+    NSString *time=[NSString stringWithFormat:@"%f",self.time];
+    NSString *cmpCount=[NSString stringWithFormat:@"%ld",self.cmpCount];
+    NSString *swapCount=[NSString stringWithFormat:@"%ld",self.swapCount];
+    NSString *str=[NSString stringWithFormat:@"\n Sort: %@\n 耗时：%@\t 比较次数：%@\t 交换次数：%@\t",class,time,cmpCount,swapCount];
+    printf("************************************************\n");
+    return str;
+}
+
+@end
