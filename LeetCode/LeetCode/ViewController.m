@@ -24,6 +24,8 @@
 #import "SelectSort.h"
 #import "HeapSort.h"
 #import "InsertSort.h"
+#import "MergeSort.h"
+
 #import "149_Max_Points_on_a_Line.h"
 
 
@@ -62,6 +64,7 @@
 //    int arr1[10]={90,56,23,4,1,45,57,29,40,39};
     int arr1[1000]={0},arr2[1000]={0},arr3[1000]={0},arr4[1000]={0},arr5[1000]={0};
     int arr6[1000]={0},arr7[1000]={0},arr8[1000]={0},arr9[1000]={0},arr10[1000]={0};
+    NSMutableArray *arr=[NSMutableArray array];
     int len=1000;
     for (int i=0; i<len; i++) {
         int rand=arc4random()%len;
@@ -75,6 +78,7 @@
         arr8[i]=rand;
         arr9[i]=rand;
         arr10[i]=rand;
+        [arr addObject:@(rand)];
     }
 //
     BubbleSort1 *b1=[[BubbleSort1 alloc]init];
@@ -103,7 +107,9 @@
     [insert insertSort3:arr6 length:len];
     NSLog(@"%@",insert);
     
-    
+    MergeSort *merge=[[MergeSort alloc]init];
+    [merge mergeSort:arr];
+    NSLog(@"%@",merge);
     
     
 //    for (int i=0; i<10; i++) {

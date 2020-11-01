@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3564FE55254E4A4800230505 /* BinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564FE54254E4A4800230505 /* BinarySearch.m */; };
+		3564FE59254E5E2600230505 /* MergeSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564FE58254E5E2600230505 /* MergeSort.m */; };
 		35836D2425452C7F006A1BF3 /* BubbleSort2.m in Sources */ = {isa = PBXBuildFile; fileRef = 35836D2325452C7F006A1BF3 /* BubbleSort2.m */; };
 		35836D2C25452CD8006A1BF3 /* Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 35836D2B25452CD8006A1BF3 /* Sort.m */; };
 		3586A3FC2545632300CD2C61 /* BubbleSort3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3586A3FB2545632300CD2C61 /* BubbleSort3.m */; };
@@ -51,6 +52,8 @@
 /* Begin PBXFileReference section */
 		3564FE53254E4A4800230505 /* BinarySearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySearch.h; sourceTree = "<group>"; };
 		3564FE54254E4A4800230505 /* BinarySearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinarySearch.m; sourceTree = "<group>"; };
+		3564FE57254E5E2600230505 /* MergeSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeSort.h; sourceTree = "<group>"; };
+		3564FE58254E5E2600230505 /* MergeSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MergeSort.m; sourceTree = "<group>"; };
 		35836D2225452C7F006A1BF3 /* BubbleSort2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort2.h; sourceTree = "<group>"; };
 		35836D2325452C7F006A1BF3 /* BubbleSort2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort2.m; sourceTree = "<group>"; };
 		35836D2A25452CD8006A1BF3 /* Sort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sort.h; sourceTree = "<group>"; };
@@ -153,10 +156,12 @@
 				378C998A2549112D00B64B92 /* HeapSort.m */,
 				378C9FAD254C1E3000B64B92 /* InsertSort.h */,
 				378C9FAE254C1E3000B64B92 /* InsertSort.m */,
-				3564FE53254E4A4800230505 /* BinarySearch.h */,
-				3564FE54254E4A4800230505 /* BinarySearch.m */,
+				3564FE57254E5E2600230505 /* MergeSort.h */,
+				3564FE58254E5E2600230505 /* MergeSort.m */,
 				35836D2A25452CD8006A1BF3 /* Sort.h */,
 				35836D2B25452CD8006A1BF3 /* Sort.m */,
+				3564FE53254E4A4800230505 /* BinarySearch.h */,
+				3564FE54254E4A4800230505 /* BinarySearch.m */,
 			);
 			path = "排序";
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 				37CF43892538357900CBBDEF /* SceneDelegate.m in Sources */,
 				37CF43CC2538362700CBBDEF /* 206_ReverseLinkedList.c in Sources */,
 				3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */,
+				3564FE59254E5E2600230505 /* MergeSort.m in Sources */,
 				37C75B5825400B96006564C1 /* 15_ThreeSum.m in Sources */,
 				37CF43CA2538362700CBBDEF /* 203_RemoveLinkedListElements.c in Sources */,
 			);
