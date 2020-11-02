@@ -64,7 +64,31 @@
 
 int* plusOne(int* digits, int digitsSize, int* returnSize){
     
-    return 0;
+    for (int i = digitsSize - 1; i >= 0; i--) {
+        //最后一位加一
+        digits[i]++;
+        //然后求余
+        digits[i] = digits[i] % 10;
+        //没有进位了就可以直接返回了
+        if (digits[i] != 0){ //如果求余后还不等于0说明没有进位，久可以直接返回了。
+            *returnSize=digitsSize;
+            return digits;
+        }
+    }
+    //这是处理类似于9 99 999 9999这样的数组
+    int *array=(int *)malloc(sizeof(int)*(digitsSize + 1));
+    memset(array, 0, digitsSize + 1);
+    array[0] = 1;//只有第一个是1，其他位置的默认是0
+    *returnSize=digitsSize + 1;
+    return array;
 }
-
++(void)plusOneTest{
+    int a[]={9};
+    int size=0;
+    int *arr=plusOne(a, 1, &size);
+    for (int i=0; i<size; i++) {
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+}
 @end

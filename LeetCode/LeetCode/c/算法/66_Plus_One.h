@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface _6_Plus_One : NSObject
 
++(void)plusOneTest;
+
 @end
 
 NS_ASSUME_NONNULL_END

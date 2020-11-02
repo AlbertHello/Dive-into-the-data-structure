@@ -28,6 +28,7 @@
 #import "QuickSort.h"
 #import "149_Max_Points_on_a_Line.h"
 #import "28_Implement_strStr.h"
+#import "66_Plus_One.h"
 
 
 
@@ -61,7 +62,8 @@
 //    [_5_ThreeSum threeSumTest];
 //    [_StringtoInteger myAtoiTest];
 //    [_49_Max_Points_on_a_Line maxPointsTests];
-    [_8_Implement_strStr locateSubstringTest];
+//    [_8_Implement_strStr locateSubstringTest];
+    [_6_Plus_One plusOneTest];
 }
 -(void)sortTest{
 //    int arr1[10]={90,56,23,4,1,45,57,29,40,39};
