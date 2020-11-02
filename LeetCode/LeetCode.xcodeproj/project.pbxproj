@@ -49,6 +49,7 @@
 		37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */; };
 		37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */; };
 		37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */; };
+		37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D525503B6200D726A5 /* 66_Plus_One.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +135,8 @@
 		37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 53_MaximumSubarray.c; sourceTree = "<group>"; };
 		37EBD7A2254FAAD600D726A5 /* 28_Implement_strStr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 28_Implement_strStr.h; sourceTree = "<group>"; };
 		37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 28_Implement_strStr.m; sourceTree = "<group>"; };
+		37EBD8D425503B6200D726A5 /* 66_Plus_One.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 66_Plus_One.h; sourceTree = "<group>"; };
+		37EBD8D525503B6200D726A5 /* 66_Plus_One.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 66_Plus_One.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +235,8 @@
 				37C75B5725400B96006564C1 /* 15_ThreeSum.m */,
 				37CF44202538475D00CBBDEF /* 53_MaximumSubarray.h */,
 				37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */,
+				37EBD8D425503B6200D726A5 /* 66_Plus_One.h */,
+				37EBD8D525503B6200D726A5 /* 66_Plus_One.m */,
 				37CF4419253838EC00CBBDEF /* 70_ClimbingStairs.h */,
 				37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */,
 				378C9FA1254BC40500B64B92 /* 75_Sort_Colors.h */,
@@ -368,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */,
 				378C9F5A254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m in Sources */,
 				37CF438C2538357900CBBDEF /* ViewController.m in Sources */,
 				37CF43CB2538362700CBBDEF /* 61_RotateList.c in Sources */,
