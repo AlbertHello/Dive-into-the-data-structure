@@ -26,8 +26,9 @@
 #import "InsertSort.h"
 #import "MergeSort.h"
 #import "QuickSort.h"
-
 #import "149_Max_Points_on_a_Line.h"
+#import "28_Implement_strStr.h"
+
 
 
 
@@ -46,8 +47,8 @@
     self.view.backgroundColor=[UIColor systemPinkColor];
     
 //    [self test];
-//    [self leetcodeTest];
-    [self sortTest];
+    [self leetcodeTest];
+//    [self sortTest];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -59,7 +60,8 @@
 //    climbStairsTest();
 //    [_5_ThreeSum threeSumTest];
 //    [_StringtoInteger myAtoiTest];
-    [_49_Max_Points_on_a_Line maxPointsTests];
+//    [_49_Max_Points_on_a_Line maxPointsTests];
+    [_8_Implement_strStr locateSubstringTest];
 }
 -(void)sortTest{
 //    int arr1[10]={90,56,23,4,1,45,57,29,40,39};
