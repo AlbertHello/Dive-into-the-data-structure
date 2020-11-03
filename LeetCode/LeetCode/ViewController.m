@@ -26,6 +26,7 @@
 #import "InsertSort.h"
 #import "MergeSort.h"
 #import "QuickSort.h"
+#import "ShellSort.h"
 #import "149_Max_Points_on_a_Line.h"
 #import "28_Implement_strStr.h"
 #import "66_Plus_One.h"
@@ -49,8 +50,8 @@
     self.view.backgroundColor=[UIColor systemPinkColor];
     
 //    [self test];
-    [self leetcodeTest];
-//    [self sortTest];
+//    [self leetcodeTest];
+    [self sortTest];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -73,6 +74,7 @@
 //    int arr6[1000]={0},arr7[1000]={0},arr8[1000]={0},arr9[1000]={0},arr10[1000]={0};
     NSMutableArray *array1=[NSMutableArray array];
     NSMutableArray *array2=[NSMutableArray array];
+    NSMutableArray *array3=[NSMutableArray array];
     int len=10000;
     for (int i=0; i<len; i++) {
         int rand=arc4random()%len;
@@ -88,6 +90,7 @@
 //        arr10[i]=rand;
         [array1 addObject:@(rand)];
         [array2 addObject:@(rand)];
+        [array3 addObject:@(rand)];
     }
 //
 //    BubbleSort1 *b1=[[BubbleSort1 alloc]init];
@@ -123,6 +126,10 @@
     QuickSort *quick=[[QuickSort alloc]init];
     [quick quickSort:array2];
     NSLog(@"%@",quick);
+    
+    ShellSort *shell=[[ShellSort alloc]init];
+    [shell shellSort:array3];
+    NSLog(@"%@",shell);
     
     
 //    for (int i=0; i<10; i++) {

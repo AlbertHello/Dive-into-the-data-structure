@@ -51,6 +51,8 @@
 		37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */; };
 		37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D525503B6200D726A5 /* 66_Plus_One.m */; };
 		37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */; };
+		37EBD9252551846800D726A5 /* ShellSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD9242551846800D726A5 /* ShellSort.m */; };
+		37EBD92A2551894000D726A5 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD9292551894000D726A5 /* 01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +142,9 @@
 		37EBD8D525503B6200D726A5 /* 66_Plus_One.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 66_Plus_One.m; sourceTree = "<group>"; };
 		37EBD8D82550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _821_Shortest_Distance_to_a_Character.h; sourceTree = "<group>"; };
 		37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _821_Shortest_Distance_to_a_Character.m; sourceTree = "<group>"; };
+		37EBD9232551846800D726A5 /* ShellSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShellSort.h; sourceTree = "<group>"; };
+		37EBD9242551846800D726A5 /* ShellSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShellSort.m; sourceTree = "<group>"; };
+		37EBD9292551894000D726A5 /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +161,7 @@
 		35CF22332543E2990044632E /* 排序 */ = {
 			isa = PBXGroup;
 			children = (
+				37EBD9282551894000D726A5 /* resource */,
 				35CF222F2543E2910044632E /* BubbleSort1.h */,
 				35CF22302543E2910044632E /* BubbleSort1.m */,
 				35836D2225452C7F006A1BF3 /* BubbleSort2.h */,
@@ -172,6 +178,8 @@
 				3564FE58254E5E2600230505 /* MergeSort.m */,
 				3564FE5B254E719500230505 /* QuickSort.h */,
 				3564FE5C254E719500230505 /* QuickSort.m */,
+				37EBD9232551846800D726A5 /* ShellSort.h */,
+				37EBD9242551846800D726A5 /* ShellSort.m */,
 				35836D2A25452CD8006A1BF3 /* Sort.h */,
 				35836D2B25452CD8006A1BF3 /* Sort.m */,
 				3564FE53254E4A4800230505 /* BinarySearch.h */,
@@ -309,6 +317,14 @@
 			path = "栈";
 			sourceTree = "<group>";
 		};
+		37EBD9282551894000D726A5 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				37EBD9292551894000D726A5 /* 01.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,6 +383,7 @@
 			files = (
 				37CF43942538357A00CBBDEF /* LaunchScreen.storyboard in Resources */,
 				37CF43912538357A00CBBDEF /* Assets.xcassets in Resources */,
+				37EBD92A2551894000D726A5 /* 01.png in Resources */,
 				37CF438F2538357900CBBDEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +407,7 @@
 				37CF43C42538362700CBBDEF /* 2_AddTwoNumbers.c in Sources */,
 				37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */,
 				37CF43C52538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c in Sources */,
+				37EBD9252551846800D726A5 /* ShellSort.m in Sources */,
 				35CF22312543E2910044632E /* BubbleSort1.m in Sources */,
 				37CF43CD2538362700CBBDEF /* 5_LongestPalindromicSubstring.c in Sources */,
 				37CF43C62538362700CBBDEF /* 141_LinkedListCycle.c in Sources */,
