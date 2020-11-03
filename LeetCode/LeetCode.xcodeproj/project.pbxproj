@@ -50,6 +50,7 @@
 		37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */; };
 		37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */; };
 		37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D525503B6200D726A5 /* 66_Plus_One.m */; };
+		37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,6 +138,8 @@
 		37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 28_Implement_strStr.m; sourceTree = "<group>"; };
 		37EBD8D425503B6200D726A5 /* 66_Plus_One.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 66_Plus_One.h; sourceTree = "<group>"; };
 		37EBD8D525503B6200D726A5 /* 66_Plus_One.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 66_Plus_One.m; sourceTree = "<group>"; };
+		37EBD8D82550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _821_Shortest_Distance_to_a_Character.h; sourceTree = "<group>"; };
+		37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _821_Shortest_Distance_to_a_Character.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +292,8 @@
 				37CF43BB2538362700CBBDEF /* 5_LongestPalindromicSubstring.c */,
 				37EBD7A2254FAAD600D726A5 /* 28_Implement_strStr.h */,
 				37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */,
+				37EBD8D82550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.h */,
+				37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */,
 				37CF43BA2538362700CBBDEF /* 1002_Find_Common_Characters.h */,
 				37CF43BC2538362700CBBDEF /* 1002_Find_Common_Characters.c */,
 			);
@@ -383,6 +388,7 @@
 				35836D2C25452CD8006A1BF3 /* Sort.m in Sources */,
 				378C9FA3254BC40500B64B92 /* 75_Sort_Colors.m in Sources */,
 				37CF43C42538362700CBBDEF /* 2_AddTwoNumbers.c in Sources */,
+				37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */,
 				37CF43C52538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c in Sources */,
 				35CF22312543E2910044632E /* BubbleSort1.m in Sources */,
 				37CF43CD2538362700CBBDEF /* 5_LongestPalindromicSubstring.c in Sources */,

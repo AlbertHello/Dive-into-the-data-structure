@@ -29,6 +29,7 @@
 #import "149_Max_Points_on_a_Line.h"
 #import "28_Implement_strStr.h"
 #import "66_Plus_One.h"
+#import "_821_Shortest_Distance_to_a_Character.h"
 
 
 
@@ -63,7 +64,8 @@
 //    [_StringtoInteger myAtoiTest];
 //    [_49_Max_Points_on_a_Line maxPointsTests];
 //    [_8_Implement_strStr locateSubstringTest];
-    [_6_Plus_One plusOneTest];
+//    [_6_Plus_One plusOneTest];
+    [_821_Shortest_Distance_to_a_Character shortestToCharTest];
 }
 -(void)sortTest{
 //    int arr1[10]={90,56,23,4,1,45,57,29,40,39};
