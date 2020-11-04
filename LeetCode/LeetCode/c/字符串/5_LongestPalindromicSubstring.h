@@ -12,5 +12,6 @@
 #include <stdio.h>
 #include "ListNode_C.h"
 
+void longestPalindromeTest(void);
 
 #endif /* __LongestPalindromicSubstring_h */
