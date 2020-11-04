@@ -31,6 +31,8 @@
 #import "28_Implement_strStr.h"
 #import "66_Plus_One.h"
 #import "_821_Shortest_Distance_to_a_Character.h"
+#import "146_LRU_Cache.h"
+
 
 
 
@@ -50,8 +52,8 @@
     self.view.backgroundColor=[UIColor systemPinkColor];
     
 //    [self test];
-//    [self leetcodeTest];
-    [self sortTest];
+    [self leetcodeTest];
+//    [self sortTest];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -66,7 +68,8 @@
 //    [_49_Max_Points_on_a_Line maxPointsTests];
 //    [_8_Implement_strStr locateSubstringTest];
 //    [_6_Plus_One plusOneTest];
-    [_821_Shortest_Distance_to_a_Character shortestToCharTest];
+//    [_821_Shortest_Distance_to_a_Character shortestToCharTest];
+    [_46_LRU_Cache LRU_Cache_Test];
 }
 -(void)sortTest{
 //    int arr1[10]={90,56,23,4,1,45,57,29,40,39};

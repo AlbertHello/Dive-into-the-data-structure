@@ -11,6 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface _46_LRU_Cache : NSObject
 
+
+-(instancetype)initWithCapacity:(NSUInteger)capacity;
+-(NSInteger)get:(NSString *)key;
+-(void)put:(NSString *)key value:(NSInteger)value;
+
++(void)LRU_Cache_Test;
 @end
 
 NS_ASSUME_NONNULL_END
