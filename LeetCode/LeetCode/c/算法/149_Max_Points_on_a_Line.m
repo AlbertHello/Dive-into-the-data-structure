@@ -91,6 +91,7 @@ int maxPoints(int** points, int pointsSize, int* pointsColSize){
             }
             //进行约分
             int gcd = yuefen(x, y);
+            //拿到最大公倍数后分子分母再除以这个公倍数就是最简分式了
             x = x / gcd;
             y = y / gcd;
             
@@ -105,6 +106,8 @@ int maxPoints(int** points, int pointsSize, int* pointsColSize){
     return res;
 }
 
+//约分得到的值是分子分母的最大公倍数
+//然后拿到值后分子分母再除以这个公倍数就是最简分式了
 int yuefen(int a, int b) {
     while (b != 0) {
         int temp = a % b;
