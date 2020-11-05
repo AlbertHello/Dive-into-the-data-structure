@@ -53,6 +53,7 @@
 		37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */; };
 		37EBD9252551846800D726A5 /* ShellSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD9242551846800D726A5 /* ShellSort.m */; };
 		37EBD92A2551894000D726A5 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD9292551894000D726A5 /* 01.png */; };
+		37EBD94D2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD94C2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +146,8 @@
 		37EBD9232551846800D726A5 /* ShellSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShellSort.h; sourceTree = "<group>"; };
 		37EBD9242551846800D726A5 /* ShellSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShellSort.m; sourceTree = "<group>"; };
 		37EBD9292551894000D726A5 /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
+		37EBD94B2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _1381_Design_a_Stack_With_Increment_Operation.h; sourceTree = "<group>"; };
+		37EBD94C2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _1381_Design_a_Stack_With_Increment_Operation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +261,8 @@
 				3776CDCE2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m */,
 				378C9F58254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.h */,
 				378C9F59254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m */,
+				37EBD94B2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.h */,
+				37EBD94C2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m */,
 			);
 			path = "算法";
 			sourceTree = "<group>";
@@ -420,6 +425,7 @@
 				378C99AE254925FD00B64B92 /* SelectSort.m in Sources */,
 				37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */,
 				3776CDCF2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m in Sources */,
+				37EBD94D2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m in Sources */,
 				37CF43862538357900CBBDEF /* AppDelegate.m in Sources */,
 				37CF43C72538362700CBBDEF /* 237_DeleteNodeinLinkedList.c in Sources */,
 				37CF43C92538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.c in Sources */,
