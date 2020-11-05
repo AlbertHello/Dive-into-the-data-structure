@@ -49,7 +49,7 @@
  时间复杂度：O（n）
  空间复杂度：O（1）
  */
-int* twoSum(int* numbers, int numbersSize, int target, int* returnSize){
+int* twoSum_2(int* numbers, int numbersSize, int target, int* returnSize){
     int left = 0, right = numbersSize - 1;
     while (left < right) {
         int sum = numbers[left] + numbers[right];

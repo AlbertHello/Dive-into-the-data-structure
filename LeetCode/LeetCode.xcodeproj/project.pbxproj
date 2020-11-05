@@ -56,6 +56,7 @@
 		37EBD94D2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD94C2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m */; };
 		37EBD9512553D0B700D726A5 /* _167_TwoSum_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD9502553D0B700D726A5 /* _167_TwoSum_2.m */; };
 		37EBD9552553D2FD00D726A5 /* _344_Reverse_String.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD9542553D2FD00D726A5 /* _344_Reverse_String.m */; };
+		37EBD95A2553DACD00D726A5 /* _876_Middle_of_the_Linked_List.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD9592553DACD00D726A5 /* _876_Middle_of_the_Linked_List.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +155,8 @@
 		37EBD9502553D0B700D726A5 /* _167_TwoSum_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _167_TwoSum_2.m; sourceTree = "<group>"; };
 		37EBD9532553D2FD00D726A5 /* _344_Reverse_String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _344_Reverse_String.h; sourceTree = "<group>"; };
 		37EBD9542553D2FD00D726A5 /* _344_Reverse_String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _344_Reverse_String.m; sourceTree = "<group>"; };
+		37EBD9582553DACD00D726A5 /* _876_Middle_of_the_Linked_List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _876_Middle_of_the_Linked_List.h; sourceTree = "<group>"; };
+		37EBD9592553DACD00D726A5 /* _876_Middle_of_the_Linked_List.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _876_Middle_of_the_Linked_List.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +301,8 @@
 				37CF43B82538362700CBBDEF /* 206_ReverseLinkedList.c */,
 				37CF43A92538362700CBBDEF /* 237_DeleteNodeinLinkedList.h */,
 				37CF43B22538362700CBBDEF /* 237_DeleteNodeinLinkedList.c */,
+				37EBD9582553DACD00D726A5 /* _876_Middle_of_the_Linked_List.h */,
+				37EBD9592553DACD00D726A5 /* _876_Middle_of_the_Linked_List.m */,
 			);
 			path = "链表";
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37EBD95A2553DACD00D726A5 /* _876_Middle_of_the_Linked_List.m in Sources */,
 				37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */,
 				378C9F5A254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m in Sources */,
 				37CF438C2538357900CBBDEF /* ViewController.m in Sources */,

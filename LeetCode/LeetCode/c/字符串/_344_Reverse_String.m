@@ -30,7 +30,7 @@
  */
 
 
-void swap(char *a, char *b) {
+void swap_c(char *a, char *b) {
     char t = *a;
     *a = *b;
     *b = t;
@@ -48,7 +48,7 @@ void reverseString(char* s, int sSize){
     //如果len是偶数，则最后一次遍历就是最中间两个字符，此时l<r，再l++;r--;刚好l>r,退出循环
     while (l < r) {
         //交换
-        swap(&s[l], &s[r]);
+        swap_c(&s[l], &s[r]);
         //左指针++
         l++;
         //右指针--

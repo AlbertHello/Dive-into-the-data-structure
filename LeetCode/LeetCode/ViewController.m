@@ -54,15 +54,6 @@
     self.view.backgroundColor=[UIColor systemPinkColor];
     
     
-    char s[]={"h","e","l","l","o"};
-    
-    
-    
-    
-    
-    
-    
-    
 //    [self test];
 //    [self leetcodeTest];
 //    [self sortTest];
