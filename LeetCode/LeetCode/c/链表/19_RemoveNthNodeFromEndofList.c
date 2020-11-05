@@ -103,6 +103,31 @@ SingleNode_1* removeNthFromEnd2(SingleNode_1 * head, int n){
     }
 }
 
+//方法三
+/**
+ 思路还是使用快慢指针，让快指针先走n步，然后快慢指针开始同速前进。这样当快指针走到链表末尾null时，慢指针所在的位置就是倒数第n个链表节点（n不会超过链表长度）。
+ */
+SingleNode_1* removeNthFromEnd3(SingleNode_1 * head, int n){
+    SingleNode_1 *fast, *slow;
+    fast = slow = head;
+    // 快指针先前进 n 步
+    while (n-- > 0) {
+        fast = fast->next;
+    }
+    if (fast == NULL) {
+        // 如果此时快指针走到头了，
+        // 说明倒数第 n 个节点就是第一个节点
+        return head;
+    }
+    // 让慢指针和快指针同步向前
+    while (fast != NULL && fast->next != NULL) { //快指针走到最后一个节点就会退出循环
+        fast = fast->next;
+        slow = slow->next;
+    }
+    // slow.next 就是倒数第 n 个节点，删除它
+    slow->next = slow->next->next;
+    return head;
+}
 
 void remove_nth_from_end_test(){
     
