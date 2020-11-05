@@ -14,6 +14,7 @@
 		35836D2C25452CD8006A1BF3 /* Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 35836D2B25452CD8006A1BF3 /* Sort.m */; };
 		3586A3FC2545632300CD2C61 /* BubbleSort3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3586A3FB2545632300CD2C61 /* BubbleSort3.m */; };
 		35CF22312543E2910044632E /* BubbleSort1.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CF22302543E2910044632E /* BubbleSort1.m */; };
+		3709399E25540D8A00CAF6F0 /* UnionFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 3709399D25540D8A00CAF6F0 /* UnionFind.m */; };
 		373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */; };
 		3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3736330625419FB20039E4A6 /* 8_StringtoInteger.m */; };
 		3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDC92546DA70003C8105 /* 1_TwoSums.m */; };
@@ -48,6 +49,7 @@
 		37CF43CF2538362700CBBDEF /* 20_ValidParentheses.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43C02538362700CBBDEF /* 20_ValidParentheses.c */; };
 		37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */; };
 		37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */; };
+		37DA62A4255410180075ABEA /* UnionFind_QF.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DA62A3255410180075ABEA /* UnionFind_QF.m */; };
 		37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */; };
 		37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D525503B6200D726A5 /* 66_Plus_One.m */; };
 		37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */; };
@@ -74,6 +76,8 @@
 		3586A3FB2545632300CD2C61 /* BubbleSort3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort3.m; sourceTree = "<group>"; };
 		35CF222F2543E2910044632E /* BubbleSort1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort1.h; sourceTree = "<group>"; };
 		35CF22302543E2910044632E /* BubbleSort1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort1.m; sourceTree = "<group>"; };
+		3709399C25540D8A00CAF6F0 /* UnionFind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind.h; sourceTree = "<group>"; };
+		3709399D25540D8A00CAF6F0 /* UnionFind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind.m; sourceTree = "<group>"; };
 		373632C825413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 3_LongestSubstringWithoutRepeatingCharacters.h; sourceTree = "<group>"; };
 		373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 3_LongestSubstringWithoutRepeatingCharacters.m; sourceTree = "<group>"; };
 		3736330525419FB20039E4A6 /* 8_StringtoInteger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 8_StringtoInteger.h; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 		37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 70_ClimbingStairs.c; sourceTree = "<group>"; };
 		37CF44202538475D00CBBDEF /* 53_MaximumSubarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 53_MaximumSubarray.h; sourceTree = "<group>"; };
 		37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 53_MaximumSubarray.c; sourceTree = "<group>"; };
+		37DA62A2255410180075ABEA /* UnionFind_QF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QF.h; sourceTree = "<group>"; };
+		37DA62A3255410180075ABEA /* UnionFind_QF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QF.m; sourceTree = "<group>"; };
 		37EBD7A2254FAAD600D726A5 /* 28_Implement_strStr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 28_Implement_strStr.h; sourceTree = "<group>"; };
 		37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 28_Implement_strStr.m; sourceTree = "<group>"; };
 		37EBD8D425503B6200D726A5 /* 66_Plus_One.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 66_Plus_One.h; sourceTree = "<group>"; };
@@ -200,6 +206,17 @@
 			path = "排序";
 			sourceTree = "<group>";
 		};
+		370939A025540DA400CAF6F0 /* 并查集 */ = {
+			isa = PBXGroup;
+			children = (
+				3709399C25540D8A00CAF6F0 /* UnionFind.h */,
+				3709399D25540D8A00CAF6F0 /* UnionFind.m */,
+				37DA62A2255410180075ABEA /* UnionFind_QF.h */,
+				37DA62A3255410180075ABEA /* UnionFind_QF.m */,
+			);
+			path = "并查集";
+			sourceTree = "<group>";
+		};
 		37CF43782538357900CBBDEF = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +238,7 @@
 			children = (
 				37CF439E2538362700CBBDEF /* c */,
 				37CF43842538357900CBBDEF /* AppDelegate.h */,
+				370939A025540DA400CAF6F0 /* 并查集 */,
 				37CF43852538357900CBBDEF /* AppDelegate.m */,
 				37CF43872538357900CBBDEF /* SceneDelegate.h */,
 				37CF43882538357900CBBDEF /* SceneDelegate.m */,
@@ -440,6 +458,7 @@
 				3564FE5D254E719500230505 /* QuickSort.m in Sources */,
 				3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */,
 				378C99AE254925FD00B64B92 /* SelectSort.m in Sources */,
+				37DA62A4255410180075ABEA /* UnionFind_QF.m in Sources */,
 				37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */,
 				3776CDCF2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m in Sources */,
 				37EBD94D2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m in Sources */,
@@ -451,6 +470,7 @@
 				378C9FAF254C1E3000B64B92 /* InsertSort.m in Sources */,
 				37CF43C22538362700CBBDEF /* 4_MedianofTwoSortedArrays.c in Sources */,
 				37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */,
+				3709399E25540D8A00CAF6F0 /* UnionFind.m in Sources */,
 				373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */,
 				37CF43972538357A00CBBDEF /* main.m in Sources */,
 				37CF43C32538362700CBBDEF /* ListNode_C.c in Sources */,
