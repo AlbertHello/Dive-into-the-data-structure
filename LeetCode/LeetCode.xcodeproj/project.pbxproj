@@ -50,6 +50,7 @@
 		37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */; };
 		37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */; };
 		37DA62A4255410180075ABEA /* UnionFind_QF.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DA62A3255410180075ABEA /* UnionFind_QF.m */; };
+		37DA62A8255422B90075ABEA /* UnionFind_QU.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DA62A7255422B90075ABEA /* UnionFind_QU.m */; };
 		37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */; };
 		37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D525503B6200D726A5 /* 66_Plus_One.m */; };
 		37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */; };
@@ -146,6 +147,8 @@
 		37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 53_MaximumSubarray.c; sourceTree = "<group>"; };
 		37DA62A2255410180075ABEA /* UnionFind_QF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QF.h; sourceTree = "<group>"; };
 		37DA62A3255410180075ABEA /* UnionFind_QF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QF.m; sourceTree = "<group>"; };
+		37DA62A6255422B90075ABEA /* UnionFind_QU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU.h; sourceTree = "<group>"; };
+		37DA62A7255422B90075ABEA /* UnionFind_QU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU.m; sourceTree = "<group>"; };
 		37EBD7A2254FAAD600D726A5 /* 28_Implement_strStr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 28_Implement_strStr.h; sourceTree = "<group>"; };
 		37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 28_Implement_strStr.m; sourceTree = "<group>"; };
 		37EBD8D425503B6200D726A5 /* 66_Plus_One.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 66_Plus_One.h; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				3709399D25540D8A00CAF6F0 /* UnionFind.m */,
 				37DA62A2255410180075ABEA /* UnionFind_QF.h */,
 				37DA62A3255410180075ABEA /* UnionFind_QF.m */,
+				37DA62A6255422B90075ABEA /* UnionFind_QU.h */,
+				37DA62A7255422B90075ABEA /* UnionFind_QU.m */,
 			);
 			path = "并查集";
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 				3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */,
 				35836D2C25452CD8006A1BF3 /* Sort.m in Sources */,
 				378C9FA3254BC40500B64B92 /* 75_Sort_Colors.m in Sources */,
+				37DA62A8255422B90075ABEA /* UnionFind_QU.m in Sources */,
 				37CF43C42538362700CBBDEF /* 2_AddTwoNumbers.c in Sources */,
 				37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */,
 				37CF43C52538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c in Sources */,
