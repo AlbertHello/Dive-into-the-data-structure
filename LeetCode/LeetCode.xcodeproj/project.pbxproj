@@ -55,6 +55,7 @@
 		37EBD92A2551894000D726A5 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD9292551894000D726A5 /* 01.png */; };
 		37EBD94D2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD94C2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m */; };
 		37EBD9512553D0B700D726A5 /* _167_TwoSum_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD9502553D0B700D726A5 /* _167_TwoSum_2.m */; };
+		37EBD9552553D2FD00D726A5 /* _344_Reverse_String.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD9542553D2FD00D726A5 /* _344_Reverse_String.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +152,8 @@
 		37EBD94C2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _1381_Design_a_Stack_With_Increment_Operation.m; sourceTree = "<group>"; };
 		37EBD94F2553D0B700D726A5 /* _167_TwoSum_2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _167_TwoSum_2.h; sourceTree = "<group>"; };
 		37EBD9502553D0B700D726A5 /* _167_TwoSum_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _167_TwoSum_2.m; sourceTree = "<group>"; };
+		37EBD9532553D2FD00D726A5 /* _344_Reverse_String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _344_Reverse_String.h; sourceTree = "<group>"; };
+		37EBD9542553D2FD00D726A5 /* _344_Reverse_String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _344_Reverse_String.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +313,8 @@
 				37CF43BB2538362700CBBDEF /* 5_LongestPalindromicSubstring.c */,
 				37EBD7A2254FAAD600D726A5 /* 28_Implement_strStr.h */,
 				37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */,
+				37EBD9532553D2FD00D726A5 /* _344_Reverse_String.h */,
+				37EBD9542553D2FD00D726A5 /* _344_Reverse_String.m */,
 				37EBD8D82550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.h */,
 				37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */,
 				37CF43BA2538362700CBBDEF /* 1002_Find_Common_Characters.h */,
@@ -422,6 +427,7 @@
 				37CF43CD2538362700CBBDEF /* 5_LongestPalindromicSubstring.c in Sources */,
 				37CF43C62538362700CBBDEF /* 141_LinkedListCycle.c in Sources */,
 				3586A3FC2545632300CD2C61 /* BubbleSort3.m in Sources */,
+				37EBD9552553D2FD00D726A5 /* _344_Reverse_String.m in Sources */,
 				37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */,
 				37CF43C82538362700CBBDEF /* 21_MergeTwoSortedList.c in Sources */,
 				3564FE55254E4A4800230505 /* BinarySearch.m in Sources */,
