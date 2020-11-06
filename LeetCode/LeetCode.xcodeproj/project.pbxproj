@@ -53,6 +53,7 @@
 		37DA62A8255422B90075ABEA /* UnionFind_QU.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DA62A7255422B90075ABEA /* UnionFind_QU.m */; };
 		37DA62AC255428D50075ABEA /* UnionFind_QU_Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DA62AB255428D50075ABEA /* UnionFind_QU_Size.m */; };
 		37DA62B025542C7A0075ABEA /* UnionFind_QU_Rank.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DA62AF25542C7A0075ABEA /* UnionFind_QU_Rank.m */; };
+		37DA62B425542FA30075ABEA /* UnionFind_QU_Rank_Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DA62B325542FA30075ABEA /* UnionFind_QU_Rank_Path.m */; };
 		37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */; };
 		37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D525503B6200D726A5 /* 66_Plus_One.m */; };
 		37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */; };
@@ -155,6 +156,8 @@
 		37DA62AB255428D50075ABEA /* UnionFind_QU_Size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Size.m; sourceTree = "<group>"; };
 		37DA62AE25542C7A0075ABEA /* UnionFind_QU_Rank.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank.h; sourceTree = "<group>"; };
 		37DA62AF25542C7A0075ABEA /* UnionFind_QU_Rank.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Rank.m; sourceTree = "<group>"; };
+		37DA62B225542FA30075ABEA /* UnionFind_QU_Rank_Path.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank_Path.h; sourceTree = "<group>"; };
+		37DA62B325542FA30075ABEA /* UnionFind_QU_Rank_Path.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Rank_Path.m; sourceTree = "<group>"; };
 		37EBD7A2254FAAD600D726A5 /* 28_Implement_strStr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 28_Implement_strStr.h; sourceTree = "<group>"; };
 		37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 28_Implement_strStr.m; sourceTree = "<group>"; };
 		37EBD8D425503B6200D726A5 /* 66_Plus_One.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 66_Plus_One.h; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 				37DA62AB255428D50075ABEA /* UnionFind_QU_Size.m */,
 				37DA62AE25542C7A0075ABEA /* UnionFind_QU_Rank.h */,
 				37DA62AF25542C7A0075ABEA /* UnionFind_QU_Rank.m */,
+				37DA62B225542FA30075ABEA /* UnionFind_QU_Rank_Path.h */,
+				37DA62B325542FA30075ABEA /* UnionFind_QU_Rank_Path.m */,
 			);
 			path = "并查集";
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 				37DA62A8255422B90075ABEA /* UnionFind_QU.m in Sources */,
 				37CF43C42538362700CBBDEF /* 2_AddTwoNumbers.c in Sources */,
 				37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */,
+				37DA62B425542FA30075ABEA /* UnionFind_QU_Rank_Path.m in Sources */,
 				37CF43C52538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c in Sources */,
 				37EBD9252551846800D726A5 /* ShellSort.m in Sources */,
 				35CF22312543E2910044632E /* BubbleSort1.m in Sources */,
