@@ -18,6 +18,7 @@
 		373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */; };
 		3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3736330625419FB20039E4A6 /* 8_StringtoInteger.m */; };
 		37593E8925550829001D5A09 /* UnionFind_QU_Rank_Path_Split.m in Sources */ = {isa = PBXBuildFile; fileRef = 37593E8825550829001D5A09 /* UnionFind_QU_Rank_Path_Split.m */; };
+		37593E8D255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.m in Sources */ = {isa = PBXBuildFile; fileRef = 37593E8C255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.m */; };
 		3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDC92546DA70003C8105 /* 1_TwoSums.m */; };
 		3776CDCF2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDCE2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m */; };
 		3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDD22547CC4B003C8105 /* 146_LRU_Cache.m */; };
@@ -89,6 +90,8 @@
 		3736330625419FB20039E4A6 /* 8_StringtoInteger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 8_StringtoInteger.m; sourceTree = "<group>"; };
 		37593E8725550829001D5A09 /* UnionFind_QU_Rank_Path_Split.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank_Path_Split.h; sourceTree = "<group>"; };
 		37593E8825550829001D5A09 /* UnionFind_QU_Rank_Path_Split.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Rank_Path_Split.m; sourceTree = "<group>"; };
+		37593E8B255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank_Path_Halving.h; sourceTree = "<group>"; };
+		37593E8C255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Rank_Path_Halving.m; sourceTree = "<group>"; };
 		3776CDC82546DA70003C8105 /* 1_TwoSums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 1_TwoSums.h; sourceTree = "<group>"; };
 		3776CDC92546DA70003C8105 /* 1_TwoSums.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 1_TwoSums.m; sourceTree = "<group>"; };
 		3776CDCD2546EF5E003C8105 /* 149_Max_Points_on_a_Line.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 149_Max_Points_on_a_Line.h; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 				37DA62B325542FA30075ABEA /* UnionFind_QU_Rank_Path.m */,
 				37593E8725550829001D5A09 /* UnionFind_QU_Rank_Path_Split.h */,
 				37593E8825550829001D5A09 /* UnionFind_QU_Rank_Path_Split.m */,
+				37593E8B255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.h */,
+				37593E8C255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.m */,
 			);
 			path = "并查集";
 			sourceTree = "<group>";
@@ -496,6 +501,7 @@
 				378C998B2549112D00B64B92 /* HeapSort.m in Sources */,
 				37CF43CF2538362700CBBDEF /* 20_ValidParentheses.c in Sources */,
 				378C9FAF254C1E3000B64B92 /* InsertSort.m in Sources */,
+				37593E8D255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.m in Sources */,
 				37CF43C22538362700CBBDEF /* 4_MedianofTwoSortedArrays.c in Sources */,
 				37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */,
 				37593E8925550829001D5A09 /* UnionFind_QU_Rank_Path_Split.m in Sources */,
