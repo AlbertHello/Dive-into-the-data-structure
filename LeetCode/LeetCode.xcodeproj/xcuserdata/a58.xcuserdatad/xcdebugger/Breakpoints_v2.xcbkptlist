@@ -5,18 +5,30 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
-            uuid = "E61D368C-750A-4A2D-A007-C705F1595527"
-            shouldBeEnabled = "No"
+            uuid = "CF6DC14C-666B-4D85-B440-209EA0418835"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LeetCode/c/&#x7b97;&#x6cd5;/15_ThreeSum.m"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87E95634-6D9A-43D0-AE2C-C089E0377BB1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeetCode/c/&#x5b57;&#x7b26;&#x4e32;/_394_Decode_String.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
-            landmarkName = "+threeSumTest"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-decodeString:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

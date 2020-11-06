@@ -22,6 +22,7 @@
 		370E303025550C86007FC789 /* UnionFind_QF.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E302125550C86007FC789 /* UnionFind_QF.m */; };
 		370E303125550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E302225550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.m */; };
 		370E303225550C86007FC789 /* UnionFind_QU.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E302425550C86007FC789 /* UnionFind_QU.m */; };
+		370E306625556C3F007FC789 /* _394_Decode_String.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E306525556C3F007FC789 /* _394_Decode_String.m */; };
 		373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */; };
 		3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3736330625419FB20039E4A6 /* 8_StringtoInteger.m */; };
 		3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDC92546DA70003C8105 /* 1_TwoSums.m */; };
@@ -98,6 +99,8 @@
 		370E302825550C86007FC789 /* UnionFind_QU_Rank_Path_Split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank_Path_Split.h; sourceTree = "<group>"; };
 		370E302925550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank_Path_Halving.h; sourceTree = "<group>"; };
 		370E302A25550C86007FC789 /* UnionFind_QF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind_QF.h; sourceTree = "<group>"; };
+		370E306425556C3E007FC789 /* _394_Decode_String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _394_Decode_String.h; sourceTree = "<group>"; };
+		370E306525556C3F007FC789 /* _394_Decode_String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _394_Decode_String.m; sourceTree = "<group>"; };
 		373632C825413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 3_LongestSubstringWithoutRepeatingCharacters.h; sourceTree = "<group>"; };
 		373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 3_LongestSubstringWithoutRepeatingCharacters.m; sourceTree = "<group>"; };
 		3736330525419FB20039E4A6 /* 8_StringtoInteger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 8_StringtoInteger.h; sourceTree = "<group>"; };
@@ -368,6 +371,8 @@
 				37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */,
 				37EBD9532553D2FD00D726A5 /* _344_Reverse_String.h */,
 				37EBD9542553D2FD00D726A5 /* _344_Reverse_String.m */,
+				370E306425556C3E007FC789 /* _394_Decode_String.h */,
+				370E306525556C3F007FC789 /* _394_Decode_String.m */,
 				37EBD8D82550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.h */,
 				37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */,
 				37CF43BA2538362700CBBDEF /* 1002_Find_Common_Characters.h */,
@@ -491,6 +496,7 @@
 				3564FE55254E4A4800230505 /* BinarySearch.m in Sources */,
 				3564FE5D254E719500230505 /* QuickSort.m in Sources */,
 				3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */,
+				370E306625556C3F007FC789 /* _394_Decode_String.m in Sources */,
 				378C99AE254925FD00B64B92 /* SelectSort.m in Sources */,
 				37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */,
 				3776CDCF2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m in Sources */,

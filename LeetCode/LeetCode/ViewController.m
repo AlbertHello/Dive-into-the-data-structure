@@ -33,6 +33,8 @@
 #import "_821_Shortest_Distance_to_a_Character.h"
 #import "146_LRU_Cache.h"
 #import "5_LongestPalindromicSubstring.h"
+#import "_394_Decode_String.h"
+
 
 
 
@@ -55,7 +57,7 @@
     
     
 //    [self test];
-//    [self leetcodeTest];
+    [self leetcodeTest];
 //    [self sortTest];
 }
 
@@ -73,7 +75,8 @@
 //    [_6_Plus_One plusOneTest];
 //    [_821_Shortest_Distance_to_a_Character shortestToCharTest];
 //    [_46_LRU_Cache LRU_Cache_Test];
-    longestPalindromeTest();
+//    longestPalindromeTest();
+    [_394_Decode_String decodeStringTest];
 }
 -(void)sortTest{
 //    int arr1[10]={90,56,23,4,1,45,57,29,40,39};
