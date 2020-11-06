@@ -8,6 +8,7 @@
 #import "UnionFind_QU_Rank_Path.h"
 
 // 路径压缩
+//在find时使路径上的所有节点都指向根节点，从而降低树的高度
 @implementation UnionFind_QU_Rank_Path
 
 
