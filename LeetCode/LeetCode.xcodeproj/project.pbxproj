@@ -14,11 +14,16 @@
 		35836D2C25452CD8006A1BF3 /* Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 35836D2B25452CD8006A1BF3 /* Sort.m */; };
 		3586A3FC2545632300CD2C61 /* BubbleSort3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3586A3FB2545632300CD2C61 /* BubbleSort3.m */; };
 		35CF22312543E2910044632E /* BubbleSort1.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CF22302543E2910044632E /* BubbleSort1.m */; };
-		3709399E25540D8A00CAF6F0 /* UnionFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 3709399D25540D8A00CAF6F0 /* UnionFind.m */; };
+		370E302B25550C86007FC789 /* UnionFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E301B25550C86007FC789 /* UnionFind.m */; };
+		370E302C25550C86007FC789 /* UnionFind_QU_Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E301D25550C86007FC789 /* UnionFind_QU_Size.m */; };
+		370E302D25550C86007FC789 /* UnionFind_QU_Rank_Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E301E25550C86007FC789 /* UnionFind_QU_Rank_Path.m */; };
+		370E302E25550C86007FC789 /* UnionFind_QU_Rank_Path_Split.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E301F25550C86007FC789 /* UnionFind_QU_Rank_Path_Split.m */; };
+		370E302F25550C86007FC789 /* UnionFind_QU_Rank.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E302025550C86007FC789 /* UnionFind_QU_Rank.m */; };
+		370E303025550C86007FC789 /* UnionFind_QF.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E302125550C86007FC789 /* UnionFind_QF.m */; };
+		370E303125550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E302225550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.m */; };
+		370E303225550C86007FC789 /* UnionFind_QU.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E302425550C86007FC789 /* UnionFind_QU.m */; };
 		373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */; };
 		3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3736330625419FB20039E4A6 /* 8_StringtoInteger.m */; };
-		37593E8925550829001D5A09 /* UnionFind_QU_Rank_Path_Split.m in Sources */ = {isa = PBXBuildFile; fileRef = 37593E8825550829001D5A09 /* UnionFind_QU_Rank_Path_Split.m */; };
-		37593E8D255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.m in Sources */ = {isa = PBXBuildFile; fileRef = 37593E8C255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.m */; };
 		3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDC92546DA70003C8105 /* 1_TwoSums.m */; };
 		3776CDCF2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDCE2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m */; };
 		3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDD22547CC4B003C8105 /* 146_LRU_Cache.m */; };
@@ -51,11 +56,6 @@
 		37CF43CF2538362700CBBDEF /* 20_ValidParentheses.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43C02538362700CBBDEF /* 20_ValidParentheses.c */; };
 		37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */; };
 		37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */; };
-		37DA62A4255410180075ABEA /* UnionFind_QF.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DA62A3255410180075ABEA /* UnionFind_QF.m */; };
-		37DA62A8255422B90075ABEA /* UnionFind_QU.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DA62A7255422B90075ABEA /* UnionFind_QU.m */; };
-		37DA62AC255428D50075ABEA /* UnionFind_QU_Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DA62AB255428D50075ABEA /* UnionFind_QU_Size.m */; };
-		37DA62B025542C7A0075ABEA /* UnionFind_QU_Rank.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DA62AF25542C7A0075ABEA /* UnionFind_QU_Rank.m */; };
-		37DA62B425542FA30075ABEA /* UnionFind_QU_Rank_Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DA62B325542FA30075ABEA /* UnionFind_QU_Rank_Path.m */; };
 		37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */; };
 		37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D525503B6200D726A5 /* 66_Plus_One.m */; };
 		37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */; };
@@ -82,16 +82,26 @@
 		3586A3FB2545632300CD2C61 /* BubbleSort3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort3.m; sourceTree = "<group>"; };
 		35CF222F2543E2910044632E /* BubbleSort1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort1.h; sourceTree = "<group>"; };
 		35CF22302543E2910044632E /* BubbleSort1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort1.m; sourceTree = "<group>"; };
-		3709399C25540D8A00CAF6F0 /* UnionFind.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind.h; sourceTree = "<group>"; };
-		3709399D25540D8A00CAF6F0 /* UnionFind.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind.m; sourceTree = "<group>"; };
+		370E301B25550C86007FC789 /* UnionFind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnionFind.m; sourceTree = "<group>"; };
+		370E301C25550C86007FC789 /* UnionFind_QU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU.h; sourceTree = "<group>"; };
+		370E301D25550C86007FC789 /* UnionFind_QU_Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Size.m; sourceTree = "<group>"; };
+		370E301E25550C86007FC789 /* UnionFind_QU_Rank_Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Rank_Path.m; sourceTree = "<group>"; };
+		370E301F25550C86007FC789 /* UnionFind_QU_Rank_Path_Split.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Rank_Path_Split.m; sourceTree = "<group>"; };
+		370E302025550C86007FC789 /* UnionFind_QU_Rank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Rank.m; sourceTree = "<group>"; };
+		370E302125550C86007FC789 /* UnionFind_QF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QF.m; sourceTree = "<group>"; };
+		370E302225550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Rank_Path_Halving.m; sourceTree = "<group>"; };
+		370E302325550C86007FC789 /* UnionFind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind.h; sourceTree = "<group>"; };
+		370E302425550C86007FC789 /* UnionFind_QU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU.m; sourceTree = "<group>"; };
+		370E302525550C86007FC789 /* UnionFind_QU_Rank_Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank_Path.h; sourceTree = "<group>"; };
+		370E302625550C86007FC789 /* UnionFind_QU_Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Size.h; sourceTree = "<group>"; };
+		370E302725550C86007FC789 /* UnionFind_QU_Rank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank.h; sourceTree = "<group>"; };
+		370E302825550C86007FC789 /* UnionFind_QU_Rank_Path_Split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank_Path_Split.h; sourceTree = "<group>"; };
+		370E302925550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank_Path_Halving.h; sourceTree = "<group>"; };
+		370E302A25550C86007FC789 /* UnionFind_QF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind_QF.h; sourceTree = "<group>"; };
 		373632C825413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 3_LongestSubstringWithoutRepeatingCharacters.h; sourceTree = "<group>"; };
 		373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 3_LongestSubstringWithoutRepeatingCharacters.m; sourceTree = "<group>"; };
 		3736330525419FB20039E4A6 /* 8_StringtoInteger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 8_StringtoInteger.h; sourceTree = "<group>"; };
 		3736330625419FB20039E4A6 /* 8_StringtoInteger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 8_StringtoInteger.m; sourceTree = "<group>"; };
-		37593E8725550829001D5A09 /* UnionFind_QU_Rank_Path_Split.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank_Path_Split.h; sourceTree = "<group>"; };
-		37593E8825550829001D5A09 /* UnionFind_QU_Rank_Path_Split.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Rank_Path_Split.m; sourceTree = "<group>"; };
-		37593E8B255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank_Path_Halving.h; sourceTree = "<group>"; };
-		37593E8C255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Rank_Path_Halving.m; sourceTree = "<group>"; };
 		3776CDC82546DA70003C8105 /* 1_TwoSums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 1_TwoSums.h; sourceTree = "<group>"; };
 		3776CDC92546DA70003C8105 /* 1_TwoSums.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 1_TwoSums.m; sourceTree = "<group>"; };
 		3776CDCD2546EF5E003C8105 /* 149_Max_Points_on_a_Line.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 149_Max_Points_on_a_Line.h; sourceTree = "<group>"; };
@@ -154,16 +164,6 @@
 		37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 70_ClimbingStairs.c; sourceTree = "<group>"; };
 		37CF44202538475D00CBBDEF /* 53_MaximumSubarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 53_MaximumSubarray.h; sourceTree = "<group>"; };
 		37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 53_MaximumSubarray.c; sourceTree = "<group>"; };
-		37DA62A2255410180075ABEA /* UnionFind_QF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QF.h; sourceTree = "<group>"; };
-		37DA62A3255410180075ABEA /* UnionFind_QF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QF.m; sourceTree = "<group>"; };
-		37DA62A6255422B90075ABEA /* UnionFind_QU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU.h; sourceTree = "<group>"; };
-		37DA62A7255422B90075ABEA /* UnionFind_QU.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU.m; sourceTree = "<group>"; };
-		37DA62AA255428D50075ABEA /* UnionFind_QU_Size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Size.h; sourceTree = "<group>"; };
-		37DA62AB255428D50075ABEA /* UnionFind_QU_Size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Size.m; sourceTree = "<group>"; };
-		37DA62AE25542C7A0075ABEA /* UnionFind_QU_Rank.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank.h; sourceTree = "<group>"; };
-		37DA62AF25542C7A0075ABEA /* UnionFind_QU_Rank.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Rank.m; sourceTree = "<group>"; };
-		37DA62B225542FA30075ABEA /* UnionFind_QU_Rank_Path.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU_Rank_Path.h; sourceTree = "<group>"; };
-		37DA62B325542FA30075ABEA /* UnionFind_QU_Rank_Path.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Rank_Path.m; sourceTree = "<group>"; };
 		37EBD7A2254FAAD600D726A5 /* 28_Implement_strStr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 28_Implement_strStr.h; sourceTree = "<group>"; };
 		37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 28_Implement_strStr.m; sourceTree = "<group>"; };
 		37EBD8D425503B6200D726A5 /* 66_Plus_One.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 66_Plus_One.h; sourceTree = "<group>"; };
@@ -224,25 +224,25 @@
 			path = "排序";
 			sourceTree = "<group>";
 		};
-		370939A025540DA400CAF6F0 /* 并查集 */ = {
+		370E301A25550C86007FC789 /* 并查集 */ = {
 			isa = PBXGroup;
 			children = (
-				3709399C25540D8A00CAF6F0 /* UnionFind.h */,
-				3709399D25540D8A00CAF6F0 /* UnionFind.m */,
-				37DA62A2255410180075ABEA /* UnionFind_QF.h */,
-				37DA62A3255410180075ABEA /* UnionFind_QF.m */,
-				37DA62A6255422B90075ABEA /* UnionFind_QU.h */,
-				37DA62A7255422B90075ABEA /* UnionFind_QU.m */,
-				37DA62AA255428D50075ABEA /* UnionFind_QU_Size.h */,
-				37DA62AB255428D50075ABEA /* UnionFind_QU_Size.m */,
-				37DA62AE25542C7A0075ABEA /* UnionFind_QU_Rank.h */,
-				37DA62AF25542C7A0075ABEA /* UnionFind_QU_Rank.m */,
-				37DA62B225542FA30075ABEA /* UnionFind_QU_Rank_Path.h */,
-				37DA62B325542FA30075ABEA /* UnionFind_QU_Rank_Path.m */,
-				37593E8725550829001D5A09 /* UnionFind_QU_Rank_Path_Split.h */,
-				37593E8825550829001D5A09 /* UnionFind_QU_Rank_Path_Split.m */,
-				37593E8B255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.h */,
-				37593E8C255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.m */,
+				370E301B25550C86007FC789 /* UnionFind.m */,
+				370E301C25550C86007FC789 /* UnionFind_QU.h */,
+				370E301D25550C86007FC789 /* UnionFind_QU_Size.m */,
+				370E301E25550C86007FC789 /* UnionFind_QU_Rank_Path.m */,
+				370E301F25550C86007FC789 /* UnionFind_QU_Rank_Path_Split.m */,
+				370E302025550C86007FC789 /* UnionFind_QU_Rank.m */,
+				370E302125550C86007FC789 /* UnionFind_QF.m */,
+				370E302225550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.m */,
+				370E302325550C86007FC789 /* UnionFind.h */,
+				370E302425550C86007FC789 /* UnionFind_QU.m */,
+				370E302525550C86007FC789 /* UnionFind_QU_Rank_Path.h */,
+				370E302625550C86007FC789 /* UnionFind_QU_Size.h */,
+				370E302725550C86007FC789 /* UnionFind_QU_Rank.h */,
+				370E302825550C86007FC789 /* UnionFind_QU_Rank_Path_Split.h */,
+				370E302925550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.h */,
+				370E302A25550C86007FC789 /* UnionFind_QF.h */,
 			);
 			path = "并查集";
 			sourceTree = "<group>";
@@ -268,7 +268,6 @@
 			children = (
 				37CF439E2538362700CBBDEF /* c */,
 				37CF43842538357900CBBDEF /* AppDelegate.h */,
-				370939A025540DA400CAF6F0 /* 并查集 */,
 				37CF43852538357900CBBDEF /* AppDelegate.m */,
 				37CF43872538357900CBBDEF /* SceneDelegate.h */,
 				37CF43882538357900CBBDEF /* SceneDelegate.m */,
@@ -286,6 +285,7 @@
 		37CF439E2538362700CBBDEF /* c */ = {
 			isa = PBXGroup;
 			children = (
+				370E301A25550C86007FC789 /* 并查集 */,
 				37CF439F2538362700CBBDEF /* 算法 */,
 				37CF43A42538362700CBBDEF /* 链表 */,
 				37CF43B92538362700CBBDEF /* 字符串 */,
@@ -467,23 +467,24 @@
 				37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */,
 				378C9F5A254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m in Sources */,
 				37CF438C2538357900CBBDEF /* ViewController.m in Sources */,
+				370E303225550C86007FC789 /* UnionFind_QU.m in Sources */,
 				37CF43CB2538362700CBBDEF /* 61_RotateList.c in Sources */,
 				37CF43CE2538362700CBBDEF /* 1002_Find_Common_Characters.c in Sources */,
 				35836D2425452C7F006A1BF3 /* BubbleSort2.m in Sources */,
 				3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */,
 				35836D2C25452CD8006A1BF3 /* Sort.m in Sources */,
 				378C9FA3254BC40500B64B92 /* 75_Sort_Colors.m in Sources */,
-				37DA62A8255422B90075ABEA /* UnionFind_QU.m in Sources */,
+				370E302E25550C86007FC789 /* UnionFind_QU_Rank_Path_Split.m in Sources */,
 				37CF43C42538362700CBBDEF /* 2_AddTwoNumbers.c in Sources */,
 				37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */,
-				37DA62B425542FA30075ABEA /* UnionFind_QU_Rank_Path.m in Sources */,
+				370E302D25550C86007FC789 /* UnionFind_QU_Rank_Path.m in Sources */,
+				370E303125550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.m in Sources */,
 				37CF43C52538362700CBBDEF /* 19_RemoveNthNodeFromEndofList.c in Sources */,
 				37EBD9252551846800D726A5 /* ShellSort.m in Sources */,
 				35CF22312543E2910044632E /* BubbleSort1.m in Sources */,
 				37CF43CD2538362700CBBDEF /* 5_LongestPalindromicSubstring.c in Sources */,
 				37CF43C62538362700CBBDEF /* 141_LinkedListCycle.c in Sources */,
 				3586A3FC2545632300CD2C61 /* BubbleSort3.m in Sources */,
-				37DA62AC255428D50075ABEA /* UnionFind_QU_Size.m in Sources */,
 				37EBD9552553D2FD00D726A5 /* _344_Reverse_String.m in Sources */,
 				37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */,
 				37CF43C82538362700CBBDEF /* 21_MergeTwoSortedList.c in Sources */,
@@ -491,7 +492,6 @@
 				3564FE5D254E719500230505 /* QuickSort.m in Sources */,
 				3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */,
 				378C99AE254925FD00B64B92 /* SelectSort.m in Sources */,
-				37DA62A4255410180075ABEA /* UnionFind_QF.m in Sources */,
 				37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */,
 				3776CDCF2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m in Sources */,
 				37EBD94D2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m in Sources */,
@@ -501,20 +501,20 @@
 				378C998B2549112D00B64B92 /* HeapSort.m in Sources */,
 				37CF43CF2538362700CBBDEF /* 20_ValidParentheses.c in Sources */,
 				378C9FAF254C1E3000B64B92 /* InsertSort.m in Sources */,
-				37593E8D255509B0001D5A09 /* UnionFind_QU_Rank_Path_Halving.m in Sources */,
 				37CF43C22538362700CBBDEF /* 4_MedianofTwoSortedArrays.c in Sources */,
 				37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */,
-				37593E8925550829001D5A09 /* UnionFind_QU_Rank_Path_Split.m in Sources */,
-				37DA62B025542C7A0075ABEA /* UnionFind_QU_Rank.m in Sources */,
-				3709399E25540D8A00CAF6F0 /* UnionFind.m in Sources */,
+				370E302B25550C86007FC789 /* UnionFind.m in Sources */,
+				370E302F25550C86007FC789 /* UnionFind_QU_Rank.m in Sources */,
 				373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */,
 				37CF43972538357A00CBBDEF /* main.m in Sources */,
+				370E302C25550C86007FC789 /* UnionFind_QU_Size.m in Sources */,
 				37CF43C32538362700CBBDEF /* ListNode_C.c in Sources */,
 				37CF43892538357900CBBDEF /* SceneDelegate.m in Sources */,
 				37CF43CC2538362700CBBDEF /* 206_ReverseLinkedList.c in Sources */,
 				3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */,
 				3564FE59254E5E2600230505 /* MergeSort.m in Sources */,
 				37C75B5825400B96006564C1 /* 15_ThreeSum.m in Sources */,
+				370E303025550C86007FC789 /* UnionFind_QF.m in Sources */,
 				37EBD9512553D0B700D726A5 /* _167_TwoSum_2.m in Sources */,
 				37CF43CA2538362700CBBDEF /* 203_RemoveLinkedListElements.c in Sources */,
 			);
