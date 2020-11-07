@@ -230,22 +230,22 @@
 		370E301A25550C86007FC789 /* 并查集 */ = {
 			isa = PBXGroup;
 			children = (
-				370E301B25550C86007FC789 /* UnionFind.m */,
-				370E301C25550C86007FC789 /* UnionFind_QU.h */,
-				370E301D25550C86007FC789 /* UnionFind_QU_Size.m */,
-				370E301E25550C86007FC789 /* UnionFind_QU_Rank_Path.m */,
-				370E301F25550C86007FC789 /* UnionFind_QU_Rank_Path_Split.m */,
-				370E302025550C86007FC789 /* UnionFind_QU_Rank.m */,
-				370E302125550C86007FC789 /* UnionFind_QF.m */,
-				370E302225550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.m */,
 				370E302325550C86007FC789 /* UnionFind.h */,
-				370E302425550C86007FC789 /* UnionFind_QU.m */,
-				370E302525550C86007FC789 /* UnionFind_QU_Rank_Path.h */,
-				370E302625550C86007FC789 /* UnionFind_QU_Size.h */,
-				370E302725550C86007FC789 /* UnionFind_QU_Rank.h */,
-				370E302825550C86007FC789 /* UnionFind_QU_Rank_Path_Split.h */,
-				370E302925550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.h */,
+				370E301B25550C86007FC789 /* UnionFind.m */,
 				370E302A25550C86007FC789 /* UnionFind_QF.h */,
+				370E302125550C86007FC789 /* UnionFind_QF.m */,
+				370E301C25550C86007FC789 /* UnionFind_QU.h */,
+				370E302425550C86007FC789 /* UnionFind_QU.m */,
+				370E302625550C86007FC789 /* UnionFind_QU_Size.h */,
+				370E301D25550C86007FC789 /* UnionFind_QU_Size.m */,
+				370E302725550C86007FC789 /* UnionFind_QU_Rank.h */,
+				370E302025550C86007FC789 /* UnionFind_QU_Rank.m */,
+				370E302525550C86007FC789 /* UnionFind_QU_Rank_Path.h */,
+				370E301E25550C86007FC789 /* UnionFind_QU_Rank_Path.m */,
+				370E302825550C86007FC789 /* UnionFind_QU_Rank_Path_Split.h */,
+				370E301F25550C86007FC789 /* UnionFind_QU_Rank_Path_Split.m */,
+				370E302925550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.h */,
+				370E302225550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.m */,
 			);
 			path = "并查集";
 			sourceTree = "<group>";

@@ -32,11 +32,11 @@
  路径分裂后：
           7
         ↗️ ↖️
-        6   5
+        6     5
           ↗️ ↖️
-          4   3
+          4     3
             ↗️ ↖️
-            2   1
+            2     1
  */
 - (int)_find:(int)val{
     if ([self rangeCheck:val]) {
