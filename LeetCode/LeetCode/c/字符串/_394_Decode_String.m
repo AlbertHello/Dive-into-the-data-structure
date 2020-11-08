@@ -111,6 +111,41 @@
     return (NSString *)final;
 }
 
+//递归
+-(NSString *)decodeString2:(NSString *)str{
+    NSMutableString *res=[NSMutableString string];
+    NSMutableString *temp=[NSMutableString string];
+    int times=0;
+    NSInteger index=0;
+    while (index<str.length) {
+        char cur = [str characterAtIndex:index];
+        if ([self isDigit:cur]) {
+            times = cur - '0';
+        }else if (cur == '['){ // 遇见[就递归
+            //++index表示从中括号中间的第一个字母开始，比如[abc]从a开始
+            NSString *sub=[str substringFromIndex:++index];
+            //返回的temp就是中括号之间的字母组成的字符串
+            temp=(NSMutableString *)[self decodeString2:sub];
+            while(times-->0){
+                //重复追加n次。n就是[之前的数字
+                [res appendString:temp];
+            }
+            times = 0;//num置零
+            //中括号之间有个字母index要同时++
+            index+=sub.length;
+        }else if (cur == ']'){ // 遇见]就递归结束
+            //比如[abc]，遇见]就break，表示中括号之间的所有字母统计完了。
+            break;
+        }else{
+            // 这个仅仅统计中括号之间的字母，
+            NSString *s=[NSString stringWithFormat:@"%c",cur];
+            [res appendString:s];
+        }
+        index++;
+    }
+    return res;
+}
+
 -(BOOL)isLetter:(char )c{
     if ( (c >= 65 && c <= 90) || (c >= 97 && c <= 122)) {
         return YES;
@@ -122,7 +157,8 @@
 }
 +(void)decodeStringTest{
     _394_Decode_String *ins=[[_394_Decode_String alloc]init];
-    NSString *str=[ins decodeString:@"abc3[a2[c]]"];
+    NSString *str=[ins decodeString2:@"abc3[a2[c]]"]; //abcaccaccacc
+//    NSString *str=[ins decodeString:@"abc3[a2[c]]"];
     NSLog(@"str = %@",str);
 }
 @end
