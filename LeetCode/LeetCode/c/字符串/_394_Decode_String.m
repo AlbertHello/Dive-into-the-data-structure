@@ -86,13 +86,21 @@
                     [t appendString:sub[i]];
                 }
             }
+            //删除这个数字
             [statck removeLastObject];
             // 将构造好的字符串入栈
             [statck addObject:t];
         }
         ptr++;
     }
-    return (NSString *)statck.firstObject;
+    NSMutableString  *final = [NSMutableString string];
+    //最后处理不是数字开头的情况： abc3[a2[c]]
+    while (statck.count != 0) {
+        NSString *temp=statck.lastObject;
+        [final insertString:temp atIndex:0];
+        [statck removeLastObject];
+    }
+    return (NSString *)final;
 }
 
 -(BOOL)isLetter:(char )c{
@@ -106,7 +114,7 @@
 }
 +(void)decodeStringTest{
     _394_Decode_String *ins=[[_394_Decode_String alloc]init];
-    NSString *str=[ins decodeString:@"3[a]2[bc]"];
+    NSString *str=[ins decodeString:@"abc3[a2[c]]"];
     NSLog(@"str = %@",str);
 }
 @end
