@@ -48,7 +48,15 @@
 
  输入：s = "abc3[cd]xyz"
  输出："abccdcdcdxyz"
+ 
+ //链接：https://leetcode-cn.com/problems/decode-string/solution/
  */
+
+//复杂度分析
+//时间复杂度：记解码后得出的字符串长度为S，除了遍历一次原字符串s，
+//我们还需要将解码后的字符串中的每个字符都入栈，并最终拼接进答案中，故渐进时间复杂度为O(S+∣s∣)，即O(S)。
+//空间复杂度：记解码后得出的字符串长度为S，这里用栈维护 TOKEN，
+//栈的总大小最终与S 相同，故渐进空间复杂度为O(S)。
 
 
 -(NSString *)decodeString:(NSString *)s{
