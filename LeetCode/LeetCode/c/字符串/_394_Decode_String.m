@@ -112,6 +112,15 @@
 }
 
 //递归
+//将 [ 和 ] 分别作为递归的开启与终止条件：
+//当 s[i] == ']' 时，返回当前括号内记录的 res 字符串；
+//当 s[i] == '[' 时，开启新一层递归，记录此 [...] 内字符串 tmp 并执行 res appendString:temp 拼接字符串。遍历完毕后返回 res。
+
+//复杂度分析：
+//时间复杂度O(N)，递归会更新索引，因此实际上还是一次遍历 s；
+//空间复杂度O(N)，极端情况下递归深度将会达到线性级别。
+
+
 -(NSString *)decodeString2:(NSString *)str{
     NSMutableString *res=[NSMutableString string];
     NSMutableString *temp=[NSMutableString string];
