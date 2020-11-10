@@ -98,13 +98,26 @@ char * longestPalindrome(char * s){
     }
     return res;
 }
-
-void longestPalindromeTest(void){
-    char *src="babad";
-    char *dest=longestPalindrome(src);
-    size_t len = strlen(dest);
-    for (size_t i=0; i<len; i++) {
-        printf("%c",dest[i]);
+/**
+ 而判断一个字符串是不是回文串就简单很多，不需要考虑奇偶情况，只需要「双指针技巧」，
+ 从两端向中间逼近即可：
+ 因为回文串是对称的，所以正着读和倒着读应该是一样的。
+ */
+bool isPalindrome(char *s) {
+    size_t left = 0, right = strlen(s) - 1;
+    while (left < right) {
+        if (s[left] != s[right]) return false;
+        left++; right--;
     }
+    return true;
+}
+void longestPalindromeTest(void){
+    char *src="baab";
+    bool isP=isPalindrome(src);
+//    char *dest=longestPalindrome(src);
+//    size_t len = strlen(dest);
+//    for (size_t i=0; i<len; i++) {
+//        printf("%c",dest[i]);
+//    }
     printf("\n");
 }

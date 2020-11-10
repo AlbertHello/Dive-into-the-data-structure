@@ -75,8 +75,8 @@
 //    [_6_Plus_One plusOneTest];
 //    [_821_Shortest_Distance_to_a_Character shortestToCharTest];
 //    [_46_LRU_Cache LRU_Cache_Test];
-//    longestPalindromeTest();
-    [_394_Decode_String decodeStringTest];
+    longestPalindromeTest();
+//    [_394_Decode_String decodeStringTest];
 }
 -(void)sortTest{
 //    int arr1[10]={90,56,23,4,1,45,57,29,40,39};
