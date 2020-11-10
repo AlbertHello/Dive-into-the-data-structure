@@ -57,6 +57,7 @@
 		37CF43CF2538362700CBBDEF /* 20_ValidParentheses.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43C02538362700CBBDEF /* 20_ValidParentheses.c */; };
 		37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */; };
 		37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */; };
+		37D01C66255A3764007B297E /* _232_Implement_Queue_using_Stacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D01C65255A3764007B297E /* _232_Implement_Queue_using_Stacks.m */; };
 		37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */; };
 		37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D525503B6200D726A5 /* 66_Plus_One.m */; };
 		37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */; };
@@ -167,6 +168,8 @@
 		37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 70_ClimbingStairs.c; sourceTree = "<group>"; };
 		37CF44202538475D00CBBDEF /* 53_MaximumSubarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 53_MaximumSubarray.h; sourceTree = "<group>"; };
 		37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 53_MaximumSubarray.c; sourceTree = "<group>"; };
+		37D01C64255A3764007B297E /* _232_Implement_Queue_using_Stacks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _232_Implement_Queue_using_Stacks.h; sourceTree = "<group>"; };
+		37D01C65255A3764007B297E /* _232_Implement_Queue_using_Stacks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _232_Implement_Queue_using_Stacks.m; sourceTree = "<group>"; };
 		37EBD7A2254FAAD600D726A5 /* 28_Implement_strStr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 28_Implement_strStr.h; sourceTree = "<group>"; };
 		37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 28_Implement_strStr.m; sourceTree = "<group>"; };
 		37EBD8D425503B6200D726A5 /* 66_Plus_One.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 66_Plus_One.h; sourceTree = "<group>"; };
@@ -386,6 +389,8 @@
 			children = (
 				37CF43BF2538362700CBBDEF /* 20_ValidParentheses.h */,
 				37CF43C02538362700CBBDEF /* 20_ValidParentheses.c */,
+				37D01C64255A3764007B297E /* _232_Implement_Queue_using_Stacks.h */,
+				37D01C65255A3764007B297E /* _232_Implement_Queue_using_Stacks.m */,
 			);
 			path = "栈";
 			sourceTree = "<group>";
@@ -523,6 +528,7 @@
 				370E303025550C86007FC789 /* UnionFind_QF.m in Sources */,
 				37EBD9512553D0B700D726A5 /* _167_TwoSum_2.m in Sources */,
 				37CF43CA2538362700CBBDEF /* 203_RemoveLinkedListElements.c in Sources */,
+				37D01C66255A3764007B297E /* _232_Implement_Queue_using_Stacks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
