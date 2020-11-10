@@ -7,11 +7,11 @@
 
 #import "_24_Swap_Nodes_in_Pairs.h"
 
-@interface Node : NSObject
+@interface Node_24 : NSObject
 @property(assign, nonatomic)NSInteger val;
-@property(strong, nonatomic,nullable)Node *next;
+@property(strong, nonatomic,nullable)Node_24 *next;
 @end
-@implementation Node
+@implementation Node_24
 -(instancetype)init{
     if (self=[super init]) {
         self.next=nil;
@@ -52,10 +52,10 @@
  https://leetcode-cn.com/problems/swap-nodes-in-pairs/solution/
  */
 
--(Node *)swapPairs:(Node *)head{
+-(Node_24 *)swapPairs:(Node_24 *)head{
     if (head == NULL || head.next == NULL) return head;
-    Node *rest = head.next.next;
-    Node * newHead = head.next;
+    Node_24 *rest = head.next.next;
+    Node_24 * newHead = head.next;
     newHead.next = head;
     head.next = [self swapPairs:rest];
     return newHead;
@@ -68,16 +68,16 @@
  时间复杂度：O(n)，其中n 是链表的节点数量。需要对每个节点进行更新指针的操作。
  空间复杂度：O(1)。
  */
--(Node *)swapPairs_no_recurse:(Node *)head {
-    Node *pre = [[Node alloc]init];//虚拟了一个头节点
+-(Node_24 *)swapPairs_no_recurse:(Node_24 *)head {
+    Node_24 *pre = [[Node_24 alloc]init];//虚拟了一个头节点
     pre.next = head;
-    Node *temp = pre;
+    Node_24 *temp = pre;
     //第一个节点和第二个节点都不能为空
     while(temp.next != nil && temp.next.next != nil) {
         //第一个节点 1
-        Node *start = temp.next;
+        Node_24 *start = temp.next;
         //第二个节点 2
-        Node *end = temp.next.next;
+        Node_24 *end = temp.next.next;
         //0->2
         temp.next = end;
         //1->3

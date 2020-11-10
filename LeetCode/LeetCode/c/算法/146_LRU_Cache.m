@@ -35,8 +35,6 @@
 // 在链表头部添加节点 x，时间 O(1)
 -(void)addFront:(Node *)node;
 // 删除链表中的 x 节点（x 一定存在）
-// 由于是双链表且给的是目标 Node 节点，时间 O(1)
--(void)removeNode:(Node *)node;
 // 删除链表中最后一个节点，并返回该节点，时间 O(1)
 -(Node *)removeLast;
 // 返回链表长度，时间 O(1)
@@ -82,9 +80,6 @@
         }
     }
 }
--(void)removeNode:(Node *)node{
-    
-}
 - (Node *)removeLast{
     if (self.last) {
         Node *node=self.last;
@@ -92,7 +87,7 @@
             self.first=nil;
             self.last=nil;
         }else{
-            //为什么要双向链表？因为要拿到前驱节点，单链表还的便利还能拿到前驱节点
+            //为什么要双向链表？因为要拿到前驱节点，单链表还的遍历才能拿到前驱节点
             self.last=node.prev;
             self.last.next=nil;
         }
