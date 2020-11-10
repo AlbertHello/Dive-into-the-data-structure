@@ -59,6 +59,7 @@
 		37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */; };
 		37D01C66255A3764007B297E /* _232_Implement_Queue_using_Stacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D01C65255A3764007B297E /* _232_Implement_Queue_using_Stacks.m */; };
 		37D01C6A255A405F007B297E /* _225_Implement_Stack_using_Queues.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D01C69255A405F007B297E /* _225_Implement_Stack_using_Queues.m */; };
+		37D01D4E255A866D007B297E /* _768_Max_Chunks_To_Make_Sorted2.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D01D4D255A866D007B297E /* _768_Max_Chunks_To_Make_Sorted2.m */; };
 		37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */; };
 		37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D525503B6200D726A5 /* 66_Plus_One.m */; };
 		37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD8D92550FE9C00D726A5 /* _821_Shortest_Distance_to_a_Character.m */; };
@@ -173,6 +174,8 @@
 		37D01C65255A3764007B297E /* _232_Implement_Queue_using_Stacks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _232_Implement_Queue_using_Stacks.m; sourceTree = "<group>"; };
 		37D01C68255A405F007B297E /* _225_Implement_Stack_using_Queues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _225_Implement_Stack_using_Queues.h; sourceTree = "<group>"; };
 		37D01C69255A405F007B297E /* _225_Implement_Stack_using_Queues.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _225_Implement_Stack_using_Queues.m; sourceTree = "<group>"; };
+		37D01D4C255A866D007B297E /* _768_Max_Chunks_To_Make_Sorted2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _768_Max_Chunks_To_Make_Sorted2.h; sourceTree = "<group>"; };
+		37D01D4D255A866D007B297E /* _768_Max_Chunks_To_Make_Sorted2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _768_Max_Chunks_To_Make_Sorted2.m; sourceTree = "<group>"; };
 		37EBD7A2254FAAD600D726A5 /* 28_Implement_strStr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 28_Implement_strStr.h; sourceTree = "<group>"; };
 		37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 28_Implement_strStr.m; sourceTree = "<group>"; };
 		37EBD8D425503B6200D726A5 /* 66_Plus_One.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 66_Plus_One.h; sourceTree = "<group>"; };
@@ -329,6 +332,8 @@
 				3776CDCE2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m */,
 				378C9F58254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.h */,
 				378C9F59254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m */,
+				37D01D4C255A866D007B297E /* _768_Max_Chunks_To_Make_Sorted2.h */,
+				37D01D4D255A866D007B297E /* _768_Max_Chunks_To_Make_Sorted2.m */,
 				37EBD94B2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.h */,
 				37EBD94C2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m */,
 			);
@@ -511,6 +516,7 @@
 				37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */,
 				3776CDCF2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m in Sources */,
 				37EBD94D2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m in Sources */,
+				37D01D4E255A866D007B297E /* _768_Max_Chunks_To_Make_Sorted2.m in Sources */,
 				37CF43862538357900CBBDEF /* AppDelegate.m in Sources */,
 				37CF43C72538362700CBBDEF /* 237_DeleteNodeinLinkedList.c in Sources */,
 				37CF43C92538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.c in Sources */,

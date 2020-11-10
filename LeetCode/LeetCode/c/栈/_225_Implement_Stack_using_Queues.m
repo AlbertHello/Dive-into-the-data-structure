@@ -108,6 +108,7 @@
 //    q.offer(q.poll());
 //    // 删除之前的队尾元素
 //    return q.poll();
+    return 0;
 }
 
 /** 返回栈顶元素 */
