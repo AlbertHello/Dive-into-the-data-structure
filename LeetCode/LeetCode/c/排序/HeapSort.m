@@ -58,7 +58,6 @@ static int * g_array=NULL;
         NSNumber *top=self.array[0];
         self.array[0]=self.array[self.size];
         self.array[self.size]=top;
-//        [self swapObj:self.array[0] with:self.array[self.size]];
         // 对0位置进行siftDown（恢复堆的性质）
         //因为此时size已经减一，再进行下虑不会再把最后一个最大的值给弄上去
         //只会把第二大的值弄到堆顶

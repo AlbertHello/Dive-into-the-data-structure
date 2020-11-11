@@ -122,21 +122,26 @@ Node_234* left=nil;
  至此算法总体的时间复杂度 O(N)，空间复杂度 O(1)，已经是最优的了。
  */
 -(BOOL)isPalindromeLink2:(Node_234 *)head{
+    
     Node_234 *slow=nil, *fast=nil;
     slow = fast = head;
+    //1 先通过「双指针技巧」中的快慢指针来找到链表的中点
     while (fast != nil && fast.next != nil) {
         slow = slow.next;
         fast = fast.next.next;
     }
+    //2、如果fast指针没有指向null，说明链表长度为奇数，slow还要再前进一步：
     if (fast != nil) slow = slow.next;
     
     Node_234 *left = head;
+    //3、从slow开始反转后面的链表，现在就可以开始比较回文串了
     Node_234 *right = [self reverseList_234:slow];;
     while (right != nil) {
         if (left.val != right.val) return false;
         left = left.next;
         right = right.next;
     }
+    
     return true;
 }
 //反转链表
@@ -144,9 +149,8 @@ Node_234* left=nil;
     if (head == NULL || head.next == NULL) return head;
     Node_234* pre_node=nil;
     Node_234* cur_node=head;
-    Node_234* next_node=nil;
     while(cur_node != nil){
-        next_node=cur_node.next;
+        Node_234* next_node=cur_node.next;
         cur_node.next=pre_node;
         pre_node=cur_node;
         cur_node=next_node;

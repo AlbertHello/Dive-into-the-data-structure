@@ -56,8 +56,38 @@
     self.view.backgroundColor=[UIColor systemPinkColor];
     
     
+    NSArray *nums=@[@962,@9,@96]; // 996962
+    NSMutableArray *strArr=[NSMutableArray array];
+    for (int i = 0; i < nums.count; i++) {
+        NSNumber *num=nums[i];
+        [strArr addObject: num.stringValue];
+    }
+    for (int i=0; i< strArr.count; i++) {
+        for (int j=strArr.count-1; j>i; j--) {
+            //比较一轮，较大者被挪到了最后面，下一次比较就不再和最后一个比较
+            NSMutableString *str1=[NSMutableString string];
+            NSMutableString *str2=[NSMutableString string];
+            
+            [str1 appendString:strArr[j-1]];
+            [str1 appendString:strArr[j]];
+            
+            [str2 appendString:strArr[j]];
+            [str2 appendString:strArr[j-1]];
+            
+            if (str1.intValue<str2.intValue) {
+                NSString *temp=strArr[j];
+                strArr[j]=strArr[j-1];
+                strArr[j-1]=temp;
+            }
+        }
+    }
+    NSLog(@"strArr = %@",strArr);
+    
+    
+    
+    
 //    [self test];
-    [self leetcodeTest];
+//    [self leetcodeTest];
 //    [self sortTest];
 }
 

@@ -33,6 +33,7 @@
 		378C9F5A254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C9F59254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m */; };
 		378C9FA3254BC40500B64B92 /* 75_Sort_Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C9FA2254BC40500B64B92 /* 75_Sort_Colors.m */; };
 		378C9FAF254C1E3000B64B92 /* InsertSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C9FAE254C1E3000B64B92 /* InsertSort.m */; };
+		37A79D7E255B9AE30025A043 /* _179_Largest_Number.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D7D255B9AE30025A043 /* _179_Largest_Number.m */; };
 		37C75B5825400B96006564C1 /* 15_ThreeSum.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C75B5725400B96006564C1 /* 15_ThreeSum.m */; };
 		37CF43862538357900CBBDEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43852538357900CBBDEF /* AppDelegate.m */; };
 		37CF43892538357900CBBDEF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43882538357900CBBDEF /* SceneDelegate.m */; };
@@ -126,6 +127,8 @@
 		378C9FA2254BC40500B64B92 /* 75_Sort_Colors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 75_Sort_Colors.m; sourceTree = "<group>"; };
 		378C9FAD254C1E3000B64B92 /* InsertSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsertSort.h; sourceTree = "<group>"; };
 		378C9FAE254C1E3000B64B92 /* InsertSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsertSort.m; sourceTree = "<group>"; };
+		37A79D7C255B9AE30025A043 /* _179_Largest_Number.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _179_Largest_Number.h; sourceTree = "<group>"; };
+		37A79D7D255B9AE30025A043 /* _179_Largest_Number.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _179_Largest_Number.m; sourceTree = "<group>"; };
 		37C75B5625400B96006564C1 /* 15_ThreeSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 15_ThreeSum.h; sourceTree = "<group>"; };
 		37C75B5725400B96006564C1 /* 15_ThreeSum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 15_ThreeSum.m; sourceTree = "<group>"; };
 		37CF43812538357900CBBDEF /* LeetCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -336,6 +339,8 @@
 				37EBD9502553D0B700D726A5 /* _167_TwoSum_2.m */,
 				3776CDCD2546EF5E003C8105 /* 149_Max_Points_on_a_Line.h */,
 				3776CDCE2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m */,
+				37A79D7C255B9AE30025A043 /* _179_Largest_Number.h */,
+				37A79D7D255B9AE30025A043 /* _179_Largest_Number.m */,
 				378C9F58254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.h */,
 				378C9F59254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m */,
 				37D01D4C255A866D007B297E /* _768_Max_Chunks_To_Make_Sorted2.h */,
@@ -502,6 +507,7 @@
 				37CF43CE2538362700CBBDEF /* 1002_Find_Common_Characters.c in Sources */,
 				35836D2425452C7F006A1BF3 /* BubbleSort2.m in Sources */,
 				3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */,
+				37A79D7E255B9AE30025A043 /* _179_Largest_Number.m in Sources */,
 				35836D2C25452CD8006A1BF3 /* Sort.m in Sources */,
 				378C9FA3254BC40500B64B92 /* 75_Sort_Colors.m in Sources */,
 				370E302E25550C86007FC789 /* UnionFind_QU_Rank_Path_Split.m in Sources */,
