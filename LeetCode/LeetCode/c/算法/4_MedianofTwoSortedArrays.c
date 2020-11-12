@@ -138,11 +138,134 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
         return nums[count / 2];
     }
 }
-
-
+/**
+ 思路：
+ 1、在有序数组中寻找中位数其实就是找一个边界线，边界线左边的数是左边数组中的最大值left_max，右边的数是右边数组的最小值right_min。奇数长度和偶数长度无非是一个数决定中位数还是两个数求平均的问题
+ 2 合适的边界线满足的条件：把两个数组的分界线右侧部分交换仍能满足两个数组是升序数组，
+ 也就是：nums1_left_max < nums2_right_min && num2_left_max < num1_right_min
+ 比如：
+ nums1: 2 4 6 | 15
+ nums2: 1 7 | 8 10 17
+ 交换分界线右侧部分:
+ nums1: 2 4 6 | 8 10 17
+ nums2: 1 7 | 15
+ 
+ 分界线条件：
+ 2.1 分界线左边所有的数都小于等于分界线右边所有的数；
+ 2.2 分界线左边所有元素的个数left_size和分界线右边所有元素个数right_size满足：
+    2.2.1 m+n=奇数时：left_size=right_size+1；
+    2.2.2 m+n=偶数时：left_size=right_size；
+ 比如：
+ m+n=奇数，left_size=5， right_size=4
+ nums1, m=4 : 2 4 6 | 15
+ nums2, n=5 : 1 7 | 8 10 17
+ 
+ m+n=奇数，left_size=5， right_size=5
+ nums1, m=4 : 2 4 6 | 15
+ nums2, n=6 : 1 7 | 8 10 17 20
+ 
+ 3. 边界条件
+ 3.1 num1长度短：
+    3.1.1 数组1的分界线已经在最右侧：
+    nums1, m=4 : 2 4 6 7 ｜
+    nums2, n=6 : 8 ｜ 9 10 11 12 13
+    这种情况相当于num1最右侧的数是INT_MAX，最终比较分界线右侧的值时取最小值，也就是取9
+ 
+    3.1.2 数组1的分界线已经在最左侧：
+    nums1, m=4 : ｜19 20 21 22
+    nums2, n=8 : 8 9 10 11 12 13 ｜ 14 15
+    这种情况相当于num1最左侧的数是INT_MIN，最终比较分界线左侧的值时取最大值，也就是取13
+ 
+    
+ 3.2 num1长度长：
+    3.1.1 数组2的分界线已经在最右侧：
+    nums1, m=6 : 8 ｜ 9 10 11 12 13
+    nums2, n=4 : 2 4 6 7 ｜
+    这种情况相当于num2最右侧的数是INT_MAX，最终比较分界线右侧的值时取最小值，也就是取9
+ 
+    3.1.2 数组2的分界线已经在最左侧：
+    nums1, m=8 : 8 9 10 11 12 13 ｜ 14 15
+    nums2, n=4 : ｜19 20 21 22
+    这种情况相当于num2最左侧的数是INT_MIN，最终比较分界线左侧的值时取最大值，也就是取13
+ 
+ 4. 分界线的索引
+ 分界线也就是两个数组中的索引i和j，那么left_size=i+j
+ 当m+n=奇数时，left_size=(m+n+1)/2
+ 当m+n=偶数时，left_size=(m+n)/2
+ 
+ 其实无论m+n等于奇数还是偶数， left_size都等于(m+n+1)/2，所以(m+n+1)/2=i+j，所j=(m+n+1)/2-i
+ 所以索引j确定了，只关心索引i就行了
+ 
+ 5. 三种条件判断：
+    5.1 num2[j-1] < num1[i]
+    此时数组2左边的最大值比数组1右边的最小值要大，说明数组1左边部分要扩大（i+1）
+ 
+    5.2 num1[i-1] > num2[j]
+    数组1左边的最大值大于数组2左边的最小值，说明数组1左边部分要缩小 i-1
+ 
+    5.3 nums1_left_max < nums2_right_min && num2_left_max < num1_right_min
+    这种情况就是我们要找的i
+ 
+ 注意：
+ 1. 尽量让数组1的长度短，可以缩小二分查找的循环次数
+ 2. i 的取值范围 0 - m
+ 3. 处理边界情况
+ 
+ 时间复杂度： O(log(min(M,N)))，为了使得搜索更快，我们把更短的数组设置为 nums1 ，因为使用二分查找法，在它的长度的对数时间复杂度内完成搜索。
+ 空间复杂度：O(1)，只使用了常数个的辅助变量。
+ 
+ 参考：
+ https://blog.csdn.net/lw_power/article/details/97184524
+ */
 double findMedianSortedArrays2(int* nums1, int nums1Size, int* nums2, int nums2Size){
+    // 为了让搜索范围更小，我们始终让 num1 是那个更短的数组，PPT 第 9 张
+    if (nums1Size > nums2Size) {
+        int *temp = nums1;
+        nums1 = nums2;
+        nums2 = temp;
+    }
     
-    
+    // 上述交换保证了 m <= n，在更短的区间 [0, m] 中搜索，会更快一些
+    int m = sizeof(nums1);
+    int n = sizeof(nums2);
+
+    // 使用二分查找算法在数组 nums1 中搜索一个索引 i，PPT 第 9 张
+    int left = 0;
+    int right = m;
+    // 这里使用的是最简单的、"传统"的二分查找法模板，使用"高级的"二分查找法模板在退出循环时候处理不方便
+    while (left <= right) {
+        // 尝试要找的索引，在区间里完成二分，为了保证语义，这里就不定义成 mid 了
+        // 用加号和右移是安全的做法，即使在溢出的时候都能保证结果正确，但是 Python 中不存在溢出
+        int i = (left + right) >> 1;
+        // j 的取值在 PPT 第 7 张
+        int j = ((m + n + 1) >> 1) - i;
+
+        // 边界值的特殊取法的原因在 PPT 第 10 张
+        int nums1LeftMax = i == 0 ? INT32_MIN : nums1[i - 1];
+        int nums1RightMin = i == m ? INT32_MAX : nums1[i];
+
+        int nums2LeftMax = j == 0 ? INT32_MIN : nums2[j - 1];
+        int nums2RightMin = j == n ? INT32_MAX : nums2[j];
+
+        // 交叉小于等于关系成立，那么中位数就可以从"边界线"两边的数得到，原因在 PPT 第 2 张、第 3 张
+        if (nums1LeftMax <= nums2RightMin && nums2LeftMax <= nums1RightMin) {
+            // 已经找到解了，分数组之和是奇数还是偶数得到不同的结果，原因在 PPT 第 2 张
+            if (((m + n) & 1) == 1) { // (m + n) & 1 == (m + n) % 2
+                return (nums1LeftMax > nums2LeftMax)? nums1LeftMax : nums2LeftMax;
+            } else {
+                int max=(nums1LeftMax > nums2LeftMax)? nums1LeftMax : nums2LeftMax;
+                int min=(nums1RightMin<nums2RightMin)? nums1RightMin : nums2RightMin;
+                
+                return max+min / 2.0;
+            }
+        } else if (nums2LeftMax > nums1RightMin) {
+            // 这个分支缩短边界的原因在 PPT 第 8 张
+            left = i + 1;
+        } else {
+            // 这个分支缩短边界的原因在 PPT 第 8 张
+            right = i - 1;
+        }
+    }
     
     return 0;
 }

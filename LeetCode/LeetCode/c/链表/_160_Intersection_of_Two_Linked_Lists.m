@@ -44,7 +44,8 @@
  那么B+A=6->7->4->5->null->1->2->3->4->5->null
  无论A+B还是B+A只要他俩是相交的，连起来后最后的节点都是相同的，那么从头开始一步一步的走肯定能碰到相同的节点啊
  如果他俩不相交，那么一直走到最后呗都是NULL，就说明不相交
- 
+ 时间复杂度：O（n）
+ 时间复杂度：O（1）
  */
 Node_160 *getIntersectionNode(Node_160 *headA, Node_160 *headB) {
     if(!headA || !headB) return NULL;
