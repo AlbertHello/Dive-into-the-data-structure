@@ -126,6 +126,37 @@
     [self connectTwoNode:node1.right node:node2.left];
 }
 
+//************************* 114 二叉树展开为连表 *************************
+
+/**
+ 1、将root的左子树和右子树拉平。
+ 2、将root的右子树接到左子树下方，然后将整个左子树作为右子树。
+ */
+// 定义：将以 root 为根的树拉平为链表
+-(void)flatten:(BTNode *)root{
+    // base case
+    if (root == nil) return;
+
+    [self flatten:root.left];
+    [self flatten:root.right];
+
+    /**** 后序遍历位置 ****/
+    // 1、左右子树已经被拉平成一条链表
+    BTNode *left = root.left;
+    BTNode *right = root.right;
+
+    // 2、将左子树作为右子树
+    root.left = nil;
+    root.right = left;
+
+    // 3、将原先的右子树接到当前右子树的末端
+    BTNode *p = root;
+    while (p.right != nil) {
+        p = p.right;
+    }
+    p.right = right;
+}
+
 
 
 @end
