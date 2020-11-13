@@ -34,17 +34,17 @@
  逐渐将每一个元素都转换成轴点元素
  
  在轴点左右元素数量比较均匀的情况下，同时也是最好的情况
- T n = 2 ∗ T n/2 + O n = O(nlogn)
+ T(n) = 2 * T(n/2) + O(n) = O(nlogn)
  
  如果轴点左右元素数量极度不均匀，最坏情况
-  T n = T n − 1 + O n = O(n2)
+  T(n) = T(n-1) + O(n) = O(n^2)
  
  为了降低最坏情况的出现概率，一般采取的做法是
  随机选择轴点元素
  
  最好、平均时间复杂度： O(nlogn)
  ◼ 最坏时间复杂度： O(n2)
- ◼ 由于递归调用的缘故，空间复杂度： O(logn)
+ ◼ 由于递归调用的缘故，空间复杂度： O(logn)，也就是递归深度
  ◼ 属于不稳定排序
  */
 -(void)quickSort:(NSMutableArray *)array{
@@ -69,12 +69,13 @@
     self.array[begin]=self.array[randomIndex];
     self.array[randomIndex]=temp;
     
-    // 备份begin位置的元素
+    // 备份begin位置的元素，还是取index=begin处的元素作为标准值判断，但是这个标准值已经是随机的了。
     int pivot = [self.array[begin] intValue];
     // end指向最后一个元素
     end--;
     
     while (begin < end) {
+        // 左右begin end交替判断就可以用到这两个while来实现
         while (begin < end) {
             // 右边元素 > 轴点元素
             // 如果小于号改成小于等于号，则可能就会导致最坏情况发生
@@ -82,6 +83,9 @@
                 end--;
             } else { // 右边元素 <= 轴点元素
                 self.array[begin++] = self.array[end];
+                //一旦end处的值小于轴点元素了，把值替换后break，
+                //下一轮就从begin处开始判断
+                //begin end 交替判断
                 break;
             }
         }
@@ -92,10 +96,14 @@
                 begin++;
             } else { // 左边元素 >= 轴点元素
                 self.array[end--] = self.array[begin];
+                //一旦begin处的值大于等于轴点元素了，把值替换后break，
+                //下一轮就从end处开始判断了
+                //begin end 交替判断
                 break;
             }
         }
     }
+    //能来到这里说明begin=end了，也就找到了最中间的那个值的索引
     // 将轴点元素放入最终的位置
     self.array[begin] = @(pivot);
     // 返回轴点元素的位置

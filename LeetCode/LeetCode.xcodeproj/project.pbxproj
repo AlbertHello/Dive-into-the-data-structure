@@ -37,6 +37,7 @@
 		37A79D82255C09690025A043 /* _109_Convert_Sorted_List_to_Binary_Search_Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D81255C09690025A043 /* _109_Convert_Sorted_List_to_Binary_Search_Tree.m */; };
 		37A79D86255C10C10025A043 /* _108_Convert_Sorted_Array_to_Binary_Search_Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D85255C10C10025A043 /* _108_Convert_Sorted_Array_to_Binary_Search_Tree.m */; };
 		37A79D8A255D19BD0025A043 /* _160_Intersection_of_Two_Linked_Lists.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D89255D19BD0025A043 /* _160_Intersection_of_Two_Linked_Lists.m */; };
+		37A79D91255D6AF00025A043 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D90255D6AF00025A043 /* BinaryTree.m */; };
 		37C75B5825400B96006564C1 /* 15_ThreeSum.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C75B5725400B96006564C1 /* 15_ThreeSum.m */; };
 		37CF43862538357900CBBDEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43852538357900CBBDEF /* AppDelegate.m */; };
 		37CF43892538357900CBBDEF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43882538357900CBBDEF /* SceneDelegate.m */; };
@@ -138,6 +139,8 @@
 		37A79D85255C10C10025A043 /* _108_Convert_Sorted_Array_to_Binary_Search_Tree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _108_Convert_Sorted_Array_to_Binary_Search_Tree.m; sourceTree = "<group>"; };
 		37A79D88255D19BD0025A043 /* _160_Intersection_of_Two_Linked_Lists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _160_Intersection_of_Two_Linked_Lists.h; sourceTree = "<group>"; };
 		37A79D89255D19BD0025A043 /* _160_Intersection_of_Two_Linked_Lists.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _160_Intersection_of_Two_Linked_Lists.m; sourceTree = "<group>"; };
+		37A79D8F255D6AF00025A043 /* BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
+		37A79D90255D6AF00025A043 /* BinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 		37C75B5625400B96006564C1 /* 15_ThreeSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 15_ThreeSum.h; sourceTree = "<group>"; };
 		37C75B5725400B96006564C1 /* 15_ThreeSum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 15_ThreeSum.m; sourceTree = "<group>"; };
 		37CF43812538357900CBBDEF /* LeetCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -277,6 +280,15 @@
 			path = "并查集";
 			sourceTree = "<group>";
 		};
+		37A79D94255D6AF60025A043 /* 二叉树 */ = {
+			isa = PBXGroup;
+			children = (
+				37A79D8F255D6AF00025A043 /* BinaryTree.h */,
+				37A79D90255D6AF00025A043 /* BinaryTree.m */,
+			);
+			path = "二叉树";
+			sourceTree = "<group>";
+		};
 		37CF43782538357900CBBDEF = {
 			isa = PBXGroup;
 			children = (
@@ -296,7 +308,13 @@
 		37CF43832538357900CBBDEF /* LeetCode */ = {
 			isa = PBXGroup;
 			children = (
-				37CF439E2538362700CBBDEF /* c */,
+				370E301A25550C86007FC789 /* 并查集 */,
+				37CF439F2538362700CBBDEF /* 算法 */,
+				37CF43A42538362700CBBDEF /* 链表 */,
+				37CF43B92538362700CBBDEF /* 字符串 */,
+				37CF43BE2538362700CBBDEF /* 栈 */,
+				35CF22332543E2990044632E /* 排序 */,
+				37A79D94255D6AF60025A043 /* 二叉树 */,
 				37CF43842538357900CBBDEF /* AppDelegate.h */,
 				37CF43852538357900CBBDEF /* AppDelegate.m */,
 				37CF43872538357900CBBDEF /* SceneDelegate.h */,
@@ -310,19 +328,6 @@
 				37CF43962538357A00CBBDEF /* main.m */,
 			);
 			path = LeetCode;
-			sourceTree = "<group>";
-		};
-		37CF439E2538362700CBBDEF /* c */ = {
-			isa = PBXGroup;
-			children = (
-				370E301A25550C86007FC789 /* 并查集 */,
-				37CF439F2538362700CBBDEF /* 算法 */,
-				37CF43A42538362700CBBDEF /* 链表 */,
-				37CF43B92538362700CBBDEF /* 字符串 */,
-				37CF43BE2538362700CBBDEF /* 栈 */,
-				35CF22332543E2990044632E /* 排序 */,
-			);
-			path = c;
 			sourceTree = "<group>";
 		};
 		37CF439F2538362700CBBDEF /* 算法 */ = {
@@ -573,6 +578,7 @@
 				37C75B5825400B96006564C1 /* 15_ThreeSum.m in Sources */,
 				370E303025550C86007FC789 /* UnionFind_QF.m in Sources */,
 				37EBD9512553D0B700D726A5 /* _167_TwoSum_2.m in Sources */,
+				37A79D91255D6AF00025A043 /* BinaryTree.m in Sources */,
 				37D01D52255AB80C007B297E /* _24_Swap_Nodes_in_Pairs.m in Sources */,
 				37CF43CA2538362700CBBDEF /* 203_RemoveLinkedListElements.c in Sources */,
 				37D01C66255A3764007B297E /* _232_Implement_Queue_using_Stacks.m in Sources */,

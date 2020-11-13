@@ -71,11 +71,12 @@
     while (li < le) { // 如果左边还没有结束
         //如果右边结束了：ri >= re,就直接把左边数组剩下的全部靠过去self.array[ai++] = self.leftArray[li++];
         //如果左右数组都没结束，开始比较
-        //如果右边的值小于左边的值则覆盖，同时右边的ri++，被覆盖的ai++
+        //如果右边的值小于左边的值则拿右边的值覆盖array[ai++]，同时右边的ri++，被覆盖的ai++
         if (ri < re && [self cmp:[self.array[ri] intValue] to:[self.leftArray[li] intValue]] < 0) {
             self.array[ai++] = self.array[ri++];
         } else {
-            //如果右边的值大于等于左边的值则拿备份数组中的值覆盖，这样避免了原数组中的相同的值交换
+            //如果右边的值大于等于左边的值则拿备份数组中的值覆盖array[ai++]
+            //这样避免了原数组中的相同的值交换，所以是稳定的
             //同时备份数组的li++，被覆盖的ai++
             self.array[ai++] = self.leftArray[li++];
         }
