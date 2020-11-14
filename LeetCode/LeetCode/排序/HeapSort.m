@@ -50,11 +50,11 @@ static int * g_array=NULL;
     //自下而上的下虑
     for (int i = (int)(self.size >> 1) - 1; i >= 0; i--) {
         [self shiftDown:i];
-    }//这样处理完后只是建立了一个局部有序的大顶堆。还需要继续排序
+    }//这样处理完后只是建立了一个局部有序的大顶堆。只是把最大的元素找到了。并且放到了堆顶。还需要继续排序
     
     while (self.size > 1) {
-        // 交换堆顶元素和尾部元素
         --self.size;
+        // 交换堆顶元素和尾部元素
         NSNumber *top=self.array[0];
         self.array[0]=self.array[self.size];
         self.array[self.size]=top;
