@@ -306,7 +306,90 @@
     }
     return leftValue;
 }
-
-
+//************************* 129. 求根到叶子节点数字之和 *************************
+/**
+ 129. 求根到叶子节点数字之和
+ 给定一个二叉树，它的每个结点都存放一个 0-9 的数字，每条从根到叶子节点的路径都代表一个数字。
+ 例如，从根到叶子节点路径 1->2->3 代表数字 123。
+ 计算从根到叶子节点生成的所有数字之和。
+ 说明: 叶子节点是指没有子节点的节点。
+ 
+ 示例 1:
+ 输入: [1,2,3]
+     1
+    / \
+   2   3
+ 输出: 25
+ 解释:
+ 从根到叶子节点路径 1->2 代表数字 12.
+ 从根到叶子节点路径 1->3 代表数字 13.
+ 因此，数字总和 = 12 + 13 = 25.
+ 
+ 示例 2:
+ 输入: [4,9,0,5,1]
+     4
+    / \
+   9   0
+  / \
+ 5   1
+ 输出: 1026
+ 解释:
+ 从根到叶子节点路径 4->9->5 代表数字 495.
+ 从根到叶子节点路径 4->9->1 代表数字 491.
+ 从根到叶子节点路径 4->0 代表数字 40.
+ 因此，数字总和 = 495 + 491 + 40 = 1026.
+ https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/
+ 
+ */
+/**
+ 递归
+ 1 我们要遍历整个二叉树，且需要要返回值做逻辑处理，所有返回值为void
+ 参数只需要把根节点传入，此时还需要定义两个全局遍历，一个是result，记录最终结果，一个是数组path，数组方便
+ 删除最后一个元素，回到上一个节点。这就是回溯
+ 2 当然是遇到叶子节点，此时要收集结果了，通知返回本层递归，因为单条路径的结果使用数组，
+ 我们需要一个函数arrayToInt把数组转成int。
+ 3 这里主要是当左节点不为空，path收集路径，并递归左孩子，右节点同理。
+ */
+static NSMutableArray *path = nil;
+static int result = 0;
+// 把数组里都的存储的一条路径的所有数字转化为int
+-(int)arrayToInt:(NSArray *)array{
+    int sum = 0;
+    for (int i = 0; i < array.count; i++) {
+        sum = sum * 10 + [array[i] intValue];
+    }
+    return sum;
+}
+-(void)traversal:(BTNode*)cur {
+    if (!cur.left && !cur.right) { // 遇到了叶子节点
+        result += [self arrayToInt:path];
+        return;
+    }
+    if (cur.left) { // 左 （空节点不遍历）
+        [path addObject:@(cur.left.data)];// 处理节点
+        [self traversal:cur.left];//递归
+        //来到这里说明前面一条路径处理完了，把数组最后一个元素删掉也就是删掉叶子结点cur.left
+        //删除后最后一个元素是cur
+        [path removeLastObject];// 回溯，撤销
+    }
+    if (cur.right) { // 右 （空节点不遍历）
+        [path addObject:@(cur.right.data)];// 处理节点
+        [self traversal:cur.right];// 递归
+        [path removeLastObject];// 回溯，撤销
+    }
+    return ;
+}
+/**
+ 时间复杂度：O(n)，其中n 是二叉树的节点个数。对每个节点访问一次。
+ 空间复杂度：O(n)，其中n 是二叉树的节点个数。空间复杂度主要取决于递归调用的栈空间，
+ 递归栈的深度等于二叉树的高度，最坏情况下，二叉树的高度等于节点个数，空间复杂度为O(n)。
+ */
+-(int)sumNumbers:(BTNode *)root {
+    path=[NSMutableArray array];
+    if (root == nil) return 0;
+    [path addObject:@(root.data)];
+    [self traversal:root];
+    return result;
+}
 
 @end
