@@ -495,7 +495,68 @@ static int result = 0;
     }
     return false;
 }
+//************************* 113. 路径总和II *************************
+/**
+ 113. 路径总和 II
+ 给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。
+ 说明: 叶子节点是指没有子节点的节点。
+ 示例:
+ 给定如下二叉树，以及目标和 sum = 22，
+               5
+              / \
+             4   8
+            /   / \
+           11  13  4
+          /  \    / \
+         7    2  5   1
+ 返回:
+ [
+    [5,4,11,2],
+    [5,8,4,5]
+ ]
+ */
 
+
+/**
+ 因为要遍历整个树，找到所有路径，所以递归函数不要返回值，112题目只是找到一个路径即可。
+ */
+static NSMutableArray *path_113 = nil;
+static NSMutableArray *result_113 = nil;
+-(void)traversal_113:(BTNode*)cur count:(int)count {
+    if (!cur.left && !cur.right && count == 0) {
+        // 遇到了叶子节点切找到了和为sum的路径
+        // result_113 的元素是数组，是满足要求的节点路径
+        [result_113 addObject:[NSArray arrayWithArray:path_113]];
+        return ;
+    }
+    
+    if (!cur.left && !cur.right) return ; // 遇到叶子节点而没有找到合适的边，直接返回
+    
+    if (cur.left) { // 左  空节点不遍历
+        [path_113 addObject:@(cur.left.data)];
+        count -= cur.left.data; // 递归，处理节点;
+        [self traversal_113:cur.left count:count];
+        count += cur.left.data; // 回溯，撤销处理结果
+        [path_113 removeLastObject]; // 回溯
+    }
+    if (cur.right) { // 右 空节点不遍历
+        [path_113 addObject:@(cur.right.data)];
+        count -= cur.right.data; // 递归，处理节点;
+        [self traversal_113:cur.right count:count];
+        count += cur.right.data; // 回溯，撤销处理结果
+        [path_113 removeLastObject]; // 回溯
+    }
+    return ;
+}
+-(BOOL)hasPathSum113:(BTNode*)root sum:(int)sum {
+    if (root == nil) return false;
+    path_113=[NSMutableArray array];
+    result_113=[NSMutableArray array];
+    
+    [path_113 addObject:@(root.data)];
+    [self traversal_113:root count:sum-root.data];
+    return result_113;
+}
 
 
 
