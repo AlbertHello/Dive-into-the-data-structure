@@ -6,6 +6,7 @@
 //
 
 #import "_23_Merge_k_Sorted_Lists.h"
+#include "ListNode_C.h"
 
 @implementation _23_Merge_k_Sorted_Lists
 /**
@@ -34,5 +35,36 @@
  输出：[]
  https://leetcode-cn.com/problems/merge-k-sorted-lists/
  */
+
+SingleNode_1* mergeKLists(SingleNode_1** lists,int listsSize) {
+    if (lists == NULL) return NULL;
+    return merge(lists, 0, listsSize - 1);
+}
+//T(k)=2T(k/2)+O(n)
+//所以时间复杂度：O(nlogk)
+//空间复杂度：递归会使用到O(logk) 空间代价的栈空间。
+SingleNode_1* merge(SingleNode_1** lists, int left, int right) {
+    if (left == right) return lists[left];
+    int mid = left + (right - left) / 2;
+    SingleNode_1* l1 = merge(lists, left, mid); //T(k/2)
+    SingleNode_1* l2 = merge(lists, mid + 1, right);//T(k/2)
+    return mergeTwoLink(l1, l2);//O(n)
+}
+//时间复杂度：O(n+m)
+//空间复杂度：O(n+m)
+SingleNode_1* mergeTwoLink(SingleNode_1* l1, SingleNode_1* l2){
+    if (l1 == NULL) {
+        return l2;
+    } else if (l2 == NULL) {
+        return l1;
+    } else if (l1->val < l2->val) {
+        l1->next = mergeTwoLink(l1->next, l2);
+        return l1;
+    } else {
+        l2->next = mergeTwoLink(l1, l2->next);
+        return l2;
+    }
+}
+
 
 @end
