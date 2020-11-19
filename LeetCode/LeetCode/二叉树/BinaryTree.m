@@ -563,8 +563,123 @@ static NSMutableArray *result_113 = nil;
     [self traversal_113:root count:sum-root.data];
     return result_113;
 }
+#pragma mark - 101 二叉树是否对称
+//************************* 101 二叉树是否对称 *************************
+/**
+ 101. 对称二叉树
+给定一个二叉树，检查它是否是镜像对称的。
+ 例如，二叉树 [1,2,2,3,4,4,3] 是对称的。
+     1
+    / \
+   2   2
+  / \ / \
+ 3  4 4  3
+ 但是下面这个 [1,2,2,null,3,null,3] 则不是镜像对称的:
+     1
+    / \
+   2   2
+    \   \
+    3    3
+ 
+ https://leetcode-cn.com/problems/symmetric-tree/
+ */
 
+/**
+ 迭代法
+ 对于二叉树是否对称，要比较的是根节点的左子树与右子树是不是相互翻转的，理解这一点就知道了「其实我们要比较的是两个树（这两个树是根节点的左右子树）」，所以在递归遍历的过程中，也是要同时遍历两棵树。比较的是两个子树的里侧和外侧的元素是否相等.
+ 
+ 首先我们引入一个队列，这是把递归程序改写成迭代程序的常用方法。每次提取两个结点并比较它们的值（队列中每两个连续的结点应该是相等的，而且它们的子树互为镜像），然后将两个结点的左右子结点按相反的顺序插入队列中。当队列为空时，或者我们检测到树不对称（即从队列中取出两个不相等的连续结点）时，该算法结束。
+ 
+ 复杂度分析
 
+ 时间复杂度：O(n)
+ 空间复杂度：这里需要用一个队列来维护节点，每个节点最多进队一次，出队一次，队列中最多不会超过n 个点，故渐进空间复杂度为O(n)。
+ */
+
+-(BOOL)isSymmetric:(BTNode*)root{
+    if (root == NULL) return true;
+    NSMutableArray *queue=[NSMutableArray array];
+    NSObject* l=(root.left) ? root.left : [NSNull null];
+    NSObject* r=(root.right) ? root.right : [NSNull null];
+    [queue addObject:l];// 将左子树头结点加入队列
+    [queue addObject:r];// 将右子树头结点加入队列
+    while (queue.count != 0) {  // 接下来就要判断这这两个树是否相互翻转
+        //出对
+        NSObject* leftNode = (NSObject *)queue.firstObject;
+        [queue removeObjectAtIndex:0];
+        NSObject* rightNode = (NSObject *)queue.firstObject;
+        [queue removeObjectAtIndex:0];
+        // 左节点为空、右节点为空，此时说明是对称的
+        if ( !leftNode && !rightNode) continue;
+        // 左右一个节点不为空 返回false
+        if (!leftNode || !rightNode) return false;
+        // 都不为空但数值不相同 返回false
+        if (((BTNode *)leftNode).data != ((BTNode *)rightNode).data) return false;
+        
+        
+        //来到此处说明 leftNode 和 rightNode都有值且相等
+        l = (((BTNode *)leftNode).left) ? ((BTNode *)leftNode).left : [NSNull null];
+        [queue addObject:l];// 加入左节点左孩子
+        
+        r = (((BTNode *)rightNode).right) ? ((BTNode *)rightNode).right : [NSNull null];
+        [queue addObject:r];// 加入右节点右孩子
+        
+        r = (((BTNode *)leftNode).right) ? ((BTNode *)leftNode).right : [NSNull null];
+        [queue addObject:r];// 加入左节点右孩子
+        
+        l = (((BTNode *)rightNode).left) ? ((BTNode *)rightNode).left : [NSNull null];
+        [queue addObject:l];// 加入右节点左孩子
+    }
+    return true;
+}
+
+//递归
+/**
+ 要遍历两棵树而且要比较内侧和外侧节点,
+ 所以准确的来说是一个树的遍历顺序是「 左 右 中 」，一个树的遍历顺序是「 右 左 中 」，可以理解算是后序遍历。
+ 
+ 1 确定递归函数的参数和返回值
+ 要比较的是根节点的两个子树是否是相互翻转的，进而判断这个树是不是对称树，所以要比较的是两个树，参数自然也是左子树节点和右子树节点，返回值自然是bool类型。
+ 2 确定终止条件
+ 节点为空的情况有：
+    a 左节点为空，右节点不为空，不对称，return false
+    b 左不为空，右为空，不对称 return  false
+    c 左右都为空，对称，返回true
+ 左右节点不为空：
+    a 左右都不为空，比较节点数值，不相同就return false
+    b 左右都不为空，且数值相同，则进入单层递归逻辑：
+        a 比较二叉树外侧是否对称：传入的是左节点的左孩子，右节点的右孩子。
+        b 比较内测是否对称，传入左节点的右孩子，右节点的左孩子。
+        c 如果左右都对称就返回true ，有一侧不对称就返回false
+ 
+ 假设树上一共n 个节点。
+ 时间复杂度：这里遍历了这棵树，渐进时间复杂度为O(n)。
+ 空间复杂度：这里的空间复杂度和递归使用的栈空间有关，这里递归层数不超过n，故渐进空间复杂度为O(n)。
+ */
+-(BOOL)isSymmetric2:(BTNode*)root{
+    if (root == nil) return true;
+    return [self compareLeft:root.left right:root.right];
+}
+-(BOOL)compareLeft:(BTNode*)left right:(BTNode*) right {
+    // 首先排除空节点的情况
+    if (left == nil && right != nil) return false;
+    else if (left != nil && right == nil) return false;
+    else if (left == nil && right == nil) return true;
+    // 排除了空节点，再排除数值不相同的情况
+    else if (left.data != right.data) return false;
+
+    // 此时就是：左右节点都不为空，且数值相同的情况
+    // 此时才做递归，做下一层的判断
+    
+    // 左子树：左、 右子树：右
+    bool outside = [self compareLeft:left.left right:right.right];
+    // 左子树：右、 右子树：左
+    bool inside = [self compareLeft:left.right right:right.left];
+    // 左子树：中、 右子树：中 （逻辑处理）
+    bool isSame = outside && inside;
+    
+    return isSame;
+}
 
 
 @end
