@@ -680,6 +680,82 @@ static NSMutableArray *result_113 = nil;
     
     return isSame;
 }
+#pragma mark - 100  相同的树
+//************************* 100. 相同的树 *************************
+/**
+ 100. 相同的树
+ 给定两个二叉树，编写一个函数来检验它们是否相同。
+ 如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。
+ 示例 1:
+ 输入:       1         1
+           / \       / \
+          2   3     2   3
 
+         [1,2,3],   [1,2,3]
+ 输出: true
+ 示例 2:
+ 输入:      1          1
+           /           \
+          2             2
 
+         [1,2],     [1,null,2]
+ 输出: false
+ 示例 3:
+ 输入:       1         1
+           / \       / \
+          2   1     1   2
+
+         [1,2,1],   [1,1,2]
+ 输出: false
+ 
+ 链接：https://leetcode-cn.com/problems/same-tree/
+ */
+
+/**
+ 思想： 深度优先搜索 递归
+ 如果两个二叉树都为空，则两个二叉树相同。如果两个二叉树中有且只有一个为空，则两个二叉树一定不相同。
+ 如果两个二叉树都不为空，那么首先判断它们的根节点的值是否相同，若不相同则两个二叉树一定不同，若相同，再分别判断两个二叉树的左子树是否相同以及右子树是否相同。这是一个递归的过程，因此可以使用深度优先搜索，递归地判断两个二叉树是否相同。
+ 
+ 1. 确定递归函数的参数和返回值
+ 我们要比较的是两个树是否是相互相同的，参数也就是两个树的根节点，返回值自然是bool类型。
+ 2. 确定终止条件
+ 要比较两个节点数值相不相同，首先要把两个节点为空的情况弄清楚！否则后面比较数值的时候就会操作空指针了。
+ 节点为空的情况有：
+    a. tree1为空，tree2不为空，不对称，return false
+    b. tree1不为空，tree2为空，不对称 return false
+    c. tree1，tree2都为空，对称，返回true
+ 
+ 此时tree1、tree2都不为空，比较节点数值，不相同就return false
+ 3. 确定单层递归的逻辑
+    a. 比较二叉树是否相同 ：传入的是tree1的左孩子，tree2的右孩子。
+    b. 如果左右都相同就返回true ，有一侧不相同就返回false 。
+ 
+ 时间复杂度：O(min(m,n))，其中m 和n 分别是两个二叉树的节点数。对两个二叉树同时进行深度优先搜索，
+ 只有当两个二叉树中的对应节点都不为空时才会访问到该节点，因此被访问到的节点数不会超过较小的二叉树的节点数。
+ 空间复杂度：O(min(m,n))，其中m 和n 分别是两个二叉树的节点数。空间复杂度取决于递归调用的层数，
+ 递归调用的层数不会超过较小的二叉树的最大高度，最坏情况下，二叉树的高度等于节点数。
+
+ */
+-(BOOL)isSameTree1:(BTNode*)root{
+    if (root == nil) return true;
+    return [self compareLeft:root.left right:root.right];
+}
+-(BOOL)compareTree1:(BTNode*)tree1 tree2:(BTNode*)tree2{
+    // 首先排除空节点的情况
+    if (tree1 == nil && tree2 != nil) return false;
+    else if (tree1 != nil && tree2 == nil) return false;
+    else if (tree1 == nil && tree2 == nil) return true;
+    // 排除了空节点，再排除数值不相同的情况
+    else if (tree1.data != tree2.data) return false;
+
+    // 此时就是：左右节点都不为空，且数值相同的情况
+    // 此时才做递归，做下一层的判断
+    // 左子树：左、 右子树：左
+    bool outside = [self compareTree1:tree1.left tree2:tree1.left];
+    // 左子树：右、 右子树：右
+    bool inside = [self compareTree1:tree1.right tree2:tree1.right];
+    //逻辑处理 左右都得相等
+    bool isSame = outside && inside;
+    return isSame;
+}
 @end
