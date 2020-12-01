@@ -54,7 +54,10 @@ Node_160 *getIntersectionNode(Node_160 *headA, Node_160 *headB) {
     while(ptr_a != ptr_b){ // 不相交都是null时也会结束循环
         //第一次走到null之后再接着从另一条连表头部还是走
         ptr_a = ptr_a ? ptr_a.next : headB;
-        ptr_a = ptr_b ? ptr_b.next : headA;
+        ptr_b = ptr_b ? ptr_b.next : headA;
+        // 这段代码在两个链表不相交的时候会死循环
+        // ptr_a = (ptr_a.next == null) ? headB : ptr_a.next;
+        // ptr_b = (ptr_b.next == null) ? headA : ptr_b.next;
     }
     return ptr_a;
 }
