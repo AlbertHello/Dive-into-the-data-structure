@@ -100,20 +100,25 @@ SingleNode_1 *addTwoNumbers1(SingleNode_1* l1, SingleNode_1* l2){
 SingleNode_1 *addTwoNumbers2(SingleNode_1* l1, SingleNode_1* l2){
     
     SingleNode_1 *link1=l1;
-    SingleNode_1* link2=l2;
+    SingleNode_1 *link2=l2;
     SingleNode_1 *l3=NULL;
     SingleNode_1 *link3=NULL;
     int count=0;
     // 不进行补齐，
     while (link1 != NULL || link2 != NULL) {
         SingleNode_1 *node=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
+        //取出值
         int num1=(link1 == NULL)? 0:link1->val;
         int num2=(link2 == NULL)? 0:link2->val;
+        //计算两值相加。看是否有进位
         count = num1 + num2 + (count>=10 ? 1: 0);
         node->val=(count%10);
         node->next=NULL;
+        //移到下一个
         link1=(link1 == NULL)? NULL:link1->next;
         link2=(link2 == NULL)? NULL:link2->next;
+        
+        //新链表
         if (link3) link3->next=node;
         link3=node;
         if (l3==NULL) l3=link3;
@@ -127,6 +132,46 @@ SingleNode_1 *addTwoNumbers2(SingleNode_1* l1, SingleNode_1* l2){
     }
     return l3;
 }
+///虚拟头节点
+SingleNode_1 *addTwoNumbers3(SingleNode_1* l1, SingleNode_1* l2){
+    if (l1 == NULL) return l2;
+    if (l2 == NULL) return l1;
+    
+    SingleNode_1 *dummyHead = (struct SingleLinkNode_1 *)malloc(sizeof(struct SingleLinkNode_1));
+    SingleNode_1 * last = dummyHead;
+    // 进位值
+    int carry = 0;
+    while (l1 != NULL || l2 != NULL) {
+        int v1 = 0;
+        if (l1 != NULL) {
+            v1 = l1->val;
+            l1 = l1->next;
+        }
+        int v2 = 0;
+        if (l2 != NULL) {
+            v2 = l2->val;
+            l2 = l2->next;
+        }
+        int sum = v1 + v2 + carry;
+        // 设置进位值
+        carry = sum / 10;
+        // sum的个位数作为新节点的值
+        SingleNode_1 *new = (struct SingleLinkNode_1 *)malloc(sizeof(struct SingleLinkNode_1));
+        new->val=sum % 10;
+        last->next = new;
+        last = last->next;
+    }
+    // 检查最后的进位
+    if (carry > 0) {
+        // carry == 1
+        SingleNode_1 *tail = (struct SingleLinkNode_1 *)malloc(sizeof(struct SingleLinkNode_1));
+        tail->val = 1;
+        last->next = tail;
+    }
+    
+    return dummyHead->next;
+}
+
 
 void add_two_numbers_test(void){
     SingleNode_1 *link1=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
