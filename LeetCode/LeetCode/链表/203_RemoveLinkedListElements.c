@@ -56,3 +56,23 @@ SingleNode_1* removeElements(SingleNode_1* head, int val){
     }
     return head;
 }
+/**
+ 技巧：虚拟头节点
+ 创建一个虚拟的头节点，先置为空。然后遍历原链表，跳过那个值等于val的节点。依次串起来就成了一个链表
+ */
+SingleNode_1* removeElements2(SingleNode_1* head, int val){
+    if (head == NULL) return NULL;
+    // 新链表的头结点
+    SingleLink_1 *virtual_head_ptr = create_single_link_1();
+    // 新链表的尾结点
+    SingleNode_1 *tail_node = virtual_head_ptr->first;
+    while (head != NULL) {
+        if (head->val != val) {
+            tail_node->next = head;
+            tail_node = head;
+        }
+        head = head->next;
+    }
+    tail_node->next = NULL;
+    return virtual_head_ptr->first;
+}
