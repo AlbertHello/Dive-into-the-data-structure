@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35197EC825768B71009D5F0A /* _155_Min_Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197EC725768B71009D5F0A /* _155_Min_Stack.m */; };
 		3564FE55254E4A4800230505 /* BinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564FE54254E4A4800230505 /* BinarySearch.m */; };
 		3564FE59254E5E2600230505 /* MergeSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564FE58254E5E2600230505 /* MergeSort.m */; };
 		3564FE5D254E719500230505 /* QuickSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564FE5C254E719500230505 /* QuickSort.m */; };
@@ -85,6 +86,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35197EC625768B71009D5F0A /* _155_Min_Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _155_Min_Stack.h; sourceTree = "<group>"; };
+		35197EC725768B71009D5F0A /* _155_Min_Stack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _155_Min_Stack.m; sourceTree = "<group>"; };
 		3564FE53254E4A4800230505 /* BinarySearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySearch.h; sourceTree = "<group>"; };
 		3564FE54254E4A4800230505 /* BinarySearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinarySearch.m; sourceTree = "<group>"; };
 		3564FE57254E5E2600230505 /* MergeSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeSort.h; sourceTree = "<group>"; };
@@ -462,6 +465,8 @@
 			children = (
 				37CF43BF2538362700CBBDEF /* 20_ValidParentheses.h */,
 				37CF43C02538362700CBBDEF /* 20_ValidParentheses.c */,
+				35197EC625768B71009D5F0A /* _155_Min_Stack.h */,
+				35197EC725768B71009D5F0A /* _155_Min_Stack.m */,
 				37D01C68255A405F007B297E /* _225_Implement_Stack_using_Queues.h */,
 				37D01C69255A405F007B297E /* _225_Implement_Stack_using_Queues.m */,
 				37D01C64255A3764007B297E /* _232_Implement_Queue_using_Stacks.h */,
@@ -577,6 +582,7 @@
 				37EBD9552553D2FD00D726A5 /* _344_Reverse_String.m in Sources */,
 				37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */,
 				37CF43C82538362700CBBDEF /* 21_MergeTwoSortedList.c in Sources */,
+				35197EC825768B71009D5F0A /* _155_Min_Stack.m in Sources */,
 				3564FE55254E4A4800230505 /* BinarySearch.m in Sources */,
 				3564FE5D254E719500230505 /* QuickSort.m in Sources */,
 				3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */,
