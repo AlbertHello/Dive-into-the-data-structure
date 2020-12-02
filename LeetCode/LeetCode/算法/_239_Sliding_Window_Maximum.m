@@ -69,25 +69,18 @@
     for (int ri = 0; ri < nums.count; ri++) {
         // 只要nums[队尾] <= nums[i]，就删除队尾
         while (deque.count != 0  && [nums[ri] intValue] >= nums[[deque.lastObject intValue]]) {
-            // deque.pollLast();
-//            deque.removeLast();
             [deque removeLastObject];
         }
         
         // 将i加到队尾
-        // deque.offerLast(ri);
-//        deque.addLast(ri);
         [deque addObject:@(ri)];
         
         // 检查窗口的索引是否合法
         int li = ri - k + 1;
         if (li < 0) continue;
-        
         // 检查队头的合法性
         if ([deque.firstObject intValue] < li) {
             // 队头不合法（失效，不在滑动窗口索引范围内）
-            // deque.pollFirst();
-//            deque.removeFirst();
             [deque removeObjectAtIndex:0];
         }
         // 设置窗口的最大值
@@ -97,6 +90,43 @@
     return maxes;
 }
 
+/**
+ 解法2：
+ 核心就是记录下窗口内的一个最大值。 当窗口内进入一个新元素时，直接和记录的那个最大值比较即可，当然得确保当窗口滑动时，
+ 之前确认的最大值是否在窗口滑动后还在窗口内，如果不在了，就得来一次窗口内的所有元素相互比较，再选出一个最大值。记录下。如果之前确认的最大值在窗口滑动后仍在窗口内，就不需要窗口内的每个元素都再互相比较一遍了。
+ 
+ 这种算法在遇到一个升序排列的数组时其实就变成了暴力枚举了。。
+ */
+-(NSArray *)maxSlidingWindow2:(NSArray *)nums windowSize:(int)k{
+    if (nums == nil || nums.count == 0 || k < 1) return @[];
+    if (k == 1) return nums;
+    
+    //创建最大值数组。数组的长度就是nums.count - k + 1
+    NSMutableArray *maxes=[NSMutableArray arrayWithCapacity:nums.count - k + 1];
+    // 当前滑动窗口的最大值索引
+    int maxIdx = 0;
+    // 求出前k个元素的最大值索引
+    for (int i = 1; i < k; i++) {
+        if (nums[i] > nums[maxIdx]) maxIdx = i;
+    }
+    // li是滑动窗口的最左索引
+    for (int li = 0; li < maxes.count; li++) {
+        // ri是滑动窗口的最右索引
+        int ri = li + k - 1;
+        if (maxIdx < li) { // 最大值的索引不在滑动窗口的合理范围内
+            // 则求出[li, ri]范围内最大值的索引
+            maxIdx = li;
+            for (int i = li + 1; i <= ri; i++) {
+                if (nums[i] > nums[maxIdx]) maxIdx = i;
+            }
+        } else if (nums[ri] >= nums[maxIdx]) { // 最大值的索引在滑动窗口的合理范围内
+            maxIdx = ri;
+        }
+        maxes[li] = nums[maxIdx];
+    }
+    
+    return maxes;
+}
 
 
 
