@@ -6,6 +6,9 @@
 //
 
 #import "BinaryTree.h"
+
+static id object = NULL;
+
 @interface BTNode : NSObject
 
 @property(assign, nonatomic)int data;
@@ -51,9 +54,54 @@
     return self;
 }
 @end
+@interface Stack : NSObject
+@property(nonatomic,strong)NSMutableArray *container;
+-(BOOL)isEmpty;
+-(int)peek;
+-(int)pop;
+-(void)push:(int)val;
+
+@end
+
+@implementation Stack
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.container=[NSMutableArray array];
+    }
+    return self;
+}
+-(BOOL)isEmpty{
+    return self.container.count == 0;
+}
+-(int)peek{
+    if ([self isEmpty]) return INT_MAX;
+    NSNumber *last=self.container.lastObject;
+    return last.intValue;
+}
+-(int)pop{
+    int top = self.peek;
+    if (top == -1) return top;
+    [self.container removeLastObject];
+    return top;
+}
+-(void)push:(int)val{
+    [self.container addObject:@(val)];
+}
+
+@end
 
 
 @implementation BinaryTree
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        object=self;
+    }
+    return self;
+}
 
 #pragma mark - 226 反转二叉树
 //************************* 226 反转二叉树 *************************
@@ -231,30 +279,99 @@
 /* 主函数 */
 -(BTNode *)constructMaximumBinaryTree:(NSArray *)array {
     
-    return [self build:array low:0 height:(int)array.count-1];
+    return [self build:array left:0 right:(int)array.count];
 }
 
-/* 将 nums[lo..hi] 构造成符合条件的树，返回根节点 */
--(BTNode *)build:(NSArray *)array low:(int)lo height:(int)hi{
+/* 将 [l, r) 构造成符合条件的树，返回根节点 */
+-(BTNode *)build:(NSArray *)array left:(int)l right:(int)r{
     // base case
-    if (lo > hi) return nil;
+    if (l == r) return nil;
 
     // 找到数组中的最大值和对应的索引
-    int index = -1, maxVal = INT_MIN;
-    for (int i = lo; i <= hi; i++) {
+    int maxIndex = -1, maxVal = INT_MIN;
+    for (int i = l; i < r; i++) {
         if (maxVal < [array[i] intValue]) {
-            index = i;
+            maxIndex = i;
             maxVal = [array[i] intValue];
         }
     }
     BTNode *root=[[BTNode alloc]init];
     root.data=maxVal;
     // 递归调用构造左右子树
-    root.left = [self build:array low:lo height:index -1];
-    root.right = [self build:array low:index+1 height:hi];
+    root.left = [self build:array left:l right:maxIndex];
+    root.right = [self build:array left:maxIndex+1 right:r];
 
     return root;
 }
+
+/**
+ 题目变形：返回一个数组，数组里面存着每个节点的父节点的索引（如果没有父节点，就存 -1）
+ index: 0 1 2  3 4 5
+ value: 3 2 1  6 0 5
+return: 3 0 1 -1 5 3
+ 
+ 思路：利用栈求左、右边第一个比它大的数，这个栈从底到顶是降序的。
+ */
+int *parentIndexes(int *nums, int length) {
+    if (nums == NULL || length == 0) return NULL;
+    /*
+     * 1.扫描一遍所有的元素
+     * 2.保持栈从栈底到栈顶是单调递减的
+     */
+    
+    //存储某个数它左边第一个比它大的数的索引
+    int *lis=(int *)malloc(sizeof(int)*length);
+    //存储某个数它右边第一个比它大的数的索引
+    int *ris=(int *)malloc(sizeof(int)*length);
+    // 初始化
+    for (int i = 0; i < length; i++) {
+        ris[i] = -1; // 索引默认为-1，也就是nums[i]左边没有比nums[i]大的数
+        lis[i] = -1; // 索引默认为-1，也就是nums[i]右边没有比nums[i]大的数
+    }
+
+    Stack *stack=[[Stack alloc]init]; // 栈中存储的是数组索引
+    
+    for (int i = 0; i < length; i++) {
+        // 1 首先栈不为空
+        // 2 看一下栈顶元素和将要入栈的元素nums[i]谁大，
+        // 2.1 如果将要入栈的元素更大：则需要把站定元素弹出，那么这个栈顶元素的右边第一个最大的数就是nums[i]
+        while (!stack.isEmpty && nums[i] > nums[stack.peek]) {
+            ris[stack.pop] = i; // 栈顶元素的右边第一个最大的数就是nums[i]，存储索引。
+        }
+        // 2.2 如果将要入栈的元素比栈顶元素小：那么这个将要入栈的元素左边第一个比它大的数就是栈顶元素
+        if (!stack.isEmpty) {
+            lis[i] = stack.peek; // 这个将要入栈的元素左边第一个比它大的数就是栈顶元素 。存储索引
+        }
+        // 3 如果将要入栈的元素比栈顶元素小或者栈则继续入栈
+        [stack push:i];
+    }
+    // 到此 lis[i] 和 ris[i] 数组就存著着nums[i]这个数左边第一个比它大的数/右边第一个比它大的数的索引。
+    // 而最大二叉树的原理就是每个节点都比左右子节点大。只需要找出lis[i]和ris[i]两者比较小的那个，就是nums[i]的父节点
+    // 为什么找lis[i]和ris[i]两者比较小的那个，因为比较大的那个是祖父节点甚至更高层次的节点。不是直接父节点
+    int *pis=(int *)malloc(sizeof(int)*length);
+    
+    for (int i = 0; i < length; i++) {
+        if (lis[i] == -1 && ris[i] == -1) {
+            // i位置的是根节点
+            pis[i] = -1;
+            continue;
+        }
+        if (lis[i] == -1) { // lis[i] 等于-1 表示nums[i]左边没有比nums[i]大的数，只能选右边ris[i]
+            pis[i] = ris[i];
+        } else if (ris[i] == -1) { // ris[i] 等于-1 表示nums[i]右边没有比nums[i]大的数，只能选左边lis[i]
+            pis[i] = lis[i];
+        } else if (nums[lis[i]] < nums[ris[i]]) { // lis[i]和ris[i] 都存在，取较小者
+            pis[i] = lis[i];
+        } else {
+            pis[i] = ris[i];
+        }
+    }
+    return pis;
+}
+
+
+
+
 #pragma mark - 513 找树左下角的值
 //************************* 513 找树左下角的值 *************************
 /**
