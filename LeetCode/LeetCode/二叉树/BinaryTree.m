@@ -6,6 +6,8 @@
 //
 
 #import "BinaryTree.h"
+#import "MyStack.h"
+
 
 static id object = NULL;
 
@@ -291,7 +293,7 @@ int *parentIndexes(int *nums, int length) {
         lis[i] = -1; // 索引默认为-1，也就是nums[i]右边没有比nums[i]大的数
     }
 
-    Stack *stack=[[Stack alloc]init]; // 栈中存储的是数组索引
+    MyStack *stack=[[MyStack alloc]init]; // 栈中存储的是数组索引
     
     for (int i = 0; i < length; i++) {
         // 1 首先栈不为空

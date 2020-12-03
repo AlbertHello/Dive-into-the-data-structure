@@ -38,6 +38,8 @@
 		378C9FA3254BC40500B64B92 /* 75_Sort_Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C9FA2254BC40500B64B92 /* 75_Sort_Colors.m */; };
 		378C9FAF254C1E3000B64B92 /* InsertSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C9FAE254C1E3000B64B92 /* InsertSort.m */; };
 		3790F9EE257891D900B2701E /* _739_DailyTeampreture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790F9ED257891D900B2701E /* _739_DailyTeampreture.m */; };
+		3790F9F225789C9200B2701E /* MyStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790F9F125789C9200B2701E /* MyStack.m */; };
+		3790F9F725789D2200B2701E /* MyQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790F9F625789D2200B2701E /* MyQueue.m */; };
 		37A4DBC425679CF80010C9C9 /* _46_Permutations.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4DBC325679CF80010C9C9 /* _46_Permutations.m */; };
 		37A79D7E255B9AE30025A043 /* _179_Largest_Number.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D7D255B9AE30025A043 /* _179_Largest_Number.m */; };
 		37A79D82255C09690025A043 /* _109_Convert_Sorted_List_to_Binary_Search_Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D81255C09690025A043 /* _109_Convert_Sorted_List_to_Binary_Search_Tree.m */; };
@@ -150,6 +152,10 @@
 		378C9FAE254C1E3000B64B92 /* InsertSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsertSort.m; sourceTree = "<group>"; };
 		3790F9EC257891D900B2701E /* _739_DailyTeampreture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _739_DailyTeampreture.h; sourceTree = "<group>"; };
 		3790F9ED257891D900B2701E /* _739_DailyTeampreture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _739_DailyTeampreture.m; sourceTree = "<group>"; };
+		3790F9F025789C9200B2701E /* MyStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyStack.h; sourceTree = "<group>"; };
+		3790F9F125789C9200B2701E /* MyStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyStack.m; sourceTree = "<group>"; };
+		3790F9F525789D2200B2701E /* MyQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyQueue.h; sourceTree = "<group>"; };
+		3790F9F625789D2200B2701E /* MyQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyQueue.m; sourceTree = "<group>"; };
 		37A4DBC225679CF80010C9C9 /* _46_Permutations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _46_Permutations.h; sourceTree = "<group>"; };
 		37A4DBC325679CF80010C9C9 /* _46_Permutations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _46_Permutations.m; sourceTree = "<group>"; };
 		37A79D7C255B9AE30025A043 /* _179_Largest_Number.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _179_Largest_Number.h; sourceTree = "<group>"; };
@@ -360,6 +366,10 @@
 		37CF439F2538362700CBBDEF /* 算法 */ = {
 			isa = PBXGroup;
 			children = (
+				3790F9F025789C9200B2701E /* MyStack.h */,
+				3790F9F125789C9200B2701E /* MyStack.m */,
+				3790F9F525789D2200B2701E /* MyQueue.h */,
+				3790F9F625789D2200B2701E /* MyQueue.m */,
 				3776CDC82546DA70003C8105 /* 1_TwoSums.h */,
 				3776CDC92546DA70003C8105 /* 1_TwoSums.m */,
 				37CF43A12538362700CBBDEF /* 4_MedianofTwoSortedArrays.h */,
@@ -574,6 +584,7 @@
 				3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */,
 				37A79D7E255B9AE30025A043 /* _179_Largest_Number.m in Sources */,
 				35836D2C25452CD8006A1BF3 /* Sort.m in Sources */,
+				3790F9F725789D2200B2701E /* MyQueue.m in Sources */,
 				378C9FA3254BC40500B64B92 /* 75_Sort_Colors.m in Sources */,
 				370E302E25550C86007FC789 /* UnionFind_QU_Rank_Path_Split.m in Sources */,
 				37CF43C42538362700CBBDEF /* 2_AddTwoNumbers.c in Sources */,
@@ -605,6 +616,7 @@
 				37CF43862538357900CBBDEF /* AppDelegate.m in Sources */,
 				37D01D56255AC458007B297E /* _234_Palindrome_Linked_List.m in Sources */,
 				37CF43C72538362700CBBDEF /* 237_DeleteNodeinLinkedList.c in Sources */,
+				3790F9F225789C9200B2701E /* MyStack.m in Sources */,
 				37CF43C92538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.c in Sources */,
 				378C998B2549112D00B64B92 /* HeapSort.m in Sources */,
 				37CF43CF2538362700CBBDEF /* 20_ValidParentheses.c in Sources */,

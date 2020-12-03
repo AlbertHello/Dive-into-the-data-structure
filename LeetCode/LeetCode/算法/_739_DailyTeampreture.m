@@ -6,44 +6,8 @@
 //
 
 #import "_739_DailyTeampreture.h"
+#import "MyStack.h"
 
-@interface Stack : NSObject
-@property(nonatomic,strong)NSMutableArray *container;
--(BOOL)isEmpty;
--(int)peek;
--(int)pop;
--(void)push:(int)val;
-
-@end
-
-@implementation Stack
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        self.container=[NSMutableArray array];
-    }
-    return self;
-}
--(BOOL)isEmpty{
-    return self.container.count == 0;
-}
--(int)peek{
-    if ([self isEmpty]) return INT_MAX;
-    NSNumber *last=self.container.lastObject;
-    return last.intValue;
-}
--(int)pop{
-    int top = self.peek;
-    if (top == -1) return top;
-    [self.container removeLastObject];
-    return top;
-}
--(void)push:(int)val{
-    [self.container addObject:@(val)];
-}
-
-@end
 
 
 @implementation _739_DailyTeampreture
@@ -70,7 +34,7 @@
 int* dailyTemperatures1(int* T, int length) {
     if (T == NULL || length == 0) return NULL;
     int *result = (int *)malloc(sizeof(int)*length);
-    Stack *stack=[[Stack alloc]init]; // 栈中存储的是数组索引
+    MyStack *stack=[[MyStack alloc]init]; // 栈中存储的是数组索引
     for (int i = 0; i < length; i++) {
         // 这里应该要写大于，不要写大于等于
         while (!stack.isEmpty && T[i] > T[stack.peek]) {
