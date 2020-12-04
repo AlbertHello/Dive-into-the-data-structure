@@ -80,23 +80,6 @@
 }
 
 
-//bool isSubtree(struct TreeNode* s, struct TreeNode* t){
-//
-//    return true;
-//}
-//void postSerialize(TreeNode node, StringBuilder sb) {
-//        sb.append(node.val).append("!");
-//        if (node.left == null) {
-//            sb.append("#!");
-//        } else {
-//            postSerialize(node.left, sb);
-//        }
-//        if (node.right == null) {
-//            sb.append("#!");
-//        } else {
-//            postSerialize(node.right, sb);
-//        }
-//    }
 
 
 

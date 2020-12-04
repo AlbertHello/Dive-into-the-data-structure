@@ -44,6 +44,7 @@
 		3790F9FF2578BA5C00B2701E /* _572_Subtree_of_Another_Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790F9FE2578BA5C00B2701E /* _572_Subtree_of_Another_Tree.m */; };
 		3790FA032578BCE200B2701E /* MyBTNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790FA022578BCE200B2701E /* MyBTNode.m */; };
 		3790FA212579DC3500B2701E /* _151_Reverse_Words_in_a_String.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790FA202579DC3500B2701E /* _151_Reverse_Words_in_a_String.m */; };
+		3790FA252579EEBC00B2701E /* _242_Valid_Anagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790FA242579EEBC00B2701E /* _242_Valid_Anagram.m */; };
 		37A4DBC425679CF80010C9C9 /* _46_Permutations.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4DBC325679CF80010C9C9 /* _46_Permutations.m */; };
 		37A79D7E255B9AE30025A043 /* _179_Largest_Number.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D7D255B9AE30025A043 /* _179_Largest_Number.m */; };
 		37A79D82255C09690025A043 /* _109_Convert_Sorted_List_to_Binary_Search_Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D81255C09690025A043 /* _109_Convert_Sorted_List_to_Binary_Search_Tree.m */; };
@@ -168,6 +169,8 @@
 		3790FA022578BCE200B2701E /* MyBTNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBTNode.m; sourceTree = "<group>"; };
 		3790FA1F2579DC3500B2701E /* _151_Reverse_Words_in_a_String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _151_Reverse_Words_in_a_String.h; sourceTree = "<group>"; };
 		3790FA202579DC3500B2701E /* _151_Reverse_Words_in_a_String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _151_Reverse_Words_in_a_String.m; sourceTree = "<group>"; };
+		3790FA232579EEBC00B2701E /* _242_Valid_Anagram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _242_Valid_Anagram.h; sourceTree = "<group>"; };
+		3790FA242579EEBC00B2701E /* _242_Valid_Anagram.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _242_Valid_Anagram.m; sourceTree = "<group>"; };
 		37A4DBC225679CF80010C9C9 /* _46_Permutations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _46_Permutations.h; sourceTree = "<group>"; };
 		37A4DBC325679CF80010C9C9 /* _46_Permutations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _46_Permutations.m; sourceTree = "<group>"; };
 		37A79D7C255B9AE30025A043 /* _179_Largest_Number.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _179_Largest_Number.h; sourceTree = "<group>"; };
@@ -484,6 +487,8 @@
 				37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */,
 				3790FA1F2579DC3500B2701E /* _151_Reverse_Words_in_a_String.h */,
 				3790FA202579DC3500B2701E /* _151_Reverse_Words_in_a_String.m */,
+				3790FA232579EEBC00B2701E /* _242_Valid_Anagram.h */,
+				3790FA242579EEBC00B2701E /* _242_Valid_Anagram.m */,
 				37EBD9532553D2FD00D726A5 /* _344_Reverse_String.h */,
 				37EBD9542553D2FD00D726A5 /* _344_Reverse_String.m */,
 				370E306425556C3E007FC789 /* _394_Decode_String.h */,
@@ -610,6 +615,7 @@
 				370E302E25550C86007FC789 /* UnionFind_QU_Rank_Path_Split.m in Sources */,
 				37CF43C42538362700CBBDEF /* 2_AddTwoNumbers.c in Sources */,
 				37EBD8DA2550FE9D00D726A5 /* _821_Shortest_Distance_to_a_Character.m in Sources */,
+				3790FA252579EEBC00B2701E /* _242_Valid_Anagram.m in Sources */,
 				370E302D25550C86007FC789 /* UnionFind_QU_Rank_Path.m in Sources */,
 				37A4DBC425679CF80010C9C9 /* _46_Permutations.m in Sources */,
 				370E303125550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.m in Sources */,
