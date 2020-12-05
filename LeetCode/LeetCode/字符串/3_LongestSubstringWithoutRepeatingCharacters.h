@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface __LongestSubstringWithoutRepeatingCharacters : NSObject
 
+
++(void)lengthOfLongestSubstring_c_Test;
+
 @end
 
 NS_ASSUME_NONNULL_END

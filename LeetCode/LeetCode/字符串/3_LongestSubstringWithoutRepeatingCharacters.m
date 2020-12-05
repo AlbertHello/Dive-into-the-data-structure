@@ -6,6 +6,8 @@
 //
 
 #import "3_LongestSubstringWithoutRepeatingCharacters.h"
+#import "MyQueue.h"
+
 /**
  3. 无重复字符的最长子串
  给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
@@ -86,17 +88,21 @@ int lengthOfLongestSubstring_c(char * s) {
     int start = 0, count = 0, max = 0;
     memset(hset, -1, sizeof(hset)); //初始值-1
     for (int i = 0; i < strlen(s); i++) {
-        if (hset[s[i]] >= start) { //如果后来的元素与之前的元素重复，那么势必索引i比之前存储的更大
-            start = hset[s[i]] + 1; // 更新为重复字符的下一个位置
+        if (hset[s[i]] >= start) { // 如果后来的元素与之前的元素重复，那么势必索引i比之前存储的更大
+            start = hset[s[i]] + 1; // 更新为之前出现的该字符的下一个位置
             count = i - start; //长度
         }
-        hset[s[i]] = i;//字母对应的ASCII码作为hset的下标，存储的是元素下标
+        hset[s[i]] = i;// 字母对应的ASCII码作为hset的下标，存储的是元素下标
         count++;
-        if (count > max) {
-            max = count;
-        }
+        max = max > count ? max : count;
     }
     return max;
+}
+
++(void)lengthOfLongestSubstring_c_Test{
+    char *original = "wangolgle";
+    int len = lengthOfLongestSubstring_c(original);
+    printf("%d\n",len);
 }
 
 
