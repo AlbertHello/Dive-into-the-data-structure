@@ -41,7 +41,7 @@
 /// 从字符串的中间截取n个字符
 /// @param src 源字符串
 /// @param length 要截取的长度
-/// @param length 要截取的子串的起始位置
+/// @param start 要截取的子串的起始位置
 char * subString(char *src, int length,int start){
     char *p = src;
     char *dst = (char *)malloc(sizeof(char)*(length+1));
