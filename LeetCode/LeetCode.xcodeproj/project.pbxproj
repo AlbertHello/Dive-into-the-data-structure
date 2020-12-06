@@ -15,6 +15,7 @@
 		35836D2425452C7F006A1BF3 /* BubbleSort2.m in Sources */ = {isa = PBXBuildFile; fileRef = 35836D2325452C7F006A1BF3 /* BubbleSort2.m */; };
 		35836D2C25452CD8006A1BF3 /* Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 35836D2B25452CD8006A1BF3 /* Sort.m */; };
 		3586A3FC2545632300CD2C61 /* BubbleSort3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3586A3FB2545632300CD2C61 /* BubbleSort3.m */; };
+		35C9B1F9257C708A00CF3899 /* _72_Edit_Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */; };
 		35CF22312543E2910044632E /* BubbleSort1.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CF22302543E2910044632E /* BubbleSort1.m */; };
 		370E302B25550C86007FC789 /* UnionFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E301B25550C86007FC789 /* UnionFind.m */; };
 		370E302C25550C86007FC789 /* UnionFind_QU_Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E301D25550C86007FC789 /* UnionFind_QU_Size.m */; };
@@ -113,6 +114,8 @@
 		35836D2B25452CD8006A1BF3 /* Sort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sort.m; sourceTree = "<group>"; };
 		3586A3FA2545632300CD2C61 /* BubbleSort3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort3.h; sourceTree = "<group>"; };
 		3586A3FB2545632300CD2C61 /* BubbleSort3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort3.m; sourceTree = "<group>"; };
+		35C9B1F7257C708A00CF3899 /* _72_Edit_Distance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _72_Edit_Distance.h; sourceTree = "<group>"; };
+		35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _72_Edit_Distance.m; sourceTree = "<group>"; };
 		35CF222F2543E2910044632E /* BubbleSort1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort1.h; sourceTree = "<group>"; };
 		35CF22302543E2910044632E /* BubbleSort1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort1.m; sourceTree = "<group>"; };
 		370E301B25550C86007FC789 /* UnionFind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnionFind.m; sourceTree = "<group>"; };
@@ -415,6 +418,8 @@
 				37EBD8D525503B6200D726A5 /* 66_Plus_One.m */,
 				37CF4419253838EC00CBBDEF /* 70_ClimbingStairs.h */,
 				37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */,
+				35C9B1F7257C708A00CF3899 /* _72_Edit_Distance.h */,
+				35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */,
 				378C9FA1254BC40500B64B92 /* 75_Sort_Colors.h */,
 				378C9FA2254BC40500B64B92 /* 75_Sort_Colors.m */,
 				3766716E257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.h */,
@@ -617,6 +622,7 @@
 				37CF43CB2538362700CBBDEF /* 61_RotateList.c in Sources */,
 				37CF43CE2538362700CBBDEF /* 1002_Find_Common_Characters.c in Sources */,
 				35836D2425452C7F006A1BF3 /* BubbleSort2.m in Sources */,
+				35C9B1F9257C708A00CF3899 /* _72_Edit_Distance.m in Sources */,
 				3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */,
 				37A79D7E255B9AE30025A043 /* _179_Largest_Number.m in Sources */,
 				35836D2C25452CD8006A1BF3 /* Sort.m in Sources */,
