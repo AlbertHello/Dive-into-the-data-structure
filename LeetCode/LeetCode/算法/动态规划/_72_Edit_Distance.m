@@ -54,9 +54,7 @@
  
  
  */
-int min_72(int a, int b){
-    return (a < b) ? a : b;
-}
+
 int minDistance(char * word1, char * word2){
     if (word1 == NULL || word2 == NULL) return 0;
     size_t len1=strlen(word1); //
@@ -95,7 +93,7 @@ int minDistance(char * word1, char * word2){
                 leftTop++;
             }
             // 寻找三者中的最小值
-            dp[i][j] = min_72(min_72(top, left), leftTop);
+            dp[i][j] = min(min(top, left), leftTop);
         }
     }
     return dp[len1][len2];
