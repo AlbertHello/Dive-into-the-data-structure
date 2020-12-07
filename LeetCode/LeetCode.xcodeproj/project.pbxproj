@@ -33,6 +33,7 @@
 		3757DD80257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m in Sources */ = {isa = PBXBuildFile; fileRef = 3757DD7F257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m */; };
 		375921FC255FED470055F16E /* _42_Trapping_Rain_Water.m in Sources */ = {isa = PBXBuildFile; fileRef = 375921FB255FED470055F16E /* _42_Trapping_Rain_Water.m */; };
 		37667170257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3766716F257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.m */; };
+		376CB64E257E5BCD00CF90F5 /* _22_GenerateParentheses.m in Sources */ = {isa = PBXBuildFile; fileRef = 376CB64D257E5BCD00CF90F5 /* _22_GenerateParentheses.m */; };
 		3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDC92546DA70003C8105 /* 1_TwoSums.m */; };
 		3776CDCF2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDCE2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m */; };
 		3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDD22547CC4B003C8105 /* 146_LRU_Cache.m */; };
@@ -151,6 +152,8 @@
 		375921FB255FED470055F16E /* _42_Trapping_Rain_Water.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _42_Trapping_Rain_Water.m; sourceTree = "<group>"; };
 		3766716E257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _121_Best_Time_to_Buy_and_Sell_Stock.h; sourceTree = "<group>"; };
 		3766716F257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _121_Best_Time_to_Buy_and_Sell_Stock.m; sourceTree = "<group>"; };
+		376CB64C257E5BCD00CF90F5 /* _22_GenerateParentheses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _22_GenerateParentheses.h; sourceTree = "<group>"; };
+		376CB64D257E5BCD00CF90F5 /* _22_GenerateParentheses.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _22_GenerateParentheses.m; sourceTree = "<group>"; };
 		3776CDC82546DA70003C8105 /* 1_TwoSums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 1_TwoSums.h; sourceTree = "<group>"; };
 		3776CDC92546DA70003C8105 /* 1_TwoSums.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 1_TwoSums.m; sourceTree = "<group>"; };
 		3776CDCD2546EF5E003C8105 /* 149_Max_Points_on_a_Line.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 149_Max_Points_on_a_Line.h; sourceTree = "<group>"; };
@@ -355,6 +358,15 @@
 			path = "并查集";
 			sourceTree = "<group>";
 		};
+		376CB650257E5BD200CF90F5 /* DFS  */ = {
+			isa = PBXGroup;
+			children = (
+				376CB64C257E5BCD00CF90F5 /* _22_GenerateParentheses.h */,
+				376CB64D257E5BCD00CF90F5 /* _22_GenerateParentheses.m */,
+			);
+			path = "DFS ";
+			sourceTree = "<group>";
+		};
 		37A79D94255D6AF60025A043 /* 二叉树 */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +434,7 @@
 				37C75B5725400B96006564C1 /* 15_ThreeSum.m */,
 				37C1EF3A2574EDE7002346A9 /* _16_16Sub_Sort_LCCI.h */,
 				37C1EF3B2574EDE7002346A9 /* _16_16Sub_Sort_LCCI.m */,
+				376CB650257E5BD200CF90F5 /* DFS  */,
 				375921FA255FED470055F16E /* _42_Trapping_Rain_Water.h */,
 				375921FB255FED470055F16E /* _42_Trapping_Rain_Water.m */,
 				37A4DBC225679CF80010C9C9 /* _46_Permutations.h */,
@@ -639,6 +652,7 @@
 				35C9B1F9257C708A00CF3899 /* _72_Edit_Distance.m in Sources */,
 				3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */,
 				37A79D7E255B9AE30025A043 /* _179_Largest_Number.m in Sources */,
+				376CB64E257E5BCD00CF90F5 /* _22_GenerateParentheses.m in Sources */,
 				35836D2C25452CD8006A1BF3 /* Sort.m in Sources */,
 				3790F9F725789D2200B2701E /* MyQueue.m in Sources */,
 				3790F9FF2578BA5C00B2701E /* _572_Subtree_of_Another_Tree.m in Sources */,

@@ -28,8 +28,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
             endingLineNumber = "98"
-            landmarkName = "subSort2(array, arraySize, returnSize)"
-            landmarkType = "9">
+            landmarkName = "_16_16Sub_Sort_LCCI"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -44,8 +44,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
             endingLineNumber = "94"
-            landmarkName = "subSort2(array, arraySize, returnSize)"
-            landmarkType = "9">
+            landmarkName = "_16_16Sub_Sort_LCCI"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
