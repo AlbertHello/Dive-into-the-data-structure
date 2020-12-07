@@ -182,6 +182,7 @@
 -(NSInteger)compare:(NSInteger)current next:(NSInteger)next;{
     return current-next;//返回负数放右侧，返回正数放左侧。返回0直接替换。
 }
+// 获取二叉树高度
 -(NSUInteger)height{
     if (self.root == NULL) return 0;
     // 树的高度
@@ -209,7 +210,7 @@
     }
     return height;
 }
-
+// 获取前驱节点
 -(BSTNode*)predecessor:(BSTNode *)cur_node{
     if (cur_node == NULL) return NULL;
     // 前驱节点在左子树当中（left.right.right.right....）
@@ -229,6 +230,7 @@
     // node == node.parent.right
     return cur_node.parent;
 }
+// 获取后继节点
 -(BSTNode*)successor:(BSTNode *)cur_node{
     if (cur_node == NULL) return NULL;
     // 前驱节点在左子树当中（right.left.left.left....）
@@ -239,7 +241,7 @@
         }
         return p;
     }
-    // 从父节点、祖父节点中寻找前驱节点
+    // 从父节点、祖父节点中寻找后继节点
     while (cur_node.parent != NULL && cur_node == cur_node.parent.right) {
         cur_node = cur_node.parent;
     }
@@ -493,7 +495,7 @@ int* inorderTraversal(struct TreeNode* root, int* returnSize){
     BSTNode *node=root.left;
     root.left=root.right;
     root.right=node;
-    [self invertTree2:root.left];
+    [self invertTree2:root.left]; // 注意此处传进去的仍然是root.left
     return root;
 }
 -(BSTNode *)invertTree3:(BSTNode *)root{
