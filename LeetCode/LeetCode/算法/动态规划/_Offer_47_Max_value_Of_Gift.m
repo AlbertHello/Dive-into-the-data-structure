@@ -38,9 +38,6 @@
  其余的：
  dp[row][col] = max(dp[row - 1][col], dp[row][col - 1]) + grid[row][col];
  */
-int max(int a, int b){
-    return (a > b)? a : b;
-}
 // 空间复杂度：O（m*n） 开辟了新数组dp
 int maxValue(int** grid, int gridSize, int* gridColSize){
     int rows = gridSize; // 行数

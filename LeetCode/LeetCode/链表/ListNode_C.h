@@ -32,7 +32,8 @@ typedef struct SingleLink_1 SingleLink_1;
 SingleLink_1 *create_single_link_1(void);
 void add_for_single_node_1(int val, SingleLink_1 *link);
 void print_single_link_1(SingleLink_1 *link);
-
+int min(int a, int b);
+int max(int a, int b);
 
 
 

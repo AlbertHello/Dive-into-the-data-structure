@@ -55,3 +55,9 @@ void print_single_link_1(SingleLink_1 *link){
     printf("%s",string);
     printf("]\n");
 }
+int min(int a, int b){
+    return (a < b) ? a : b;
+}
+int max(int a, int b){
+    return (a > b) ? a : b;
+}

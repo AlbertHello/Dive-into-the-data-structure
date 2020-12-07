@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#include "ListNode_C.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

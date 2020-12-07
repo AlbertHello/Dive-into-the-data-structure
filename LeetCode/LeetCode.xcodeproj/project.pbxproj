@@ -15,6 +15,8 @@
 		35836D2425452C7F006A1BF3 /* BubbleSort2.m in Sources */ = {isa = PBXBuildFile; fileRef = 35836D2325452C7F006A1BF3 /* BubbleSort2.m */; };
 		35836D2C25452CD8006A1BF3 /* Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 35836D2B25452CD8006A1BF3 /* Sort.m */; };
 		3586A3FC2545632300CD2C61 /* BubbleSort3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3586A3FB2545632300CD2C61 /* BubbleSort3.m */; };
+		35C9B1F9257C708A00CF3899 /* _72_Edit_Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */; };
+		35C9B1FD257C906B00CF3899 /* _322_Coin_Change.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9B1FC257C906B00CF3899 /* _322_Coin_Change.m */; };
 		35CF22312543E2910044632E /* BubbleSort1.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CF22302543E2910044632E /* BubbleSort1.m */; };
 		370E302B25550C86007FC789 /* UnionFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E301B25550C86007FC789 /* UnionFind.m */; };
 		370E302C25550C86007FC789 /* UnionFind_QU_Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E301D25550C86007FC789 /* UnionFind_QU_Size.m */; };
@@ -113,6 +115,10 @@
 		35836D2B25452CD8006A1BF3 /* Sort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sort.m; sourceTree = "<group>"; };
 		3586A3FA2545632300CD2C61 /* BubbleSort3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort3.h; sourceTree = "<group>"; };
 		3586A3FB2545632300CD2C61 /* BubbleSort3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort3.m; sourceTree = "<group>"; };
+		35C9B1F7257C708A00CF3899 /* _72_Edit_Distance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _72_Edit_Distance.h; sourceTree = "<group>"; };
+		35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _72_Edit_Distance.m; sourceTree = "<group>"; };
+		35C9B1FB257C906B00CF3899 /* _322_Coin_Change.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _322_Coin_Change.h; sourceTree = "<group>"; };
+		35C9B1FC257C906B00CF3899 /* _322_Coin_Change.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _322_Coin_Change.m; sourceTree = "<group>"; };
 		35CF222F2543E2910044632E /* BubbleSort1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort1.h; sourceTree = "<group>"; };
 		35CF22302543E2910044632E /* BubbleSort1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort1.m; sourceTree = "<group>"; };
 		370E301B25550C86007FC789 /* UnionFind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnionFind.m; sourceTree = "<group>"; };
@@ -281,6 +287,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35C9B1FF257C908F00CF3899 /* 动态规划 */ = {
+			isa = PBXGroup;
+			children = (
+				3766716E257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.h */,
+				3766716F257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.m */,
+				3757DD7E257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.h */,
+				3757DD7F257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m */,
+				35C9B1F7257C708A00CF3899 /* _72_Edit_Distance.h */,
+				35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */,
+				35C9B1FB257C906B00CF3899 /* _322_Coin_Change.h */,
+				35C9B1FC257C906B00CF3899 /* _322_Coin_Change.m */,
+			);
+			path = "动态规划";
+			sourceTree = "<group>";
+		};
 		35CF22332543E2990044632E /* 排序 */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,8 +426,6 @@
 				375921FB255FED470055F16E /* _42_Trapping_Rain_Water.m */,
 				37A4DBC225679CF80010C9C9 /* _46_Permutations.h */,
 				37A4DBC325679CF80010C9C9 /* _46_Permutations.m */,
-				3757DD7E257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.h */,
-				3757DD7F257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m */,
 				37C1EF5F25751B22002346A9 /* _51_N-Queens.h */,
 				37C1EF6025751B22002346A9 /* _51_N-Queens.m */,
 				37CF44202538475D00CBBDEF /* 53_MaximumSubarray.h */,
@@ -417,8 +436,6 @@
 				37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */,
 				378C9FA1254BC40500B64B92 /* 75_Sort_Colors.h */,
 				378C9FA2254BC40500B64B92 /* 75_Sort_Colors.m */,
-				3766716E257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.h */,
-				3766716F257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.m */,
 				3776CDD12547CC4B003C8105 /* 146_LRU_Cache.h */,
 				3776CDD22547CC4B003C8105 /* 146_LRU_Cache.m */,
 				37EBD94F2553D0B700D726A5 /* _167_TwoSum_2.h */,
@@ -429,6 +446,7 @@
 				37A79D7D255B9AE30025A043 /* _179_Largest_Number.m */,
 				35197ECA2577065E009D5F0A /* _239_Sliding_Window_Maximum.h */,
 				35197ECB2577065E009D5F0A /* _239_Sliding_Window_Maximum.m */,
+				35C9B1FF257C908F00CF3899 /* 动态规划 */,
 				378C9F58254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.h */,
 				378C9F59254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m */,
 				3790F9EC257891D900B2701E /* _739_DailyTeampreture.h */,
@@ -616,7 +634,9 @@
 				370E303225550C86007FC789 /* UnionFind_QU.m in Sources */,
 				37CF43CB2538362700CBBDEF /* 61_RotateList.c in Sources */,
 				37CF43CE2538362700CBBDEF /* 1002_Find_Common_Characters.c in Sources */,
+				35C9B1FD257C906B00CF3899 /* _322_Coin_Change.m in Sources */,
 				35836D2425452C7F006A1BF3 /* BubbleSort2.m in Sources */,
+				35C9B1F9257C708A00CF3899 /* _72_Edit_Distance.m in Sources */,
 				3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */,
 				37A79D7E255B9AE30025A043 /* _179_Largest_Number.m in Sources */,
 				35836D2C25452CD8006A1BF3 /* Sort.m in Sources */,
