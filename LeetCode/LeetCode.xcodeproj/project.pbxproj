@@ -53,6 +53,7 @@
 		3790FA212579DC3500B2701E /* _151_Reverse_Words_in_a_String.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790FA202579DC3500B2701E /* _151_Reverse_Words_in_a_String.m */; };
 		3790FA252579EEBC00B2701E /* _242_Valid_Anagram.m in Sources */ = {isa = PBXBuildFile; fileRef = 3790FA242579EEBC00B2701E /* _242_Valid_Anagram.m */; };
 		37A4DBC425679CF80010C9C9 /* _46_Permutations.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A4DBC325679CF80010C9C9 /* _46_Permutations.m */; };
+		37A6E0BD257FADC100FAB7DD /* Offer_62_LastRemaining_in_Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A6E0BC257FADC100FAB7DD /* Offer_62_LastRemaining_in_Circle.m */; };
 		37A79D7E255B9AE30025A043 /* _179_Largest_Number.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D7D255B9AE30025A043 /* _179_Largest_Number.m */; };
 		37A79D82255C09690025A043 /* _109_Convert_Sorted_List_to_Binary_Search_Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D81255C09690025A043 /* _109_Convert_Sorted_List_to_Binary_Search_Tree.m */; };
 		37A79D86255C10C10025A043 /* _108_Convert_Sorted_Array_to_Binary_Search_Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D85255C10C10025A043 /* _108_Convert_Sorted_Array_to_Binary_Search_Tree.m */; };
@@ -194,6 +195,8 @@
 		3790FA242579EEBC00B2701E /* _242_Valid_Anagram.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _242_Valid_Anagram.m; sourceTree = "<group>"; };
 		37A4DBC225679CF80010C9C9 /* _46_Permutations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _46_Permutations.h; sourceTree = "<group>"; };
 		37A4DBC325679CF80010C9C9 /* _46_Permutations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _46_Permutations.m; sourceTree = "<group>"; };
+		37A6E0BB257FADC100FAB7DD /* Offer_62_LastRemaining_in_Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Offer_62_LastRemaining_in_Circle.h; sourceTree = "<group>"; };
+		37A6E0BC257FADC100FAB7DD /* Offer_62_LastRemaining_in_Circle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Offer_62_LastRemaining_in_Circle.m; sourceTree = "<group>"; };
 		37A79D7C255B9AE30025A043 /* _179_Largest_Number.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _179_Largest_Number.h; sourceTree = "<group>"; };
 		37A79D7D255B9AE30025A043 /* _179_Largest_Number.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _179_Largest_Number.m; sourceTree = "<group>"; };
 		37A79D80255C09690025A043 /* _109_Convert_Sorted_List_to_Binary_Search_Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _109_Convert_Sorted_List_to_Binary_Search_Tree.h; sourceTree = "<group>"; };
@@ -301,8 +304,7 @@
 			children = (
 				3766716E257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.h */,
 				3766716F257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.m */,
-				3757DD7E257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.h */,
-				3757DD7F257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m */,
+				37A6E0B9257FAD8A00FAB7DD /* offer */,
 				35C9B1F7257C708A00CF3899 /* _72_Edit_Distance.h */,
 				35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */,
 				35C9B1FB257C906B00CF3899 /* _322_Coin_Change.h */,
@@ -373,6 +375,17 @@
 				376CB654257E604B00CF90F5 /* _17_LetterCombinationsofaPhoneNumber.m */,
 			);
 			path = "DFS ";
+			sourceTree = "<group>";
+		};
+		37A6E0B9257FAD8A00FAB7DD /* offer */ = {
+			isa = PBXGroup;
+			children = (
+				3757DD7E257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.h */,
+				3757DD7F257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m */,
+				37A6E0BB257FADC100FAB7DD /* Offer_62_LastRemaining_in_Circle.h */,
+				37A6E0BC257FADC100FAB7DD /* Offer_62_LastRemaining_in_Circle.m */,
+			);
+			path = offer;
 			sourceTree = "<group>";
 		};
 		37A79D94255D6AF60025A043 /* 二叉树 */ = {
@@ -650,6 +663,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				376CB655257E604B00CF90F5 /* _17_LetterCombinationsofaPhoneNumber.m in Sources */,
+				37A6E0BD257FADC100FAB7DD /* Offer_62_LastRemaining_in_Circle.m in Sources */,
 				37EBD95A2553DACD00D726A5 /* _876_Middle_of_the_Linked_List.m in Sources */,
 				37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */,
 				378C9F5A254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m in Sources */,

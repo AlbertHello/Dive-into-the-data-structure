@@ -10,6 +10,8 @@
 @implementation __TwoSums
 
 /**
+ 1. 两数之和
+ 难度 简单
  给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
 
  你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
@@ -82,20 +84,20 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
     NSMutableDictionary *dict=[NSMutableDictionary dictionary];
     for (int i=0; i<numsSize; i++) {
         int cmp=target-nums[i];
-        NSString *key=@(cmp).stringValue;
-        if ([dict.allKeys containsObject:key]) {
-            int index=[dict[key] intValue];
+        NSString *key_cmp=@(cmp).stringValue;
+        if (dict[key_cmp]) {
+            int index=[dict[key_cmp] intValue];
             int *arr=(int *)malloc(sizeof(int)*2);
             arr[0]=index;
             arr[1]=i;
             return arr;
         }else{
-            dict[key]=@(nums[i]);
+            NSString *key_used=@(nums[i]).stringValue;
+            dict[key_used]=@(i);
         }
     }
     return NULL;
 }
-
 
 
 //struct hashTable {
