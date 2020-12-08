@@ -78,11 +78,12 @@
 //    [_6_Plus_One plusOneTest];
 //    [_821_Shortest_Distance_to_a_Character shortestToCharTest];
 //    [_46_LRU_Cache LRU_Cache_Test];
-    longestPalindromeTest();
+//    longestPalindromeTest();
 //    [_394_Decode_String decodeStringTest];
 //    [_16_16Sub_Sort_LCCI subSortTest];
 //    [_151_Reverse_Words_in_a_String reverseWordsTest];
 //    [__LongestSubstringWithoutRepeatingCharacters lengthOfLongestSubstring_c_Test];
+    rotate_right_test();
     
 }
 -(void)sortTest{
@@ -136,17 +137,17 @@
 //    [insert insertSort3:arr6 length:len];
 //    NSLog(@"%@",insert);
     
-    MergeSort *merge=[[MergeSort alloc]init];
-    [merge mergeSort:array1];
-    NSLog(@"%@",merge);
-    
-    QuickSort *quick=[[QuickSort alloc]init];
-    [quick quickSort:array2];
-    NSLog(@"%@",quick);
-    
-    ShellSort *shell=[[ShellSort alloc]init];
-    [shell shellSort:array3];
-    NSLog(@"%@",shell);
+//    MergeSort *merge=[[MergeSort alloc]init];
+//    [merge mergeSort:array1];
+//    NSLog(@"%@",merge);
+//
+//    QuickSort *quick=[[QuickSort alloc]init];
+//    [quick quickSort:array2];
+//    NSLog(@"%@",quick);
+//
+//    ShellSort *shell=[[ShellSort alloc]init];
+//    [shell shellSort:array3];
+//    NSLog(@"%@",shell);
     
     
 //    for (int i=0; i<10; i++) {

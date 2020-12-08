@@ -59,9 +59,7 @@ SingleNode_1* rotateRight(SingleNode_1* head, int k){
     //当k大于链表长度时，需要求余，因为k=len时，相当于没有转。
     //只计算不到len或超过len的次数
     int step = len - k % len - 1;
-    int i=0;
-    while (i<step) {
-        i++;
+    while (step-- > 0) {
         ptr = ptr->next;
     }
     //下一个就是head
@@ -76,13 +74,15 @@ SingleNode_1* rotateRight(SingleNode_1* head, int k){
 void rotate_right_test(){
     
     SingleLink_1 *link=create_single_link_1();
-    add_for_single_node_1(5, link);
-    add_for_single_node_1(4, link);
-    add_for_single_node_1(3, link);
-    add_for_single_node_1(2, link);
     add_for_single_node_1(1, link);
+    add_for_single_node_1(2, link);
+    add_for_single_node_1(3, link);
+    add_for_single_node_1(4, link);
+    add_for_single_node_1(5, link);
     
-    SingleNode_1 *head=rotateRight(link->first, 6);
+    print_single_link_1(link);
+    
+    SingleNode_1 *head=rotateRight(link->first, 2);
     
     link->first=head;
     print_single_link_1(link);

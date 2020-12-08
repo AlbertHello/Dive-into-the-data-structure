@@ -71,21 +71,21 @@
 -(Node_24 *)swapPairs_no_recurse:(Node_24 *)head {
     Node_24 *pre = [[Node_24 alloc]init];//虚拟了一个头节点
     pre.next = head;
-    Node_24 *temp = pre;
+    Node_24 *cur = pre;
     //第一个节点和第二个节点都不能为空
-    while(temp.next != nil && temp.next.next != nil) {
+    while(cur.next != nil && cur.next.next != nil) {
         //第一个节点 1
-        Node_24 *start = temp.next;
+        Node_24 *start = cur.next;
         //第二个节点 2
-        Node_24 *end = temp.next.next;
+        Node_24 *end = cur.next.next;
         //0->2
-        temp.next = end;
+        cur.next = end;
         //1->3
         start.next = end.next;
         //2->1
         end.next = start;
         //start 和 end 交换了位置了。temp跟上
-        temp = start;
+        cur = start;
     }
     return pre.next;
 }

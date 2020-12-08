@@ -8,6 +8,8 @@
 
 #include "82_RemoveDuplicatesfromSortedList2.h"
 /**
+ 82. 删除排序链表中的重复元素 II
+ 
  给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 没有重复出现 的数字。
 
  示例 1:
@@ -40,11 +42,13 @@ SingleNode_1* deleteDuplicates(SingleNode_1* head){
         SingleNode_1 *curr = prev -> next; //curr是pre的后一个
         //拿pre的后一个和后一个的后一个比较
         //如果curr到最后一位了或者当前curr所指元素没有重复值
-        if(!curr->next || curr->next->val != curr->val) prev = curr;
-        else
-        {
+        if(!curr->next || curr->next->val != curr->val){
+            prev = curr;
+        }else{
             // 将curr定位到一串重复元素的最后一位
-            while(curr->next && curr->next->val == curr->val) curr = curr -> next;
+            while(curr->next && curr->next->val == curr->val){
+                curr = curr -> next;
+            }
             // prev->next跳过中间所有的重复元素
             prev -> next = curr -> next;
         }
