@@ -29,7 +29,7 @@
  所以不能挪动0，而是把非零数字往前挪。
  */
 void moveZeroes(int* nums, int numsSize){
-    if (nums == NULL)  return NULL;
+    if (nums == NULL) return;
     for (int i=0, cur=0; i< numsSize; i++) {
         // 遇到0就跳过，但cur不能加一
         if (nums[i] == 0) continue;
