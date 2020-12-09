@@ -60,21 +60,32 @@
  空间复杂度：O(logn)，其中n 是数组的长度。空间复杂度不考虑返回值，因此空间复杂度主要取决于递归栈的深度，递归栈的深度是O(logn)。
  
  */
-
 -(TreeNode_108 *)sortedArrayToBST:(NSArray *)array{
     return [self dfs:array left:0 right:(int)array.count];
 }
 -(TreeNode_108 *)dfs:(NSArray *)array left:(int)lo right:(int)hi{
-    if (lo > hi) return NULL;
+    if (lo == hi) return NULL;
     // 以升序数组的中间元素作为根节点 root。
-    int mid = lo + ((hi - lo) >> 1); //O(1)
+    int mid = (hi + lo) >> 1; //O(1)
     TreeNode_108 *root = [[TreeNode_108 alloc]initWithVal:[array[mid] integerValue]];
+    root.val=[array[mid] integerValue];
     // 递归的构建 root 的左子树与右子树。
-    root.left = [self dfs:array left:lo right:mid-1]; //T(n/2)
+    root.left = [self dfs:array left:lo right:mid]; //T(n/2)
     root.right = [self dfs:array left:mid+1 right:hi]; //T(n/2)
-    
     return root;
 }
+/**
+ C 实现
+ struct TreeNode *buildBalanceBSTFromArray(int *nums, int left, int right){
+     if(left == right) return NULL;
+     int mid = (left + right) >> 1;
+     struct TreeNode *root = (struct TreeNode *)malloc(sizeof(struct TreeNode));
+     root->val=nums[mid];
+     root->left=buildBST(nums,left,mid);
+     root->right=buildBST(nums,mid+1,right);
+     return root;
+ }
+ */
 
 
 @end

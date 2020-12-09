@@ -42,6 +42,8 @@
 
 /**
  109. 有序链表转换二叉搜索树
+ 难度 中等
+ https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/
  给定一个单链表，其中的元素按升序排序，将其转换为高度平衡的二叉搜索树。
 
  本题中，一个高度平衡二叉树是指一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过 1。
@@ -66,29 +68,38 @@
  空间复杂度：O(logn)，这里只计算除了返回答案之外的空间。平衡二叉树的高度为(logn)，即为递归过程中栈的最大深度，
  也就是需要的空间。
  
+ 主定理：
+ T(n) = T(n/2)  + O(1)    --->>>   O(logn)
+ T(n) = T(n/2)  + O(n)    --->>>   O(n)
+ T(n) = 2T(n/2) + O(1)    --->>>   O(n)
+ T(n) = 2T(n/2) + O(n)    --->>>   O(nlogn)
+ T(n) = T(n-1)  + O(1)    --->>>   O(n)
+ T(n) = T(n-1)  + O(n)    --->>>   O(n^2)
+ T(n) = 2T(n-1) + O(1)    --->>>   O(2^n)
+ T(n) = 2T(n-1) + O(n)    --->>>   O(2^n)
+ 
  */
 -(TreeNode_109 *)sortedArrayToBST:(LinkNode *)head{
     if (head == nil) return nil;
     if (head.next == nil) return [[TreeNode_109 alloc]initWithVal:head.val];
-    
-    // 快慢指针找中心节点
-    LinkNode *slow = head;
-    LinkNode *fast = head;
-    LinkNode *pre = nil;//记录slow前一个节点，单链表没有前驱节点
-    while (fast != nil && fast.next != nil) { // O(n)
-        pre = slow;
+    return [self buildBST:head right:NULL];
+}
+// 快慢指针找中心节点
+-(LinkNode *)getMedianLeft:(LinkNode *)left right:(LinkNode *)right{
+    LinkNode *slow = left;
+    LinkNode *fast = left;
+    while (fast != right && fast.next != right) { // O(n)
         slow = slow.next;
         fast = fast.next.next;
     }
-    //slow是中间节点，pre是中间节点的前一个节点
-    //置为nil就是断开连表的前一半，这样左右两条子连表
-    pre.next = nil;
-    
-    // 以升序链表的中间元素作为根节点 root，递归的构建 root 的左子树与右子树。
-    TreeNode_109 *root = [[TreeNode_109 alloc]initWithVal:slow.val];;
-    root.left = [self sortedArrayToBST:head]; // T(n/2)
-    root.right = [self sortedArrayToBST:slow.next]; // T(n/2)
-
+    return slow;
+}
+-(TreeNode_109 *)buildBST:(LinkNode *)left right:(LinkNode *)right{
+    if (left == right) return  NULL;
+    LinkNode *mid=[self getMedianLeft:left right:right];
+    TreeNode_109 *root = [[TreeNode_109 alloc]initWithVal:mid.val];;
+    root.left = [self buildBST:left right:mid]; // T(n/2)
+    root.right = [self buildBST:mid.next right:right]; // T(n/2)
     return root;
 }
 
