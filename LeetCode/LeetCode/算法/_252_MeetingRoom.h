@@ -1,5 +1,5 @@
 //
-//  _7_Reverse_Integer.h
+//  _252_MeetingRoom.h
 //  LeetCode
 //
 //  Created by 58 on 2020/12/9.
@@ -9,9 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface _7_Reverse_Integer : NSObject
+@interface _252_MeetingRoom : NSObject
 
-+(void)integerReverseTest;
++(void)canAttendMeetingsTest;
 
 @end
 

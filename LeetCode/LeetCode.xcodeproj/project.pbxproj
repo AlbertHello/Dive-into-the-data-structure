@@ -103,6 +103,7 @@
 		37EBD9512553D0B700D726A5 /* _167_TwoSum_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD9502553D0B700D726A5 /* _167_TwoSum_2.m */; };
 		37EBD9552553D2FD00D726A5 /* _344_Reverse_String.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD9542553D2FD00D726A5 /* _344_Reverse_String.m */; };
 		37EBD95A2553DACD00D726A5 /* _876_Middle_of_the_Linked_List.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD9592553DACD00D726A5 /* _876_Middle_of_the_Linked_List.m */; };
+		37FDFE6D2580BFFA006F8540 /* _252_MeetingRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FDFE6C2580BFFA006F8540 /* _252_MeetingRoom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -295,6 +296,8 @@
 		37EBD9542553D2FD00D726A5 /* _344_Reverse_String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _344_Reverse_String.m; sourceTree = "<group>"; };
 		37EBD9582553DACD00D726A5 /* _876_Middle_of_the_Linked_List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _876_Middle_of_the_Linked_List.h; sourceTree = "<group>"; };
 		37EBD9592553DACD00D726A5 /* _876_Middle_of_the_Linked_List.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _876_Middle_of_the_Linked_List.m; sourceTree = "<group>"; };
+		37FDFE6B2580BFFA006F8540 /* _252_MeetingRoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _252_MeetingRoom.h; sourceTree = "<group>"; };
+		37FDFE6C2580BFFA006F8540 /* _252_MeetingRoom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _252_MeetingRoom.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -495,6 +498,8 @@
 				37A79D7D255B9AE30025A043 /* _179_Largest_Number.m */,
 				35197ECA2577065E009D5F0A /* _239_Sliding_Window_Maximum.h */,
 				35197ECB2577065E009D5F0A /* _239_Sliding_Window_Maximum.m */,
+				37FDFE6B2580BFFA006F8540 /* _252_MeetingRoom.h */,
+				37FDFE6C2580BFFA006F8540 /* _252_MeetingRoom.m */,
 				37018B8B257F5D0700EA658E /* _283_Move_Zeroes.h */,
 				37018B8C257F5D0700EA658E /* _283_Move_Zeroes.m */,
 				35C9B1FF257C908F00CF3899 /* 动态规划 */,
@@ -737,6 +742,7 @@
 				37A6E0C9258079F000FAB7DD /* _7_Reverse_Integer.m in Sources */,
 				3790FA032578BCE200B2701E /* MyBTNode.m in Sources */,
 				37CF43C92538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.c in Sources */,
+				37FDFE6D2580BFFA006F8540 /* _252_MeetingRoom.m in Sources */,
 				378C998B2549112D00B64B92 /* HeapSort.m in Sources */,
 				3790F9FB2578A38B00B2701E /* _01_09_String_Rotation_LCCI.m in Sources */,
 				37CF43CF2538362700CBBDEF /* 20_ValidParentheses.c in Sources */,

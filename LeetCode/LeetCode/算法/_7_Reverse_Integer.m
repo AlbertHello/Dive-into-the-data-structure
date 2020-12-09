@@ -48,11 +48,22 @@ int reverse2(int x) {
     while (x != 0) {
         int prevRes = res;
         int mod = x % 10;
+        // 此处，就又可能已经溢出了，某些语言从此处就可能报错了
         res = prevRes * 10 + mod;
         if ((res - mod) / 10 != prevRes) return 0;
         x /= 10;
     }
     return res;
 }
+
++(void)integerReverseTest{
+//    printf("%d",INT_MIN);
+    // INT_MAX: 2147483647
+    // INT_MIN: -2147483648
+    printf("%d",reverse2(-2147483648));
+}
+
+
+
 
 @end

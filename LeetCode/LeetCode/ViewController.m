@@ -38,7 +38,8 @@
 #import "_151_Reverse_Words_in_a_String.h"
 #import "3_LongestSubstringWithoutRepeatingCharacters.h"
 #import "_54_Spiral_Matrix.h"
-
+#import "_7_Reverse_Integer.h"
+#import "_252_MeetingRoom.h"
 
 
 
@@ -54,6 +55,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor systemPinkColor];
+    
+    
+//    NSArray *arr=@[@(2),@(1),@(-3),@(5),@(3),@(6),];
+//    NSArray *new=[arr sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+//        NSNumber *o1=(NSNumber *)obj1;
+//        NSNumber *o2=(NSNumber *)obj2;
+//        NSInteger o1_val=[o1 integerValue];
+//        NSInteger o2_val=[o2 integerValue];
+//        if (o1_val < o2_val) { // 生序
+//            return NSOrderedAscending;
+//        }else{
+//            return NSOrderedDescending;
+//        }
+//    }];
+//    NSLog(@"%@",new);
     
     
     
@@ -83,6 +99,8 @@
 //    [_151_Reverse_Words_in_a_String reverseWordsTest];
 //    [__LongestSubstringWithoutRepeatingCharacters lengthOfLongestSubstring_c_Test];
 //    rotate_right_test();
+//    [_7_Reverse_Integer integerReverseTest];
+    [_252_MeetingRoom canAttendMeetingsTest];
     
 }
 -(void)sortTest{
