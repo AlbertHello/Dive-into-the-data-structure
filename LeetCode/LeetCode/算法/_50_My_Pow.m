@@ -86,4 +86,50 @@ double myPow(double x, int n) {
     return (n < 0) ? (1 / res) : res;
 }
 
+
+/**
+ 快速幂进阶
+ 设计一个算法求x的y次幂模z的结果：x^y % z
+    假设x，y都有可能是很大的整数
+    y>=0,z!=0
+ 
+ 公式须知：
+ (a*b)%c == ((a%c)*(b%c))%c
+ 
+ */
+// 2^100 % 6  = (2^50 * 2^50) % 6 = ((2^50 % 6) * (2^50 % 6)) % 6
+// 2^101 % 6  = (2^50 * 2^50 * 2) % 6 = ((2^50 % 6) * (2^50 % 6) * (2 % 6)) % 6
+// 递归
+int powMod(int x, int y, int z) {
+    if (y < 0 || z == 0) return 0;
+    if (y == 0) return 1 % z;
+    int half = powMod(x, y >> 1, z);
+    half *= half;
+    if ((y & 1) == 0) { // (y & 1) == 0 偶数
+        return half % z;
+    } else { // (y & 1) == 1 奇数
+        return (half * (x % z)) % z;
+    }
+}
+
+// 迭代
+int powMod1(int x, int y, int z) {
+    if (y < 0 || z == 0) return 0;
+    int res = 1 % z;
+    x %= z;
+    while (y > 0) {
+        if ((y & 1) == 1) {
+            // 如果最后一个二进制位是1，就累乘上x
+            res = (res * x) % z;
+        }
+        x = (x * x) % z;
+        // 舍弃掉最后一个二进制位
+        y >>= 1;
+    }
+    return res;
+}
+
+
+
+
 @end
