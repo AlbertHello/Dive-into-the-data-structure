@@ -40,7 +40,7 @@
 #import "_54_Spiral_Matrix.h"
 #import "_7_Reverse_Integer.h"
 #import "_252_MeetingRoom.h"
-
+#import "_253_MeetingRoom_2.h"
 
 
 
@@ -100,7 +100,8 @@
 //    [__LongestSubstringWithoutRepeatingCharacters lengthOfLongestSubstring_c_Test];
 //    rotate_right_test();
 //    [_7_Reverse_Integer integerReverseTest];
-    [_252_MeetingRoom canAttendMeetingsTest];
+//    [_252_MeetingRoom canAttendMeetingsTest];
+    [_253_MeetingRoom_2 minMeetingRoomTest];
     
 }
 -(void)sortTest{

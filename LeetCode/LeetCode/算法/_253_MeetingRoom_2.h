@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface _253_MeetingRoom_2 : NSObject
 
++(void)minMeetingRoomTest;
+
 @end
 
 NS_ASSUME_NONNULL_END

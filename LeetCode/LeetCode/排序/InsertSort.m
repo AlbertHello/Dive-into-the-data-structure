@@ -8,6 +8,22 @@
 #import "InsertSort.h"
 
 @implementation InsertSort
+// 大O排序
+// O(1) < O(logn) < O(n) < O(nlogn) < O(n^2) < O(2^n) < O(n!)
+
+//  名称    最好          最坏               平均            空间   in-place  稳定性
+// 冒泡排序  O(n)         O(n^2)            O(n^2)          O(1)    ✅       ✅
+// 选择排序  O(n^2)       O(n^2)            O(n^2)          O(1)    ✅       ❌
+// 插入排序  O(n)         O(n^2)            O(n^2)          O(1)    ✅       ✅
+// 归并排序  O(nlogn)     O(nlogn)          O(nlogn)        O(n)    ❌       ✅
+// 快速排序  O(nlogn)     O(n^2)             O(nlogn)        O(logn) ✅       ❌
+// 希尔排序  O(n)     O(n^(4/3))~O(n^2)   取决于步长序列       O(1)    ✅       ❌
+// 堆排序    O(nlogn)     O(nlogn)         O(nlogn)         O(1)    ✅       ❌
+// 计数排序  O(n + k)     O(n + k)          O(n + k)        O(n + k) ❌      ✅
+// 基数排序  O(d∗(n+k))   O(d∗(n+k))       O(d∗(n+k))       O(n + k) ❌      ✅
+// 桶排序    O(n + k)     O(n + k)          O(n + k)        O(n + m) ❌      ✅
+
+
 
 /**
  插入排序非常类似于扑克牌的排序：在新抓到的牌中插入已经排好序的牌中。
