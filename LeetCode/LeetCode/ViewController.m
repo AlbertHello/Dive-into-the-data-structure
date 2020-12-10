@@ -41,6 +41,7 @@
 #import "_7_Reverse_Integer.h"
 #import "_252_MeetingRoom.h"
 #import "_253_MeetingRoom_2.h"
+#import "_42_Trapping_Rain_Water.h"
 
 
 
@@ -101,7 +102,8 @@
 //    rotate_right_test();
 //    [_7_Reverse_Integer integerReverseTest];
 //    [_252_MeetingRoom canAttendMeetingsTest];
-    [_253_MeetingRoom_2 minMeetingRoomTest];
+//    [_253_MeetingRoom_2 minMeetingRoomTest];
+    [_42_Trapping_Rain_Water trapTest];
     
 }
 -(void)sortTest{

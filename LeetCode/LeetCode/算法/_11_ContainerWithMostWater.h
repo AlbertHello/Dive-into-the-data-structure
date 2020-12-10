@@ -1,19 +1,15 @@
 //
-//  _42_Trapping_Rain_Water.h
+//  _11_ContainerWithMostWater.h
 //  LeetCode
 //
-//  Created by 58 on 2020/11/14.
+//  Created by 58 on 2020/12/10.
 //
 
 #import <Foundation/Foundation.h>
 #include "ListNode_C.h"
-
-
 NS_ASSUME_NONNULL_BEGIN
 
-@interface _42_Trapping_Rain_Water : NSObject
-
-+(void)trapTest;
+@interface _11_ContainerWithMostWater : NSObject
 
 @end
 

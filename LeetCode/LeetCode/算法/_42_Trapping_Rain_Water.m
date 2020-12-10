@@ -10,7 +10,7 @@
 @implementation _42_Trapping_Rain_Water
 /**
  42. 接雨水
- 难度
+ 难度 困难
  输入：height = [0,1,0,2,1,0,1,3,2,1,2,1]
  输出：6
  解释：上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。
@@ -34,45 +34,24 @@
                 # 右边最高的柱子
                 max(height[i..end])
              ) - height[i] //  减去i自己的高度
- 
- 
  */
-
-int max_42(int num1, int num2){
-    return (num1 > num2) ? num1 : num2;
-}
--(NSNumber *)max_42:(NSNumber *)num1 num2:(NSNumber *)num2{
-    int v1=num1.intValue;
-    int v2=num2.intValue;
-    return (v1 > v2) ? num1 : num2;
-}
-
-int min_42(int num1, int num2){
-    return (num1 < num2) ? num1 : num2;
-}
--(NSNumber *)min_42:(NSNumber *)num1 num2:(NSNumber *)num2{
-    int v1=num1.intValue;
-    int v2=num2.intValue;
-    return (v1 < v2) ? num1 : num2;
-}
 
 /**
  这就是本问题的核心思路，我们可以简单写一个暴力算法
  有之前的思路，这个解法应该是很直接粗暴的，时间复杂度 O(N^2)，空间复杂度 O(1)。但是很明显这种计算 r_max 和 l_max 的方式非常笨拙，一般的优化方法就是备忘录。
  */
-int trap1(int *height){
-    size_t n = sizeof(height);
+int trap1(int *height, int heightSize){
     int res = 0;
-    for (int i = 1; i < n - 1; i++) {
+    for (int i = 1; i < heightSize - 1; i++) {
         int l_max = 0, r_max = 0;
         // 找右边最高的柱子
-        for (int j = i; j < n; j++)
-            r_max = max_42(r_max, height[j]);
+        for (int j = i; j < heightSize; j++)
+            r_max = max(r_max, height[j]);
         // 找左边最高的柱子
         for (int j = i; j >= 0; j--)
-            l_max = max_42(l_max, height[j]);
+            l_max = max(l_max, height[j]);
         //结果
-        res += min_42(l_max, r_max) - height[i];
+        res += min(l_max, r_max) - height[i];
     }
     return res;
 }
@@ -83,46 +62,50 @@ int trap1(int *height){
  
  优化其实和暴力解法思路差不多，就是避免了重复计算，把时间复杂度降低为 O(N)，已经是最优了，但是空间复杂度是 O(N)。下面来看一个精妙一些的解法，能够把空间复杂度降低到 O(1)。
  */
--(int)trap2:(NSArray *)height{
-    NSUInteger count = height.count;
+int trap2(int *height, int heightSize){
+    if (height == NULL || heightSize <= 1) {
+        return 0;
+    }
     int res = 0;
-    NSMutableArray *l_max=[NSMutableArray array];
-    NSMutableArray *r_max=[NSMutableArray array];
-    l_max[0] = height[0];
-    r_max[count - 1] = height[count - 1];
+    int *l_max=(int *)malloc(sizeof(int)*heightSize);
+    int *r_max=(int *)malloc(sizeof(int)*heightSize);
+    l_max[0] = height[0]; // 第一个元素的l_max就是他本身
+    r_max[heightSize - 1]=height[heightSize-1]; // 最后一个元素的r_max就是他本身
     // 从左向右计算 l_max
-    for (int i = 1; i < count; i++){
-        l_max[i]=[self max_42:height[i] num2:l_max[i - 1]];
+    for (int i = 1; i < heightSize; i++){
+        l_max[i]=max(height[i], l_max[i-1]);
     }
     // 从右向左计算 r_max
-    for (NSUInteger i = count - 2; i >= 0; i--){
-        r_max[i]=[self max_42:height[i] num2:r_max[i + 1]];
+    for (int i = heightSize - 2; i >= 0; i--){
+        r_max[i]=max(height[i], r_max[i+1]);
     }
     // 计算答案
-    for (int i = 1; i < count - 1; i++){
-        NSNumber *min_num = [self min_42:l_max[i] num2:r_max[i]];
-        NSNumber *i_num = height[i];
-        res += min_num.intValue - i_num.intValue;
+    for (int i = 1; i < heightSize - 1; i++){
+        int minH=min(l_max[i], r_max[i]);
+        res += minH - height[i];
     }
+    free(l_max);
+    free(r_max);
     return res;
 }
 
 /**
  用双指针边走边算，节省空间复杂度,达到O（1）
  */
-int trap3(int *height){
-    size_t n = sizeof(height);
-    size_t left = 0, right = n - 1;
-    int res = 0;
+int trap3(int *height, int heightSize){
+    if (height == NULL || heightSize <= 1) {
+        return 0;
+    }
+    // 双指针--索引
+    int left = 0, right = heightSize - 1;
     int l_max = height[0];
-    int r_max = height[n - 1];
+    int r_max = height[heightSize - 1];
+    int res = 0;
     while (left <= right) {
-        
         //l_max 是 height[0..left] 中最高柱子的高度
-        l_max = max_42(l_max, height[left]);
+        l_max = max(l_max, height[left]);
         //r_max 是 height[right..end] 的最高柱子的高度
-        r_max = max_42(r_max, height[right]);
-        
+        r_max = max(r_max, height[right]);
         if (l_max < r_max) {
             res += l_max - height[left];
             left++;
@@ -132,6 +115,12 @@ int trap3(int *height){
         }
     }
     return res;
+}
+
+
++(void)trapTest{
+    int a[]={4,2,0,3,5};
+    printf("%d ",trap2(a,5));
 }
 
 
