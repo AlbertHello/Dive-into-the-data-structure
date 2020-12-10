@@ -79,39 +79,25 @@ void quick_sort_meeting_room(int a[], int begin, int end);
     }
     return room;
 }
-+(void)minMeetingRoomTest{
-//    NSArray *intervals=@[
-//        @[@5,@10],
-//        @[@15,@20],
-//        @[@0,@30]
-//    ];
-//    NSInteger room = [self minMeetingRoom_OC:intervals];
-//    NSLog(@"room: %ld",room);
-    int a[][2]={{5,10},{15,20},{0,30}};
-    int (*b)[2]=a;
-    int room = minMeetingRooms_C(b, 3);
-    printf("room: %d\n",room);
-}
-
-// C 实现分开排序
+// C 实现分开排序 2(O(nlogn) + O(n))
 int minMeetingRooms_C(int (*intervals)[2], int intervalsSize) {
     if (intervals == NULL || intervalsSize == 0) return 0;
     // 1 存放所有会议的开始时间
     int *begins=(int *)malloc(sizeof(int)*intervalsSize);
     // 存放所有会议的结束时间
     int *ends=(int *)malloc(sizeof(int)*intervalsSize);
-    for (int i = 0; i < intervalsSize; i++) {
+    for (int i = 0; i < intervalsSize; i++) { // O(n)
         begins[i] = intervals[i][0];
         ends[i] = intervals[i][1];
     }
     
     // 2 排序
-    quick_sort_meeting_room(begins, 0, intervalsSize);
-    quick_sort_meeting_room(ends, 0, intervalsSize);
+    quick_sort_meeting_room(begins, 0, intervalsSize); // O(nlogn)
+    quick_sort_meeting_room(ends, 0, intervalsSize); // O(nlogn)
     
     // 3 比较
     int room = 0, endIdx = 0;
-    for (int i=0; i<intervalsSize; i++) {
+    for (int i=0; i<intervalsSize; i++) { // O(n)
         int begin = begins[i];
         int end = ends[endIdx];
         if (begin >= end) { // 能重复利用会议室
@@ -123,10 +109,8 @@ int minMeetingRooms_C(int (*intervals)[2], int intervalsSize) {
     return room;
 }
 
-
-
 /**
- 最小堆
+  解法2: 最小堆
  */
 //int minMeetingRooms1(int[][] intervals) {
 //    if (intervals == null || intervals.length == 0) return 0;
@@ -152,6 +136,9 @@ int minMeetingRooms_C(int (*intervals)[2], int intervalsSize) {
 //    return heap.size();
 //}
 
+
+
+// 快速排序
 // 时间复杂度：平均O（nlogn）
 // 空间复杂度：O(logn)  递归
 void quick_sort_meeting_room(int a[], int begin, int end){
@@ -170,10 +157,11 @@ void quick_sort_meeting_room(int a[], int begin, int end){
     // end指向最后一个元素
     right--;
     
+    // 左右交替比较
     while (left < right) {
         // 左右begin end交替判断就可以用到这两个while来实现
         while (left < right) {
-            // 如果小于号改成小于等于号，则可能就会导致最坏情况发生
+            // 如果大于号改成大于等于号，则可能就会导致最坏情况发生
             if (a[right] > pivot) { // 右边元素 > 轴点元素
                 right--;
             } else { // 右边元素 <= 轴点元素 就得往轴点元素左边移动了
@@ -184,7 +172,7 @@ void quick_sort_meeting_room(int a[], int begin, int end){
             }
         }
         while (left < right) {
-            // 如果大于号改成大于等于号，则可能就会导致最坏情况发生
+            // 如果小于号改成小于等于号，则可能就会导致最坏情况发生
             if (a[left] < pivot) { // 左边元素 < 轴点元素
                 left++;
             } else { // 左边元素 >= 轴点元素 就得往轴点元素右边移动了
@@ -204,4 +192,21 @@ void quick_sort_meeting_room(int a[], int begin, int end){
     quick_sort_meeting_room(a, begin, left); // [begin, left)
     quick_sort_meeting_room(a, left+1, end); // [left+1, end)
 }
+
++(void)minMeetingRoomTest{
+//    NSArray *intervals=@[
+//        @[@5,@10],
+//        @[@15,@20],
+//        @[@0,@30]
+//    ];
+//    NSInteger room = [self minMeetingRoom_OC:intervals];
+//    NSLog(@"room: %ld",room);
+    
+    
+    int a[][2]={{5,10},{15,20},{0,30}};
+    int (*b)[2]=a;
+    int room = minMeetingRooms_C(b, 3);
+    printf("room: %d\n",room);
+}
+
 @end

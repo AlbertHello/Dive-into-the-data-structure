@@ -126,6 +126,7 @@ void quick_sort(int a[], int begin, int end);
     // 返回轴点元素的位置
     return begin;
 }
+// C 实现 快排
 void quick_sort(int a[], int begin, int end){
     if (end - begin < 2) return;
     // 在[begin,end)随机选择一个元素跟begin位置进行交换，降低最坏情况出现的概率
@@ -144,7 +145,7 @@ void quick_sort(int a[], int begin, int end){
     while (left < right) {
         // 左右begin end交替判断就可以用到这两个while来实现
         while (left < right) {
-            // 如果小于号改成小于等于号，则可能就会导致最坏情况发生
+            // 如果大于号改成大于等于号，则可能就会导致最坏情况发生
             if (a[right] > pivot) { // 右边元素 > 轴点元素
                 right--;
             } else { // 右边元素 <= 轴点元素 就得往轴点元素左边移动了
@@ -155,7 +156,7 @@ void quick_sort(int a[], int begin, int end){
             }
         }
         while (left < right) {
-            // 如果大于号改成大于等于号，则可能就会导致最坏情况发生
+            // 如果小于号改成小于等于号，则可能就会导致最坏情况发生
             if (a[left] < pivot) { // 左边元素 < 轴点元素
                 left++;
             } else { // 左边元素 >= 轴点元素 就得往轴点元素右边移动了
