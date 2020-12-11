@@ -280,7 +280,7 @@
 // 3、如果当前节点的值小于p和q的值，说明p和q应该在当前节点的右子树，因此将当前节点移动到它的右子节点
 // 4、如果当前节点的值不满足上述两条要求，那么说明当前节点就是「分岔点」。此时p和q要么在当前节点的不同的子树中，要么其中一个就是当前节点。
 //
-// 链接：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/solution/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-26/
+// 链接：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
 // 来源：力扣（LeetCode）
 // */
 //BinarySearchNode* lowestCommonAncestor(BinarySearchNode* root,

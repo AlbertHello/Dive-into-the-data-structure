@@ -124,6 +124,7 @@ static id object = NULL;
 //************************* 116 填充二叉树节点的右侧指针 *************************
 /**
  116. 填充每个节点的下一个右侧节点指针
+ https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/
 给定一个完美二叉树，其所有叶子节点都在同一层，每个父节点都有两个子节点。二叉树定义如下：
 
  struct Node {
@@ -156,6 +157,7 @@ static id object = NULL;
 //************************* 114 二叉树展开为连表 *************************
 /**
  114. 二叉树展开为链表
+ https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/
 给定一个二叉树，原地将它展开为一个单链表。
  例如，给定二叉树
 
@@ -210,6 +212,7 @@ static id object = NULL;
 //************************* 654 最大二叉树 *************************
 /**
  654. 最大二叉树
+ https://leetcode-cn.com/problems/maximum-binary-tree/
  给定一个不含重复元素的整数数组。一个以此数组构建的最大二叉树定义如下：
  二叉树的根是数组中的最大元素。
  左子树是通过数组中最大值左边部分构造出的最大二叉树。
@@ -581,6 +584,7 @@ static int result = 0;
 //************************* 113. 路径总和II *************************
 /**
  113. 路径总和 II
+ https://leetcode-cn.com/problems/path-sum-ii/
  给定一个二叉树和一个目标和，找到所有从根节点到叶子节点路径总和等于给定目标和的路径。
  说明: 叶子节点是指没有子节点的节点。
  示例:
@@ -835,4 +839,49 @@ static NSMutableArray *result_113 = nil;
     bool isSame = outside && inside;
     return isSame;
 }
+#pragma mark - 100  相同的树
+//************************* 236. 二叉树的最近公共祖先 *************************
+/**
+ 236. 二叉树的最近公共祖先
+ https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/
+ 难度 中等
+ 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
+ 百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。”
+
+ 例如，给定如下二叉树:  root = [3,5,1,6,2,0,8,null,null,7,4]
+ 示例 1:
+ 输入: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+ 输出: 3
+ 解释: 节点 5 和节点 1 的最近公共祖先是节点 3。
+ 示例 2:
+ 输入: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+ 输出: 5
+ 解释: 节点 5 和节点 4 的最近公共祖先是节点 5。因为根据定义最近公共祖先节点可以为节点本身。
+ 说明:
+ 所有节点的值都是唯一的。
+ p、q 为不同节点且均存在于给定的二叉树中。
+ */
+
+/**
+ * 去以root为根节点的二叉树中查找p、q的最近公共祖先
+ * ① 如果p、q同时存在于这棵二叉树中，就能成功返回它们的最近公共祖先
+ * ② 如果p、q都不存在于这棵二叉树中，返回null
+ * ③ 如果只有p存在于这棵二叉树中，返回p
+ * ④ 如果只有q存在于这棵二叉树中，返回q
+ */
+-(BTNode *)lowestCommonAncestor_OC:(BTNode *)root p:(BTNode *)p q:(BTNode *)q{
+    if (root == nil || root == p || root == q) return root;
+    // 去以root.left为根节点的二叉树中查找p、q的最近公共祖先
+    BTNode *left = [self lowestCommonAncestor_OC:root.left p:p q:q];
+    // 去以root.right为根节点的二叉树中查找p、q的最近公共祖先
+    BTNode *right = [self lowestCommonAncestor_OC:root.right p:p q:q];;
+    
+    // 如果left 和 right 都不为空，那么p和q 一定在 根结点两侧，且left=right=root
+    if (left != nil && right != nil) return root;
+    // 如果left和right有一个为空，
+    return (left != nil) ? left : right;
+}
+
+
+
 @end
