@@ -13,12 +13,12 @@ static id object = NULL;
 
 @interface BTNode : NSObject
 
+// ************************* BTNode *******************************
 @property(assign, nonatomic)int data;
 @property(strong, nonatomic,nullable)BTNode *parent;
 @property(strong, nonatomic,nullable)BTNode *left;
 @property(strong, nonatomic,nullable)BTNode *right;
 @end
-
 @implementation BTNode
 
 - (instancetype)init{
@@ -33,7 +33,7 @@ static id object = NULL;
 }
 @end
 
-
+// ************************* BTNode1 *******************************
 @interface BTNode1 : NSObject
 
 @property(assign, nonatomic)NSInteger data;
@@ -42,9 +42,7 @@ static id object = NULL;
 @property(strong, nonatomic,nullable)BTNode1 *right;
 @property(strong, nonatomic,nullable)BTNode1 *next;
 @end
-
 @implementation BTNode1
-
 - (instancetype)init{
     self = [super init];
     if (self) {
@@ -57,6 +55,36 @@ static id object = NULL;
 }
 @end
 
+// ************************* Info *******************************
+@interface Info : NSObject
+@property(strong, nonatomic)BTNode *root;
+@property(assign, nonatomic)NSInteger size;
+@property(assign, nonatomic)NSInteger max;
+@property(assign, nonatomic)NSInteger min;
+- (instancetype)initWithRoot:(BTNode *)root
+                        size:(NSInteger)size
+                         max:(NSInteger)max
+                         min:(NSInteger)min;
+@end
+@implementation Info
+- (instancetype)initWithRoot:(BTNode *)root
+                        size:(NSInteger)size
+                         max:(NSInteger)max
+                         min:(NSInteger)min{
+    
+    self = [super init];
+    if (self) {
+        self.root=root;
+        self.size=size;
+        self.max=max;
+        self.min=min;
+    }
+    return self;
+}
+
+@end
+
+// ************************* BinaryTree *******************************
 @implementation BinaryTree
 - (instancetype)init
 {
@@ -839,7 +867,7 @@ static NSMutableArray *result_113 = nil;
     bool isSame = outside && inside;
     return isSame;
 }
-#pragma mark - 100  相同的树
+#pragma mark - 236. 二叉树的最近公共祖先
 //************************* 236. 二叉树的最近公共祖先 *************************
 /**
  236. 二叉树的最近公共祖先
@@ -881,6 +909,88 @@ static NSMutableArray *result_113 = nil;
     // 如果left和right有一个为空，
     return (left != nil) ? left : right;
 }
+#pragma mark - 333 最大BST子树
+//************************* 333 最大BST子树 *************************
+/**
+ 给定一个二叉树，找到其中最大的二叉搜索树子树，其中最大指的是子树节点数最多的。
+ 注意：子树必须包含气所有后代
+ 输入：[10,5,15,1,8,null,7]
+    10
+    / \
+    5  15
+   / \   \
+   1  8   7
+ 
+ 输出：3
+ 因为其中
+  5
+ / \
+ 1  8
+ 构成最大BST子树
+ 
+ 能用O（n）的时间复杂度解决嘛
+ */
+
+-(NSInteger)largestBSTSubtree:(BTNode *)root{
+    return (root == NULL) ? 0:[self getInfo:root].size;
+}
+-(Info *)getInfo:(BTNode *)root{
+    if (root == nil) return nil;
+    // li(left info)：左子树的最大BST子树信息
+    Info *li = [self getInfo:root.left];
+
+    // ri(right info)：右子树的最大BST子树信息
+    Info *ri = [self getInfo:root.right];
+    /*
+    有4种情况，以root为根节点的二叉树就是一棵BST，最大BST子树就是其本身
+    ① li != null && ri != null //左右子树不为空且都是BST
+    && li.root == root.left && root.val > li.max // 且根结点的值正好大于左BST中的最大值
+    && ri.root == root.right && root.val < ri.min // 且根结点的值正好小于左BST中的最小值 那么以root为根结点的树就是一颗更大的BST
+
+    ② li != null && ri == null // 右子树为空
+    && li.root == root.left && root.val > li.max // 且根结点的值正好大于左BST中的最大值，那么root也算是一个更大的BST
+
+    ③ li == null && ri != null // 左子树为空
+    && ri.root == root.right && root.val < ri.min // 且根结点的值正好小于左BST中的最小值，那么root也算是一个更大的BST
+
+    ④ li == null && ri == null。// 左右子树都是空，那么一个节点也是一个BST
+     */
+
+    NSInteger leftBstSize = -1, rightBstSize = -1, max = root.data, min = root.data;
+    if (li == nil) { // 左为空
+        leftBstSize = 0;
+    } else if (li.root == root.left && root.data > li.max) {
+        // 左不为空，且左子树是BST，那么leftBstSize和min就有值了
+        leftBstSize = li.size;
+        min = li.min;
+    }// 这里往后虽然左也不为空，但左不是BST了
+
+    if (ri == nil) { // 右为空
+        rightBstSize = 0;
+    } else if (ri.root == root.right && root.data < ri.min) {
+        // 右不为空，且右子树是BST，那么rightBstSize和max就有值了
+        rightBstSize = ri.size;
+        max = ri.max;
+    }// 这里往后虽然右也不为空，但右不是BST了
+    
+    
+    if (leftBstSize >= 0 && rightBstSize >= 0) {
+        // 来到这里肯定li 和 ri 都是bst了， li和ri的父节点都是root
+        Info *new_info = [[Info alloc]initWithRoot:root
+                                              size:1 + leftBstSize + rightBstSize
+                                               max:max
+                                               min:min];
+        return new_info;
+    } // 这里代表leftBstSize 和 rightBstSize 等于-1 也就是li和ri不是bst
+    
+    // 以root为根节点的二叉树并不是BST
+    // 返回最大BST子树的节点数量较多的那个Info
+    if (li != nil && ri != nil) return (li.size > ri.size) ? li : ri;
+    // 这里就代表其中一个为空。返回li、ri中不为null的那个Info
+    return (li != nil) ? li : ri;
+}
+
+
 
 
 
