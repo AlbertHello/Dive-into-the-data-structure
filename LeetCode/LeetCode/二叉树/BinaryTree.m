@@ -7,6 +7,8 @@
 
 #import "BinaryTree.h"
 #import "MyStack.h"
+#import "ListNode_C.h"
+
 
 
 static id object = NULL;
@@ -90,6 +92,9 @@ static id object = NULL;
 @property(nonatomic,strong)BTNode *prev; // 上一次中序遍历过的节点
 @property(nonatomic,strong)BTNode *firstWrong; // 第一个错误节点
 @property(nonatomic,strong)BTNode *secondWrong; // 第二个错误节点
+// 处理124题需要的属性
+@property(assign, nonatomic)int maxValue;
+
 
 @end
 @implementation BinaryTree
@@ -98,6 +103,7 @@ static id object = NULL;
     self = [super init];
     if (self) {
         object=self;
+        self.maxValue=INT_MIN;
     }
     return self;
 }
@@ -1096,7 +1102,58 @@ static NSMutableArray *result_113 = nil;
     }
     self.prev = node;
 }
-
-
+#pragma mark - 124. 二叉树中的最大路径和
+//************************* 124. 二叉树中的最大路径和 *************************
+/**
+ 124. 二叉树中的最大路径和
+ 难度 困难
+ 给定一个非空二叉树，返回其最大路径和。
+ 本题中，路径被定义为一条从树中任意节点出发，沿父节点-子节点连接，达到任意节点的序列。该路径至少包含一个节点，且不一定经过根节点。
+ 示例 1：
+ 输入：[1,2,3]
+       1
+       / \
+      2   3
+ 输出：6
+ 示例 2：
+ 输入：[-10,9,20,null,null,15,7]
+    -10
+    / \
+   9  20
+     /  \
+    15   7
+ 输出：42
+ */
+/**
+ 定义 dfs 函数：求出当前子树能向父节点“提供”的最大路径和。即，一条从父节点延伸下来的路径，
+ 能在当前子树中捞取的最大收益。它分为三种情况：
+ 路径停在当前子树的根节点，收益：root.val
+ 走入左子树，最大收益：root.val + dfs(root.left)
+ 走入右子树，最大收益：root.val + dfs(root.right)
+ 最大收益取三者中的最大值。
+ 再次提醒：一条从父节点延伸下来的路径，不能走入左子树又掉头走右子树，不能两头收益。
+ 当遍历到null节点时，返回 0，代表收益为 0。
+ 如果一个子树提供的最大路径和为负，路径走入它，收益不增反减，我们希望这个子树不被考虑，让它返回 0，像砍掉一样。
+ 题目说，路径不一定经过根节点，说明，最大路径和可能产生于局部子树中
+ 因此每次递归调用，都求一下「当前子树内部的最大路径和」，每个子树都求，取最大的。
+ 注意，一个子树内部的路径，要包含当前子树的根节点。如果不包括根节点，那还算什么当前子树的路径，而是当前子树的子树的内部路径。
+ 所以，一个子树内部的最大路径和 = 左子树提供的最大路径和 + 根节点值 + 右子树提供的最大路径和。即 dfs(root.left) + root.val + dfs(root.right);
+ 时间复杂度O(N)，每个节点都要遍历，空间复杂度是O(H)，递归树的深度。
+ */
+-(int)maxPathSum:(BTNode *)root{
+    if (root == nil) {
+        return 0;
+    }
+    int left = [self maxPathSum:root.left]; // 左子树提供的最大收益
+    int right = [self maxPathSum:root.right]; // 右子树提供的最大收益
+    // 当前子树内部的最大路径和
+    int innerMaxSum=left + root.data + right;
+    // 挑战一下最大纪录
+    self.maxValue = max(self.maxValue, innerMaxSum);
+    // 对外提供的最大和
+    int outputMaxSum = root.data + max(left, right);
+    if (outputMaxSum < 0) return 0; // 对外提供的路径和为负，直接返回0
+    return outputMaxSum; // 否则正常返回
+}
 
 @end
