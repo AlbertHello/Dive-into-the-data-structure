@@ -85,6 +85,13 @@ static id object = NULL;
 @end
 
 // ************************* BinaryTree *******************************
+@interface BinaryTree ()
+// 处理99题需要的属性
+@property(nonatomic,strong)BTNode *prev; // 上一次中序遍历过的节点
+@property(nonatomic,strong)BTNode *firstWrong; // 第一个错误节点
+@property(nonatomic,strong)BTNode *secondWrong; // 第二个错误节点
+
+@end
 @implementation BinaryTree
 - (instancetype)init
 {
@@ -989,8 +996,106 @@ static NSMutableArray *result_113 = nil;
     // 这里就代表其中一个为空。返回li、ri中不为null的那个Info
     return (li != nil) ? li : ri;
 }
+#pragma mark - 99. 恢复二叉搜索树
+//************************* 99. 恢复二叉搜索树 *************************
+/**
+ 99. 恢复二叉搜索树
+ https://leetcode-cn.com/problems/recover-binary-search-tree/
+ 难度 困难
+ 给你二叉搜索树的根节点 root ，该树中的两个节点被错误地交换。请在不改变其结构的情况下，恢复这棵树。
+ 进阶：使用 O(n) 空间复杂度的解法很容易实现。你能想出一个只使用常数空间的解决方案吗？
+ 示例 1：
+ 输入：root = [1,3,null,null,2]
+ 输出：[3,1,null,null,2]
+ 解释：3 不能是 1 左孩子，因为 3 > 1 。交换 1 和 3 使二叉搜索树有效。
+ 示例 2：
+ 输入：root = [3,1,4,null,null,2]
+ 输出：[2,1,4,null,null,3]
+ 解释：2 不能在 3 的右子树中，因为 2 < 3 。交换 2 和 3 使二叉搜索树有效。
+ 
+ */
+
+/**
+ 思路：
+ 既然是二叉搜索树，那么中序遍历得到的是一个生序的序列
+ 只需要找到那个逆序对 就可以恢复了。
+ 1 如果两个对调的节点，其中序遍历不是挨着的，也就是会出现两个逆序对， 那么第一个错误节点是第一个逆序对中较大者，第二个错误节点是第二个逆序对中较小者。
+ 2 如果两个对调的节点，其中序遍历是挨着的，也就是只有一个逆序对，
+ 那么第一个错误节点是逆序对中较大者，第二个错误节点就是逆序对中较小者。
+ */
 
 
+/**
+  二叉树的Morris遍历
+  时间复杂度O（n）
+  空间复杂度O（1）
+  以下是Morris中序遍历：
+ 假设便利到当前节点N：
+ 1 如果N.left != null，则找到N的前驱节点就是左孩子P=N.left
+    如果P.right == null，则P.right = N，也就是对原二叉树添加了一个指针，孩子的右孩子指向了自己。
+    然后N=N.left, 然后再回到1
+ 2 如果N.left == null
+    打印N，然后N=N.right，再然后回到1
+ 如果P.right == N
+    则P.right = null //这是把刚才加上的指针断掉，恢复原有二叉树
+    然后打印N，然后N=N.right，再回到1
+ 重复1 和 2 知道N== NULL
+ */
+-(void)recoverTree:(BTNode *)root{
+    BTNode *node = root;
+    while (node != nil) {
+        if (node.left != nil) { //1 如果N.left != null
+            // 找到前驱节点(predecessor)、后继节点(successor)
+            BTNode *pred = node.left; // 找到N的前驱节点就是左孩子P=N.left
+            while (pred.right != nil && pred.right != node) {
+                pred = pred.right;
+            }
+            if (pred.right == nil) { // 如果P.right == null，
+                pred.right = node; // 则P.right = N
+                node = node.left; // 然后N=N.left, 然后再回到1
+            } else { // 如果 pred.right == N
+                [self find:node]; // 访问
+                pred.right = nil; // 则P.right=null这是把刚才加上的指针断掉，恢复原有二叉树
+                node = node.right; // 然后N=N.right，再回到1
+            }
+        } else { // 2 如果N.left == null
+            [self find:node]; // 访问N
+            node = node.right;
+        }
+    }
+    // 交换2个错误节点的值
+    int tmp = self.firstWrong.data;
+    self.firstWrong.data = self.secondWrong.data;
+    self.secondWrong.data = tmp;
+}
+// 递归
+// 时间复杂度：O(N) N 为二叉搜索树的节点个数。
+// 空间复杂度：O(H)，其中H 为二叉搜索树的高度。中序遍历的时候栈的深度取决于二叉搜索树的高度。
+-(void)recoverTree2:(BTNode *)root{
+    if (root == nil) return;
+    [self findWrongNodes:root];
+    // 交换2个错误节点的值
+    int tmp = self.firstWrong.data;
+    self.firstWrong.data = self.secondWrong.data;
+    self.secondWrong.data = tmp;
+}
+-(void)findWrongNodes:(BTNode *)root {
+   if (root == nil) return;
+    [self findWrongNodes:root.left];
+    [self find:root]; // 中序便利
+    [self findWrongNodes:root.right];
+}
+-(void)find:(BTNode *)node{
+    // 出现了逆序对
+    if (self.prev != nil && self.prev.data > node.data) {
+        // 第2个错误节点：最后一个逆序对中较小的那个节点
+        self.secondWrong = node;
+        // 第1个错误节点：第一个逆序对中较大的那个节点
+        if (self.firstWrong != nil) return;
+        self.firstWrong = self.prev;
+    }
+    self.prev = node;
+}
 
 
 
