@@ -10,7 +10,7 @@
 @interface _17_LetterCombinationsofaPhoneNumber ()
 
 @property(nonatomic,strong)NSMutableArray *res;
-@property(nonatomic,strong)NSMutableArray *lettersArray;
+@property(nonatomic,strong)NSArray *lettersArray;
 
 @end
 
@@ -37,20 +37,43 @@
 -(instancetype)init{
     if (self=[super init]) {
         self.res=[NSMutableArray array];
-//        self.lettersArray=@[ @[@"a", @"b", @"c"],
-//                             @[@"d", @"e", @"f"],
-//                             @[@"g", @"h", @"i"],
-//                             @[@"j", @"a", @"a"],
-//                             @[@"a", @"a", @"a"],
-//                             @[@"a", @"a", @"a"],
-//                             @[@"a", @"a", @"a"],
-//                             @[@"a", @"a", @"a"],
-//        ];
+        self.lettersArray=@[ @[@"a", @"b", @"c"],
+                             @[@"d", @"e", @"f"],
+                             @[@"g", @"h", @"i"],
+                             @[@"j", @"k", @"l"],
+                             @[@"m", @"n", @"o"],
+                             @[@"p", @"q", @"r",@"s"],
+                             @[@"t", @"u", @"v"],
+                             @[@"w", @"x", @"y",@"r"]
+        ];
     }
     return self;
     
 }
-
-
+-(NSArray *)letterCombinations:(NSString *)digits {
+    if (digits == nil) return nil;
+    NSMutableArray *final=[NSMutableArray array];
+    NSMutableArray *track=[NSMutableArray array];
+    [self dfs:0 str:digits track:track final:final];
+    return final;
+}
+-(void)dfs:(NSInteger)index str:(NSString *)digits track:(NSMutableArray *)track final:(NSMutableArray *)final{
+    if (index == digits.length) {
+        NSMutableString *finalStr=[NSMutableString string];
+        for (NSString *letter in track) {
+            [finalStr appendString:letter];
+        }
+        [final addObject:finalStr];
+        return;
+    }
+    NSString *numChar = [NSString stringWithFormat:@"%c",[digits characterAtIndex:index]];
+    NSInteger num = numChar.intValue;
+    NSMutableArray *lettrs =  self.lettersArray[num - 2];
+    for (NSString *letter in lettrs) {
+        [track addObject:letter];
+        [self dfs:index + 1 str:digits track:track final:final];
+        [track removeLastObject];
+    }
+}
 
 @end

@@ -99,6 +99,8 @@
 // 路径：记录在 track 中
 // 选择列表：nums 中不存在于 track 的那些元素
 // 结束条件：nums 中的元素全都在 track 中出现
+// 时间复杂度：O(n! * n * n)
+// 空间复杂度：O(n)
 -(void)backtrack:(NSArray *)nums recordTrack:(NSMutableArray *)track{
     // 触发结束条件
     // 这里的结束条件可以判断选择列表是否空了，也可以判断路径列表长度是否等于选择列表长度了
@@ -123,7 +125,7 @@
 }
 
 /**
- 解法2
+ 解法2 优化
  就是把穿进来的原数组原地替换，三个数都替换完了就是排列出了一组数
  第一层index=0，有三种方案：0和0替换，0和1替换，0和2替换
  那么先选第一种方案把nums[0]和nums[0]替换，之后index+1，钻入第二层：
@@ -136,6 +138,8 @@
         第二层时index=1，是有两种方案的，不过先把刚才交换的元素再次交换下，恢复原有数据。之后i++
         1和2交换，再进入下一层。。。。。。
  */
+// 时间复杂度：O(n! * n)
+// 空间复杂度：O(n)
 -(void)backtrack2:(NSInteger)index
              nums:(NSMutableArray *)nums
       recordTrack:(NSMutableArray *)track{
@@ -161,6 +165,7 @@
 }
 
 //解放3 去除重复的值
+// 这其实是全排列II的题目要求
 -(void)backtrack3:(NSInteger)index
              nums:(NSMutableArray *)nums
       recordTrack:(NSMutableArray *)track{
