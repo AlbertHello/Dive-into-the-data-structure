@@ -6,6 +6,7 @@
 //
 
 #import "75_Sort_Colors.h"
+#include "ListNode_C.h"
 
 @implementation _5_Sort_Colors
 
@@ -72,11 +73,6 @@
 //复杂度分析
 //时间复杂度：O(n)，其中n 是数组nums 的长度。
 //空间复杂度：(1)。
-void swap(int *a, int *b) {
-    int t = *a;
-    *a = *b;
-    *b = t;
-}
 void sortColors(int *nums, int numsSize) {
     int ptr = 0;
     //ptr的位置就是当前0所在的数组索引的后一位，也代表了0的个数

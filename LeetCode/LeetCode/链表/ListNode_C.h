@@ -34,6 +34,7 @@ void add_for_single_node_1(int val, SingleLink_1 *link);
 void print_single_link_1(SingleLink_1 *link);
 int min(int a, int b);
 int max(int a, int b);
+void swap(int *a, int *b);
 
 
 

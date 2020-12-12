@@ -6,6 +6,7 @@
 //
 
 #import "_46_Permutations.h"
+#include "ListNode_C.h"
 
 @interface _46_Permutations()
 
@@ -83,8 +84,16 @@
 -(NSArray *)permute:(NSArray *)nums{
     // 记录「路径」
     NSMutableArray *track=[NSMutableArray array];
-    [self backtrack:nums recordTrack:track];
-    return self.res;
+    
+    // 解法1
+//    [self backtrack:nums recordTrack:track];
+//    return self.res;
+    
+    
+    // 解法2
+    NSMutableArray *mutable_nums=[NSMutableArray arrayWithArray:nums];
+    [self backtrack2:0 nums:mutable_nums recordTrack:track];
+    return track;
 }
 
 // 路径：记录在 track 中
@@ -113,8 +122,83 @@
     }
 }
 
+/**
+ 解法2
+ 就是把穿进来的原数组原地替换，三个数都替换完了就是排列出了一组数
+ 第一层index=0，有三种方案：0和0替换，0和1替换，0和2替换
+ 那么先选第一种方案把nums[0]和nums[0]替换，之后index+1，钻入第二层：
+    第二层时index=1那么只有两种方案1和1替换，1和2替换，
+    先选第一种方案把nums[1]和nums[1]替换，之后index+1，钻入第三层：
+                第三层时index=2，那么只有一种方案2和2替换
+                只能把nums[2]和nums[2]替换，之后index+1，钻入第四层：
+                    第四层时index=3，等于数组长度了。找到一组了。之后回退到第三层
+                再来到第三时index=2，把nums[2]和nums[2]替换则恢复数组原有数据，之后会退到第二层
+        第二层时index=1，是有两种方案的，不过先把刚才交换的元素再次交换下，恢复原有数据。之后i++
+        1和2交换，再进入下一层。。。。。。
+ */
+-(void)backtrack2:(NSInteger)index
+             nums:(NSMutableArray *)nums
+      recordTrack:(NSMutableArray *)track{
+    if (index == nums.count) {
+        // 获得一组数据排好的
+        NSMutableArray *arr=[NSMutableArray arrayWithArray:nums]; //O（n）
+        [track addObject:arr];
+        return;
+    }
+    // 枚举这一层所有可以做出的选择
+    for (NSInteger i = index; i < nums.count; i++) { // O(n!)每组的数字都会遍历到
+        
+        NSNumber *forward_index_Obj=nums[index];
+        nums[index]=nums[i];
+        nums[i]=forward_index_Obj;
+        
+        [self backtrack2:index+1 nums:nums recordTrack:track];
+        
+        NSNumber *backword_index_Obj=nums[index];
+        nums[index]=nums[i];
+        nums[i]=backword_index_Obj;
+    }
+}
 
-
+//解放3 去除重复的值
+-(void)backtrack3:(NSInteger)index
+             nums:(NSMutableArray *)nums
+      recordTrack:(NSMutableArray *)track{
+    if (index == nums.count) {
+        // 获得一组数据排好的
+        NSMutableArray *arr=[NSMutableArray arrayWithArray:nums]; //O（n）
+        [track addObject:arr];
+        return;
+    }
+    // 枚举这一层所有可以做出的选择
+    for (NSInteger i = index; i < nums.count; i++) { // O(n!)每组的数字都会遍历到
+        
+        // 处理重复
+        if ([self isRepeat:nums index:index current:i]) continue;
+        
+        // 交换 idnex 和 i 索引下的值
+        NSNumber *forward_index_Obj=nums[index];
+        nums[index]=nums[i];
+        nums[i]=forward_index_Obj;
+        
+        // 钻入下一层
+        [self backtrack2:index+1 nums:nums recordTrack:track];
+        
+        // 再次交换 idnex 和 i 索引下的值，数组恢复。
+        NSNumber *backword_index_Obj=nums[index];
+        nums[index]=nums[i];
+        nums[i]=backword_index_Obj;
+    }
+}
+// 比较从index 到 cur 索引是否存在相同的值
+-(BOOL)isRepeat:(NSMutableArray *)nums index:(NSInteger)index current:(NSInteger)cur{
+    for (NSInteger i = index; i < cur; i++) {
+        NSNumber *n1=nums[i];
+        NSNumber *n2=nums[cur];
+        if (n1.intValue == n2.intValue) return YES;
+    }
+    return NO;
+}
 
 
 
