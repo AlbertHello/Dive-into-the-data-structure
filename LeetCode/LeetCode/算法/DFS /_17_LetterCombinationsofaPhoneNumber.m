@@ -70,10 +70,14 @@
     NSInteger num = numChar.intValue;
     NSMutableArray *lettrs =  self.lettersArray[num - 2];
     for (NSString *letter in lettrs) {
-        [track addObject:letter];
-        [self dfs:index + 1 str:digits track:track final:final];
-        [track removeLastObject];
+        [track addObject:letter]; // 添加选择
+        [self dfs:index + 1 str:digits track:track final:final]; // 进入下一层
+        [track removeLastObject]; // 撤销选择
     }
+}
++(void)letterCombinationsTest{
+    _17_LetterCombinationsofaPhoneNumber *letter=[[_17_LetterCombinationsofaPhoneNumber alloc]init];
+    NSLog(@"%@",[letter  letterCombinations:@"29"]);
 }
 
 @end

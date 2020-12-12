@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface _17_LetterCombinationsofaPhoneNumber : NSObject
 
++(void)letterCombinationsTest;
+
 @end
 
 NS_ASSUME_NONNULL_END

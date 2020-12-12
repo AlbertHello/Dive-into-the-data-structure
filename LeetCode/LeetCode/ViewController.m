@@ -42,6 +42,9 @@
 #import "_252_MeetingRoom.h"
 #import "_253_MeetingRoom_2.h"
 #import "_42_Trapping_Rain_Water.h"
+#import "_22_GenerateParentheses.h"
+#import "_17_LetterCombinationsofaPhoneNumber.h"
+
 
 
 
@@ -103,7 +106,9 @@
 //    [_7_Reverse_Integer integerReverseTest];
 //    [_252_MeetingRoom canAttendMeetingsTest];
 //    [_253_MeetingRoom_2 minMeetingRoomTest];
-    [_42_Trapping_Rain_Water trapTest];
+//    [_42_Trapping_Rain_Water trapTest];
+//    [_22_GenerateParentheses generateParenthesis_OC_TEST];
+    [_17_LetterCombinationsofaPhoneNumber letterCombinationsTest];
     
 }
 -(void)sortTest{

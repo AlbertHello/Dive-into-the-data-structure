@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface _22_GenerateParentheses : NSObject
 
++(void)generateParenthesis_OC_TEST;
+
 @end
 
 NS_ASSUME_NONNULL_END
