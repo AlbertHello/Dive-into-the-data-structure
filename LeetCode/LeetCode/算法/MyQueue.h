@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(BOOL)isEmpty;
 -(int)dequeue;
--(int)peek;
 -(void)enqueue:(int)val;
+-(int)peek;
 
 @end
 

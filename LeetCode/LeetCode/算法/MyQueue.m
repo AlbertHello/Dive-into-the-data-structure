@@ -26,8 +26,8 @@
 
 @interface MyQueue ()
 @property(nonatomic,assign)int size;
-@property(nonatomic,strong)MyQueueNode *first;
-@property(nonatomic,strong)MyQueueNode *last;
+@property(nonatomic,strong)MyQueueNode *front;
+@property(nonatomic,strong)MyQueueNode *rear;
 @end
 
 @implementation MyQueue
@@ -36,32 +36,32 @@
 }
 -(int)dequeue{
     if ([self isEmpty]) return -1;
-    int val = self.first.val;
-    MyQueueNode *first_node=self.first;
+    int val = self.front.val;
+    MyQueueNode *front_node=self.front;
     if (self.size == 1) {
-        self.first=nil;
-        self.last=nil;
+        self.front=nil;
+        self.rear=nil;
     }else{
-        self.first=self.first.next;
+        self.front=self.front.next;
     }
-    first_node=nil;
+    front_node=nil;
     self.size--;
     return val;
 }
 -(int)peek{
     if ([self isEmpty]) return -1;
-    return self.first.val;
+    return self.front.val;
 }
 -(void)enqueue:(int)val{
     MyQueueNode *new_node=[[MyQueueNode alloc]init];
     new_node.val=val;
     new_node.next=nil;
     if (self.size == 0) {
-        self.first=new_node;
+        self.front=new_node;
     }else{
-        self.last.next=new_node;
+        self.rear.next=new_node;
     }
-    self.last=new_node;
+    self.rear=new_node;
     self.size++;
 }
 @end
