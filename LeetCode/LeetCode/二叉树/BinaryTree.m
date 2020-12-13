@@ -1141,19 +1141,40 @@ static NSMutableArray *result_113 = nil;
  时间复杂度O(N)，每个节点都要遍历，空间复杂度是O(H)，递归树的深度。
  */
 -(int)maxPathSum:(BTNode *)root{
+    if (root == nil) return 0;
+    int maxSum=INT_MIN;
+    [self dfs:root max:&maxSum];
+    return maxSum;
+}
+-(int)dfs:(BTNode *)root max:(int *)maxSum{
     if (root == nil) {
         return 0;
     }
-    int left = [self maxPathSum:root.left]; // 左子树提供的最大收益
-    int right = [self maxPathSum:root.right]; // 右子树提供的最大收益
+    int left = [self dfs:root.left max:maxSum]; // 左子树提供的最大收益
+    int right = [self dfs:root.right max:maxSum]; // 右子树提供的最大收益
     // 当前子树内部的最大路径和
     int innerMaxSum=left + root.data + right;
     // 挑战一下最大纪录
-    self.maxValue = max(self.maxValue, innerMaxSum);
+    *maxSum = max(*maxSum, innerMaxSum);
     // 对外提供的最大和
     int outputMaxSum = root.data + max(left, right);
     if (outputMaxSum < 0) return 0; // 对外提供的路径和为负，直接返回0
     return outputMaxSum; // 否则正常返回
 }
++(void)binaryTreeTest{
+    BinaryTree *bt=[[BinaryTree alloc]init];
+    BTNode *root=[[BTNode alloc]init];
+    root.data=1;
+    BTNode *node1=[[BTNode alloc]init];
+    node1.data=2;
+    root.left=node1;
+    BTNode *node2=[[BTNode alloc]init];
+    node2.data=3;
+    root.right=node2;
+    
+    int maxv = [bt maxPathSum:root];
+    NSLog(@"maxPathSum: %d",maxv);
+}
+
 
 @end

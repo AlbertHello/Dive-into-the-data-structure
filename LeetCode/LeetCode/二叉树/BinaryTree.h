@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BinaryTree : NSObject
 
++(void)binaryTreeTest;
+
 @end
 
 NS_ASSUME_NONNULL_END

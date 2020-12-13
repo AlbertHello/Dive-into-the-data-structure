@@ -44,6 +44,8 @@
 #import "_42_Trapping_Rain_Water.h"
 #import "_22_GenerateParentheses.h"
 #import "_17_LetterCombinationsofaPhoneNumber.h"
+#import "BinaryTree.h"
+
 
 
 
@@ -79,8 +81,9 @@
     
     
 //    [self test];
-    [self leetcodeTest];
+//    [self leetcodeTest];
 //    [self sortTest];
+    [self testBinaryTree];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -108,8 +111,11 @@
 //    [_253_MeetingRoom_2 minMeetingRoomTest];
 //    [_42_Trapping_Rain_Water trapTest];
 //    [_22_GenerateParentheses generateParenthesis_OC_TEST];
-    [_17_LetterCombinationsofaPhoneNumber letterCombinationsTest];
+//    [_17_LetterCombinationsofaPhoneNumber letterCombinationsTest];
     
+}
+-(void)testBinaryTree{
+    [BinaryTree binaryTreeTest];
 }
 -(void)sortTest{
 //    int arr1[10]={90,56,23,4,1,45,57,29,40,39};
