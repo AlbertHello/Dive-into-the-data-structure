@@ -106,10 +106,9 @@ char * longestPalindrome(char * s){
 // 中心扩散法2
 
 // 这个方法不再每次都返回字符串，频繁创建字符串也会耗性能。
-//这个方法返回的是源字符串S中满足回文条件的子串的起始位置和长度
-// length 满足的回文串的长度
-// return 返回的是回文串的起始位置
-int palindrome2(char *s, int l, int r, int *length) {
+// 这个方法返回的是源字符串S中满足回文条件的子串的起始位置和长度
+// return 返回的是回文串的长度
+int palindrome2(char *s, int l, int r) {
     // l >= 0 && r < strlen(s) 防止索引越界
     // s[l] == s[r]  左右字符相等就满足时回文串了
     while (l >= 0 && r < strlen(s) && s[l] == s[r]) {
@@ -119,32 +118,33 @@ int palindrome2(char *s, int l, int r, int *length) {
     // 直到不再满足回文串的条件，就把前一次循环的满足的回文串提取出来
     // r - l -1 是满足的回文串的长度
     // l+1是满足的回文串在原字符串S中的起始位置
-    *length = r - l - 1;
-    return l + 1;
+    return r - l - 1;
 }
 // 优化
+//时间复杂度：O(n^2)，其中n 是字符串的长度。长度为1和2 的回文中心分别有n 和n−1 个，
+//每个回文中心最多会向外扩展O(n) 次。
+//空间复杂度：O(1)
 char * longestPalindrome2(char * s){
-    int max = 0;
+    if (s == NULL) return NULL;
+    if (strlen(s) <=1 ) return s;
     int start = 0;
+    int maxLen = 1; // 最长回文子串的长度（至少是1）
     for (int i = 0; i < strlen(s); i++) {
         // 以 s[i] 为中心的最长回文子串，这是处理奇数长度的字符串
-        int length1 = 0;
-        int start1 = palindrome2(s, i, i, &length1);
+        int length1 = palindrome2(s, i, i);
         // 以 s[i] 和 s[i+1] 为中心的最长回文子串 。这是处理偶数长度的字符串
-        int length2 = 0;
-        int start2 = palindrome2(s, i, i + 1,&length2);
-        //在max, length1, length2中寻找最长的一个
-        int len = (length1 > length2)?length1:length2;
-        max = max > len ? max : len;
-        start = (length1 > length2)?start1:start2;
+        int length2 = palindrome2(s, i, i + 1);
+        //在maxLen, length1, length2中寻找最长的一个
+        int len = max(length1,length2);
+        // 计算对应最大回文子串的起点和终点
+        if (len > maxLen){ // 只有len 大于 已有的回文串的长度：end - start 的情况下才计算
+            maxLen = len;
+            start = i - (maxLen - 1) / 2;
+        }
     }
-    if (max > 0) {
-        char *res = (char *)malloc(sizeof(char)*(max + 1));
-        memcpy(res, s, (max + 1));
-        return res;
-    }else{
-        return NULL;
-    }
+    char *res = (char *)malloc(sizeof(char)*(maxLen));
+    memcpy(res, s+start,maxLen);
+    return res;
 }
 
 /**
@@ -162,8 +162,9 @@ bool isPalindrome(char *s) {
     return true;
 }
 void longestPalindromeTest(void){
-    char *src="baab";
+    char *src="cbbd";
 //    bool isP=isPalindrome(src);
     char *dest=longestPalindrome2(src);
     printf("%s\n",dest);
 }
+
