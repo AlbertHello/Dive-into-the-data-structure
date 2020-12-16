@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface QuickSort : Sort
 
 -(void)quickSort:(NSMutableArray *)array;
-
+/// C 实现 快排 [ begin, end )
+void quick_sort(int *nums, int begin, int end);
 @end
 
 NS_ASSUME_NONNULL_END

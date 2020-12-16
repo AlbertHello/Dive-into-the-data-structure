@@ -6,6 +6,7 @@
 //
 
 #import "15_ThreeSum.h"
+#import "QuickSort.h"
 
 @implementation _5_ThreeSum
 
@@ -15,6 +16,7 @@
 /**
  15. 三数之和
  https://leetcode-cn.com/problems/3sum/
+ 难度 中等
  给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有满足条件且不重复的三元组。
  注意：答案中不可以包含重复的三元组。
  示例：
@@ -202,30 +204,11 @@
     return res;
 }
 
-// 下面是C实现threeSum
-int *sort_array(int *nums,int numsSize){
-    //快排 最好、平均时间复杂度：O(nlogn)
-    for(int j = 0; j < numsSize - 1; j += 1){
-        int min = j;
-        for(int i = j + 1; i < numsSize; i += 1){
-            if(nums[i] < nums[min]){
-                min = i;
-            }
-        }
-        if(min != j){
-            int temp;
-            temp = nums[j];
-            nums[j] = nums[min];
-            nums[min] = temp;
-        }
-    }
-    return nums;
-}
 int** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes){
     // 1 对于数组长度n，如果数组为null 或者数组长度小于3，返回[]。
     if (nums==NULL || numsSize < 3) return NULL;
     // 2 排序
-    nums=sort_array(nums,numsSize);
+    quick_sort(nums, 0, numsSize);// 时间：nlogn 空间：logn
     int **res=(int**)malloc(sizeof(int *)*numsSize*numsSize);
     // int res[10][10]={0};
     int k=0;

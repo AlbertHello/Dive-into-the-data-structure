@@ -15,8 +15,6 @@
 
 @implementation QuickSort
 
-void quick_sort(int a[], int begin, int end);
-
 
 // 大O排序
 // O(1) < O(logn) < O(n) < O(nlogn) < O(n^2) < O(2^n) < O(n!)
@@ -126,19 +124,19 @@ void quick_sort(int a[], int begin, int end);
     // 返回轴点元素的位置
     return begin;
 }
-// C 实现 快排
-void quick_sort(int a[], int begin, int end){
+/// C 实现 快排 [ begin, end )
+void quick_sort(int *nums, int begin, int end){
     if (end - begin < 2) return;
     // 在[begin,end)随机选择一个元素跟begin位置进行交换，降低最坏情况出现的概率
     int random_index=(arc4random()%(end-begin)) + begin;
-    int temp_begin = a[begin];
-    a[begin] = a[random_index];
-    a[random_index]=temp_begin;
+    int temp_begin = nums[begin];
+    nums[begin] = nums[random_index];
+    nums[random_index]=temp_begin;
     
     int left = begin;
     int right = end;
     // 备份begin位置的元素，还是取index=begin处的元素作为标准值判断
-    int pivot = a[begin]; // 这个标准值已经是[begin， end)随机的了，降低最坏情况发生概率
+    int pivot = nums[begin]; // 这个标准值已经是[begin， end)随机的了，降低最坏情况发生概率
     // end指向最后一个元素
     right--;
     
@@ -146,23 +144,23 @@ void quick_sort(int a[], int begin, int end){
         // 左右begin end交替判断就可以用到这两个while来实现
         while (left < right) {
             // 如果大于号改成大于等于号，则可能就会导致最坏情况发生
-            if (a[right] > pivot) { // 右边元素 > 轴点元素
+            if (nums[right] > pivot) { // 右边元素 > 轴点元素
                 right--;
             } else { // 右边元素 <= 轴点元素 就得往轴点元素左边移动了
                 //下一轮就从轴点左侧开始判断
                 //begin end 交替判断
-                a[left++]=a[right];
+                nums[left++]=nums[right];
                 break;
             }
         }
         while (left < right) {
             // 如果小于号改成小于等于号，则可能就会导致最坏情况发生
-            if (a[left] < pivot) { // 左边元素 < 轴点元素
+            if (nums[left] < pivot) { // 左边元素 < 轴点元素
                 left++;
             } else { // 左边元素 >= 轴点元素 就得往轴点元素右边移动了
                 //下一轮就从轴点右侧开始判断了
                 //begin end 交替判断
-                a[right--]=a[left];
+                nums[right--]=nums[left];
                 break;
             }
         }
@@ -170,11 +168,11 @@ void quick_sort(int a[], int begin, int end){
     
     //能来到这里说明left=right了，也就找到了最中间的那个值的索引
     // 将轴点元素放入最终的位置
-    a[left]=pivot;
+    nums[left]=pivot;
     
     // 对子序列进行快速排序
-    quick_sort(a, begin, left); // [begin, left)
-    quick_sort(a, left+1, end); // [left+1, end)
+    quick_sort(nums, begin, left); // [begin, left)
+    quick_sort(nums, left+1, end); // [left+1, end)
 }
 
 /*
