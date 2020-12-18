@@ -80,7 +80,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
           size:(int)numsSize
         target:(int)target
     returnSize:(int*) returnSize{
-    //以字典当做哈希
+    // 以字典当做哈希
     NSMutableDictionary *dict=[NSMutableDictionary dictionary];
     for (int i=0; i<numsSize; i++) {
         int cmp=target-nums[i];
@@ -90,6 +90,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
             int *arr=(int *)malloc(sizeof(int)*2);
             arr[0]=index;
             arr[1]=i;
+            *returnSize=2;
             return arr;
         }else{
             NSString *key_used=@(nums[i]).stringValue;
