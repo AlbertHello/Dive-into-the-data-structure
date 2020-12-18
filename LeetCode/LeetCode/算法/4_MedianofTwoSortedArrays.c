@@ -10,7 +10,7 @@
 
 /*
  4. 寻找两个正序数组的中位数
- 
+ 难度 困难
  给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的中位数。
 
  进阶：你能设计一个时间复杂度为 O(log (m+n)) 的算法解决此问题吗？
@@ -160,7 +160,7 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
  nums1, m=4 : 2 4 6 | 15
  nums2, n=5 : 1 7 | 8 10 17
  
- m+n=奇数，left_size=5， right_size=5
+ m+n=偶数，left_size=5， right_size=5
  nums1, m=4 : 2 4 6 | 15
  nums2, n=6 : 1 7 | 8 10 17 20
  
