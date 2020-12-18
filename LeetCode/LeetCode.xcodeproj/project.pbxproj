@@ -32,6 +32,7 @@
 		373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */; };
 		3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3736330625419FB20039E4A6 /* 8_StringtoInteger.m */; };
 		3743DDD1258C602600E7880F /* _53_MaximumSubarray.m in Sources */ = {isa = PBXBuildFile; fileRef = 3743DDD0258C602600E7880F /* _53_MaximumSubarray.m */; };
+		3743DDD6258C68DD00E7880F /* _300_Longest_Increasing_Subsequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3743DDD5258C68DD00E7880F /* _300_Longest_Increasing_Subsequence.m */; };
 		3757DD80257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m in Sources */ = {isa = PBXBuildFile; fileRef = 3757DD7F257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m */; };
 		375921FC255FED470055F16E /* _42_Trapping_Rain_Water.m in Sources */ = {isa = PBXBuildFile; fileRef = 375921FB255FED470055F16E /* _42_Trapping_Rain_Water.m */; };
 		37667170257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3766716F257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.m */; };
@@ -159,6 +160,8 @@
 		3736330625419FB20039E4A6 /* 8_StringtoInteger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 8_StringtoInteger.m; sourceTree = "<group>"; };
 		3743DDCF258C602600E7880F /* _53_MaximumSubarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _53_MaximumSubarray.h; sourceTree = "<group>"; };
 		3743DDD0258C602600E7880F /* _53_MaximumSubarray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _53_MaximumSubarray.m; sourceTree = "<group>"; };
+		3743DDD4258C68DD00E7880F /* _300_Longest_Increasing_Subsequence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _300_Longest_Increasing_Subsequence.h; sourceTree = "<group>"; };
+		3743DDD5258C68DD00E7880F /* _300_Longest_Increasing_Subsequence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _300_Longest_Increasing_Subsequence.m; sourceTree = "<group>"; };
 		3757DD7E257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _Offer_47_Max_value_Of_Gift.h; sourceTree = "<group>"; };
 		3757DD7F257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _Offer_47_Max_value_Of_Gift.m; sourceTree = "<group>"; };
 		375921FA255FED470055F16E /* _42_Trapping_Rain_Water.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _42_Trapping_Rain_Water.h; sourceTree = "<group>"; };
@@ -512,6 +515,8 @@
 				37FDFE702580C78B006F8540 /* _253_MeetingRoom_2.m */,
 				37018B8B257F5D0700EA658E /* _283_Move_Zeroes.h */,
 				37018B8C257F5D0700EA658E /* _283_Move_Zeroes.m */,
+				3743DDD4258C68DD00E7880F /* _300_Longest_Increasing_Subsequence.h */,
+				3743DDD5258C68DD00E7880F /* _300_Longest_Increasing_Subsequence.m */,
 				35C9B1FF257C908F00CF3899 /* 动态规划 */,
 				378C9F58254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.h */,
 				378C9F59254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m */,
@@ -773,6 +778,7 @@
 				37C1EF3C2574EDE7002346A9 /* _16_16Sub_Sort_LCCI.m in Sources */,
 				37CF43892538357900CBBDEF /* SceneDelegate.m in Sources */,
 				37CF43CC2538362700CBBDEF /* 206_ReverseLinkedList.c in Sources */,
+				3743DDD6258C68DD00E7880F /* _300_Longest_Increasing_Subsequence.m in Sources */,
 				3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */,
 				3790F9EE257891D900B2701E /* _739_DailyTeampreture.m in Sources */,
 				3564FE59254E5E2600230505 /* MergeSort.m in Sources */,

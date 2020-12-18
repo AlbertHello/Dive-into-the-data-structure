@@ -45,6 +45,8 @@
 #import "_22_GenerateParentheses.h"
 #import "_17_LetterCombinationsofaPhoneNumber.h"
 #import "BinaryTree.h"
+#import "_300_Longest_Increasing_Subsequence.h"
+
 
 
 
@@ -100,7 +102,7 @@
 //    [_6_Plus_One plusOneTest];
 //    [_821_Shortest_Distance_to_a_Character shortestToCharTest];
 //    [_46_LRU_Cache LRU_Cache_Test];
-    longestPalindromeTest();
+//    longestPalindromeTest();
 //    [_394_Decode_String decodeStringTest];
 //    [_16_16Sub_Sort_LCCI subSortTest];
 //    [_151_Reverse_Words_in_a_String reverseWordsTest];
@@ -112,6 +114,7 @@
 //    [_42_Trapping_Rain_Water trapTest];
 //    [_22_GenerateParentheses generateParenthesis_OC_TEST];
 //    [_17_LetterCombinationsofaPhoneNumber letterCombinationsTest];
+    lengthOfLISTest();
     
 }
 -(void)testBinaryTree{
