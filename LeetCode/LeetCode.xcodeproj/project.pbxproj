@@ -31,6 +31,7 @@
 		3721397125667DBA00739C1D /* _23_Merge_k_Sorted_Lists.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721397025667DBA00739C1D /* _23_Merge_k_Sorted_Lists.m */; };
 		373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */; };
 		3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3736330625419FB20039E4A6 /* 8_StringtoInteger.m */; };
+		3743DDD1258C602600E7880F /* _53_MaximumSubarray.m in Sources */ = {isa = PBXBuildFile; fileRef = 3743DDD0258C602600E7880F /* _53_MaximumSubarray.m */; };
 		3757DD80257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m in Sources */ = {isa = PBXBuildFile; fileRef = 3757DD7F257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m */; };
 		375921FC255FED470055F16E /* _42_Trapping_Rain_Water.m in Sources */ = {isa = PBXBuildFile; fileRef = 375921FB255FED470055F16E /* _42_Trapping_Rain_Water.m */; };
 		37667170257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3766716F257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.m */; };
@@ -88,7 +89,6 @@
 		37CF43CE2538362700CBBDEF /* 1002_Find_Common_Characters.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43BC2538362700CBBDEF /* 1002_Find_Common_Characters.c */; };
 		37CF43CF2538362700CBBDEF /* 20_ValidParentheses.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF43C02538362700CBBDEF /* 20_ValidParentheses.c */; };
 		37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */; };
-		37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */ = {isa = PBXBuildFile; fileRef = 37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */; };
 		37D01C66255A3764007B297E /* _232_Implement_Queue_using_Stacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D01C65255A3764007B297E /* _232_Implement_Queue_using_Stacks.m */; };
 		37D01C6A255A405F007B297E /* _225_Implement_Stack_using_Queues.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D01C69255A405F007B297E /* _225_Implement_Stack_using_Queues.m */; };
 		37D01D4E255A866D007B297E /* _768_Max_Chunks_To_Make_Sorted2.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D01D4D255A866D007B297E /* _768_Max_Chunks_To_Make_Sorted2.m */; };
@@ -157,6 +157,8 @@
 		373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 3_LongestSubstringWithoutRepeatingCharacters.m; sourceTree = "<group>"; };
 		3736330525419FB20039E4A6 /* 8_StringtoInteger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 8_StringtoInteger.h; sourceTree = "<group>"; };
 		3736330625419FB20039E4A6 /* 8_StringtoInteger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 8_StringtoInteger.m; sourceTree = "<group>"; };
+		3743DDCF258C602600E7880F /* _53_MaximumSubarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _53_MaximumSubarray.h; sourceTree = "<group>"; };
+		3743DDD0258C602600E7880F /* _53_MaximumSubarray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _53_MaximumSubarray.m; sourceTree = "<group>"; };
 		3757DD7E257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _Offer_47_Max_value_Of_Gift.h; sourceTree = "<group>"; };
 		3757DD7F257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _Offer_47_Max_value_Of_Gift.m; sourceTree = "<group>"; };
 		375921FA255FED470055F16E /* _42_Trapping_Rain_Water.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _42_Trapping_Rain_Water.h; sourceTree = "<group>"; };
@@ -269,8 +271,6 @@
 		37CF43C02538362700CBBDEF /* 20_ValidParentheses.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = 20_ValidParentheses.c; sourceTree = "<group>"; };
 		37CF4419253838EC00CBBDEF /* 70_ClimbingStairs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 70_ClimbingStairs.h; sourceTree = "<group>"; };
 		37CF441A253838EC00CBBDEF /* 70_ClimbingStairs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 70_ClimbingStairs.c; sourceTree = "<group>"; };
-		37CF44202538475D00CBBDEF /* 53_MaximumSubarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 53_MaximumSubarray.h; sourceTree = "<group>"; };
-		37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 53_MaximumSubarray.c; sourceTree = "<group>"; };
 		37D01C64255A3764007B297E /* _232_Implement_Queue_using_Stacks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _232_Implement_Queue_using_Stacks.h; sourceTree = "<group>"; };
 		37D01C65255A3764007B297E /* _232_Implement_Queue_using_Stacks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _232_Implement_Queue_using_Stacks.m; sourceTree = "<group>"; };
 		37D01C68255A405F007B297E /* _225_Implement_Stack_using_Queues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _225_Implement_Stack_using_Queues.h; sourceTree = "<group>"; };
@@ -488,8 +488,8 @@
 				37A6E0C42580717300FAB7DD /* _54_Spiral_Matrix.m */,
 				37C1EF5F25751B22002346A9 /* _51_N-Queens.h */,
 				37C1EF6025751B22002346A9 /* _51_N-Queens.m */,
-				37CF44202538475D00CBBDEF /* 53_MaximumSubarray.h */,
-				37CF44212538475D00CBBDEF /* 53_MaximumSubarray.c */,
+				3743DDCF258C602600E7880F /* _53_MaximumSubarray.h */,
+				3743DDD0258C602600E7880F /* _53_MaximumSubarray.m */,
 				37EBD8D425503B6200D726A5 /* 66_Plus_One.h */,
 				37EBD8D525503B6200D726A5 /* 66_Plus_One.m */,
 				37CF4419253838EC00CBBDEF /* 70_ClimbingStairs.h */,
@@ -732,7 +732,6 @@
 				37CF43C62538362700CBBDEF /* 141_LinkedListCycle.c in Sources */,
 				3586A3FC2545632300CD2C61 /* BubbleSort3.m in Sources */,
 				37EBD9552553D2FD00D726A5 /* _344_Reverse_String.m in Sources */,
-				37CF44222538475D00CBBDEF /* 53_MaximumSubarray.c in Sources */,
 				37A6E0C1257FB08800FAB7DD /* _50_My_Pow.m in Sources */,
 				37CF43C82538362700CBBDEF /* 21_MergeTwoSortedList.c in Sources */,
 				35197EC825768B71009D5F0A /* _155_Min_Stack.m in Sources */,
@@ -785,6 +784,7 @@
 				37D01D52255AB80C007B297E /* _24_Swap_Nodes_in_Pairs.m in Sources */,
 				3721397125667DBA00739C1D /* _23_Merge_k_Sorted_Lists.m in Sources */,
 				37CF43CA2538362700CBBDEF /* 203_RemoveLinkedListElements.c in Sources */,
+				3743DDD1258C602600E7880F /* _53_MaximumSubarray.m in Sources */,
 				37D01C66255A3764007B297E /* _232_Implement_Queue_using_Stacks.m in Sources */,
 				37A79D8A255D19BD0025A043 /* _160_Intersection_of_Two_Linked_Lists.m in Sources */,
 			);
