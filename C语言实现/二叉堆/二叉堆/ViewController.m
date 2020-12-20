@@ -53,7 +53,7 @@
     [heap printHeap];
 }
 
-//面试题
+//面试题 top K
 //在大量数据中找出最大的前k个数
 //采用小顶堆
 -(void)test4{
