@@ -105,10 +105,10 @@
 //    }
     
     // 方式二
-    int ele=[self.array[index] intValue];
+    int ele=[self.array[index] intValue]; // 备份这个值
     while (index>0) {
-        NSUInteger p_index=(index-1) >> 1;
-        int p_ele=[self.array[p_index] intValue];
+        NSUInteger p_index=(index-1) >> 1; // 父节点index
+        int p_ele=[self.array[p_index] intValue]; // 父节点的值
         if ([self cmp:ele to:p_ele] < 0) break; //加入的值比父节点小，不需要上虑
         //将父节点的内容存储在index中
         //index一直往上找，最终这个最大的值一直找到根节点，直接替换根节点的值
