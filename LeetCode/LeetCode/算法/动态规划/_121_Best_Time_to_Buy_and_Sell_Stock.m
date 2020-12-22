@@ -203,8 +203,8 @@ int maxProfit_with_cool(int* prices, int pricesSize) {
     int dp_pre_0 = 0; // 代表 dp[i-2][0]
     for (int i = 0; i < pricesSize; i++) {
         int temp = dp_i_0;
-        dp_i_0 = Math.max(dp_i_0, dp_i_1 + prices[i]);
-        dp_i_1 = Math.max(dp_i_1, dp_pre_0 - prices[i]);
+        dp_i_0 = max(dp_i_0, dp_i_1 + prices[i]);
+        dp_i_1 = max(dp_i_1, dp_pre_0 - prices[i]);
         dp_pre_0 = temp;
     }
     return dp_i_0;
@@ -251,14 +251,15 @@ int maxProfit_with_fee(int* prices, int pricesSize, int fee) {
  dp[i][1][0] = max(dp[i-1][1][0], dp[i-1][1][1] + prices[i])
  dp[i][1][1] = max(dp[i-1][1][1], -prices[i])
  */
-int maxProfit_k_2(int[] prices) {
+int maxProfit_k_2(int* prices,int pricesSize) {
     int dp_i10 = 0, dp_i11 = INT_MIN;
     int dp_i20 = 0, dp_i21 = INT_MIN;
-    for (int price : prices) {
-        dp_i20 = Math.max(dp_i20, dp_i21 + price);
-        dp_i21 = Math.max(dp_i21, dp_i10 - price);
-        dp_i10 = Math.max(dp_i10, dp_i11 + price);
-        dp_i11 = Math.max(dp_i11, -price);
+    for (int i=0; i<pricesSize; i++) {
+        int price = prices[i];
+        dp_i20 = max(dp_i20, dp_i21 + price);
+        dp_i21 = max(dp_i21, dp_i10 - price);
+        dp_i10 = max(dp_i10, dp_i11 + price);
+        dp_i11 = max(dp_i11, -price);
     }
     return dp_i20;
 }
@@ -269,18 +270,17 @@ int maxProfit_k_2(int[] prices) {
  一次交易由买入和卖出构成，至少需要两天。所以说有效的限制 k 应该不超过 n/2，如果超过，就没有约束作用了，相当于 k = +infinity。这种情况是之前解决过的。
  直接把之前的代码重用：
  */
-int maxProfit_k_any(int max_k, int[] prices) {
-    int n = prices.length;
-    if (max_k > n / 2)
-        return maxProfit_k_inf(prices);
-    int[][][] dp = new int[n][max_k + 1][2];
-    for (int i = 0; i < n; i++)
-        for (int k = max_k; k >= 1; k--) {
-            if (i - 1 == -1) { /* 处理 base case */ }
-            dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i]);
-            dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i]);
-        }
-    return dp[n - 1][max_k][0];
+int maxProfit_k_any(int max_k, int *prices, int pricesSize) {
+    if (max_k > pricesSize / 2) return maxProfit_k_inf(prices, pricesSize);
+//    int dp[pricesSize][max_k+1][2]  ={0};
+//    for (int i = 0; i < n; i++)
+//        for (int k = max_k; k >= 1; k--) {
+//            if (i - 1 == -1) { /* 处理 base case */ }
+//            dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i]);
+//            dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i]);
+//        }
+//    return dp[n - 1][max_k][0];
+    return 0;
 }
 
 -(void)maxProfitTest{

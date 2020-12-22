@@ -33,6 +33,9 @@
 		3721397125667DBA00739C1D /* _23_Merge_k_Sorted_Lists.m in Sources */ = {isa = PBXBuildFile; fileRef = 3721397025667DBA00739C1D /* _23_Merge_k_Sorted_Lists.m */; };
 		373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */; };
 		3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3736330625419FB20039E4A6 /* 8_StringtoInteger.m */; };
+		373B97B82591B4C100054150 /* _153_FindMinimuminRotatedSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B97B72591B4C100054150 /* _153_FindMinimuminRotatedSortedArray.m */; };
+		373EA00A259203A900B22510 /* _347_TopKFrequentElements.m in Sources */ = {isa = PBXBuildFile; fileRef = 373EA009259203A900B22510 /* _347_TopKFrequentElements.m */; };
+		373EA00F25920C3B00B22510 /* BinaryHeap.m in Sources */ = {isa = PBXBuildFile; fileRef = 373EA00E25920C3B00B22510 /* BinaryHeap.m */; };
 		3743DDD1258C602600E7880F /* _53_MaximumSubarray.m in Sources */ = {isa = PBXBuildFile; fileRef = 3743DDD0258C602600E7880F /* _53_MaximumSubarray.m */; };
 		3743DDD6258C68DD00E7880F /* _300_Longest_Increasing_Subsequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3743DDD5258C68DD00E7880F /* _300_Longest_Increasing_Subsequence.m */; };
 		3757DD80257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m in Sources */ = {isa = PBXBuildFile; fileRef = 3757DD7F257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m */; };
@@ -164,6 +167,12 @@
 		373632C925413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 3_LongestSubstringWithoutRepeatingCharacters.m; sourceTree = "<group>"; };
 		3736330525419FB20039E4A6 /* 8_StringtoInteger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 8_StringtoInteger.h; sourceTree = "<group>"; };
 		3736330625419FB20039E4A6 /* 8_StringtoInteger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 8_StringtoInteger.m; sourceTree = "<group>"; };
+		373B97B62591B4C100054150 /* _153_FindMinimuminRotatedSortedArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _153_FindMinimuminRotatedSortedArray.h; sourceTree = "<group>"; };
+		373B97B72591B4C100054150 /* _153_FindMinimuminRotatedSortedArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _153_FindMinimuminRotatedSortedArray.m; sourceTree = "<group>"; };
+		373EA008259203A900B22510 /* _347_TopKFrequentElements.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _347_TopKFrequentElements.h; sourceTree = "<group>"; };
+		373EA009259203A900B22510 /* _347_TopKFrequentElements.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _347_TopKFrequentElements.m; sourceTree = "<group>"; };
+		373EA00D25920C3B00B22510 /* BinaryHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryHeap.h; sourceTree = "<group>"; };
+		373EA00E25920C3B00B22510 /* BinaryHeap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryHeap.m; sourceTree = "<group>"; };
 		3743DDCF258C602600E7880F /* _53_MaximumSubarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _53_MaximumSubarray.h; sourceTree = "<group>"; };
 		3743DDD0258C602600E7880F /* _53_MaximumSubarray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _53_MaximumSubarray.m; sourceTree = "<group>"; };
 		3743DDD4258C68DD00E7880F /* _300_Longest_Increasing_Subsequence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _300_Longest_Increasing_Subsequence.h; sourceTree = "<group>"; };
@@ -354,6 +363,7 @@
 				378C99AD254925FD00B64B92 /* SelectSort.m */,
 				378C99892549112D00B64B92 /* HeapSort.h */,
 				378C998A2549112D00B64B92 /* HeapSort.m */,
+				373EA00C25920C3B00B22510 /* 二叉堆 */,
 				378C9FAD254C1E3000B64B92 /* InsertSort.h */,
 				378C9FAE254C1E3000B64B92 /* InsertSort.m */,
 				3564FE57254E5E2600230505 /* MergeSort.h */,
@@ -391,6 +401,16 @@
 				370E302225550C86007FC789 /* UnionFind_QU_Rank_Path_Halving.m */,
 			);
 			path = "并查集";
+			sourceTree = "<group>";
+		};
+		373EA00C25920C3B00B22510 /* 二叉堆 */ = {
+			isa = PBXGroup;
+			children = (
+				373EA00D25920C3B00B22510 /* BinaryHeap.h */,
+				373EA00E25920C3B00B22510 /* BinaryHeap.m */,
+			);
+			name = "二叉堆";
+			path = "../../../C语言实现/优先级队列/优先级队列/二叉堆";
 			sourceTree = "<group>";
 		};
 		376CB650257E5BD200CF90F5 /* DFS  */ = {
@@ -507,6 +527,8 @@
 				378C9FA2254BC40500B64B92 /* 75_Sort_Colors.m */,
 				3776CDD12547CC4B003C8105 /* 146_LRU_Cache.h */,
 				3776CDD22547CC4B003C8105 /* 146_LRU_Cache.m */,
+				373B97B62591B4C100054150 /* _153_FindMinimuminRotatedSortedArray.h */,
+				373B97B72591B4C100054150 /* _153_FindMinimuminRotatedSortedArray.m */,
 				37EBD94F2553D0B700D726A5 /* _167_TwoSum_2.h */,
 				37EBD9502553D0B700D726A5 /* _167_TwoSum_2.m */,
 				3776CDCD2546EF5E003C8105 /* 149_Max_Points_on_a_Line.h */,
@@ -527,6 +549,8 @@
 				3743DDD5258C68DD00E7880F /* _300_Longest_Increasing_Subsequence.m */,
 				3545A50F258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.h */,
 				3545A510258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.m */,
+				373EA008259203A900B22510 /* _347_TopKFrequentElements.h */,
+				373EA009259203A900B22510 /* _347_TopKFrequentElements.m */,
 				35C9B1FF257C908F00CF3899 /* 动态规划 */,
 				378C9F58254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.h */,
 				378C9F59254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m */,
@@ -709,7 +733,9 @@
 			files = (
 				376CB655257E604B00CF90F5 /* _17_LetterCombinationsofaPhoneNumber.m in Sources */,
 				37A6E0BD257FADC100FAB7DD /* Offer_62_LastRemaining_in_Circle.m in Sources */,
+				373EA00F25920C3B00B22510 /* BinaryHeap.m in Sources */,
 				37EBD95A2553DACD00D726A5 /* _876_Middle_of_the_Linked_List.m in Sources */,
+				373EA00A259203A900B22510 /* _347_TopKFrequentElements.m in Sources */,
 				37EBD8D625503B6200D726A5 /* 66_Plus_One.m in Sources */,
 				378C9F5A254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m in Sources */,
 				3757DD80257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m in Sources */,
@@ -762,6 +788,7 @@
 				37EBD94D2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m in Sources */,
 				37D01D4E255A866D007B297E /* _768_Max_Chunks_To_Make_Sorted2.m in Sources */,
 				37CF43862538357900CBBDEF /* AppDelegate.m in Sources */,
+				373B97B82591B4C100054150 /* _153_FindMinimuminRotatedSortedArray.m in Sources */,
 				37D01D56255AC458007B297E /* _234_Palindrome_Linked_List.m in Sources */,
 				37CF43C72538362700CBBDEF /* 237_DeleteNodeinLinkedList.c in Sources */,
 				3790FA212579DC3500B2701E /* _151_Reverse_Words_in_a_String.m in Sources */,

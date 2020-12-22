@@ -8,30 +8,26 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-/// 自定义比较器  first < second   升序，first = second   相等，first > second   降序
+/// 自定义比较器
 typedef int(*Comparator)(int first,int second);
 
 @interface BinaryHeap : NSObject
-
-@property(nonatomic,assign)NSUInteger bigHeap;//是否是大顶堆，默认是YES
-/// 自定义比较器  first < second   升序，first = second   相等，first > second   降序
+/// 自定义比较器
 @property(nonatomic,assign)Comparator comparator;
 
-int size(void); // 元素的数量
-bool isEmpty(void); // 是否为空
-void clear(void); // 清空
-void add(int element); // 添加元素
-int get(void); // 获得堆顶元素
-int remove_ele(void); // 删除堆顶元素
-int  replace(int element); // 删除堆顶元素的同时插入一个新元素
-
-
+/// 元素的数量
 -(NSUInteger)size;
+// 是否为空
 -(BOOL)isEmpty;
+// 清空
 -(void)clear;
+// 添加元素
 -(void)add:(int)ele;
+// 获得堆顶元素
 -(int)getElement;
+// 删除堆顶元素
 -(int)removeEle;
+// 删除堆顶元素的同时插入一个新元素
 -(int)replace:(int)ele;
 -(void)printHeap;
 

@@ -23,7 +23,6 @@
         self.capacity=10;
         self.size=0;
         self.array=[NSMutableArray array];
-        self.bigHeap=YES;
     }
     return self;
 }
@@ -169,15 +168,6 @@
     self.capacity=newCapacity;
     printf("数组已扩容：oldSize: %lu, newSize: %d\n",(unsigned long)self.capacity,newCapacity);
 }
-
-//-(int)cmp:(int)v1 to:(int)v2{
-//    if (self.bigHeap) {
-//        return v1-v2;
-//    }else{
-//        return v2-v1;
-//    }
-//}
-
 -(void)printHeap{
     NSLog(@"Binary heap: %@",self.array);
 //    [MJBinaryTrees print:self];

@@ -46,6 +46,7 @@
 #import "_17_LetterCombinationsofaPhoneNumber.h"
 #import "BinaryTree.h"
 #import "_300_Longest_Increasing_Subsequence.h"
+#import "_347_TopKFrequentElements.h"
 
 
 
@@ -114,7 +115,8 @@
 //    [_42_Trapping_Rain_Water trapTest];
 //    [_22_GenerateParentheses generateParenthesis_OC_TEST];
 //    [_17_LetterCombinationsofaPhoneNumber letterCombinationsTest];
-    lengthOfLISTest();
+//    lengthOfLISTest();
+    [_347_TopKFrequentElements topKFrequentTest];
     
 }
 -(void)testBinaryTree{
