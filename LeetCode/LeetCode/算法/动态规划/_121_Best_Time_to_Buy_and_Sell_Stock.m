@@ -25,6 +25,14 @@
  输入: [7,6,4,3,1]
  输出: 0
  解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
+ 
+ 相关题目：
+ 买卖股票的最佳时机（简单） k = 1 就是本题
+ 买卖股票的最佳时机 II（简单） k = +infinity（正无穷）
+ 买卖股票的最佳时机 III（困难）k = 2
+ 买卖股票的最佳时机 IV（困难） k = 任意整数
+ 最佳买卖股票时机含冷冻期（中等）k不限次数，但卖完之后隔一天才能再买
+ 买卖股票的最佳时机含手续费（中等） k不限次数，但每卖一笔都有手续费
  */
 
 //时间复杂度O（n）
@@ -48,47 +56,24 @@ int maxProfit(int* prices, int pricesSize){
 
 /**
  解法二：动态规划思想
- 第i天买，第j天卖的利润湿第 i～j 天，所有相邻两天股价差的和
- 所以相邻两天股价差如下：
- 0～1 1～2 2～3 3～4 4～5
-  -6   4   -2   3   -2
- 于是就转化成了求【最大子序和】的问题
+ 1 每天都有三种「选择」：买入、卖出、无操作，我们用 buy, sell, rest 表示这三种选择。但问题是，并不是每天都可以任意选择这三种选择的，因为 sell 必须在 buy 之后，buy 必须在 sell 之后。那么 rest 操作还应该分两种状态，一种是 buy 之后的 rest（持有了股票），一种是 sell 之后的 rest（没有持有股票）。而且别忘了，我们还有交易次数 k 的限制，就是说你 buy 还只能在 k > 0 的前提下操作。
  
- 动态规划一般分为一维、二维、多维（使用状态压缩），对应形式为dp(i)、 dp(i)(j)、 二进制dp(i)(j)。
- 1. 动态规划做题步骤:
- 明确dp(i) 应该表示什么（二维情况： dp(i)(j)）；
- 根据dp(i) 和 dp(i−1) 的关系得出状态转移方程；
- 确定初始条件，如 dp(0)。
- 2 本题思路
- dp[i] 表示前 i 天的最大利润，因为我们始终要使利润最大化，则：dp[i] = max(dp[i−1],prices[i]−minprice)
+ 2 这个问题的「状态」有三个，第一个是天数，第二个是允许交易的最大次数，第三个是当前的持有状态（即之前说的 rest 的状态，我们不妨用 1 表示持有，0 表示没有持有）。然后我们用一个三维数组就可以装下这几种状态的全部组合：
  
- */
-
-int maxProfit2(int* prices, int pricesSize){
-    if (prices == NULL || pricesSize == 0) return 0;
-    int *minus=(int *)malloc(sizeof(int)*(pricesSize-1));
-    for (int i = 1; i<pricesSize; i++) {
-        minus[i-1]=prices[i]-prices[i-1];
-    }
-    
-    int pre = 0, maxAns = 0;
-    for (int i =0; i< pricesSize-1; i++) {
-        int num=minus[i];
-        //拿前面加过的数和当前数相加，然后再和该数比较
-        //如果pre + num的和比pre小，说明num是负数。
-        //无论pre重新赋值为pre + num还是num逗比原先pre要小了
-        pre = max(pre + num, num);
-        //maxAns保存的是连续子数组元素之和最大值，pre计算完后和maxAns比较，
-        //如果上一步出现了num为负数，那么maxAns和pre的比较肯定保留的是maxAns
-        //有点儿像滚动数组的意思
-        maxAns = max(maxAns, pre);
-    }
-    return maxAns;
-}
-/**
- 状态转移方程
+ dp[i][k][0 or 1]
+ 0 <= i <= n-1, 1 <= k <= K
+ n 为天数，大 K 为最多交易数
+ 此问题共 n × K × 2 种状态，全部穷举就能搞定。
+ for 0 <= i < n:
+     for 1 <= k <= K:
+         for s in {0, 1}:
+             dp[i][k][s] = max(buy, sell, rest)
+ 用自然语言描述出每一个状态的含义，比如说 dp[3][2][1] 的含义就是：今天是第三天，我现在手上持有着股票，至今最多进行 2 次交易。再比如 dp[2][3][0] 的含义：今天是第二天，我现在手上没有持有股票，至今最多进行 3 次交易。
+ 我们想求的最终答案是 dp[n - 1][K][0]，即最后一天，最多允许 K 次交易，最多获得多少利润。读者可能问为什么不是 dp[n - 1][K][1]？因为 [1] 代表手上还持有股票，[0] 表示手上的股票已经卖出去了，很显然后者得到的利润一定大于前者。
+ 
+ 3 状态转移方程：
  dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i])
-         max(   选择 rest  ,             选择 sell      )
+               max(   选择 rest  ,             选择 sell     )
  解释：今天我没有持有股票，有两种可能：
  要么是我昨天就没有持有，然后今天选择 rest，所以我今天还是没有持有；
  要么是我昨天持有股票，但是今天我 sell 了，所以我今天没有持有股票了。
@@ -121,7 +106,8 @@ int maxProfit2(int* prices, int pricesSize){
 /**
  k=1, 只有一次交易
  dp[i][1][0] = max(dp[i-1][1][0], dp[i-1][1][1] + prices[i])
- dp[i][1][1] = max(dp[i-1][1][1], dp[i-1][0][0] - prices[i])=max(dp[i-1][1][1], -prices[i]) //k = 0的basecase所以 dp[i-1][0][0] = 0。
+ dp[i][1][1] = max(dp[i-1][1][1], dp[i-1][0][0] - prices[i])
+             = max(dp[i-1][1][1], -prices[i]) //k = 0的basecase所以 dp[i-1][0][0] = 0。
  现在发现 k 都是 1，不会改变，即 k 对状态转移已经没有影响了。
  可以进行进一步化简去掉所有 k：
  dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
@@ -142,8 +128,8 @@ int maxProfit2(int* prices, int pricesSize){
          // = -prices[i]
          continue;
      }
-     dp[i][0] = Math.max(dp[i-1][0], dp[i-1][1] + prices[i]);
-     dp[i][1] = Math.max(dp[i-1][1], -prices[i]);
+     dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i]);
+     dp[i][1] = max(dp[i-1][1], -prices[i]);
  }
  return dp[n - 1][0];
  其实不用整个 dp 数组，只需要一个变量储存相邻的那个状态就足够了，这样可以把空间复杂度降到 O(1):
@@ -165,7 +151,7 @@ int maxProfit3(int* prices, int pricesSize){
  如果 k 为正无穷，那么就可以认为 k 和 k - 1 是一样的。可以这样改写框架：
  dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i])
  dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i])
-        = max(dp[i-1][k][1], dp[i-1][k][0] - prices[i])
+             = max(dp[i-1][k][1], dp[i-1][k][0] - prices[i])
  我们发现数组中的 k 已经不会改变了，也就是说不需要记录 k 这个状态了：
  dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
  dp[i][1] = max(dp[i-1][1], dp[i-1][0] - prices[i])
@@ -185,7 +171,7 @@ int maxProfit_k_inf(int* prices, int pricesSize) {
     int dp_i_0 = 0, dp_i_1 = INT_MIN;
     for (int i = 0; i < pricesSize; i++) {
         int temp = dp_i_0;
-        dp_i_0 = max(dp_i_0, dp_i_1 + prices[i]);
+        dp_i_0 = max(temp, dp_i_1 + prices[i]);
         dp_i_1 = max(dp_i_1, temp - prices[i]);
     }
     return dp_i_0;
@@ -203,7 +189,7 @@ int maxProfit_with_cool(int* prices, int pricesSize) {
     int dp_pre_0 = 0; // 代表 dp[i-2][0]
     for (int i = 0; i < pricesSize; i++) {
         int temp = dp_i_0;
-        dp_i_0 = max(dp_i_0, dp_i_1 + prices[i]);
+        dp_i_0 = max(temp, dp_i_1 + prices[i]);
         dp_i_1 = max(dp_i_1, dp_pre_0 - prices[i]);
         dp_pre_0 = temp;
     }
@@ -222,7 +208,7 @@ int maxProfit_with_fee(int* prices, int pricesSize, int fee) {
     int dp_i_0 = 0, dp_i_1 = INT_MIN;
     for (int i = 0; i < pricesSize; i++) {
         int temp = dp_i_0;
-        dp_i_0 = max(dp_i_0, dp_i_1 + prices[i]);
+        dp_i_0 = max(temp, dp_i_1 + prices[i]);
         dp_i_1 = max(dp_i_1, temp - prices[i] - fee);
     }
     return dp_i_0;
@@ -248,6 +234,7 @@ int maxProfit_with_fee(int* prices, int pricesSize, int fee) {
  这里 k 取值范围比较小，所以可以不用 for 循环，直接把 k = 1 和 2 的情况全部列举出来也可以：
  dp[i][2][0] = max(dp[i-1][2][0], dp[i-1][2][1] + prices[i])
  dp[i][2][1] = max(dp[i-1][2][1], dp[i-1][1][0] - prices[i])
+ 
  dp[i][1][0] = max(dp[i-1][1][0], dp[i-1][1][1] + prices[i])
  dp[i][1][1] = max(dp[i-1][1][1], -prices[i])
  */
@@ -273,21 +260,72 @@ int maxProfit_k_2(int* prices,int pricesSize) {
 int maxProfit_k_any(int max_k, int *prices, int pricesSize) {
     if (max_k > pricesSize / 2) return maxProfit_k_inf(prices, pricesSize);
 //    int dp[pricesSize][max_k+1][2]  ={0};
-//    for (int i = 0; i < n; i++)
-//        for (int k = max_k; k >= 1; k--) {
-//            if (i - 1 == -1) { /* 处理 base case */ }
-//            dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i]);
-//            dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i]);
-//        }
-//    return dp[n - 1][max_k][0];
-    return 0;
+    int rows=pricesSize;
+    int cols=max_k;
+    int dims=2;
+    int ***dp=(int ***)malloc(sizeof(int)*rows*cols*dims);
+    for (int i = 0; i < pricesSize; i++)
+        for (int k = max_k; k >= 1; k--) {
+            if (i - 1 == -1) {
+                /* 处理 base case
+                 dp[-1][k][0] = 0
+                 解释：因为 i 是从 0 开始的，所以 i = -1 意味着还没有开始，这时候的利润当然是 0 。
+                 dp[-1][k][1] = -infinity
+                 解释：还没开始的时候，是不可能持有股票的，用负无穷表示这种不可能。
+                 dp[i][0][0] = 0
+                 解释：因为 k 是从 1 开始的，所以 k = 0 意味着根本不允许交易，这时候利润当然是 0 。
+                 dp[i][0][1] = -infinity
+                 解释：不允许交易的情况下，是不可能持有股票的，用负无穷表示这种不可能。
+                 */
+                dp[i][k][0] = dp[i][0][0] = 0;
+                dp[i][k][1] = dp[i][0][1] = INT_MIN;
+            }
+            dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i]);
+            dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i]);
+        }
+    return dp[pricesSize - 1][max_k][0];
 }
-
--(void)maxProfitTest{
+-(NSInteger)maxProfit_k_any:(NSMutableArray *)prices maxK:(int)max_k{
+    int length=(int)prices.count;
+    if (max_k > prices.count / 2){
+        int *p=(int *)malloc(sizeof(int)*length);
+        for (int i=0; i<length; i++) {
+            p[i]=((NSNumber *)prices[i]).intValue;
+        }
+        return (int)maxProfit_k_inf(p, length);
+    }
+    NSMutableArray<NSMutableArray<NSMutableArray<NSNumber>*>*> *res=[NSMutableArray array];
+    for (int i = 0; i < length; i++)
+        for (int k = max_k; k >= 1; k--) {
+            if (i - 1 == -1) {
+                /* 处理 base case
+                 dp[-1][k][0] = 0
+                 解释：因为 i 是从 0 开始的，所以 i = -1 意味着还没有开始，这时候的利润当然是 0 。
+                 dp[-1][k][1] = -infinity
+                 解释：还没开始的时候，是不可能持有股票的，用负无穷表示这种不可能。
+                 dp[i][0][0] = 0
+                 解释：因为 k 是从 1 开始的，所以 k = 0 意味着根本不允许交易，这时候利润当然是 0 。
+                 dp[i][0][1] = -infinity
+                 解释：不允许交易的情况下，是不可能持有股票的，用负无穷表示这种不可能。
+                 */
+                prices[]
+                dp[i][k][0] = dp[i][0][0] = 0;
+                dp[i][k][1] = dp[i][0][1] = INT_MIN;
+            }
+            dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i]);
+            dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i]);
+        }
+    return dp[pricesSize - 1][max_k][0];
     
+    return 0;;
 }
 
+void maxProfitTest(){
+    int a[]={3,2,6,5,0,3};
+    printf(" %d \n",maxProfit_k_any(2, a, 6));
+}
 
+    
 
 
 @end
