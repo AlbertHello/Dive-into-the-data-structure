@@ -82,7 +82,7 @@ SingleNode_1* reverseListA_B(SingleNode_1* a, SingleNode_1* b){
 //「K 个一组反转链表」
 SingleNode_1 * reverseKGroup(SingleNode_1 * head, int k) {
     if (head == NULL) return NULL;
-    // 区间 [a, b) 包含 k 个待反转元素
+    // 区间 [a, b) 包含 k 个待反转元素，那么[a, b)就是一组
     SingleNode_1 *a=NULL, *b=NULL;
     a = b = head;
     for (int i = 0; i < k; i++) {
