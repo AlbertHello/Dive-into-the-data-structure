@@ -285,7 +285,7 @@ int maxProfit_k_any(int max_k, int *prices, int pricesSize) {
         }
     return dp[pricesSize - 1][max_k][0];
 }
--(NSInteger)maxProfit_k_any:(NSMutableArray *)prices maxK:(int)max_k{
++(NSInteger)maxProfit_k_any:(NSArray<NSNumber *> *)prices maxK:(int)max_k{
     int length=(int)prices.count;
     if (max_k > prices.count / 2){
         int *p=(int *)malloc(sizeof(int)*length);
@@ -294,7 +294,7 @@ int maxProfit_k_any(int max_k, int *prices, int pricesSize) {
         }
         return (int)maxProfit_k_inf(p, length);
     }
-    NSMutableArray<NSMutableArray<NSMutableArray<NSNumber>*>*> *res=[NSMutableArray array];
+    NSMutableArray<NSMutableArray<NSMutableArray<NSNumber *>*>*> *res=[NSMutableArray array];
     for (int i = 0; i < length; i++)
         for (int k = max_k; k >= 1; k--) {
             if (i - 1 == -1) {
@@ -308,21 +308,24 @@ int maxProfit_k_any(int max_k, int *prices, int pricesSize) {
                  dp[i][0][1] = -infinity
                  解释：不允许交易的情况下，是不可能持有股票的，用负无穷表示这种不可能。
                  */
-                prices[]
-                dp[i][k][0] = dp[i][0][0] = 0;
-                dp[i][k][1] = dp[i][0][1] = INT_MIN;
+                res[i][k][0] = res[i][0][0] = @(0);
+                res[i][k][1] = res[i][0][1] = @(INT_MIN);
             }
-            dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i]);
-            dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i]);
+            int max1=max(res[i-1][k][0].intValue, res[i-1][k][1].intValue + prices[i].intValue);
+            res[i][k][0] = @(max1);
+            int max2=max(res[i-1][k][1].intValue, res[i-1][k-1][0].intValue - prices[i].intValue);
+            res[i][k][1] = @(max2);
         }
-    return dp[pricesSize - 1][max_k][0];
-    
-    return 0;;
+    return res[prices.count - 1][max_k][0].intValue;
 }
 
 void maxProfitTest(){
+//    NSInteger value = [_121_Best_Time_to_Buy_and_Sell_Stock maxProfit_k_any:@[@(3),@(2),@(6),@(5),@(0),@(3)] maxK:2];
+//    NSLog(@"%d",value);
+    
     int a[]={3,2,6,5,0,3};
-    printf(" %d \n",maxProfit_k_any(2, a, 6));
+    printf("%d\n",maxProfit_k_2(a, 6));
+    
 }
 
     
