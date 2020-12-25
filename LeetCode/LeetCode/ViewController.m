@@ -47,6 +47,7 @@
 #import "BinaryTree.h"
 #import "_300_Longest_Increasing_Subsequence.h"
 #import "_347_TopKFrequentElements.h"
+#import "_572_Subtree_of_Another_Tree.h"
 #import "_121_Best_Time_to_Buy_and_Sell_Stock.h"
 
 
@@ -117,7 +118,8 @@
 //    [_17_LetterCombinationsofaPhoneNumber letterCombinationsTest];
 //    lengthOfLISTest();
 //    [_347_TopKFrequentElements topKFrequentTest];
-    maxProfitTest();
+//    maxProfitTest();
+    [_572_Subtree_of_Another_Tree isSubtreeTest];
     
     
 }
