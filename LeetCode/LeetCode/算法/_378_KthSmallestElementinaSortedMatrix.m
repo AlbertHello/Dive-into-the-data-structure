@@ -35,7 +35,6 @@
  k 个数即为答案。
  时间复杂度：O(n^2  logn)，对 n^2个数排序。
  空间复杂度：O(n^2)一维数组需要存储n^2个数。
- 
  */
 int kthSmallest(int **matrix, int matrixSize, int *matrixColSize, int k) {
     int *rec = (int *)malloc(matrixSize * matrixSize * sizeof(int));

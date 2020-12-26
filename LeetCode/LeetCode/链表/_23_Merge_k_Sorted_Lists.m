@@ -50,8 +50,10 @@ SingleNode_1* merge(SingleNode_1** lists, int left, int right) {
     SingleNode_1* l2 = merge(lists, mid + 1, right);//T(k/2)
     return mergeTwoLink(l1, l2);//O(n)
 }
-//时间复杂度：O(n+m)
-//空间复杂度：O(n+m)
+//时间复杂度：O(n+m)，其中n 和m 分别为两个链表的长度。因为每次调用递归都会去掉 l1 或者 l2 的头节点（直到至少有一个链表为空），函数 mergeTwoList 至多只会递归调用每个节点一次。
+//因此，时间复杂度取决于合并后的链表长度，即O(n+m)。
+//空间复杂度：O(n+m)，其中n 和m 分别为两个链表的长度。递归调用 mergeTwoLists 函数时需要消耗栈空间，栈空间的大小取决于递归调用的深度。
+//结束递归调用时 mergeTwoLists 函数最多调用n+m 次，因此空间复杂度为O(n+m)。
 SingleNode_1* mergeTwoLink(SingleNode_1* l1, SingleNode_1* l2){
     if (l1 == NULL) {
         return l2;

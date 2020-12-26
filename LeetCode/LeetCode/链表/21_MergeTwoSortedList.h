@@ -13,4 +13,6 @@
 #include "ListNode_C.h"
 
 
+SingleNode_1* mergeTwoLists(SingleNode_1* l1, SingleNode_1* l2);
+
 #endif /* _1_MergeTwoSortedList_h */

@@ -12,10 +12,10 @@
 
 /**
  179. 最大数
-给定一组非负整数 nums，重新排列它们每位数字的顺序使之组成一个最大的整数。
-
+ 难度 中等
+ https://leetcode-cn.com/problems/largest-number/
+ 给定一组非负整数 nums，重新排列它们每位数字的顺序使之组成一个最大的整数
  注意：输出结果可能非常大，所以你需要返回一个字符串而不是整数。
-  
 
  示例 1：
 
@@ -40,10 +40,9 @@
  1 <= nums.length <= 100
  0 <= nums[i] <= 109
  
- https://leetcode-cn.com/problems/largest-number/
  
  */
-
+// 主要是 a+b 和 b+a 两个字符串比较大小
 -(NSString *)largestNumber:(NSArray *)nums{
     // 数字转字符串
     NSMutableArray *strArr=[NSMutableArray array];
