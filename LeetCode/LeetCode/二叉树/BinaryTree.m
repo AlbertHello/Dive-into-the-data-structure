@@ -107,33 +107,87 @@ static id object = NULL;
     }
     return self;
 }
+/**
+ 写递归算法的关键是要明确函数的「定义」是什么，然后相信这个定义，利用这个定义推导最终结果，
+ 绝不要试图跳入递归。
+ 怎么理解呢，我们用一个具体的例子来说，比如说让你计算一棵二叉树共有几个节点：
+ int count(TreeNode root) {
+     // base case
+     if (root == null) return 0;
+     // 自己加上子树的节点数就是整棵树的节点数
+     return 1 + count(root.left) + count(root.right);
+ }
+ 左右子树的节点数怎么算？其实就是计算根为root.left和root.right两棵树的节点数呗，按照定义，递归调用count函数即可算出来。
+ */
+// 定义：count(root) 返回以 root 为根的树有多少节点
+-(int)count:(BTNode *)root {
+    // base case
+    if (root == nil) return 0;
+    // 自己加上子树的节点数就是整棵树的节点数
+    return 1 + [self count:root.left] + [self count:root.right];
+}
+
+
+
 
 #pragma mark - 226 反转二叉树
 //************************* 226 反转二叉树 *************************
+/**
+ 难度 简单
+ 翻转一棵二叉树。
+ https://leetcode-cn.com/problems/invert-binary-tree/
+ 示例：
 
+ 输入：
+
+      4
+    /   \
+   2     7
+  / \   / \
+ 1   3 6   9
+ 输出：
+      4
+    /   \
+   7     2
+  / \   / \
+ 9   6 3   1
+ 
+ 我们发现只要把二叉树上的每一个节点的左右子节点进行交换，最后的结果就是完全翻转之后的二叉树。
+ */
 //1、递归处理。三种遍历方式都可以
 -(BTNode *)invertTree1:(BTNode *)root{
     if (root == NULL) return root;
+    
+    /**** 前序遍历位置 ****/
+    // root 节点需要交换它的左右子节点
     BTNode *node=root.left;
     root.left=root.right;
     root.right=node;
+    
+    // 让左右子节点继续翻转它们的子节点
     [self invertTree1:root.left];
     [self invertTree1:root.right];
     return root;
 }
+//把交换左右子节点的代码放在中序遍历的位置需要有些改动的
 -(BTNode *)invertTree2:(BTNode *)root{
     if (root == NULL) return root;
+    
     [self invertTree2:root.left];
+    // 中序遍历位置
     BTNode *node=root.left;
     root.left=root.right;
     root.right=node;
-    [self invertTree2:root.left];
+    
+    [self invertTree2:root.left]; // 注意此处，传入的依然是root.left
     return root;
 }
+//如果把交换左右子节点的代码放在后序遍历的位置也是可以的
 -(BTNode *)invertTree3:(BTNode *)root{
     if (root == NULL) return root;
     [self invertTree3:root.left];
     [self invertTree3:root.right];
+    
     BTNode *node=root.left;
     root.left=root.right;
     root.right=node;
@@ -165,6 +219,7 @@ static id object = NULL;
 //************************* 116 填充二叉树节点的右侧指针 *************************
 /**
  116. 填充每个节点的下一个右侧节点指针
+ 难度 中等
  https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/
 给定一个完美二叉树，其所有叶子节点都在同一层，每个父节点都有两个子节点。二叉树定义如下：
 
@@ -180,17 +235,21 @@ static id object = NULL;
  */
 
 -(BTNode1 *)connect:(BTNode1 *)root{
-    if (root == nil || root.left == nil) return root;
+    if (root == nil) return root;
     [self connectTwoNode:root.left node:root.right];
     return root;
 }
 -(void)connectTwoNode:(BTNode1 *)node1 node:(BTNode1 *)node2{
+    if (node1 == nil || node2 == nil) return;
+    
     /**** 前序遍历位置 ****/
     // 将传入的两个节点连接
     node1.next = node2;
+    
     // 连接相同父节点的两个子节点
     [self connectTwoNode:node1.left node:node1.right];
     [self connectTwoNode:node2.left node:node2.right];
+    
     // 连接跨越父节点的两个子节点
     [self connectTwoNode:node1.right node:node2.left];
 }
@@ -222,8 +281,12 @@ static id object = NULL;
            6
  */
 /**
+ 我们尝试给出这个函数的定义：
+ 给flatten函数输入一个节点root，那么以root为根的二叉树就会被拉平为一条链表。
+ 我们再梳理一下，如何按题目要求把一棵树拉平成一条链表？很简单，以下流程：
  1、将root的左子树和右子树拉平。
  2、将root的右子树接到左子树下方，然后将整个左子树作为右子树。
+ 看起来最难的应该是第一步对吧，如何把root的左右子树拉平？其实很简单，按照flatten函数的定义，对root的左右子树递归调用flatten函数即可：
  */
 // 定义：将以 root 为根的树拉平为链表
 -(void)flatten:(BTNode *)root{
@@ -248,8 +311,17 @@ static id object = NULL;
         p = p.right;
     }
     p.right = right;
+    
+    // 这就是递归的魅力，你说flatten函数是怎么把左右子树拉平的？不容易说清楚，
+    // 但是只要知道flatten的定义如此，相信这个定义，让root做它该做的事情，
+    // 然后flatten函数就会按照定义工作。
+    // 递归算法的关键要明确函数的定义，相信这个定义，而不要跳进递归细节。
 }
 #pragma mark - 654 最大二叉树
+/**
+ 先来复习一下，我们说过写树的算法，关键思路如下：
+ 把题目的要求细化，搞清楚根节点应该做什么，然后剩下的事情抛给前/中/后序的遍历框架就行了，我们千万不要跳进递归的细节里，你的脑袋才能压几个栈呀。
+ */
 //************************* 654 最大二叉树 *************************
 /**
  654. 最大二叉树
@@ -342,7 +414,8 @@ int *parentIndexes(int *nums, int length) {
     for (int i = 0; i < length; i++) {
         // 1 首先栈不为空
         // 2 看一下栈顶元素和将要入栈的元素nums[i]谁大，
-        // 2.1 如果将要入栈的元素更大：则需要把站定元素弹出，那么这个栈顶元素的右边第一个最大的数就是nums[i]
+        // 2.1 如果将要入栈的元素更大：则需要把站定元素弹出，
+        // 那么这个栈顶元素的右边第一个最大的数就是nums[i]
         while (!stack.isEmpty && nums[i] > nums[stack.peek]) {
             ris[stack.pop] = i; // 栈顶元素的右边第一个最大的数就是nums[i]，存储索引。
         }
@@ -354,8 +427,10 @@ int *parentIndexes(int *nums, int length) {
         [stack push:i];
     }
     // 到此 lis[i] 和 ris[i] 数组就存著着nums[i]这个数左边第一个比它大的数/右边第一个比它大的数的索引。
-    // 而最大二叉树的原理就是每个节点都比左右子节点大。只需要找出lis[i]和ris[i]两者比较小的那个，就是nums[i]的父节点
-    // 为什么找lis[i]和ris[i]两者比较小的那个，因为比较大的那个是祖父节点甚至更高层次的节点。不是直接父节点
+    // 而最大二叉树的原理就是每个节点都比左右子节点大。
+    // 只需要找出lis[i]和ris[i]两者比较小的那个，就是nums[i]的父节点
+    // 为什么找lis[i]和ris[i]两者比较小的那个，
+    // 因为比较大的那个是祖父节点甚至更高层次的节点。不是直接父节点
     int *pis=(int *)malloc(sizeof(int)*length);
     
     for (int i = 0; i < length; i++) {
@@ -375,6 +450,92 @@ int *parentIndexes(int *nums, int length) {
         }
     }
     return pis;
+}
+#pragma mark - 105. 从前序与中序遍历序列构造二叉树
+//************************* 105. 从前序与中序遍历序列构造二叉树 *************************
+/**
+ 105. 从前序与中序遍历序列构造二叉树
+ 难度 中等
+ https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+ 根据一棵树的前序遍历与中序遍历构造二叉树。
+ 注意:
+ 你可以假设树中没有重复的元素。
+
+ 例如，给出
+
+ 前序遍历 preorder = [3,9,20,15,7]
+ 中序遍历 inorder = [9,3,15,20,7]
+ 返回如下的二叉树：
+
+     3
+    / \
+   9  20
+     /  \
+    15   7
+ */
+/**
+ 首先思考，根节点应该做什么。
+ 类似上一题，我们肯定要想办法确定根节点的值，把根节点做出来，然后递归构造左右子树即可。
+ 找到根节点是很简单的，前序遍历的第一个值preorder[0]就是根节点的值，关键在于如何通过根节点的值，
+ 将preorder和postorder数组划分成两半，构造根节点的左右子树？
+ */
+-(BTNode *)buildTree:(int *)preorder preorderSize:(int)preorderSize inorder:(int *)inorder inorderSize:(int)inorderSize{
+    
+    return [self build:preorder
+              preStart:0
+                preEnd:preorderSize-1
+               inorder:inorder
+               inStart:0
+                 inEnd:inorderSize-1];
+}
+-(BTNode *)build:(int *)preorder
+        preStart:(int)preStart
+          preEnd:(int)preEnd
+         inorder:(int *)inorder
+         inStart:(int)inStart
+           inEnd:(int)inEnd{
+    if (preStart > preEnd) {
+        return nil;
+    }
+    // root 节点对应的值就是前序遍历数组的第一个元素
+    int rootVal = preorder[preStart];
+    // rootVal 在中序遍历数组中的索引
+    int index = 0;
+    for (int i = inStart; i <= inEnd; i++) {
+        if (inorder[i] == rootVal) {
+            index = i;
+            break;
+        }
+    }
+    
+    //中序数组中可以拿到leftSize
+    int leftSize = index - inStart;
+    
+    // 先构造出当前根节点
+    BTNode *root = [[BTNode alloc]init];
+    root.data=rootVal;
+    
+    // 递归构造左子树
+    //preorder 左子树[preStart+1,  preStart+leftSize]
+    //inorder 左子树[inStart,  index-1]
+    root.left = [self build:preorder
+                   preStart:preStart+1
+                     preEnd:preStart+leftSize
+                    inorder:inorder
+                    inStart:inStart
+                      inEnd:index-1];
+    
+    // 递归构造左子树
+    //preorder 左子树[preStart + leftSize + 1,  preEnd]
+    //inorder 左子树[index + 1,  inEnd]
+    root.right = [self build:preorder
+                    preStart:preStart + leftSize + 1
+                      preEnd:preEnd
+                     inorder:inorder
+                     inStart:index + 1
+                       inEnd:inEnd];
+    return root;
+    
 }
 #pragma mark - 513 找树左下角的值
 //************************* 513 找树左下角的值 *************************

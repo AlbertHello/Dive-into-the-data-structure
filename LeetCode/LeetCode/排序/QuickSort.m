@@ -16,6 +16,8 @@
 @implementation QuickSort
 
 
+
+
 // 大O排序
 // O(1) < O(logn) < O(n) < O(nlogn) < O(n^2) < O(2^n) < O(n!)
 
@@ -32,6 +34,9 @@
 // 桶排序    O(n + k)     O(n + k)          O(n + k)        O(n + m) ❌      ✅
 
 /**
+ 
+ 快速排序的逻辑是若要对nums[lo..hi]进行排序，我们先找一个分界点p，通过交换元素使得nums[lo..p-1]都小于等于nums[p]，且nums[p+1..hi]都大于nums[p]，然后递归地去nums[lo..p-1]和nums[p+1..hi]中寻找新的分界点，最后整个数组就被排序了
+ 
  执行流程：
  
  1、从序列中选择一个轴点元素（pivot）
