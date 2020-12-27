@@ -75,23 +75,22 @@
  */
 
 // 左侧指针
-
 Node_234* left=nil;
-
 -(BOOL)isPalindromeLink:(Node_234 *)head{
-    left=head;
+    left=head; // 左侧指针，指向第一个节点head
     return [self traverse:head];
 }
-
 /**
  这么做的核心逻辑是什么呢？实际上就是把链表节点放入一个栈，然后再拿出来，这时候元素顺序就是反的，只不过我们利用的是递归函数的堆栈而已。
- 
  当然，无论造一条反转链表还是利用倒序遍历，算法的时间和空间复杂度都是 O(N)。下面我们想想，能不能不用额外的空间，解决这个问题呢？
  */
 -(BOOL)traverse:(Node_234 *)right{
     if (right == nil) return true;
+    // 这是代码递归就是一直把链表压栈，直到最后一个
     BOOL res =[self traverse:right.next];
     // 后序遍历代码
+    // right到最后一个之后，left还是指向head的。
+    // 这样就形成了首位双指针判断是否相等，随着递归往上回弹，首尾指针往中间靠拢
     res = res && (right.val == left.val);
     left = left.next;
     return res;
@@ -135,7 +134,7 @@ Node_234* left=nil;
     
     Node_234 *left = head;
     //3、从slow开始反转后面的链表，现在就可以开始比较回文串了
-    Node_234 *right = [self reverseList_234:slow];;
+    Node_234 *right = [self reverseList_234:slow];
     while (right != nil) {
         if (left.val != right.val) return false;
         left = left.next;
@@ -158,4 +157,84 @@ Node_234* left=nil;
     return pre_node;
 }
 
+
+/**
+ 这种解法虽然高效，但破坏了输入链表的原始结构，能不能避免这个瑕疵呢？
+ 记下链表中点的前一个节点和后半部分反转后的头节点，在return之前把后半部分再reverse一遍，那后半部分就恢复原状了
+ 前半部分再把后半部分连起来整条链表就恢复原状了。
+ */
+-(BOOL)isPalindromeLink2AndSafe:(Node_234 *)head{
+    Node_234 *slow=nil, *fast=nil, *mid_pre=nil;//定义mid_pre为链表中点的前一个节点
+    slow = fast = head;
+    //1 先通过「双指针技巧」中的快慢指针来找到链表的中点
+    while (fast != nil && fast.next != nil) {
+        mid_pre=slow;
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    //2、如果fast指针没有指向null，说明链表长度为奇数，slow还要再前进一步：
+    if (fast != nil) {
+        mid_pre=slow;
+        slow = slow.next;
+    }
+    [self printLink:head];
+    Node_234 *left = head;
+    //3、从slow开始反转后面的链表，现在就可以开始比较回文串了
+    Node_234 *right = [self reverseList_234:slow];
+    Node_234 *last=right; //定义last为后半部分反转后的头节点
+    [self printLink:last];
+    BOOL flag = YES;
+    while (right != nil) {
+        if (left.val != right.val) {
+            flag=NO;
+            break;
+        }
+        left = left.next;
+        right = right.next;
+    }
+    // 重新反转后面那一半，恢复链表原状
+    mid_pre.next=[self reverseList_234:last];
+    [self printLink:head];
+    return flag;
+}
+
+-(void)printLink:(Node_234 *)head{
+    if (head == nil) {
+        return;
+    }
+    while (head != nil) {
+        printf("%ld -> ",(long)head.val);
+        head=head.next;
+    }
+    printf("null\n");
+}
++(void)isPalindromeLinkTest{
+    _234_Palindrome_Linked_List *ssss=[[_234_Palindrome_Linked_List alloc]init];
+    Node_234 *head=[[Node_234 alloc]init];
+    head.val=1;
+    
+    Node_234 *node2=[[Node_234 alloc]init];
+    node2.val=2;
+    
+    Node_234 *node3=[[Node_234 alloc]init];
+    node3.val=3;
+    
+    Node_234 *node4=[[Node_234 alloc]init];
+    node4.val=2;
+    
+    Node_234 *node5=[[Node_234 alloc]init];
+    node5.val=1;
+    
+//    Node_234 *node6=[[Node_234 alloc]init];
+//    node6.val=1;
+    
+    head.next=node2;
+    node2.next=node3;
+    node3.next=node4;
+    node4.next=node5;
+    node5.next=nil;
+    
+    
+    [ssss isPalindromeLink2AndSafe:head];
+}
 @end

@@ -49,7 +49,7 @@
 #import "_347_TopKFrequentElements.h"
 #import "_572_Subtree_of_Another_Tree.h"
 #import "_121_Best_Time_to_Buy_and_Sell_Stock.h"
-
+#import "_234_Palindrome_Linked_List.h"
 
 
 
@@ -119,7 +119,8 @@
 //    lengthOfLISTest();
 //    [_347_TopKFrequentElements topKFrequentTest];
 //    maxProfitTest();
-    [_572_Subtree_of_Another_Tree isSubtreeTest];
+//    [_572_Subtree_of_Another_Tree isSubtreeTest];
+    [_234_Palindrome_Linked_List isPalindromeLinkTest];
     
     
 }
