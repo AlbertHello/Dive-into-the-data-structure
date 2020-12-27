@@ -560,7 +560,8 @@ int *parentIndexes(int *nums, int length) {
     15   7
  */
 /**
- 解法和上题类似
+ 解法和上题类似.有了前一题的铺垫，这道题很快就解决了，无非就是rootVal变成了最后一个元素，
+ 再改改递归函数的参数而已，只要明白二叉树的特性，也不难写出来。
  */
 -(BTNode *)buildTree:(int *)inorder inorderSize:(int)inorderSize postorder:(int *)postorder postorderSize:(int)postorderSize{
     
