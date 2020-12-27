@@ -537,6 +537,89 @@ int *parentIndexes(int *nums, int length) {
     return root;
     
 }
+#pragma mark - 106. 从中序与后序遍历序列构造二叉树
+//************************* 106. 从中序与后序遍历序列构造二叉树 *************************
+/**
+ 106. 从中序与后序遍历序列构造二叉树
+ 难度 中等
+ https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
+ 根据一棵树的中序遍历与后序遍历构造二叉树
+ 注意:
+ 你可以假设树中没有重复的元素。
+
+ 例如，给出
+
+ 中序遍历 inorder = [9,3,15,20,7]
+ 后序遍历 postorder = [9,15,7,20,3]
+ 返回如下的二叉树：
+
+     3
+    / \
+   9  20
+     /  \
+    15   7
+ */
+/**
+ 解法和上题类似
+ */
+-(BTNode *)buildTree:(int *)inorder inorderSize:(int)inorderSize postorder:(int *)postorder postorderSize:(int)postorderSize{
+    
+    return [self build:inorder
+               inStart:0
+                 inEnd:inorderSize-1
+             postorder:postorder
+             postStart:0
+               postEnd:postorderSize-1];
+}
+-(BTNode *)build:(int *)inorder
+         inStart:(int)inStart
+           inEnd:(int)inEnd
+       postorder:(int *)postorder
+       postStart:(int)postStart
+         postEnd:(int)postEnd{
+    if (inStart > inEnd) {
+        return nil;
+    }
+    // root 节点对应的值就是后序遍历数组的最后一个元素
+    int rootVal = postorder[postEnd];
+    // rootVal 在中序遍历数组中的索引
+    int index = 0;
+    for (int i = inStart; i <= inEnd; i++) {
+        if (inorder[i] == rootVal) {
+            index = i;
+            break;
+        }
+    }
+    
+    //中序数组中可以拿到leftSize
+    int leftSize = index - inStart;
+    
+    // 先构造出当前根节点
+    BTNode *root = [[BTNode alloc]init];
+    root.data=rootVal;
+    
+    // 递归构造左子树
+    //inorder     左子树[inStart,  index-1]
+    //postorder   左子树[postStart,  postStart+leftSize-1]
+    root.left = [self build:inorder
+                    inStart:inStart
+                      inEnd:index-1
+                  postorder:postorder
+                  postStart:postStart
+                    postEnd:postStart+leftSize-1];
+    
+    // 递归构造左子树
+    //inorder   左子树[index+1,  inEnd]
+    //postorder 左子树[postStart+leftSize, postEnd]
+    root.right = [self build:inorder
+                     inStart:index+1
+                       inEnd:inEnd
+                   postorder:postorder
+                   postStart:postStart+leftSize
+                     postEnd:postEnd];
+    return root;
+    
+}
 #pragma mark - 513 找树左下角的值
 //************************* 513 找树左下角的值 *************************
 /**
