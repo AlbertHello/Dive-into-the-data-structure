@@ -69,6 +69,7 @@
 		37A79D86255C10C10025A043 /* _108_Convert_Sorted_Array_to_Binary_Search_Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D85255C10C10025A043 /* _108_Convert_Sorted_Array_to_Binary_Search_Tree.m */; };
 		37A79D8A255D19BD0025A043 /* _160_Intersection_of_Two_Linked_Lists.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D89255D19BD0025A043 /* _160_Intersection_of_Two_Linked_Lists.m */; };
 		37A79D91255D6AF00025A043 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A79D90255D6AF00025A043 /* BinaryTree.m */; };
+		37A8F7982599828E00F44465 /* _191_Number_of_1_Bits.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8F7972599828E00F44465 /* _191_Number_of_1_Bits.m */; };
 		37C1EF3C2574EDE7002346A9 /* _16_16Sub_Sort_LCCI.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C1EF3B2574EDE7002346A9 /* _16_16Sub_Sort_LCCI.m */; };
 		37C1EF6125751B22002346A9 /* _51_N-Queens.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C1EF6025751B22002346A9 /* _51_N-Queens.m */; };
 		37C1EF6625760199002346A9 /* _86_Partition_List.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C1EF6525760199002346A9 /* _86_Partition_List.m */; };
@@ -240,6 +241,8 @@
 		37A79D89255D19BD0025A043 /* _160_Intersection_of_Two_Linked_Lists.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _160_Intersection_of_Two_Linked_Lists.m; sourceTree = "<group>"; };
 		37A79D8F255D6AF00025A043 /* BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
 		37A79D90255D6AF00025A043 /* BinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
+		37A8F7962599828E00F44465 /* _191_Number_of_1_Bits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _191_Number_of_1_Bits.h; sourceTree = "<group>"; };
+		37A8F7972599828E00F44465 /* _191_Number_of_1_Bits.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _191_Number_of_1_Bits.m; sourceTree = "<group>"; };
 		37C1EF3A2574EDE7002346A9 /* _16_16Sub_Sort_LCCI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _16_16Sub_Sort_LCCI.h; sourceTree = "<group>"; };
 		37C1EF3B2574EDE7002346A9 /* _16_16Sub_Sort_LCCI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _16_16Sub_Sort_LCCI.m; sourceTree = "<group>"; };
 		37C1EF5F25751B22002346A9 /* _51_N-Queens.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "_51_N-Queens.h"; sourceTree = "<group>"; };
@@ -538,6 +541,8 @@
 				3776CDCE2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m */,
 				37A79D7C255B9AE30025A043 /* _179_Largest_Number.h */,
 				37A79D7D255B9AE30025A043 /* _179_Largest_Number.m */,
+				37A8F7962599828E00F44465 /* _191_Number_of_1_Bits.h */,
+				37A8F7972599828E00F44465 /* _191_Number_of_1_Bits.m */,
 				3545A4B2258EFA9100604654 /* _218_The_Skyline_Problem.h */,
 				3545A4B3258EFA9100604654 /* _218_The_Skyline_Problem.m */,
 				35197ECA2577065E009D5F0A /* _239_Sliding_Window_Maximum.h */,
@@ -786,6 +791,7 @@
 				3564FE55254E4A4800230505 /* BinarySearch.m in Sources */,
 				3564FE5D254E719500230505 /* QuickSort.m in Sources */,
 				3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */,
+				37A8F7982599828E00F44465 /* _191_Number_of_1_Bits.m in Sources */,
 				370E306625556C3F007FC789 /* _394_Decode_String.m in Sources */,
 				378C99AE254925FD00B64B92 /* SelectSort.m in Sources */,
 				37CF441B253838EC00CBBDEF /* 70_ClimbingStairs.c in Sources */,

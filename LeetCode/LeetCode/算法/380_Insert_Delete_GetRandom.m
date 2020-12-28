@@ -61,7 +61,7 @@
  
  
  作者：LeetCode
- 链接：https://leetcode-cn.com/problems/insert-delete-getrandom-o1/solution/chang-shu-shi-jian-cha-ru-shan-chu-he-huo-qu-sui-j/
+ 链接：https://leetcode-cn.com/problems/insert-delete-getrandom-o1/solution
  来源：力扣（LeetCode）
  */
 
