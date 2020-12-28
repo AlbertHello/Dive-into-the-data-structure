@@ -48,7 +48,7 @@
 -(NSArray *)plusOne:(NSMutableArray *)array{
     int first = [array.firstObject intValue];
     if (first == 0) return @[@1];
-    for (int i = array.count - 1; i >= 0; i--) {
+    for (int i = (int)array.count - 1; i >= 0; i--) {
         int num = [array[i] intValue];
         num+=1;
         array[i] = @(num % 10);
