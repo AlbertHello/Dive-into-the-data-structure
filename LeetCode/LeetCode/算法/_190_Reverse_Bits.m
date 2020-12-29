@@ -134,4 +134,115 @@ bool isPowerOfThree(int n) {
     return n == 1;
 }
 
+/**
+ 412. Fizz Buzz
+ 难度 简单
+ https://leetcode-cn.com/problems/fizz-buzz/
+ 写一个程序，输出从 1 到 n 数字的字符串表示。
+ 1. 如果 n 是3的倍数，输出“Fizz”；
+ 2. 如果 n 是5的倍数，输出“Buzz”；
+ 3.如果 n 同时是3和5的倍数，输出 “FizzBuzz”。
+ 示例：
+ n = 15,
+ 返回:
+ [
+     "1",
+     "2",
+     "Fizz",
+     "4",
+     "Buzz",
+     "Fizz",
+     "7",
+     "8",
+     "Fizz",
+     "Buzz",
+     "11",
+     "Fizz",
+     "13",
+     "14",
+     "FizzBuzz"
+ ]
+ 
+ 
+ 解法1
+ 模拟法
+ 1 初始化一个空的答案列表。
+ 2 遍历 1...N。
+ 3 对于每个数，判断它能不能同时被 3 和 5 整除，如果可以就把 FizzBuzz 加入答案列表。
+ 4 如果不行，判断它能不能被 3 整除，如果可以，把 Fizz 加入答案列表。
+ 5 如果还是不行，判断它能不能被 5 整除，如果可以，把 Buzz 加入答案列表。
+ 6 如果以上都不行，把这个数加入答案列表。
+ 时间复杂度：O(N)
+ 空间复杂度：O(1)
+ */
+-(NSArray<NSString *>*)fizzBuzz:(int)n{
+    // ans list
+    NSMutableArray *ans=[NSMutableArray array];
+    for (int num = 1; num <= n; num++) {
+        BOOL divisibleBy3 = (num % 3 == 0);
+        BOOL divisibleBy5 = (num % 5 == 0);
+        if (divisibleBy3 && divisibleBy5) { // 判断是否是3 5的公倍数
+            [ans addObject:@"FizzBuzz"];
+        } else if (divisibleBy3) { // 判断是否仅是3的公倍数
+            [ans addObject:@"Fizz"];
+        } else if (divisibleBy5) { // 判断是否仅是5的公倍数
+            [ans addObject:@"Buzz"];
+        } else { // 除不尽
+            [ans addObject:@(num).stringValue];
+        }
+    }
+    return ans;
+}
+/**
+ 解法2 字符串拼接
+ 这个方法不会降低渐进复杂度，但是当 FizzBuzz 的规则变得更复杂的时候，这将会是个更优雅的解法
+ 玩个 FizzBuzzJazz 的游戏。规则如下： 3 ---> "Fizz" , 5 ---> "Buzz", 7 ---> "Jazz"
+ 如果你还是用之前的方法来解决这个问题的话，那将会有非常多的条件需要判断：
+ 1 能不能被 3 整除
+ 2 能不能被 5 整除
+ 3 能不能被 7 整除
+ 4 能不能同时被 3 和 5 整除
+ 5 能不能同时被 5 和 7 整除
+ 6 能不能同时被 3 和 7 整除
+ 7 能不能同时被 3，5，7 整除
+ 8 不能被 3，5，7 其中任何一个数整除
+ 所以我们放弃使用之前的联合判断，取而代之依次判断是否能被给定的数整除。能整除的就直接追加字符串即可
+ 所以还是这个问题：3 ---> "Fizz" , 5 ---> "Buzz", 7 ---> "Jazz"，则：
+ 初始化空串str
+ 1 能不能被 3 整除
+    str追加Fizz
+ 2 能不能被 5 整除
+    str追加Buzz
+ 3 能不能被 7 整除
+    str追加Jazz
+ 
+ 只需要三个判断。
+ 时间复杂度：O(N)
+ 空间复杂度：O(1)
+ */
+-(NSArray<NSString *>*)fizzBuzz2:(int)n{
+    NSMutableArray *ans=[NSMutableArray array];
+    
+    for (int num = 1; num <= n; num++) {
+        
+        BOOL divisibleBy3 = (num % 3 == 0);
+        BOOL divisibleBy5 = (num % 5 == 0);
+        
+        NSMutableString *numAnsStr=[NSMutableString string];
+        
+        if (divisibleBy3) {
+            [numAnsStr appendString:@"Fizz"];
+        }
+        if (divisibleBy5) {
+            [numAnsStr appendString:@"Buzz"];
+        }
+        if (numAnsStr.length == 0) {
+            [numAnsStr appendString:@(num).stringValue];
+        }
+        [ans addObject:numAnsStr];
+    }
+    return ans;
+}
+
+
 @end
