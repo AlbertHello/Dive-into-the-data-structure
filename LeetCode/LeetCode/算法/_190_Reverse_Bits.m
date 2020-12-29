@@ -95,4 +95,43 @@ uint32_t reverseBits2(uint32_t n) {
     n = ((n & 0xaaaaaaaa) >> 1) | ((n & 0x55555555) << 1);
     return n;
 }
+
+/**
+ 326. 3的幂
+ 难度 简单
+ 链接：https://leetcode-cn.com/problems/power-of-three/solution/3de-mi-by-leetcode/
+ 给定一个整数，写一个函数来判断它是否是 3 的幂次方。如果是，返回 true ；否则，返回 false 。
+ 整数 n 是 3 的幂次方需满足：存在整数 x 使得 n == 3x
+ 示例 1：
+
+ 输入：n = 27
+ 输出：true
+ 示例 2：
+
+ 输入：n = 0
+ 输出：false
+ 示例 3：
+
+ 输入：n = 9
+ 输出：true
+ 示例 4：
+
+ 输入：n = 45
+ 输出：false
+ */
+//
+// 找出数字 n 是否是数字 b 的幂的一个简单方法是，n%b 只要余数为 0，就一直将 n 除以 b。
+// 应该可以将 n 除以 b x 次，每次都有 0 的余数，最终结果是 1。
+//时间复杂度：O(logb(n))==(以b为底，n的对数)就是执行的次数。在我们的例子中是O(logn)。除数是用对数表示的。
+//空间复杂度：O(1)，没有使用额外的空间。
+bool isPowerOfThree(int n) {
+    if (n < 1) { // 对于负数，该算法没有意义，
+        return false;
+    }
+    while (n % 3 == 0) {
+        n /= 3;
+    }
+    return n == 1;
+}
+
 @end
