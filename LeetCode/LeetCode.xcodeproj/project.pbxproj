@@ -46,6 +46,7 @@
 		3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDC92546DA70003C8105 /* 1_TwoSums.m */; };
 		3776CDCF2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDCE2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m */; };
 		3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDD22547CC4B003C8105 /* 146_LRU_Cache.m */; };
+		37898B0B259D78D200688E37 /* _200_NumberofIslands.m in Sources */ = {isa = PBXBuildFile; fileRef = 37898B0A259D78D200688E37 /* _200_NumberofIslands.m */; };
 		378C998B2549112D00B64B92 /* HeapSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C998A2549112D00B64B92 /* HeapSort.m */; };
 		378C99AE254925FD00B64B92 /* SelectSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C99AD254925FD00B64B92 /* SelectSort.m */; };
 		378C9F5A254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C9F59254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m */; };
@@ -197,6 +198,8 @@
 		3776CDCE2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 149_Max_Points_on_a_Line.m; sourceTree = "<group>"; };
 		3776CDD12547CC4B003C8105 /* 146_LRU_Cache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 146_LRU_Cache.h; sourceTree = "<group>"; };
 		3776CDD22547CC4B003C8105 /* 146_LRU_Cache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 146_LRU_Cache.m; sourceTree = "<group>"; };
+		37898B09259D78D200688E37 /* _200_NumberofIslands.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _200_NumberofIslands.h; sourceTree = "<group>"; };
+		37898B0A259D78D200688E37 /* _200_NumberofIslands.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _200_NumberofIslands.m; sourceTree = "<group>"; };
 		378C99892549112D00B64B92 /* HeapSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeapSort.h; sourceTree = "<group>"; };
 		378C998A2549112D00B64B92 /* HeapSort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeapSort.m; sourceTree = "<group>"; };
 		378C99AC254925FD00B64B92 /* SelectSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectSort.h; sourceTree = "<group>"; };
@@ -553,6 +556,8 @@
 				37A8F7BA2599984E00F44465 /* _190_Reverse_Bits.m */,
 				37A8F7962599828E00F44465 /* _191_Number_of_1_Bits.h */,
 				37A8F7972599828E00F44465 /* _191_Number_of_1_Bits.m */,
+				37898B09259D78D200688E37 /* _200_NumberofIslands.h */,
+				37898B0A259D78D200688E37 /* _200_NumberofIslands.m */,
 				3545A4B2258EFA9100604654 /* _218_The_Skyline_Problem.h */,
 				3545A4B3258EFA9100604654 /* _218_The_Skyline_Problem.m */,
 				35197ECA2577065E009D5F0A /* _239_Sliding_Window_Maximum.h */,
@@ -800,6 +805,7 @@
 				35197EC825768B71009D5F0A /* _155_Min_Stack.m in Sources */,
 				3564FE55254E4A4800230505 /* BinarySearch.m in Sources */,
 				3564FE5D254E719500230505 /* QuickSort.m in Sources */,
+				37898B0B259D78D200688E37 /* _200_NumberofIslands.m in Sources */,
 				3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */,
 				37A8F7982599828E00F44465 /* _191_Number_of_1_Bits.m in Sources */,
 				37A8F7BB2599984E00F44465 /* _190_Reverse_Bits.m in Sources */,
