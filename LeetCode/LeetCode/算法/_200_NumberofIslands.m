@@ -138,7 +138,7 @@ int maxAreaOfIsland(int** grid, int gridSize, int* gridColSize){
         for (int c = 0; c < nc; ++c) {
             // 碰到1就是个新陆地， 则开始以1为中心往它的上下左右四个方向深度搜索
             // 搜索过程把遇到的1值为0，碰到1代表是两块陆地连载一起的，值为0防止for循环便利到它是重复计算
-            if (grid[r][c] == '1') {
+            if (grid[r][c] == 1) {
                 int area = dfs_area(grid, gridSize, gridColSize, r, c);
                 area_islands = max(area_islands, area);
             }
@@ -147,4 +147,63 @@ int maxAreaOfIsland(int** grid, int gridSize, int* gridColSize){
     return area_islands;
 }
 
+/**
+ 463. 岛屿的周长
+ 难度 简单
+ https://leetcode-cn.com/problems/island-perimeter/
+ 给定一个 row x col 的二维网格地图 grid ，其中：grid[i][j] = 1 表示陆地， grid[i][j] = 0 表示水域。
+ 网格中的格子 水平和垂直 方向相连（对角线方向不相连）。整个网格被水完全包围，但其中恰好有一个岛屿（或者说，一个或多个表示陆地的格子相连组成的岛屿）。 岛屿中没有“湖”（“湖” 指水域在岛屿内部且不和岛屿周围的水相连）。格子是边长为 1 的正方形。网格为长方形，且宽度和高度均不超过 100 。计算这个岛屿的周长。
+ */
+
+/**
+ 岛屿周长跟什么有关？跟边界和与水接触的边。我们在dfs时把碰到的1改成2，代表便利过了。
+ 1 碰到边界让周长加一
+ 2 碰到水让周长加1
+ */
+// dfs方法稍作修改
+int dfs_circle(int**grid, int gridSize, int* gridColSize, int r, int c) {
+    int nr = gridSize;
+    int nc = *gridColSize;
+    // 1 深度搜索过程中 会有r-1 r + 1 c - 1 c + 1，则需要判断越界。碰到边界加1
+    // 深度搜索过程中碰到0其实就是以[r][c]为中心的上下左右搜索可以停止了
+    // 2 因为碰到了水就意味着陆地到头了，所以周长加1
+    if (r < 0 || c < 0 || r >= nr || c >= nc || grid[r][c] == 0) {
+        return 1; // 加一
+    }
+    // 代表此处时遍历过的陆地不计算周长
+    if (grid[r][c] == 2) {
+        return 0;
+    }
+    // 这里grid[r][c] = 1，标记为2后
+    grid[r][c] = 2;
+    // 下面四行都是以[r][c]为中心点搜索上下左右四个方向，一直碰到水，才返回，然后搜索下一个方向。
+    // grid[r-1][c] 是 grid[r][c] 的上方
+    int area_top = dfs_circle(grid, gridSize, gridColSize, r - 1, c);
+    // grid[r+1][c] 是 grid[r][c] 的下方
+    int area_bottom = dfs_circle(grid, gridSize, gridColSize, r + 1, c);
+    // grid[r][c-1] 是 grid[r][c] 的左边
+    int area_left = dfs_circle(grid, gridSize, gridColSize, r, c - 1);
+    // grid[r][c+1] 是 grid[r][c] 的右边
+    int area_right = dfs_circle(grid, gridSize, gridColSize, r, c + 1);
+    
+    return area_top + area_bottom + area_left +area_right;
+}
+int islandPerimeter(int** grid, int gridSize, int* gridColSize){
+    if (grid == NULL || gridSize == 0) return 0;
+    
+    int nr = gridSize;
+    int nc = *gridColSize;
+    
+    for (int r = 0; r < nr; ++r) {
+        for (int c = 0; c < nc; ++c) {
+            // 碰到1就是个新陆地， 则开始以1为中心往它的上下左右四个方向深度搜索
+            // 搜索过程把遇到的1值为0，碰到1代表是两块陆地连载一起的，值为0防止for循环便利到它是重复计算
+            if (grid[r][c] == 1) {
+                // 题目要求只有一个岛屿
+                return  dfs_area(grid, gridSize, gridColSize, r, c);
+            }
+        }
+    }
+    return 0;
+}
 @end
