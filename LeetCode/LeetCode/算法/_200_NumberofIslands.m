@@ -6,6 +6,7 @@
 //
 
 #import "_200_NumberofIslands.h"
+#include "ListNode_C.h"
 
 @implementation _200_NumberofIslands
 
@@ -102,27 +103,48 @@ int numIslands(char** grid, int gridSize, int* gridColSize){
  此题和上题几乎相同，上题是找岛屿个数，这个是找到岛屿后求面积。那么可以这样做，在每次碰到一个1是就让面积+1不久完了。
  */
 // dfs方法稍作修改
-void dfs(char**grid, int gridSize, int* gridColSize, int r, int c) {
+int dfs_area(int**grid, int gridSize, int* gridColSize, int r, int c) {
     int nr = gridSize;
     int nc = *gridColSize;
     // 深度搜索过程中 会有r-1 r + 1 c - 1 c + 1，则需要判断越界
     // 深度搜索过程中碰到0其实就是以[r][c]为中心的上下左右搜索可以停止了
     // 因为碰到了水就意味着陆地到头了
-    if (r < 0 || c < 0 || r >= nr || c >= nc || grid[r][c] == '0') {
-        return;
+    if (r < 0 || c < 0 || r >= nr || c >= nc || grid[r][c] == 0) {
+        return 0;
     }
-    // grid[r][c] = 1，标记为0
-    grid[r][c] = '0';
+    // 这里grid[r][c] = 1，标记为0后，此时面积要+1了
+    grid[r][c] = 0;
+    
     // 下面四行都是以[r][c]为中心点搜索上下左右四个方向，一直碰到水，才返回，然后搜索下一个方向。
     // grid[r-1][c] 是 grid[r][c] 的上方
-    dfs(grid, gridSize, gridColSize, r - 1, c);
+    int area_top = dfs_area(grid, gridSize, gridColSize, r - 1, c);
     // grid[r+1][c] 是 grid[r][c] 的下方
-    dfs(grid, gridSize, gridColSize, r + 1, c);
+    int area_bottom = dfs_area(grid, gridSize, gridColSize, r + 1, c);
     // grid[r][c-1] 是 grid[r][c] 的左边
-    dfs(grid, gridSize, gridColSize, r, c - 1);
+    int area_left = dfs_area(grid, gridSize, gridColSize, r, c - 1);
     // grid[r][c+1] 是 grid[r][c] 的右边
-    dfs(grid, gridSize, gridColSize, r, c + 1);
+    int area_right = dfs_area(grid, gridSize, gridColSize, r, c + 1);
+    
+    return 1 + area_top + area_bottom + area_left +area_right;
 }
-
+int maxAreaOfIsland(int** grid, int gridSize, int* gridColSize){
+    if (grid == NULL || gridSize == 0) return 0;
+    
+    int nr = gridSize;
+    int nc = *gridColSize;
+    
+    int area_islands = 0;
+    for (int r = 0; r < nr; ++r) {
+        for (int c = 0; c < nc; ++c) {
+            // 碰到1就是个新陆地， 则开始以1为中心往它的上下左右四个方向深度搜索
+            // 搜索过程把遇到的1值为0，碰到1代表是两块陆地连载一起的，值为0防止for循环便利到它是重复计算
+            if (grid[r][c] == '1') {
+                int area = dfs_area(grid, gridSize, gridColSize, r, c);
+                area_islands = max(area_islands, area);
+            }
+        }
+    }
+    return area_islands;
+}
 
 @end
