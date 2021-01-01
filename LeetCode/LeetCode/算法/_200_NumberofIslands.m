@@ -206,4 +206,122 @@ int islandPerimeter(int** grid, int gridSize, int* gridColSize){
     }
     return 0;
 }
+
+
+/**
+ 827. 最大人工岛
+ 难度 困难
+ https://leetcode-cn.com/problems/making-a-large-island/
+ 在二维地图上， 0代表海洋， 1代表陆地，我们最多只能将一格 0 海洋变成 1变成陆地。
+ 进行填海之后，地图上最大的岛屿面积是多少？（上、下、左、右四个方向相连的 1 可形成岛屿）
+*/
+/**
+ 这道题是岛屿最大面积问题的升级版。现在我们有填海造陆的能力，可以把一个海洋格子变成陆地格子，进而让两块岛屿连成一块。
+ 具体思路：
+ 做两遍DFS，第一遍搜索岛屿并记录每个岛屿的面积，第二遍搜索海洋，找到与海洋相邻的岛屿编号
+ 1 用map记录每个岛屿的面积，岛屿编号作为key，面积为value
+ 2 用map记录与海洋相邻的岛屿编号，map可去重
+ */
+
+// dfs方法稍作修改，给每个岛屿都设置编号
+int dfs_area_index(int**grid, int gridSize, int* gridColSize, int r, int c, int index){
+    int nr = gridSize;
+    int nc = *gridColSize;
+    // 深度搜索过程中 会有r-1 r + 1 c - 1 c + 1，则需要判断越界
+    // 深度搜索过程中碰到0其实就是以[r][c]为中心的上下左右搜索可以停止了
+    // 因为碰到了水就意味着陆地到头了
+    if (r < 0 || c < 0 || r >= nr || c >= nc || grid[r][c] == 0) {
+        return 0;
+    }
+    // 这里grid[r][c] 可能会等于2 等于3 等其他数字，是因为是上个岛屿的编号
+    //
+    if (grid[r][c] != 1) {
+        return 0;
+    }
+    // 这里肯定grid[r][c]=1， 设置岛屿编号
+    grid[r][c] = index;
+    
+    // 下面四行都是以[r][c]为中心点搜索上下左右四个方向，一直碰到水，才返回，然后搜索下一个方向。
+    // grid[r-1][c] 是 grid[r][c] 的上方
+    int area_top = dfs_area_index(grid, gridSize, gridColSize, r - 1, c, index);
+    // grid[r+1][c] 是 grid[r][c] 的下方
+    int area_bottom = dfs_area_index(grid, gridSize, gridColSize, r + 1, c, index);
+    // grid[r][c-1] 是 grid[r][c] 的左边
+    int area_left = dfs_area_index(grid, gridSize, gridColSize, r, c - 1, index);
+    // grid[r][c+1] 是 grid[r][c] 的右边
+    int area_right = dfs_area_index(grid, gridSize, gridColSize, r, c + 1, index);
+    
+    return 1 + area_top + area_bottom + area_left +area_right;
+}
+// 查抄与海洋格子相邻的岛屿编号
+NSMutableDictionary *findNeighbour(int**grid, int gridSize, int* gridColSize, int r, int c) {
+    
+    int nr = gridSize;
+    int nc = *gridColSize;
+    // 用字典存储 可方便去重
+    NSMutableDictionary<NSString *, NSNumber *> *nibour=[NSMutableDictionary dictionary];
+    if (r < 0 || c < 0 || r >= nr || c >= nc || grid[r-1][c] != 0) {
+        int index = grid[r-1][c];
+        [nibour setObject:@(index) forKey:@(index).stringValue];
+    }
+    if (r < 0 || c < 0 || r >= nr || c >= nc || grid[r+1][c] != 0){
+        int index = grid[r+1][c];
+        [nibour setObject:@(index) forKey:@(index).stringValue];
+    }
+    if (r < 0 || c < 0 || r >= nr || c >= nc || grid[r][c-1] != 0){
+        int index = grid[r][c-1];
+        [nibour setObject:@(index) forKey:@(index).stringValue];
+    }
+    if (r < 0 || c < 0 || r >= nr || c >= nc || grid[r][c+1] != 0){
+        int index = grid[r][c+1];
+        [nibour setObject:@(index) forKey:@(index).stringValue];
+    }
+    return nibour;
+}
+int largestIsland(int** grid, int gridSize, int* gridColSize) {
+    if (grid == NULL || gridSize == 0) return 1;
+    
+    int nr = gridSize;
+    int nc = *gridColSize;
+    
+    int res = 0; // 最大面积
+    int index = 2; // 岛屿序号从2开始
+    
+    // map 用于存储岛屿对应的面积。岛屿编号做Key，面积做Value
+    NSMutableDictionary<NSString *, NSNumber *> *map=[NSMutableDictionary dictionary];
+    for (int r = 0; r < nr; r++) {
+        for (int c = 0; c < nc; c++) {
+            if (grid[r][c] == 1) { //遍历陆地
+                int area = dfs_area_index(grid, gridSize, gridColSize, r, c, index);
+                [map setObject:@(area) forKey:@(index).stringValue];
+                index++;
+                res = max(res, area);
+            }
+        }
+    }
+    
+    // 如果没有陆地，都是海洋，则返回1，也就是随便造一块陆地，面积就是1
+    if (res == 0) return 1;
+    
+    for (int r = 0; r < nr; r++) {
+        for (int c = 0; c < nc; c++) {
+            if (grid[r][c] == 0) {// 遍历海洋格子
+                NSMutableDictionary *nibour = findNeighbour(grid, gridSize, gridColSize, r, c);
+                // 字典长度 < 1 代表海洋格子和陆地不相接
+                if (nibour.allKeys.count < 1) continue;
+                int twoIsland = 1; // 这个1是把一个海洋格子变成陆地的面积
+                for (int i=0; nibour.allKeys.count; i++) {
+                    NSString *key=nibour.allKeys[i];
+                    int index = key.intValue;
+                    // 在map里取出岛屿编号对应的面积，累加即可
+                    twoIsland += map[@(index).stringValue].intValue;
+                }
+                res = max(res, twoIsland);
+            }
+        }
+    }
+    return res;
+}
+
+
 @end
