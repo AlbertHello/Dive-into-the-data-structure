@@ -18,6 +18,7 @@
 		35836D2425452C7F006A1BF3 /* BubbleSort2.m in Sources */ = {isa = PBXBuildFile; fileRef = 35836D2325452C7F006A1BF3 /* BubbleSort2.m */; };
 		35836D2C25452CD8006A1BF3 /* Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 35836D2B25452CD8006A1BF3 /* Sort.m */; };
 		3586A3FC2545632300CD2C61 /* BubbleSort3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3586A3FB2545632300CD2C61 /* BubbleSort3.m */; };
+		358E928A259F395F001AD137 /* _567_PermutationinString.m in Sources */ = {isa = PBXBuildFile; fileRef = 358E9289259F395F001AD137 /* _567_PermutationinString.m */; };
 		35C9B1F9257C708A00CF3899 /* _72_Edit_Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */; };
 		35C9B1FD257C906B00CF3899 /* _322_Coin_Change.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9B1FC257C906B00CF3899 /* _322_Coin_Change.m */; };
 		35CF22312543E2910044632E /* BubbleSort1.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CF22302543E2910044632E /* BubbleSort1.m */; };
@@ -143,6 +144,8 @@
 		35836D2B25452CD8006A1BF3 /* Sort.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sort.m; sourceTree = "<group>"; };
 		3586A3FA2545632300CD2C61 /* BubbleSort3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort3.h; sourceTree = "<group>"; };
 		3586A3FB2545632300CD2C61 /* BubbleSort3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort3.m; sourceTree = "<group>"; };
+		358E9288259F395F001AD137 /* _567_PermutationinString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _567_PermutationinString.h; sourceTree = "<group>"; };
+		358E9289259F395F001AD137 /* _567_PermutationinString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _567_PermutationinString.m; sourceTree = "<group>"; };
 		35C9B1F7257C708A00CF3899 /* _72_Edit_Distance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _72_Edit_Distance.h; sourceTree = "<group>"; };
 		35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _72_Edit_Distance.m; sourceTree = "<group>"; };
 		35C9B1FB257C906B00CF3899 /* _322_Coin_Change.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _322_Coin_Change.h; sourceTree = "<group>"; };
@@ -358,6 +361,8 @@
 			children = (
 				3518E430259F2713002B9FFF /* _76_Minimum_Window_Substring.h */,
 				3518E431259F2713002B9FFF /* _76_Minimum_Window_Substring.m */,
+				358E9288259F395F001AD137 /* _567_PermutationinString.h */,
+				358E9289259F395F001AD137 /* _567_PermutationinString.m */,
 			);
 			path = "滑动窗口";
 			sourceTree = "<group>";
@@ -836,6 +841,7 @@
 				37CF43C72538362700CBBDEF /* 237_DeleteNodeinLinkedList.c in Sources */,
 				3790FA212579DC3500B2701E /* _151_Reverse_Words_in_a_String.m in Sources */,
 				3790F9F225789C9200B2701E /* MyStack.m in Sources */,
+				358E928A259F395F001AD137 /* _567_PermutationinString.m in Sources */,
 				37A6E0C9258079F000FAB7DD /* _7_Reverse_Integer.m in Sources */,
 				3790FA032578BCE200B2701E /* MyBTNode.m in Sources */,
 				37CF43C92538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.c in Sources */,
