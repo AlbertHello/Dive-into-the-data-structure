@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3518E432259F2713002B9FFF /* _76_Minimum_Window_Substring.m in Sources */ = {isa = PBXBuildFile; fileRef = 3518E431259F2713002B9FFF /* _76_Minimum_Window_Substring.m */; };
 		35197EC825768B71009D5F0A /* _155_Min_Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197EC725768B71009D5F0A /* _155_Min_Stack.m */; };
 		35197ECC2577065E009D5F0A /* _239_Sliding_Window_Maximum.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197ECB2577065E009D5F0A /* _239_Sliding_Window_Maximum.m */; };
 		3545A4B4258EFA9100604654 /* _218_The_Skyline_Problem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3545A4B3258EFA9100604654 /* _218_The_Skyline_Problem.m */; };
@@ -120,6 +121,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3518E430259F2713002B9FFF /* _76_Minimum_Window_Substring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _76_Minimum_Window_Substring.h; sourceTree = "<group>"; };
+		3518E431259F2713002B9FFF /* _76_Minimum_Window_Substring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _76_Minimum_Window_Substring.m; sourceTree = "<group>"; };
 		35197EC625768B71009D5F0A /* _155_Min_Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _155_Min_Stack.h; sourceTree = "<group>"; };
 		35197EC725768B71009D5F0A /* _155_Min_Stack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _155_Min_Stack.m; sourceTree = "<group>"; };
 		35197ECA2577065E009D5F0A /* _239_Sliding_Window_Maximum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _239_Sliding_Window_Maximum.h; sourceTree = "<group>"; };
@@ -350,6 +353,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3518E434259F271D002B9FFF /* 滑动窗口 */ = {
+			isa = PBXGroup;
+			children = (
+				3518E430259F2713002B9FFF /* _76_Minimum_Window_Substring.h */,
+				3518E431259F2713002B9FFF /* _76_Minimum_Window_Substring.m */,
+			);
+			path = "滑动窗口";
+			sourceTree = "<group>";
+		};
 		35C9B1FF257C908F00CF3899 /* 动态规划 */ = {
 			isa = PBXGroup;
 			children = (
@@ -542,6 +554,7 @@
 				37A8F7D1259AE28600F44465 /* _73_Set_Matrix_Zeroes.m */,
 				378C9FA1254BC40500B64B92 /* 75_Sort_Colors.h */,
 				378C9FA2254BC40500B64B92 /* 75_Sort_Colors.m */,
+				3518E434259F271D002B9FFF /* 滑动窗口 */,
 				3776CDD12547CC4B003C8105 /* 146_LRU_Cache.h */,
 				3776CDD22547CC4B003C8105 /* 146_LRU_Cache.m */,
 				373B97B62591B4C100054150 /* _153_FindMinimuminRotatedSortedArray.h */,
@@ -765,6 +778,7 @@
 				378C9F5A254ACC5800B64B92 /* 380_Insert_Delete_GetRandom.m in Sources */,
 				3757DD80257B46FE000AE195 /* _Offer_47_Max_value_Of_Gift.m in Sources */,
 				37CF438C2538357900CBBDEF /* ViewController.m in Sources */,
+				3518E432259F2713002B9FFF /* _76_Minimum_Window_Substring.m in Sources */,
 				3545A511258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.m in Sources */,
 				370E303225550C86007FC789 /* UnionFind_QU.m in Sources */,
 				37CF43CB2538362700CBBDEF /* 61_RotateList.c in Sources */,
