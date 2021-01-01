@@ -7,6 +7,8 @@
 
 #import "3_LongestSubstringWithoutRepeatingCharacters.h"
 #import "MyQueue.h"
+#include "ListNode_C.h"
+
 
 /**
  3. 无重复字符的最长子串
@@ -114,23 +116,30 @@ int lengthOfLongestSubstring_c(char * s) {
  唯一需要注意的是，在哪里更新结果 res 呢？我们要的是最长无重复子串，哪一个阶段可以保证窗口中的字符串是没有重复的呢？
  这里和之前不一样，要在收缩窗口完成后更新 res，因为窗口收缩的 while 条件是存在重复元素，换句话说收缩完成后一定保证窗口中没有重复嘛。
  */
-
-int lengthOfLongestSubstring(string s) {
-    unordered_map<char, int> window;
-
+-(int)lengthOfLongestSubstring2:(NSString *)source{
+    // windowMap 不是窗口，[left, right)才是窗口，
+    NSMutableDictionary<NSString*,NSNumber*>*windowMap=[NSMutableDictionary dictionary];
+    // 记录结果
+    int res=0;
     int left = 0, right = 0;
-    int res = 0; // 记录结果
-    while (right < s.size()) {
-        char c = s[right];
+    while (right < source.length) {
+        // c 是将移入窗口的字符
+        NSString *c=[source substringWithRange:NSMakeRange(right, 1)];
+        // 窗口右侧扩大,继续扩大窗口[left, right)
         right++;
-        // 进行窗口内数据的一系列更新
-        window[c]++;
+        int v = windowMap[c].intValue;
+        [windowMap setObject:@(v+1) forKey:c];
         // 判断左侧窗口是否要收缩
-        while (window[c] > 1) {
-            char d = s[left];
+        // 大于1代表c出现了不止一次，就是重复了嘛
+        while (windowMap[c].intValue > 1) {
+            NSLog(@"windowMap: %@",windowMap);
+            // d 是将移出窗口的字符
+            NSString *d = [source substringWithRange:NSMakeRange(left, 1)];
+            // 窗口左边收紧，开始缩小窗口[left, right)
             left++;
             // 进行窗口内数据的一系列更新
-            window[d]--;
+            int v = windowMap[d].intValue;
+            [windowMap setObject:@(v-1) forKey:d];
         }
         // 在这里更新答案
         res = max(res, right - left);
