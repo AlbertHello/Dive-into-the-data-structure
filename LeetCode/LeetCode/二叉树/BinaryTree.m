@@ -1268,7 +1268,7 @@ static NSMutableArray *result_113 = nil;
 
 /**
  思路：
- 既然是二叉搜索树，那么中序遍历得到的是一个生序的序列
+ 既然是二叉搜索树，那么中序遍历得到的是一个升序的序列
  只需要找到那个逆序对 就可以恢复了。
  1 如果两个对调的节点，其中序遍历不是挨着的，也就是会出现两个逆序对， 那么第一个错误节点是第一个逆序对中较大者，第二个错误节点是第二个逆序对中较小者。
  2 如果两个对调的节点，其中序遍历是挨着的，也就是只有一个逆序对，
@@ -1329,6 +1329,7 @@ static NSMutableArray *result_113 = nil;
     int tmp = self.firstWrong.data;
     self.firstWrong.data = self.secondWrong.data;
     self.secondWrong.data = tmp;
+    NSLog(@"");
 }
 -(void)findWrongNodes:(BTNode *)root {
    if (root == nil) return;
@@ -1342,11 +1343,35 @@ static NSMutableArray *result_113 = nil;
         // 第2个错误节点：最后一个逆序对中较小的那个节点
         self.secondWrong = node;
         // 第1个错误节点：第一个逆序对中较大的那个节点
-        if (self.firstWrong != nil) return;
-        self.firstWrong = self.prev;
+        self.firstWrong=(self.firstWrong == nil)?self.prev:self.firstWrong;
     }
     self.prev = node;
 }
++(void)recoverTreeTest{
+   
+    BinaryTree *bt=[[BinaryTree alloc]init];
+    
+    BTNode *root=[[BTNode alloc]init];
+    root.data=3;
+    
+    BTNode *node1=[[BTNode alloc]init];
+    node1.data=1;
+    
+    BTNode *node2=[[BTNode alloc]init];
+    node2.data=4;
+    
+    BTNode *node3=[[BTNode alloc]init];
+    node3.data=2;
+    
+    root.left=node1;
+    root.right=node2;
+    
+    node2.left=node3;
+    
+    [bt recoverTree2:root];
+    
+}
+
 #pragma mark - 124. 二叉树中的最大路径和
 //************************* 124. 二叉树中的最大路径和 ¥¥ *************************
 /**
@@ -1398,6 +1423,7 @@ static NSMutableArray *result_113 = nil;
     }
     int left = [self dfs:root.left max:maxSum]; // 左子树提供的最大收益
     int right = [self dfs:root.right max:maxSum]; // 右子树提供的最大收益
+    // 此处也就是二叉树的后序遍历位置
     // 当前子树内部的最大路径和
     int innerMaxSum=left + root.data + right;
     // 挑战一下最大纪录

@@ -88,9 +88,9 @@
     
     
 //    [self test];
-    [self leetcodeTest];
+//    [self leetcodeTest];
 //    [self sortTest];
-//    [self testBinaryTree];
+    [self testBinaryTree];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -126,12 +126,13 @@
 //    [_234_Palindrome_Linked_List isPalindromeLinkTest];
 //    singleNumberTest();
 //    [_76_Minimum_Window_Substring minWindowTest];
-    [_316_RemoveDuplicateLetters removeDuplicateLettersTest];
+//    [_316_RemoveDuplicateLetters removeDuplicateLettersTest];
     
     
 }
 -(void)testBinaryTree{
-    [BinaryTree binaryTreeTest];
+//    [BinaryTree binaryTreeTest];
+    [BinaryTree recoverTreeTest];
 }
 -(void)sortTest{
 //    int arr1[10]={90,56,23,4,1,45,57,29,40,39};
