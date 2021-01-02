@@ -30,7 +30,7 @@
 // 算法思想
 // 再创建一个节点，当做新的head，那么，这个head是不参与比较的。
 //
-SingleNode_1* deleteDuplicates(SingleNode_1* head){
+SingleNode_1* deleteDuplicates2(SingleNode_1* head){
     if(!head || !head->next) return head;
     //新创建一个节点，放在最前面
     SingleNode_1 *new_head = (SingleNode_1 *)malloc(sizeof(SingleNode_1));

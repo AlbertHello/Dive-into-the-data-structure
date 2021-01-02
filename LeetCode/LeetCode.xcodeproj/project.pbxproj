@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		350DD73425A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DD73325A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m */; };
+		350DD73825A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DD73725A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.m */; };
 		3518E432259F2713002B9FFF /* _76_Minimum_Window_Substring.m in Sources */ = {isa = PBXBuildFile; fileRef = 3518E431259F2713002B9FFF /* _76_Minimum_Window_Substring.m */; };
 		35197EC825768B71009D5F0A /* _155_Min_Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197EC725768B71009D5F0A /* _155_Min_Stack.m */; };
 		35197ECC2577065E009D5F0A /* _239_Sliding_Window_Maximum.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197ECB2577065E009D5F0A /* _239_Sliding_Window_Maximum.m */; };
@@ -126,6 +127,8 @@
 /* Begin PBXFileReference section */
 		350DD73225A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _26_RemoveDuplicatesfromSortedArray.h; sourceTree = "<group>"; };
 		350DD73325A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _26_RemoveDuplicatesfromSortedArray.m; sourceTree = "<group>"; };
+		350DD73625A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _83_RemoveDuplicatesfromSortedList.h; sourceTree = "<group>"; };
+		350DD73725A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _83_RemoveDuplicatesfromSortedList.m; sourceTree = "<group>"; };
 		3518E430259F2713002B9FFF /* _76_Minimum_Window_Substring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _76_Minimum_Window_Substring.h; sourceTree = "<group>"; };
 		3518E431259F2713002B9FFF /* _76_Minimum_Window_Substring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _76_Minimum_Window_Substring.m; sourceTree = "<group>"; };
 		35197EC625768B71009D5F0A /* _155_Min_Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _155_Min_Stack.h; sourceTree = "<group>"; };
@@ -636,6 +639,8 @@
 				37CF43B72538362700CBBDEF /* 61_RotateList.c */,
 				37CF43AB2538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.h */,
 				37CF43B42538362700CBBDEF /* 82_RemoveDuplicatesfromSortedList2.c */,
+				350DD73625A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.h */,
+				350DD73725A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.m */,
 				37C1EF6425760199002346A9 /* _86_Partition_List.h */,
 				37C1EF6525760199002346A9 /* _86_Partition_List.m */,
 				37A79D84255C10C10025A043 /* _108_Convert_Sorted_Array_to_Binary_Search_Tree.h */,
@@ -874,6 +879,7 @@
 				37C1EF6125751B22002346A9 /* _51_N-Queens.m in Sources */,
 				37A79D86255C10C10025A043 /* _108_Convert_Sorted_Array_to_Binary_Search_Tree.m in Sources */,
 				3545A4B4258EFA9100604654 /* _218_The_Skyline_Problem.m in Sources */,
+				350DD73825A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.m in Sources */,
 				37D01C6A255A405F007B297E /* _225_Implement_Stack_using_Queues.m in Sources */,
 				37C1EF3C2574EDE7002346A9 /* _16_16Sub_Sort_LCCI.m in Sources */,
 				37CF43892538357900CBBDEF /* SceneDelegate.m in Sources */,
