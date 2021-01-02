@@ -1491,5 +1491,40 @@ bool verifyBST(BTNode *root, BTNode * min, BTNode * max) {
 }
 
 
+#pragma mark - 在 BST 中搜索一个数
+//************************* 在 BST 中搜索一个数 *************************
+//在二叉树中寻找一个数。 这个适合所有二叉树
+bool isInBinaryTree(BTNode *root, int target){
+    if (root == NULL) return false;
+    if (root.data == target) return true;
+    // 当前节点没找到就递归地去左右子树寻找
+    return isInBinaryTree(root.left, target) || isInBinaryTree(root.right, target);
+}
+// 那么应该如何充分利用信息，把 BST 这个「左小右大」的特性用上？
+bool isInBST(BTNode *root, int target) {
+    if (root == NULL) return false;
+    if (root.data == target) return true;
+    if (root.data < target) return isInBST(root.right, target);
+    if (root.data > target) return isInBST(root.left, target);
+    return false;
+}
+
+//于是，我们对原始框架进行改造，抽象出一套针对 BST 的遍历框架：
+//这个代码框架其实和二叉树的遍历框架差不多，无非就是利用了 BST 左小右大的特性而已。
+void BST(BTNode * root, int target) {
+    if (root.data == target){
+        // 找到目标，做点什么。。。
+    }else if (root.data< target){
+        // 去右子树。。。todo
+        BST(root.right, target);
+    }else if (root.data > target){
+        // 去左子树。。。todo
+        BST(root.left, target);
+    }else{
+        
+    }
+}
+
+
 
 @end
