@@ -1524,6 +1524,21 @@ void BST(BTNode * root, int target) {
         
     }
 }
+#pragma mark - 在 BST 中搜索一个数
+//************************* 在 BST 中搜索一个数 *************************
+BTNode * insertIntoBST(BTNode * root, int val) {
+    // 找到空位置插入新节点
+    if (root == NULL){
+        BTNode *new=[[BTNode alloc]init];
+        new.data=val;
+        return new;
+    }
+    // if (root.val == val)
+    // BST 中一般不会插入已存在元素
+    if (root.data < val) root.right = insertIntoBST(root.right, val);
+    if (root.data > val) root.left = insertIntoBST(root.left, val);
+    return root;
+}
 
 
 
