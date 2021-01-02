@@ -10,6 +10,7 @@
 		350DD73425A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DD73325A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m */; };
 		350DD73825A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DD73725A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.m */; };
 		350DD73C25A0247A00D19181 /* _27_Remove_Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DD73B25A0247A00D19181 /* _27_Remove_Element.m */; };
+		350DD74125A02B4200D19181 /* _316_RemoveDuplicateLetters.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DD74025A02B4200D19181 /* _316_RemoveDuplicateLetters.m */; };
 		3518E432259F2713002B9FFF /* _76_Minimum_Window_Substring.m in Sources */ = {isa = PBXBuildFile; fileRef = 3518E431259F2713002B9FFF /* _76_Minimum_Window_Substring.m */; };
 		35197EC825768B71009D5F0A /* _155_Min_Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197EC725768B71009D5F0A /* _155_Min_Stack.m */; };
 		35197ECC2577065E009D5F0A /* _239_Sliding_Window_Maximum.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197ECB2577065E009D5F0A /* _239_Sliding_Window_Maximum.m */; };
@@ -131,6 +132,8 @@
 		350DD73725A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _83_RemoveDuplicatesfromSortedList.m; sourceTree = "<group>"; };
 		350DD73A25A0247A00D19181 /* _27_Remove_Element.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _27_Remove_Element.h; sourceTree = "<group>"; };
 		350DD73B25A0247A00D19181 /* _27_Remove_Element.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _27_Remove_Element.m; sourceTree = "<group>"; };
+		350DD73F25A02B4200D19181 /* _316_RemoveDuplicateLetters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _316_RemoveDuplicateLetters.h; sourceTree = "<group>"; };
+		350DD74025A02B4200D19181 /* _316_RemoveDuplicateLetters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _316_RemoveDuplicateLetters.m; sourceTree = "<group>"; };
 		3518E430259F2713002B9FFF /* _76_Minimum_Window_Substring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _76_Minimum_Window_Substring.h; sourceTree = "<group>"; };
 		3518E431259F2713002B9FFF /* _76_Minimum_Window_Substring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _76_Minimum_Window_Substring.m; sourceTree = "<group>"; };
 		35197EC625768B71009D5F0A /* _155_Min_Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _155_Min_Stack.h; sourceTree = "<group>"; };
@@ -680,6 +683,8 @@
 				3790FA202579DC3500B2701E /* _151_Reverse_Words_in_a_String.m */,
 				3790FA232579EEBC00B2701E /* _242_Valid_Anagram.h */,
 				3790FA242579EEBC00B2701E /* _242_Valid_Anagram.m */,
+				350DD73F25A02B4200D19181 /* _316_RemoveDuplicateLetters.h */,
+				350DD74025A02B4200D19181 /* _316_RemoveDuplicateLetters.m */,
 				37EBD9532553D2FD00D726A5 /* _344_Reverse_String.h */,
 				37EBD9542553D2FD00D726A5 /* _344_Reverse_String.m */,
 				370E306425556C3E007FC789 /* _394_Decode_String.h */,
@@ -897,6 +902,7 @@
 				3721397125667DBA00739C1D /* _23_Merge_k_Sorted_Lists.m in Sources */,
 				37CF43CA2538362700CBBDEF /* 203_RemoveLinkedListElements.c in Sources */,
 				3743DDD1258C602600E7880F /* _53_MaximumSubarray.m in Sources */,
+				350DD74125A02B4200D19181 /* _316_RemoveDuplicateLetters.m in Sources */,
 				37D01C66255A3764007B297E /* _232_Implement_Queue_using_Stacks.m in Sources */,
 				37A8F7D2259AE28600F44465 /* _73_Set_Matrix_Zeroes.m in Sources */,
 				37A79D8A255D19BD0025A043 /* _160_Intersection_of_Two_Linked_Lists.m in Sources */,

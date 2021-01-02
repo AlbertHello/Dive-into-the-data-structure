@@ -52,6 +52,7 @@
 #import "_234_Palindrome_Linked_List.h"
 #import "_191_Number_of_1_Bits.h"
 #import "_76_Minimum_Window_Substring.h"
+#import "_316_RemoveDuplicateLetters.h"
 
 
 
@@ -124,7 +125,8 @@
 //    [_572_Subtree_of_Another_Tree isSubtreeTest];
 //    [_234_Palindrome_Linked_List isPalindromeLinkTest];
 //    singleNumberTest();
-    [_76_Minimum_Window_Substring minWindowTest];
+//    [_76_Minimum_Window_Substring minWindowTest];
+    [_316_RemoveDuplicateLetters removeDuplicateLettersTest];
     
     
 }
