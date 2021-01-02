@@ -1540,8 +1540,12 @@ BTNode * insertIntoBST(BTNode * root, int val) {
     return root;
 }
 
-#pragma mark - 在 BST 中搜索一个数
-//************************* 在 BST 中搜索一个数 *************************
+#pragma mark - 在 BST 中删除一个数
+//************************* 在 BST 中删除一个数 *************************
+/**
+ 注意一下，这个删除操作并不完美，因为我们一般不会通过 root.val = minNode.val 修改节点内部的值来交换节点，而是通过一系列略微复杂的链表操作交换 root 和 minNode 两个节点。
+ 因为具体应用中，val 域可能会是一个复杂的数据结构，修改起来非常麻烦；而链表操作无非改一改指针，而不会去碰内部数据。
+ */
 BTNode *deleteNodeInBST(BTNode * root, int key) {
     if (root == NULL) return NULL;
     if (root.data == key) {
@@ -1574,4 +1578,55 @@ BTNode *getRightMin(BTNode * node) {
     return node;
 }
 
+#pragma mark - 在 BST 中删除一个数 $$$
+//************************* 在 BST 中删除一个数 *************************
+/**
+ 222. 完全二叉树的节点个数
+ 难度 中等
+ https://leetcode-cn.com/problems/count-complete-tree-nodes/
+ 给出一个完全二叉树，求出该树的节点个数。
+ */
+// 如果是一个普通二叉树，显然只要向下面这样遍历一边即可，时间复杂度 O(N)
+int countNodes(BTNode *root) {
+    if (root == NULL) return 0;
+    return 1 + countNodes(root.left) + countNodes(root.right);
+}
+// 那如果是一棵满二叉树，节点总数就和树的高度呈指数关系：
+int countNodes1(BTNode * root) {
+    int h = 0;
+    // 计算树的高度
+    while (root != NULL) {
+        root = root.left;
+        h++;
+    }
+    // 节点总数就是 2^h - 1
+    return (int)pow(2, h) - 1;
+}
+// 完全二叉树比普通二叉树特殊，但又没有满二叉树那么特殊，计算它的节点总数，
+// 可以说是普通二叉树和完全二叉树的结合版，先看代码：
+// 算法的递归深度就是树的高度 O(logN)，每次递归所花费的时间就是 while 循环，需要 O(logN)，所以总体的时间复杂度是 O(logN*logN)。
+int countNodes2(BTNode * root) {
+    BTNode * l = root, *r = root;
+    // 记录左、右子树的高度
+    int hl = 0, hr = 0;
+    while (l != NULL) { // (logN)
+        l = l.left;
+        hl++;
+    }
+    while (r != NULL) { // (logN)
+        r = r.right;
+        hr++;
+    }
+    // 如果左右子树的高度相同，则是一棵满二叉树
+    if (hl == hr) {
+        // 完全二叉树也有一部分是满二叉树，一定会来到这里。
+        return (int)pow(2, hl) - 1;
+    }
+    // 如果左右高度不同，则按照普通二叉树的逻辑计算
+    // 这两个递归只有一个会真的递归下去，另一个一定会触发 hl == hr 而立即返回，不会递归下去。
+    // 因为完全二叉树有一半是满二叉树，一定会触发hl == hr 然乎就返回了。
+    // 消耗 O(logN) 的复杂度而不会继续递归。
+    // 算法的递归深度就是树的高度 O(logN)，每次递归所花费的时间就是 while 循环，需要 O(logN)，所以总体的时间复杂度是 O(logN*logN)。
+    return 1 + countNodes2(root.left) + countNodes2(root.right);
+}
 @end
