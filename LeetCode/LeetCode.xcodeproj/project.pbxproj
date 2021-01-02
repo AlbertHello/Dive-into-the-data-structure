@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		350DD73425A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DD73325A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m */; };
 		350DD73825A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DD73725A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.m */; };
+		350DD73C25A0247A00D19181 /* _27_Remove_Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DD73B25A0247A00D19181 /* _27_Remove_Element.m */; };
 		3518E432259F2713002B9FFF /* _76_Minimum_Window_Substring.m in Sources */ = {isa = PBXBuildFile; fileRef = 3518E431259F2713002B9FFF /* _76_Minimum_Window_Substring.m */; };
 		35197EC825768B71009D5F0A /* _155_Min_Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197EC725768B71009D5F0A /* _155_Min_Stack.m */; };
 		35197ECC2577065E009D5F0A /* _239_Sliding_Window_Maximum.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197ECB2577065E009D5F0A /* _239_Sliding_Window_Maximum.m */; };
@@ -129,6 +130,8 @@
 		350DD73325A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _26_RemoveDuplicatesfromSortedArray.m; sourceTree = "<group>"; };
 		350DD73625A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _83_RemoveDuplicatesfromSortedList.h; sourceTree = "<group>"; };
 		350DD73725A0201C00D19181 /* _83_RemoveDuplicatesfromSortedList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _83_RemoveDuplicatesfromSortedList.m; sourceTree = "<group>"; };
+		350DD73A25A0247A00D19181 /* _27_Remove_Element.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _27_Remove_Element.h; sourceTree = "<group>"; };
+		350DD73B25A0247A00D19181 /* _27_Remove_Element.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _27_Remove_Element.m; sourceTree = "<group>"; };
 		3518E430259F2713002B9FFF /* _76_Minimum_Window_Substring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _76_Minimum_Window_Substring.h; sourceTree = "<group>"; };
 		3518E431259F2713002B9FFF /* _76_Minimum_Window_Substring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _76_Minimum_Window_Substring.m; sourceTree = "<group>"; };
 		35197EC625768B71009D5F0A /* _155_Min_Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _155_Min_Stack.h; sourceTree = "<group>"; };
@@ -553,6 +556,8 @@
 				37C1EF3B2574EDE7002346A9 /* _16_16Sub_Sort_LCCI.m */,
 				350DD73225A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.h */,
 				350DD73325A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m */,
+				350DD73A25A0247A00D19181 /* _27_Remove_Element.h */,
+				350DD73B25A0247A00D19181 /* _27_Remove_Element.m */,
 				376CB650257E5BD200CF90F5 /* DFS  */,
 				375921FA255FED470055F16E /* _42_Trapping_Rain_Water.h */,
 				375921FB255FED470055F16E /* _42_Trapping_Rain_Water.m */,
@@ -866,6 +871,7 @@
 				378C998B2549112D00B64B92 /* HeapSort.m in Sources */,
 				3790F9FB2578A38B00B2701E /* _01_09_String_Rotation_LCCI.m in Sources */,
 				37CF43CF2538362700CBBDEF /* 20_ValidParentheses.c in Sources */,
+				350DD73C25A0247A00D19181 /* _27_Remove_Element.m in Sources */,
 				378C9FAF254C1E3000B64B92 /* InsertSort.m in Sources */,
 				37CF43C22538362700CBBDEF /* 4_MedianofTwoSortedArrays.c in Sources */,
 				37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */,
