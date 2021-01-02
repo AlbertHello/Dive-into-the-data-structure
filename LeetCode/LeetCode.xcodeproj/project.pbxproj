@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350DD73425A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 350DD73325A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m */; };
 		3518E432259F2713002B9FFF /* _76_Minimum_Window_Substring.m in Sources */ = {isa = PBXBuildFile; fileRef = 3518E431259F2713002B9FFF /* _76_Minimum_Window_Substring.m */; };
 		35197EC825768B71009D5F0A /* _155_Min_Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197EC725768B71009D5F0A /* _155_Min_Stack.m */; };
 		35197ECC2577065E009D5F0A /* _239_Sliding_Window_Maximum.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197ECB2577065E009D5F0A /* _239_Sliding_Window_Maximum.m */; };
@@ -123,6 +124,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		350DD73225A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _26_RemoveDuplicatesfromSortedArray.h; sourceTree = "<group>"; };
+		350DD73325A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _26_RemoveDuplicatesfromSortedArray.m; sourceTree = "<group>"; };
 		3518E430259F2713002B9FFF /* _76_Minimum_Window_Substring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _76_Minimum_Window_Substring.h; sourceTree = "<group>"; };
 		3518E431259F2713002B9FFF /* _76_Minimum_Window_Substring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _76_Minimum_Window_Substring.m; sourceTree = "<group>"; };
 		35197EC625768B71009D5F0A /* _155_Min_Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _155_Min_Stack.h; sourceTree = "<group>"; };
@@ -545,6 +548,8 @@
 				37C75B5725400B96006564C1 /* 15_ThreeSum.m */,
 				37C1EF3A2574EDE7002346A9 /* _16_16Sub_Sort_LCCI.h */,
 				37C1EF3B2574EDE7002346A9 /* _16_16Sub_Sort_LCCI.m */,
+				350DD73225A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.h */,
+				350DD73325A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m */,
 				376CB650257E5BD200CF90F5 /* DFS  */,
 				375921FA255FED470055F16E /* _42_Trapping_Rain_Water.h */,
 				375921FB255FED470055F16E /* _42_Trapping_Rain_Water.m */,
@@ -827,6 +832,7 @@
 				37A6E0C1257FB08800FAB7DD /* _50_My_Pow.m in Sources */,
 				37CF43C82538362700CBBDEF /* 21_MergeTwoSortedList.c in Sources */,
 				35197EC825768B71009D5F0A /* _155_Min_Stack.m in Sources */,
+				350DD73425A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m in Sources */,
 				3564FE55254E4A4800230505 /* BinarySearch.m in Sources */,
 				3564FE5D254E719500230505 /* QuickSort.m in Sources */,
 				37898B0B259D78D200688E37 /* _200_NumberofIslands.m in Sources */,
