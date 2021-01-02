@@ -26,7 +26,6 @@
 		35C9B1F9257C708A00CF3899 /* _72_Edit_Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */; };
 		35C9B1FD257C906B00CF3899 /* _322_Coin_Change.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9B1FC257C906B00CF3899 /* _322_Coin_Change.m */; };
 		35CF22312543E2910044632E /* BubbleSort1.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CF22302543E2910044632E /* BubbleSort1.m */; };
-		37018B8D257F5D0700EA658E /* _283_Move_Zeroes.m in Sources */ = {isa = PBXBuildFile; fileRef = 37018B8C257F5D0700EA658E /* _283_Move_Zeroes.m */; };
 		370E302B25550C86007FC789 /* UnionFind.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E301B25550C86007FC789 /* UnionFind.m */; };
 		370E302C25550C86007FC789 /* UnionFind_QU_Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E301D25550C86007FC789 /* UnionFind_QU_Size.m */; };
 		370E302D25550C86007FC789 /* UnionFind_QU_Rank_Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 370E301E25550C86007FC789 /* UnionFind_QU_Rank_Path.m */; };
@@ -164,8 +163,6 @@
 		35C9B1FC257C906B00CF3899 /* _322_Coin_Change.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _322_Coin_Change.m; sourceTree = "<group>"; };
 		35CF222F2543E2910044632E /* BubbleSort1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleSort1.h; sourceTree = "<group>"; };
 		35CF22302543E2910044632E /* BubbleSort1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleSort1.m; sourceTree = "<group>"; };
-		37018B8B257F5D0700EA658E /* _283_Move_Zeroes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _283_Move_Zeroes.h; sourceTree = "<group>"; };
-		37018B8C257F5D0700EA658E /* _283_Move_Zeroes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _283_Move_Zeroes.m; sourceTree = "<group>"; };
 		370E301B25550C86007FC789 /* UnionFind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnionFind.m; sourceTree = "<group>"; };
 		370E301C25550C86007FC789 /* UnionFind_QU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind_QU.h; sourceTree = "<group>"; };
 		370E301D25550C86007FC789 /* UnionFind_QU_Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnionFind_QU_Size.m; sourceTree = "<group>"; };
@@ -604,8 +601,6 @@
 				37FDFE6C2580BFFA006F8540 /* _252_MeetingRoom.m */,
 				37FDFE6F2580C78B006F8540 /* _253_MeetingRoom_2.h */,
 				37FDFE702580C78B006F8540 /* _253_MeetingRoom_2.m */,
-				37018B8B257F5D0700EA658E /* _283_Move_Zeroes.h */,
-				37018B8C257F5D0700EA658E /* _283_Move_Zeroes.m */,
 				3743DDD4258C68DD00E7880F /* _300_Longest_Increasing_Subsequence.h */,
 				3743DDD5258C68DD00E7880F /* _300_Longest_Increasing_Subsequence.m */,
 				3545A50F258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.h */,
@@ -814,7 +809,6 @@
 				35C9B1F9257C708A00CF3899 /* _72_Edit_Distance.m in Sources */,
 				3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */,
 				37A79D7E255B9AE30025A043 /* _179_Largest_Number.m in Sources */,
-				37018B8D257F5D0700EA658E /* _283_Move_Zeroes.m in Sources */,
 				37FDFE942581F2A8006F8540 /* _11_ContainerWithMostWater.m in Sources */,
 				376CB64E257E5BCD00CF90F5 /* _22_GenerateParentheses.m in Sources */,
 				35836D2C25452CD8006A1BF3 /* Sort.m in Sources */,

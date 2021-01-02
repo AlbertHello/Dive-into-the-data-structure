@@ -78,4 +78,32 @@ int removeElement(int* nums, int numsSize, int val) {
     }
     return slow;
 }
+
+/**
+ 283. 移动零
+ 难度 简单
+ https://leetcode-cn.com/problems/move-zeroes/
+ 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
+ 示例:
+ 输入: [0,1,0,3,12]
+ 输出: [1,3,12,0,0]
+ 说明:
+ 必须在原数组上操作，不能拷贝额外的数组。
+ 尽量减少操作次数。
+ */
+
+/**
+ 题目让我们将所有 0 移到最后，其实就相当于移除 nums 中的所有 0，然后再把后面的元素都赋值为 0 即可。
+ 所以我们可以复用上一题的 removeElement 函数：
+ */
+void moveZeroes(int* nums, int numsSize){
+    // 去除 nums 中的所有 0
+    // 返回去除 0 之后的数组长度
+    int p = removeElement(nums, numsSize, 0);
+    for (; p < numsSize; p++) {
+        // 将 p 之后的所有元素赋值为 0
+        nums[p] = 0;
+    }
+}
+
 @end
