@@ -9,7 +9,7 @@
 
 @implementation _22_GenerateParentheses
 /**
- 22. 括号生成
+ 22. 括号生成 $$$$$
  难度中等
  https://leetcode-cn.com/problems/generate-parentheses/
  数字 n 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 有效的 括号组合
@@ -28,6 +28,18 @@
  */
 /**
  * Note: The returned array must be malloced, assume caller calls free().
+ *
+ * 标准回溯框架：
+ * result = []
+   def backtrack(路径, 选择列表):
+     if 满足结束条件:
+         result.add(路径)
+         return
+
+     for 选择 in 选择列表:
+         做选择
+         backtrack(路径, 选择列表)
+         撤销选择
  */
 
 +(NSArray<NSString *>*)generateParenthesis_OC:(int)n{
@@ -45,7 +57,7 @@
      array:(NSMutableArray<NSString *> *)array{
     if (idx == count) {
         NSMutableString *finalStr=[NSMutableString string];
-        for (NSString *str in stringA) {
+        for (NSString *str in stringA) { // O(n)
             [finalStr appendString:str];
         }
         [array addObject:finalStr];

@@ -9,7 +9,7 @@
 
 @implementation _42_Trapping_Rain_Water
 /**
- 42. 接雨水
+ 42. 接雨水 $$$$$
  难度 困难
  输入：height = [0,1,0,2,1,0,1,3,2,1,2,1]
  输出：6
@@ -98,7 +98,9 @@ int trap3(int *height, int heightSize){
     }
     // 双指针--索引
     int left = 0, right = heightSize - 1;
+    // l_max 默认是左边第一个柱子高度
     int l_max = height[0];
+    // r_max 默认最后一个柱子高度
     int r_max = height[heightSize - 1];
     int res = 0;
     while (left <= right) {

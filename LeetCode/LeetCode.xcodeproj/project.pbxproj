@@ -15,6 +15,7 @@
 		35197EC825768B71009D5F0A /* _155_Min_Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197EC725768B71009D5F0A /* _155_Min_Stack.m */; };
 		35197ECC2577065E009D5F0A /* _239_Sliding_Window_Maximum.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197ECB2577065E009D5F0A /* _239_Sliding_Window_Maximum.m */; };
 		351EB71825A16B3A006D8C21 /* chiputao.m in Sources */ = {isa = PBXBuildFile; fileRef = 351EB71725A16B3A006D8C21 /* chiputao.m */; };
+		3538BE2625A1881F00FC330A /* _37_SudokuSolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3538BE2525A1881F00FC330A /* _37_SudokuSolver.m */; };
 		3545A4B4258EFA9100604654 /* _218_The_Skyline_Problem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3545A4B3258EFA9100604654 /* _218_The_Skyline_Problem.m */; };
 		3545A511258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 3545A510258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.m */; };
 		3564FE55254E4A4800230505 /* BinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564FE54254E4A4800230505 /* BinarySearch.m */; };
@@ -145,6 +146,8 @@
 		35197ECB2577065E009D5F0A /* _239_Sliding_Window_Maximum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _239_Sliding_Window_Maximum.m; sourceTree = "<group>"; };
 		351EB71625A16B3A006D8C21 /* chiputao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chiputao.h; sourceTree = "<group>"; };
 		351EB71725A16B3A006D8C21 /* chiputao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chiputao.m; sourceTree = "<group>"; };
+		3538BE2425A1881F00FC330A /* _37_SudokuSolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _37_SudokuSolver.h; sourceTree = "<group>"; };
+		3538BE2525A1881F00FC330A /* _37_SudokuSolver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _37_SudokuSolver.m; sourceTree = "<group>"; };
 		3545A4B2258EFA9100604654 /* _218_The_Skyline_Problem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _218_The_Skyline_Problem.h; sourceTree = "<group>"; };
 		3545A4B3258EFA9100604654 /* _218_The_Skyline_Problem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _218_The_Skyline_Problem.m; sourceTree = "<group>"; };
 		3545A50F258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _378_KthSmallestElementinaSortedMatrix.h; sourceTree = "<group>"; };
@@ -392,9 +395,13 @@
 			path = "滑动窗口";
 			sourceTree = "<group>";
 		};
-		3591715625A172E200E06242 /* 回溯 */ = {
+		3591715625A172E200E06242 /* 回溯 & DFS &BFS */ = {
 			isa = PBXGroup;
 			children = (
+				376CB64C257E5BCD00CF90F5 /* _22_GenerateParentheses.h */,
+				376CB64D257E5BCD00CF90F5 /* _22_GenerateParentheses.m */,
+				376CB653257E604A00CF90F5 /* _17_LetterCombinationsofaPhoneNumber.h */,
+				376CB654257E604B00CF90F5 /* _17_LetterCombinationsofaPhoneNumber.m */,
 				37A4DBC225679CF80010C9C9 /* _46_Permutations.h */,
 				37A4DBC325679CF80010C9C9 /* _46_Permutations.m */,
 				37C1EF5F25751B22002346A9 /* _51_N-Queens.h */,
@@ -403,8 +410,10 @@
 				3591715B25A176A000E06242 /* _78_Subsets.m */,
 				3591715E25A17C2300E06242 /* _77_Combinations.h */,
 				3591715F25A17C2300E06242 /* _77_Combinations.m */,
+				3538BE2425A1881F00FC330A /* _37_SudokuSolver.h */,
+				3538BE2525A1881F00FC330A /* _37_SudokuSolver.m */,
 			);
-			path = "回溯";
+			path = "回溯 & DFS &BFS";
 			sourceTree = "<group>";
 		};
 		35C9B1FF257C908F00CF3899 /* 动态规划 */ = {
@@ -485,17 +494,6 @@
 			);
 			name = "二叉堆";
 			path = "../../../C语言实现/优先级队列/优先级队列/二叉堆";
-			sourceTree = "<group>";
-		};
-		376CB650257E5BD200CF90F5 /* DFS  */ = {
-			isa = PBXGroup;
-			children = (
-				376CB64C257E5BCD00CF90F5 /* _22_GenerateParentheses.h */,
-				376CB64D257E5BCD00CF90F5 /* _22_GenerateParentheses.m */,
-				376CB653257E604A00CF90F5 /* _17_LetterCombinationsofaPhoneNumber.h */,
-				376CB654257E604B00CF90F5 /* _17_LetterCombinationsofaPhoneNumber.m */,
-			);
-			path = "DFS ";
 			sourceTree = "<group>";
 		};
 		37A6E0B9257FAD8A00FAB7DD /* offer */ = {
@@ -584,10 +582,9 @@
 				350DD73325A01E9800D19181 /* _26_RemoveDuplicatesfromSortedArray.m */,
 				350DD73A25A0247A00D19181 /* _27_Remove_Element.h */,
 				350DD73B25A0247A00D19181 /* _27_Remove_Element.m */,
-				376CB650257E5BD200CF90F5 /* DFS  */,
 				375921FA255FED470055F16E /* _42_Trapping_Rain_Water.h */,
 				375921FB255FED470055F16E /* _42_Trapping_Rain_Water.m */,
-				3591715625A172E200E06242 /* 回溯 */,
+				3591715625A172E200E06242 /* 回溯 & DFS &BFS */,
 				37A6E0BF257FB08800FAB7DD /* _50_My_Pow.h */,
 				37A6E0C0257FB08800FAB7DD /* _50_My_Pow.m */,
 				37A6E0C32580717300FAB7DD /* _54_Spiral_Matrix.h */,
@@ -884,6 +881,7 @@
 				37D01D56255AC458007B297E /* _234_Palindrome_Linked_List.m in Sources */,
 				358E928E259F3D0D001AD137 /* _438_Find_All_Anagrams_in_a_String.m in Sources */,
 				37CF43C72538362700CBBDEF /* 237_DeleteNodeinLinkedList.c in Sources */,
+				3538BE2625A1881F00FC330A /* _37_SudokuSolver.m in Sources */,
 				3790FA212579DC3500B2701E /* _151_Reverse_Words_in_a_String.m in Sources */,
 				3790F9F225789C9200B2701E /* MyStack.m in Sources */,
 				358E928A259F395F001AD137 /* _567_PermutationinString.m in Sources */,
