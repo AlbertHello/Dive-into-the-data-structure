@@ -23,7 +23,7 @@
 @implementation _234_Palindrome_Linked_List
 
 /**
- 234. 回文链表
+ 234. 回文链表 ¥¥¥¥¥
 请判断一个链表是否为回文链表。
 
  示例 1:

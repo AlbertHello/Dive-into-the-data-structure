@@ -69,21 +69,26 @@ int myAtoi(char* str) {
     long ret = 0; // 用long存储
     int flag = 1;//默认正数
     //去除空格，str指针走到不是空格的那个字符处
-    for (; *str == 32; str++); // 空格的ASCII码是32
+    for (; *str == ' '; str++); // 空格的ASCII码是32
     //判断符号位
     switch (*str) {
-        case 45: // 负号的ASCII码是45
+        case '-': // 负号的ASCII码是45
             flag = -1;//不设置break，因为正负号都得str++
-        case 43: // 正号的ASCII码是43
+        case '+': // 正号的ASCII码是43
             str++; // 如果是正号就忽视，走到下一个字符处
     }
     //正负号之后再排除非数字的情况 0～9的ASCII码是48 ～ 57
-    if (*str < 48 || *str>57) return 0;
+    if (*str < '0' || *str>'9') return 0;
     
-    while (*str >= 48 && *str <= 57) {//连续的数字
-        ret = ret * 10 + (*str - 48); //数字字符转数字
-        //判断溢出
-        if ((int)ret != ret) { // 如果溢出了(int)ret != ret
+    while (*str >= '0' && *str <= '9') {//连续的数字
+        ret = ret * 10 + (*str - '0'); //数字字符转数字
+        // 判断溢出 1
+//        if ((int)ret != ret) { // 如果溢出了(int)ret != ret
+//            return (flag == 1) ? (INT_MAX) : (INT_MIN);
+//        }
+        
+        // 判断溢出 2
+        if (ret > INT_MAX || ret < INT_MIN) {
             return (flag == 1) ? (INT_MAX) : (INT_MIN);
         }
         str++;
@@ -178,8 +183,10 @@ int myAtoi(char* str) {
 
 +(void)myAtoiTest{
     _StringtoInteger *sss=[[self alloc] init];
-    NSLog(@"%d",[sss myAtoi:@"-2147483647"]);
+    NSLog(@"%d",[sss myAtoi:@"-91283472332"]);
     
+    
+    NSLog(@"%d",myAtoi("  -43"));
 }
 
 

@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface _StringtoInteger : NSObject
 
 
+int myAtoi(char* str);
 +(void)myAtoiTest;
 @end
 
