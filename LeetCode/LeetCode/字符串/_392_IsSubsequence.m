@@ -32,14 +32,18 @@
  
  时间复杂度只需 O(N)，N 为 t 的长度。
  */
-bool isSubsequence(char *s, char * t) {
-    int i = 0, j = 0;
-    while (i < strlen(s) && j < strlen(t)) {
+bool isSubsequence(char *s, char *t) {
+    int m = (int)strlen(s);
+    int n = (int)strlen(t);
+    if (m == 0) return true;
+    if (n == 0) return false;
+    int i=0,j=0;
+    while (i < m && j < n){
         if (s[i] == t[j]) i++;
         j++;
     }
     // 只要i == strlen(s) 说明s串都已经匹配完了，否则就是没匹配完，while就结束了。
-    return i == strlen(s);
+    return i == m;
 }
 
 // 查找左侧边界的二分查找
