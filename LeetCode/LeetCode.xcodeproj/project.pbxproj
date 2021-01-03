@@ -17,6 +17,7 @@
 		351EB71825A16B3A006D8C21 /* chiputao.m in Sources */ = {isa = PBXBuildFile; fileRef = 351EB71725A16B3A006D8C21 /* chiputao.m */; };
 		3538BE2625A1881F00FC330A /* _37_SudokuSolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3538BE2525A1881F00FC330A /* _37_SudokuSolver.m */; };
 		3538BE2B25A1B63800FC330A /* _111_MinimumDepthofBinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3538BE2A25A1B63800FC330A /* _111_MinimumDepthofBinaryTree.m */; };
+		3538BE2F25A1C08F00FC330A /* _969_PancakeSorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 3538BE2E25A1C08F00FC330A /* _969_PancakeSorting.m */; };
 		3545A4B4258EFA9100604654 /* _218_The_Skyline_Problem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3545A4B3258EFA9100604654 /* _218_The_Skyline_Problem.m */; };
 		3545A511258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 3545A510258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.m */; };
 		3564FE55254E4A4800230505 /* BinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564FE54254E4A4800230505 /* BinarySearch.m */; };
@@ -151,6 +152,8 @@
 		3538BE2525A1881F00FC330A /* _37_SudokuSolver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _37_SudokuSolver.m; sourceTree = "<group>"; };
 		3538BE2925A1B63800FC330A /* _111_MinimumDepthofBinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _111_MinimumDepthofBinaryTree.h; sourceTree = "<group>"; };
 		3538BE2A25A1B63800FC330A /* _111_MinimumDepthofBinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _111_MinimumDepthofBinaryTree.m; sourceTree = "<group>"; };
+		3538BE2D25A1C08F00FC330A /* _969_PancakeSorting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _969_PancakeSorting.h; sourceTree = "<group>"; };
+		3538BE2E25A1C08F00FC330A /* _969_PancakeSorting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _969_PancakeSorting.m; sourceTree = "<group>"; };
 		3545A4B2258EFA9100604654 /* _218_The_Skyline_Problem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _218_The_Skyline_Problem.h; sourceTree = "<group>"; };
 		3545A4B3258EFA9100604654 /* _218_The_Skyline_Problem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _218_The_Skyline_Problem.m; sourceTree = "<group>"; };
 		3545A50F258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _378_KthSmallestElementinaSortedMatrix.h; sourceTree = "<group>"; };
@@ -642,6 +645,8 @@
 				3790F9ED257891D900B2701E /* _739_DailyTeampreture.m */,
 				37D01D4C255A866D007B297E /* _768_Max_Chunks_To_Make_Sorted2.h */,
 				37D01D4D255A866D007B297E /* _768_Max_Chunks_To_Make_Sorted2.m */,
+				3538BE2D25A1C08F00FC330A /* _969_PancakeSorting.h */,
+				3538BE2E25A1C08F00FC330A /* _969_PancakeSorting.m */,
 				37EBD94B2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.h */,
 				37EBD94C2553A64600D726A5 /* _1381_Design_a_Stack_With_Increment_Operation.m */,
 			);
@@ -904,6 +909,7 @@
 				37EBD7A4254FAAD600D726A5 /* 28_Implement_strStr.m in Sources */,
 				370E302B25550C86007FC789 /* UnionFind.m in Sources */,
 				370E302F25550C86007FC789 /* UnionFind_QU_Rank.m in Sources */,
+				3538BE2F25A1C08F00FC330A /* _969_PancakeSorting.m in Sources */,
 				373632CA25413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.m in Sources */,
 				37CF43972538357A00CBBDEF /* main.m in Sources */,
 				370E302C25550C86007FC789 /* UnionFind_QU_Size.m in Sources */,
