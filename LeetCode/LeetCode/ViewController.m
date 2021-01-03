@@ -53,6 +53,7 @@
 #import "_191_Number_of_1_Bits.h"
 #import "_76_Minimum_Window_Substring.h"
 #import "_316_RemoveDuplicateLetters.h"
+#import "_43_MultiplyStrings.h"
 
 
 
@@ -88,9 +89,9 @@
     
     
 //    [self test];
-//    [self leetcodeTest];
+    [self leetcodeTest];
 //    [self sortTest];
-    [self testBinaryTree];
+//    [self testBinaryTree];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -127,6 +128,7 @@
 //    singleNumberTest();
 //    [_76_Minimum_Window_Substring minWindowTest];
 //    [_316_RemoveDuplicateLetters removeDuplicateLettersTest];
+    [_43_MultiplyStrings multiplyTest];
     
     
 }

@@ -18,6 +18,7 @@
 		3538BE2625A1881F00FC330A /* _37_SudokuSolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3538BE2525A1881F00FC330A /* _37_SudokuSolver.m */; };
 		3538BE2B25A1B63800FC330A /* _111_MinimumDepthofBinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 3538BE2A25A1B63800FC330A /* _111_MinimumDepthofBinaryTree.m */; };
 		3538BE2F25A1C08F00FC330A /* _969_PancakeSorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 3538BE2E25A1C08F00FC330A /* _969_PancakeSorting.m */; };
+		3538BE3325A1C3EC00FC330A /* _43_MultiplyStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3538BE3225A1C3EC00FC330A /* _43_MultiplyStrings.m */; };
 		3545A4B4258EFA9100604654 /* _218_The_Skyline_Problem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3545A4B3258EFA9100604654 /* _218_The_Skyline_Problem.m */; };
 		3545A511258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 3545A510258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.m */; };
 		3564FE55254E4A4800230505 /* BinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564FE54254E4A4800230505 /* BinarySearch.m */; };
@@ -154,6 +155,8 @@
 		3538BE2A25A1B63800FC330A /* _111_MinimumDepthofBinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _111_MinimumDepthofBinaryTree.m; sourceTree = "<group>"; };
 		3538BE2D25A1C08F00FC330A /* _969_PancakeSorting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _969_PancakeSorting.h; sourceTree = "<group>"; };
 		3538BE2E25A1C08F00FC330A /* _969_PancakeSorting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _969_PancakeSorting.m; sourceTree = "<group>"; };
+		3538BE3125A1C3EC00FC330A /* _43_MultiplyStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _43_MultiplyStrings.h; sourceTree = "<group>"; };
+		3538BE3225A1C3EC00FC330A /* _43_MultiplyStrings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _43_MultiplyStrings.m; sourceTree = "<group>"; };
 		3545A4B2258EFA9100604654 /* _218_The_Skyline_Problem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _218_The_Skyline_Problem.h; sourceTree = "<group>"; };
 		3545A4B3258EFA9100604654 /* _218_The_Skyline_Problem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _218_The_Skyline_Problem.m; sourceTree = "<group>"; };
 		3545A50F258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _378_KthSmallestElementinaSortedMatrix.h; sourceTree = "<group>"; };
@@ -709,6 +712,8 @@
 				37CF43BB2538362700CBBDEF /* 5_LongestPalindromicSubstring.c */,
 				37EBD7A2254FAAD600D726A5 /* 28_Implement_strStr.h */,
 				37EBD7A3254FAAD600D726A5 /* 28_Implement_strStr.m */,
+				3538BE3125A1C3EC00FC330A /* _43_MultiplyStrings.h */,
+				3538BE3225A1C3EC00FC330A /* _43_MultiplyStrings.m */,
 				3790FA1F2579DC3500B2701E /* _151_Reverse_Words_in_a_String.h */,
 				3790FA202579DC3500B2701E /* _151_Reverse_Words_in_a_String.m */,
 				3790FA232579EEBC00B2701E /* _242_Valid_Anagram.h */,
@@ -879,6 +884,7 @@
 				37898B0B259D78D200688E37 /* _200_NumberofIslands.m in Sources */,
 				3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */,
 				37A8F7982599828E00F44465 /* _191_Number_of_1_Bits.m in Sources */,
+				3538BE3325A1C3EC00FC330A /* _43_MultiplyStrings.m in Sources */,
 				37A8F7BB2599984E00F44465 /* _190_Reverse_Bits.m in Sources */,
 				370E306625556C3F007FC789 /* _394_Decode_String.m in Sources */,
 				378C99AE254925FD00B64B92 /* SelectSort.m in Sources */,
