@@ -25,6 +25,7 @@
 		3586A3FC2545632300CD2C61 /* BubbleSort3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3586A3FB2545632300CD2C61 /* BubbleSort3.m */; };
 		358E928A259F395F001AD137 /* _567_PermutationinString.m in Sources */ = {isa = PBXBuildFile; fileRef = 358E9289259F395F001AD137 /* _567_PermutationinString.m */; };
 		358E928E259F3D0D001AD137 /* _438_Find_All_Anagrams_in_a_String.m in Sources */ = {isa = PBXBuildFile; fileRef = 358E928D259F3D0D001AD137 /* _438_Find_All_Anagrams_in_a_String.m */; };
+		3591715C25A176A000E06242 /* _78_Subsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591715B25A176A000E06242 /* _78_Subsets.m */; };
 		35C9B1F9257C708A00CF3899 /* _72_Edit_Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */; };
 		35C9B1FD257C906B00CF3899 /* _322_Coin_Change.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9B1FC257C906B00CF3899 /* _322_Coin_Change.m */; };
 		35CF22312543E2910044632E /* BubbleSort1.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CF22302543E2910044632E /* BubbleSort1.m */; };
@@ -163,6 +164,8 @@
 		358E9289259F395F001AD137 /* _567_PermutationinString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _567_PermutationinString.m; sourceTree = "<group>"; };
 		358E928C259F3D0D001AD137 /* _438_Find_All_Anagrams_in_a_String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _438_Find_All_Anagrams_in_a_String.h; sourceTree = "<group>"; };
 		358E928D259F3D0D001AD137 /* _438_Find_All_Anagrams_in_a_String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _438_Find_All_Anagrams_in_a_String.m; sourceTree = "<group>"; };
+		3591715A25A176A000E06242 /* _78_Subsets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _78_Subsets.h; sourceTree = "<group>"; };
+		3591715B25A176A000E06242 /* _78_Subsets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _78_Subsets.m; sourceTree = "<group>"; };
 		35C9B1F7257C708A00CF3899 /* _72_Edit_Distance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _72_Edit_Distance.h; sourceTree = "<group>"; };
 		35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _72_Edit_Distance.m; sourceTree = "<group>"; };
 		35C9B1FB257C906B00CF3899 /* _322_Coin_Change.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _322_Coin_Change.h; sourceTree = "<group>"; };
@@ -386,6 +389,19 @@
 			path = "滑动窗口";
 			sourceTree = "<group>";
 		};
+		3591715625A172E200E06242 /* 回溯 */ = {
+			isa = PBXGroup;
+			children = (
+				37A4DBC225679CF80010C9C9 /* _46_Permutations.h */,
+				37A4DBC325679CF80010C9C9 /* _46_Permutations.m */,
+				37C1EF5F25751B22002346A9 /* _51_N-Queens.h */,
+				37C1EF6025751B22002346A9 /* _51_N-Queens.m */,
+				3591715A25A176A000E06242 /* _78_Subsets.h */,
+				3591715B25A176A000E06242 /* _78_Subsets.m */,
+			);
+			path = "回溯";
+			sourceTree = "<group>";
+		};
 		35C9B1FF257C908F00CF3899 /* 动态规划 */ = {
 			isa = PBXGroup;
 			children = (
@@ -566,14 +582,11 @@
 				376CB650257E5BD200CF90F5 /* DFS  */,
 				375921FA255FED470055F16E /* _42_Trapping_Rain_Water.h */,
 				375921FB255FED470055F16E /* _42_Trapping_Rain_Water.m */,
-				37A4DBC225679CF80010C9C9 /* _46_Permutations.h */,
-				37A4DBC325679CF80010C9C9 /* _46_Permutations.m */,
+				3591715625A172E200E06242 /* 回溯 */,
 				37A6E0BF257FB08800FAB7DD /* _50_My_Pow.h */,
 				37A6E0C0257FB08800FAB7DD /* _50_My_Pow.m */,
 				37A6E0C32580717300FAB7DD /* _54_Spiral_Matrix.h */,
 				37A6E0C42580717300FAB7DD /* _54_Spiral_Matrix.m */,
-				37C1EF5F25751B22002346A9 /* _51_N-Queens.h */,
-				37C1EF6025751B22002346A9 /* _51_N-Queens.m */,
 				3743DDCF258C602600E7880F /* _53_MaximumSubarray.h */,
 				3743DDD0258C602600E7880F /* _53_MaximumSubarray.m */,
 				37EBD8D425503B6200D726A5 /* 66_Plus_One.h */,
@@ -899,6 +912,7 @@
 				3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */,
 				3790F9EE257891D900B2701E /* _739_DailyTeampreture.m in Sources */,
 				3564FE59254E5E2600230505 /* MergeSort.m in Sources */,
+				3591715C25A176A000E06242 /* _78_Subsets.m in Sources */,
 				37C75B5825400B96006564C1 /* 15_ThreeSum.m in Sources */,
 				370E303025550C86007FC789 /* UnionFind_QF.m in Sources */,
 				37C1EF6625760199002346A9 /* _86_Partition_List.m in Sources */,

@@ -51,4 +51,5 @@ long solution(long a, long b, long c) {
     // 不能构成三角形，但依然可以完全平分的情况. 情况1
     return (sum + 2) / 3;
 }
+
 @end
