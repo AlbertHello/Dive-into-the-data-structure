@@ -14,6 +14,7 @@
 		3518E432259F2713002B9FFF /* _76_Minimum_Window_Substring.m in Sources */ = {isa = PBXBuildFile; fileRef = 3518E431259F2713002B9FFF /* _76_Minimum_Window_Substring.m */; };
 		35197EC825768B71009D5F0A /* _155_Min_Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197EC725768B71009D5F0A /* _155_Min_Stack.m */; };
 		35197ECC2577065E009D5F0A /* _239_Sliding_Window_Maximum.m in Sources */ = {isa = PBXBuildFile; fileRef = 35197ECB2577065E009D5F0A /* _239_Sliding_Window_Maximum.m */; };
+		351EB71825A16B3A006D8C21 /* chiputao.m in Sources */ = {isa = PBXBuildFile; fileRef = 351EB71725A16B3A006D8C21 /* chiputao.m */; };
 		3545A4B4258EFA9100604654 /* _218_The_Skyline_Problem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3545A4B3258EFA9100604654 /* _218_The_Skyline_Problem.m */; };
 		3545A511258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 3545A510258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.m */; };
 		3564FE55254E4A4800230505 /* BinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3564FE54254E4A4800230505 /* BinarySearch.m */; };
@@ -140,6 +141,8 @@
 		35197EC725768B71009D5F0A /* _155_Min_Stack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _155_Min_Stack.m; sourceTree = "<group>"; };
 		35197ECA2577065E009D5F0A /* _239_Sliding_Window_Maximum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _239_Sliding_Window_Maximum.h; sourceTree = "<group>"; };
 		35197ECB2577065E009D5F0A /* _239_Sliding_Window_Maximum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _239_Sliding_Window_Maximum.m; sourceTree = "<group>"; };
+		351EB71625A16B3A006D8C21 /* chiputao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = chiputao.h; sourceTree = "<group>"; };
+		351EB71725A16B3A006D8C21 /* chiputao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chiputao.m; sourceTree = "<group>"; };
 		3545A4B2258EFA9100604654 /* _218_The_Skyline_Problem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _218_The_Skyline_Problem.h; sourceTree = "<group>"; };
 		3545A4B3258EFA9100604654 /* _218_The_Skyline_Problem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _218_The_Skyline_Problem.m; sourceTree = "<group>"; };
 		3545A50F258F3CB700604654 /* _378_KthSmallestElementinaSortedMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _378_KthSmallestElementinaSortedMatrix.h; sourceTree = "<group>"; };
@@ -388,6 +391,8 @@
 			children = (
 				3766716E257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.h */,
 				3766716F257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.m */,
+				351EB71625A16B3A006D8C21 /* chiputao.h */,
+				351EB71725A16B3A006D8C21 /* chiputao.m */,
 				37A6E0B9257FAD8A00FAB7DD /* offer */,
 				35C9B1F7257C708A00CF3899 /* _72_Edit_Distance.h */,
 				35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */,
@@ -838,6 +843,7 @@
 				37CF43C62538362700CBBDEF /* 141_LinkedListCycle.c in Sources */,
 				3586A3FC2545632300CD2C61 /* BubbleSort3.m in Sources */,
 				37EBD9552553D2FD00D726A5 /* _344_Reverse_String.m in Sources */,
+				351EB71825A16B3A006D8C21 /* chiputao.m in Sources */,
 				37A6E0C1257FB08800FAB7DD /* _50_My_Pow.m in Sources */,
 				37CF43C82538362700CBBDEF /* 21_MergeTwoSortedList.c in Sources */,
 				35197EC825768B71009D5F0A /* _155_Min_Stack.m in Sources */,
