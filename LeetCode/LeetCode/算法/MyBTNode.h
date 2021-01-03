@@ -14,6 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(strong, nonatomic,nullable)MyBTNode *parent;
 @property(strong, nonatomic,nullable)MyBTNode *left;
 @property(strong, nonatomic,nullable)MyBTNode *right;
+
+-(instancetype)initWithParent:(MyBTNode *)p
+                       lChild:(MyBTNode *)lc
+                       rChild:(MyBTNode *)rc
+                          val:(int)val;
+
 @end
 
 

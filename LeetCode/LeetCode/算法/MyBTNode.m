@@ -19,5 +19,17 @@
     }
     return self;
 }
-
+-(instancetype)initWithParent:(MyBTNode *)p
+                       lChild:(MyBTNode *)lc
+                       rChild:(MyBTNode *)rc
+                          val:(int)val{
+    self = [super init];
+    if (self) {
+        self.val=val;
+        self.parent=p;
+        self.left=lc;
+        self.right=rc;
+    }
+    return self;
+}
 @end
