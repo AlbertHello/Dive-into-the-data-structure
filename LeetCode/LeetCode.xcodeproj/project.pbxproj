@@ -26,6 +26,7 @@
 		358E928A259F395F001AD137 /* _567_PermutationinString.m in Sources */ = {isa = PBXBuildFile; fileRef = 358E9289259F395F001AD137 /* _567_PermutationinString.m */; };
 		358E928E259F3D0D001AD137 /* _438_Find_All_Anagrams_in_a_String.m in Sources */ = {isa = PBXBuildFile; fileRef = 358E928D259F3D0D001AD137 /* _438_Find_All_Anagrams_in_a_String.m */; };
 		3591715C25A176A000E06242 /* _78_Subsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591715B25A176A000E06242 /* _78_Subsets.m */; };
+		3591716025A17C2300E06242 /* _77_Combinations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591715F25A17C2300E06242 /* _77_Combinations.m */; };
 		35C9B1F9257C708A00CF3899 /* _72_Edit_Distance.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */; };
 		35C9B1FD257C906B00CF3899 /* _322_Coin_Change.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C9B1FC257C906B00CF3899 /* _322_Coin_Change.m */; };
 		35CF22312543E2910044632E /* BubbleSort1.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CF22302543E2910044632E /* BubbleSort1.m */; };
@@ -166,6 +167,8 @@
 		358E928D259F3D0D001AD137 /* _438_Find_All_Anagrams_in_a_String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _438_Find_All_Anagrams_in_a_String.m; sourceTree = "<group>"; };
 		3591715A25A176A000E06242 /* _78_Subsets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _78_Subsets.h; sourceTree = "<group>"; };
 		3591715B25A176A000E06242 /* _78_Subsets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _78_Subsets.m; sourceTree = "<group>"; };
+		3591715E25A17C2300E06242 /* _77_Combinations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _77_Combinations.h; sourceTree = "<group>"; };
+		3591715F25A17C2300E06242 /* _77_Combinations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _77_Combinations.m; sourceTree = "<group>"; };
 		35C9B1F7257C708A00CF3899 /* _72_Edit_Distance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _72_Edit_Distance.h; sourceTree = "<group>"; };
 		35C9B1F8257C708A00CF3899 /* _72_Edit_Distance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _72_Edit_Distance.m; sourceTree = "<group>"; };
 		35C9B1FB257C906B00CF3899 /* _322_Coin_Change.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _322_Coin_Change.h; sourceTree = "<group>"; };
@@ -398,6 +401,8 @@
 				37C1EF6025751B22002346A9 /* _51_N-Queens.m */,
 				3591715A25A176A000E06242 /* _78_Subsets.h */,
 				3591715B25A176A000E06242 /* _78_Subsets.m */,
+				3591715E25A17C2300E06242 /* _77_Combinations.h */,
+				3591715F25A17C2300E06242 /* _77_Combinations.m */,
 			);
 			path = "回溯";
 			sourceTree = "<group>";
@@ -912,6 +917,7 @@
 				3736330725419FB20039E4A6 /* 8_StringtoInteger.m in Sources */,
 				3790F9EE257891D900B2701E /* _739_DailyTeampreture.m in Sources */,
 				3564FE59254E5E2600230505 /* MergeSort.m in Sources */,
+				3591716025A17C2300E06242 /* _77_Combinations.m in Sources */,
 				3591715C25A176A000E06242 /* _78_Subsets.m in Sources */,
 				37C75B5825400B96006564C1 /* 15_ThreeSum.m in Sources */,
 				370E303025550C86007FC789 /* UnionFind_QF.m in Sources */,

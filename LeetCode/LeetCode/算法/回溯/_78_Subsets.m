@@ -7,7 +7,22 @@
 
 #import "_78_Subsets.h"
 
+@interface _78_Subsets ()
+
+@property(nonatomic,strong)NSMutableArray<NSMutableArray<NSNumber *> *> *res;
+
+@end
+
 @implementation _78_Subsets
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.res=[NSMutableArray array];
+    }
+    return self;
+}
 
 /**
  78. 子集
@@ -37,16 +52,11 @@
          撤销选择
  */
 
-NSMutableArray<NSMutableArray<NSNumber *> *> *res=NULL;
-
 -(NSMutableArray<NSMutableArray<NSNumber *> *> * )subsets:(NSArray *)nums{
-    
-    // 结果
-    res = [NSMutableArray array];
     // 记录走过的路径
     NSMutableArray<NSNumber *> *track=[NSMutableArray array];
     [self backtrack:nums start:0 track:track];
-    return res;
+    return self.res;
 }
 
 //时间复杂度：O(n×2^n)。一共2^n个状态，每种状态需要O(n) 的时间来构造子集。
@@ -57,7 +67,7 @@ NSMutableArray<NSMutableArray<NSNumber *> *> *res=NULL;
     
     //O(n)
     NSMutableArray *arr=[NSMutableArray arrayWithArray:track];
-    [res addObject:arr];
+    [self.res addObject:arr];
     
     // 注意 i 从 start 开始递增 // 共2^n次
     for (int i = start; i < nums.count; i++) {
