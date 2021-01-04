@@ -7,7 +7,17 @@
 
 #import "BinaryHeap.h"
 
-
+/**
+ 二叉堆的逻辑结构就是一棵完全二叉树，所以也叫完全二叉堆
+ ◼ 鉴于完全二叉树的一些特性， 二叉堆的底层（物理结构）一般用数组实现即可
+ 索引 i 的规律（ n 是元素数量）
+ 如果 i = 0 ，它是根节点
+ 如果 i > 0 ，它的父节点的索引为 floor( (i – 1) / 2 )
+ 如果 2i + 1 ≤ n – 1，它的左子节点的索引为 2i + 1
+ 如果 2i + 1 > n – 1 ，它无左子节点
+ 如果 2i + 2 ≤ n – 1 ，它的右子节点的索引为 2i + 2
+ 如果 2i + 2 > n – 1 ，它无右子节点
+ */
 @interface BinaryHeap ()
 
 @property(nonatomic,assign)NSUInteger size;
@@ -44,11 +54,24 @@
     }
     self.size=0;
 }
+/**
+ 添加操作：
+ 循环执行以下步骤
+ 如果 node ＞ 父节点
+ ✓ 与父节点交换位置
+ 如果 node ≤ 父节点，或者 node 没有父节点
+ ✓ 退出循环
+ ◼ 这个过程，叫做上滤（Sift Up）
+ 时间复杂度： O(logn)
+ */
 -(void)add:(int)ele{
     [self ensureCapacity:(int)self.size+1];
-    self.array[self.size++]=@(ele);
-    [self shiftUp:self.size-1];
+    self.array[self.size++]=@(ele); // 添加到数组最后
+    [self shiftUp:self.size-1];// 把刚添加的这个最后一个元素上滤
 }
+/**
+ 获取堆顶值。O（1）
+ */
 -(int)getElement{
     if ([self isEmpty]){
         NSLog(@"Binary heap is empty");
@@ -56,6 +79,17 @@
     }
     return [self.array[0] intValue];
 }
+/**
+ 删除操作：
+ 1. 用最后一个节点覆盖根节点
+ 2. 删除最后一个节点
+ 3. 循环执行以下操作
+ 如果 node < 最大的子节点
+ ✓ 与最大的子节点交换位置
+ 如果 node ≥ 最大的子节点， 或者 node 没有子节点
+ ✓ 退出循环
+ ◼ 这个过程，叫做下滤（Sift Down），时间复杂度： O(logn)
+ */
 -(int)removeEle{
     if ([self isEmpty]){
         NSLog(@"Binary heap is empty");
@@ -103,8 +137,9 @@
 //    }
     
     // 方式二
-    int ele=[self.array[index] intValue];
+    int ele=[self.array[index] intValue]; // 获取index下这个值
     while (index>0) {
+        // 获取该index对应的父节点 p_index =（index-1）/ 2
         NSUInteger p_index=(index-1) >> 1;
         int p_ele=[self.array[p_index] intValue];
         
@@ -122,21 +157,20 @@
 //index下标下的元素下虑
 -(void)shiftdown:(NSUInteger)index{
     int element = [self.array[index] intValue];
-    int half = (int)self.size >> 1;//除2
+    int half = (int)self.size >> 1;//除2，这是第一个叶子结点的索引。
     // 第一个叶子节点的索引 == 非叶子节点的数量
     // index < 第一个叶子节点的索引
-    // 必须保证index位置是非叶子节点
-    while (index < half) {
+    while (index < half) { // 必须保证index位置是非叶子节点
         // index的节点有2种情况
         // 1.只有左子节点
         // 2.同时有左右子节点
         // 默认为左子节点跟它进行比较
         //左子节点下标
-        int leftChildIndex = (int)(index << 1) + 1;
+        int leftChildIndex = (int)(index << 1) + 1; // 左孩子：2*i + 1
         //左子节点值
         int leftChild = [self.array[leftChildIndex] intValue];
         // 右子节点下标
-        int rightIndex = leftChildIndex + 1;
+        int rightIndex = leftChildIndex + 1; // // 右孩子：2*i + 2
         
         // 选出左右子节点最大的那个
         if (rightIndex < self.size && self.comparator([self.array[rightIndex]intValue],leftChild) > 0) {
