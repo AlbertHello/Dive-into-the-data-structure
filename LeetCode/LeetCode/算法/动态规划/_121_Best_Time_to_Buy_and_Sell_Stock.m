@@ -134,6 +134,7 @@ int maxProfit(int* prices, int pricesSize){
  return dp[n - 1][0];
  其实不用整个 dp 数组，只需要一个变量储存相邻的那个状态就足够了，这样可以把空间复杂度降到 O(1):
  */
+// k=1
 int maxProfit3(int* prices, int pricesSize){
     // base case: dp[-1][0] = 0, dp[-1][1] = -infinity
     int dp_i_0 = 0, dp_i_1 = INT_MIN;

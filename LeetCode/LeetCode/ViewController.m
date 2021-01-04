@@ -134,18 +134,18 @@
 }
 -(void)testBinaryTree{
 //    [BinaryTree binaryTreeTest];
-    [BinaryTree recoverTreeTest];
+//    [BinaryTree recoverTreeTest];
 }
 -(void)sortTest{
 //    int arr1[10]={90,56,23,4,1,45,57,29,40,39};
 //    int arr1[1000]={0},arr2[1000]={0},arr3[1000]={0},arr4[1000]={0},arr5[1000]={0};
 //    int arr6[1000]={0},arr7[1000]={0},arr8[1000]={0},arr9[1000]={0},arr10[1000]={0};
-    NSMutableArray *array1=[NSMutableArray array];
-    NSMutableArray *array2=[NSMutableArray array];
-    NSMutableArray *array3=[NSMutableArray array];
-    int len=10000;
-    for (int i=0; i<len; i++) {
-        int rand=arc4random()%len;
+//    NSMutableArray *array1=[NSMutableArray array];
+//    NSMutableArray *array2=[NSMutableArray array];
+//    NSMutableArray *array3=[NSMutableArray array];
+//    int len=10000;
+//    for (int i=0; i<len; i++) {
+//        int rand=arc4random()%len;
 //        arr1[i]=rand;
 //        arr2[i]=rand;
 //        arr3[i]=rand;
@@ -156,10 +156,10 @@
 //        arr8[i]=rand;
 //        arr9[i]=rand;
 //        arr10[i]=rand;
-        [array1 addObject:@(rand)];
-        [array2 addObject:@(rand)];
-        [array3 addObject:@(rand)];
-    }
+//        [array1 addObject:@(rand)];
+//        [array2 addObject:@(rand)];
+//        [array3 addObject:@(rand)];
+//    }
 //
 //    BubbleSort1 *b1=[[BubbleSort1 alloc]init];
 //    [b1 bubbleSort1:arr1 length:len];
