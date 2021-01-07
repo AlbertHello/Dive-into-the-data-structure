@@ -86,6 +86,8 @@
     return [self buildBST:head right:NULL];
 }
 // 快慢指针找中心节点
+// 1->2->3->4->5->null 奇数长度，最终fast停留在最后一个节点5上。slow停留在正中间节点3上
+// 1->2->3->4->5->6->null 偶数长度，最终fast停留在null上。slow停留在后一半的第一个节点4上。
 -(LinkNode *)getMedianLeft:(LinkNode *)left right:(LinkNode *)right{
     LinkNode *slow = left;
     LinkNode *fast = left;

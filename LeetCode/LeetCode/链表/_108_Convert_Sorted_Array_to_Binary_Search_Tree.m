@@ -6,6 +6,7 @@
 //
 
 #import "_108_Convert_Sorted_Array_to_Binary_Search_Tree.h"
+#import "MyBTNode.h"
 
 @interface TreeNode_108 : NSObject
 @property(assign, nonatomic)NSInteger val;
@@ -58,6 +59,16 @@
  
  时间复杂度：O(n)，其中n 是数组的长度。T(n)=2T(n/2)+O(1)每个数字只访问一次。
  空间复杂度：O(logn)，其中n 是数组的长度。空间复杂度不考虑返回值，因此空间复杂度主要取决于递归栈的深度，递归栈的深度是O(logn)。
+ 
+ 主定理：
+ T(n) = T(n/2)  + O(1)    --->>>   O(logn)
+ T(n) = T(n/2)  + O(n)    --->>>   O(n)
+ T(n) = 2T(n/2) + O(1)    --->>>   O(n)
+ T(n) = 2T(n/2) + O(n)    --->>>   O(nlogn)
+ T(n) = T(n-1)  + O(1)    --->>>   O(n)
+ T(n) = T(n-1)  + O(n)    --->>>   O(n^2)
+ T(n) = 2T(n-1) + O(1)    --->>>   O(2^n)
+ T(n) = 2T(n-1) + O(n)    --->>>   O(2^n)
  
  */
 -(TreeNode_108 *)sortedArrayToBST:(NSArray *)array{

@@ -54,6 +54,7 @@
 #import "_76_Minimum_Window_Substring.h"
 #import "_316_RemoveDuplicateLetters.h"
 #import "_43_MultiplyStrings.h"
+#import "_215_KthLargestElementinanArray.h"
 
 
 
@@ -102,7 +103,7 @@
 //    validParenthesesTest();
 //    climbStairsTest();
 //    [_5_ThreeSum threeSumTest];
-    [_StringtoInteger myAtoiTest];
+//    [_StringtoInteger myAtoiTest];
 //    [_49_Max_Points_on_a_Line maxPointsTests];
 //    [_8_Implement_strStr locateSubstringTest];
 //    [_6_Plus_One plusOneTest];
@@ -129,6 +130,7 @@
 //    [_76_Minimum_Window_Substring minWindowTest];
 //    [_316_RemoveDuplicateLetters removeDuplicateLettersTest];
 //    [_43_MultiplyStrings multiplyTest];
+    findKthLargestTest();
     
     
 }

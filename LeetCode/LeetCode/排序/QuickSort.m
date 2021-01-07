@@ -180,6 +180,58 @@ void quick_sort(int *nums, int begin, int end){
     quick_sort(nums, left+1, end); // [left+1, end)
 }
 
+/// C 实现 快排2 [begin, end] 闭区间
+void quick_sort2(int* nums, int begin, int end){
+    
+    if (begin >= end) return;
+    
+    // 在[begin,end)随机选择一个元素跟begin位置进行交换，降低最坏情况出现的概率
+    int random_index=(arc4random()%(end-begin + 1)) + begin;
+    int temp_begin = nums[begin];
+    nums[begin] = nums[random_index];
+    nums[random_index]=temp_begin;
+    
+    int left = begin;
+    int right = end;
+    
+    // 备份begin位置的元素，还是取index=begin处的元素作为标准值判断
+    int pivot = nums[begin];
+    while (left < right) {
+        // 左右begin end交替判断就可以用到这两个while来实现
+        while (left < right) {
+            // 如果大于号改成大于等于号，则可能就会导致最坏情况发生
+            if (nums[right] > pivot) { // 右边元素 > 轴点元素
+                right--;
+            } else { // 右边元素 <= 轴点元素 就得往轴点元素左边移动了
+                //下一轮就从轴点左侧开始判断
+                //begin end 交替判断
+                nums[left++]=nums[right];
+                break;
+            }
+        }
+        while (left < right) {
+            // 如果小于号改成小于等于号，则可能就会导致最坏情况发生
+            if (nums[left] < pivot) { // 左边元素 < 轴点元素
+                left++;
+            } else { // 左边元素 >= 轴点元素 就得往轴点元素右边移动了
+                //下一轮就从轴点右侧开始判断了
+                //begin end 交替判断
+                nums[right--]=nums[left];
+                break;
+            }
+        }
+    }
+    //能来到这里说明left=right了，也就找到了最中间的那个值的索引
+    // 将轴点元素放入最终的位置
+    nums[left]=pivot;
+    
+    quick_sort2(nums, begin, left-1);
+    quick_sort2(nums, left+1, end);
+}
+
+
+
+
 /*
  与轴点相等的元素
  如果序列中的所有元素都与轴点元素相等，利用目前的算法实现，轴点元素可以将序列分割成 2 个均匀的子序列
