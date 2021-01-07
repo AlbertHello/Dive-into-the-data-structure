@@ -57,25 +57,34 @@
         self.last=node;
         self.size++;
     }else{ // 不空
-        if (self.first != node) {
+        if (self.first != node) { // 如果查询的是头节点，不需要任何操作，因为头节点本来就是第一个。
+            // 获取该节点的前后节点
             Node *prev_node=node.prev;
             Node *next_node=node.next;
             // 新节点：
             if (prev_node == nil && prev_node == nil) {
-                self.size++;
+                self.size++; // 只有是新节点时size才加一
             }else{ // 原有节点
-                if (self.last == node) {//最后一个节点
+                if (self.last == node) {// 判断该node是不是最后一个节点
+                    // 是最后一个节点
+                    // 那么修改self.last，让其指向原本倒数第二的节点，它也就成了最后一个节点
                     self.last=self.last.prev;
+                    // 本来倒数第二的节点成了最后一个节点，它的next是指向null的
                     self.last.next=nil;
                 }else{
                     //不是最后一个节点
+                    // 这就好办了
                     prev_node.next=next_node;
                     next_node.prev=prev_node;
                 }
             }
+            // 最终该节点node成为了头节点，所以它的next要指向当前第一个节点，那么当前第一个节点就变成了第二个节点
             node.next=self.first;
+            // 该node成了第一个节点，那么它的pre就是null
             node.prev=nil;
+            // 原先的头节点self.first不是头节点了，那么它的pre就要指向新头节点node了。
             self.first.prev=node;
+            // 最后让self.first再指向第一个节点node
             self.first=node;
         }
     }
@@ -118,8 +127,9 @@
 
 
 /**
- 146. LRU缓存机制
+ 146. LRU缓存机制 $$$$$
  难度 中等
+ 链接：https://leetcode-cn.com/problems/lru-cache
  运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。它应该支持以下操作： 获取数据 get 和 写入数据 put 。
 
  获取数据 get(key) - 如果关键字 (key) 存在于缓存中，则获取关键字的值（总是正数），否则返回 -1。
@@ -142,10 +152,6 @@
  cache.get(1);       // 返回 -1 (未找到)
  cache.get(3);       // 返回  3
  cache.get(4);       // 返回  4
-
- 来源：力扣（LeetCode）
- 链接：https://leetcode-cn.com/problems/lru-cache
- 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
 /**
