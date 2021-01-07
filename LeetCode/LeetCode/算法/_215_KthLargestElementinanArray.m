@@ -6,7 +6,7 @@
 //
 
 #import "_215_KthLargestElementinanArray.h"
-
+#import "BinaryHeap.h"
 
 @implementation _215_KthLargestElementinanArray
 
@@ -56,6 +56,7 @@ void quick(int* nums, int begin, int end) { // [begin, end]
 }
 // 找那个轴点元素索引 [being, end]
 int findZhouDian(int* nums, int begin, int end){
+    if (begin == end) return begin;
     int left = begin;
     int right = end;
     // 备份begin位置的元素，还是取index=begin处的元素作为标准值判断
@@ -126,18 +127,64 @@ int findKthLargest(int* nums, int numsSize, int k) {
     }
     return -1;
 }
+
+/**
+ 解法2 二叉堆
+ */
+
+
+// 小顶堆比较器
+int comparator1(int first,int second){
+    return second-first;
+}
+// 大顶堆比较器
+int comparator2(int first,int second){
+    return first-second;
+}
+-(int)findKthLargest2:(int *)nums size:(int)numsSize k:(int)k{
+    
+    // 小顶堆，堆顶是最小元素，最后留下k个元素，堆顶就是第k个最大的元素
+    BinaryHeap *small_heap=[[BinaryHeap alloc]init];
+    small_heap.comparator=comparator1; // 小顶堆比较器
+    
+    for(int i=0; i<numsSize; i++){
+        // 每个元素都要过一遍二叉堆
+        [small_heap add:nums[i]];
+        // 堆中元素多于 k 个时，删除堆顶元素
+        if ([small_heap size] > k) {
+            [small_heap removeEle];
+        }
+    }
+    // pq 中剩下的是 nums 中 k 个最大元素，
+    // 堆顶是最小的那个，即第 k 个最大元素
+    return [small_heap getElement];
+}
+
+
+
+
+
+
+
 void findKthLargestTest(){
     int nums[]={3,2,1,5,6,4,59,21,34,12,8,19,20};
     int numsSize=sizeof(nums)/sizeof(int);
-    // 检查下快排算法是否正确
-    sort_quick(nums, numsSize);
-    for (int i=0; i<numsSize; i++) {
-        printf("%d ",nums[i]);
-    }
-    printf("\n");
     
-    // 找出第k个最大的元素
-    printf("%d ",findKthLargest(nums,numsSize,4));
+    // 解法1
+    // 检查下快排算法是否正确
+//    sort_quick(nums, numsSize);
+//    for (int i=0; i<numsSize; i++) {
+//        printf("%d ",nums[i]);
+//    }
+//    printf("\n");
+//
+//    // 找出第k个最大的元素
+//    printf("%d ",findKthLargest(nums,numsSize,4));
+    
+    
+    // 解法2
+    _215_KthLargestElementinanArray *ssss=[[_215_KthLargestElementinanArray alloc]init];
+    NSLog(@"%d",[ssss findKthLargest2:nums size:numsSize k:4]);
 }
 
 

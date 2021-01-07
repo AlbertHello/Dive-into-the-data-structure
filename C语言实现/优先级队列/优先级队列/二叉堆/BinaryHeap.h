@@ -8,7 +8,17 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-/// 自定义比较器
+/**
+ 自定义比较器
+ // 小顶堆比较器
+ int comparator1(int first,int second){
+     return second-first;
+ }
+ // 大顶堆比较器
+ int comparator2(int first,int second){
+     return first-second;
+ }
+ */
 typedef int(*Comparator)(int first,int second);
 
 @interface BinaryHeap : NSObject
