@@ -10,7 +10,7 @@
 @implementation _27_Remove_Element
 
 /**
- 27. 移除元素
+ 27. 移除元素 ¥
  难度 简单
  https://leetcode-cn.com/problems/remove-element/
  给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。
@@ -80,7 +80,7 @@ int removeElement(int* nums, int numsSize, int val) {
 }
 
 /**
- 283. 移动零
+ 283. 移动零 ¥¥¥
  难度 简单
  https://leetcode-cn.com/problems/move-zeroes/
  给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。

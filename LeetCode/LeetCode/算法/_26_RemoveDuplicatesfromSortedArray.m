@@ -10,7 +10,7 @@
 @implementation _26_RemoveDuplicatesfromSortedArray
 
 /**
- 26. 删除排序数组中的重复项
+ 26. 删除排序数组中的重复项 ¥
  难度 简单
  https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
  给定一个排序数组，你需要在 原地 删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
@@ -55,7 +55,7 @@
 
 /**
  双指针
- 我们让慢指针 slow 走在后面，快指针 fast 走在前面探路，找到一个不重复的元素就告诉 slow 并让 slow 前进一步。这样当 fast 指针遍历完整个数组 nums 后，nums[0..slow] 就是不重复元素。
+ 我们让慢指针 slow 走在后面，快指针 fast 走在前面探路，找到一个不重复的元素就告诉 slow 并让 slow 前进一步。这样当 fast 指针遍历完整个数组 nums 后，nums[0..slow-1] 就是不重复元素。
  
  */
 int removeDuplicates(int* nums, int numsSize){
@@ -65,12 +65,11 @@ int removeDuplicates(int* nums, int numsSize){
     int slow=0, fast=0;
     while (fast < numsSize) {
         if (nums[fast] != nums[slow]) {
-            slow++;
-            nums[slow] = nums[fast];
+            nums[slow++] = nums[fast];
         }
         fast++;
     }
-    // 数组长度为索引 + 1
-    return slow + 1;
+    // 数组长度为索引 
+    return slow;
 }
 @end

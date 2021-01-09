@@ -25,7 +25,7 @@
 }
 
 /**
- 77. 组合
+ 77. 组合 $
  难度 中等
  https://leetcode-cn.com/problems/combinations/
  给定两个整数 n 和 k，返回 1 ... n 中所有可能的 k 个数的组合。
@@ -62,12 +62,12 @@
            track:(NSMutableArray<NSNumber *> *)track{
     // 到达树的底部
     if (k == track.count) {
-        NSMutableArray *arr=[NSMutableArray arrayWithArray:track];
+        NSMutableArray *arr=[NSMutableArray arrayWithArray:track]; // O(n)
         [self.res addObject:arr];
         return;
     }
     // 注意 i 从 start 开始递增
-    for (int i = start; i <= n; i++) {
+    for (int i = start; i <= n; i++) { // O(n)
         // 做选择
         [track addObject:@(i)];
         // 进入下一层

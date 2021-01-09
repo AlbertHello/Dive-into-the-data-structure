@@ -136,7 +136,7 @@ char * minWindow(char * s, char * t){
             left++;
             // 如果移除的字符d是有用的，才进行窗口内数据的一系列更新
             if ([needMap.allKeys containsObject:d]) {
-                // 只有某个字符个数相等才valid-1
+                // 只有某个字符个数相等才valid-1，因为windowMap[d] 可能是大于等于1的
                 if (windowMap[d].intValue == needMap[d].intValue) valid--;
                 int v = windowMap[d].intValue;
                 [windowMap setObject:@(v-1) forKey:d]; // 更新
