@@ -310,16 +310,20 @@
     _460_LFU_Cache *cache=[[_460_LFU_Cache alloc] initWithCapacity:2];
     [cache put:1 value:1];
     [cache put:2 value:2];
+    
     int num = [cache get:1];
     NSLog(@"%d",num);
+    
     [cache put:3 value:3];
+    
     num = [cache get:2];
     NSLog(@"%d",num);
+    
     num = [cache get:3];
     NSLog(@"%d",num);
     
     [cache put:4 value:4];
-//
+    
     num = [cache get:1];
     NSLog(@"%d",num);
 
@@ -328,8 +332,6 @@
 
     num = [cache get:4];
     NSLog(@"%d",num);
-    
-//    [cache printCache];
 }
 
 @end
