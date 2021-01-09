@@ -55,6 +55,7 @@
 #import "_316_RemoveDuplicateLetters.h"
 #import "_43_MultiplyStrings.h"
 #import "_215_KthLargestElementinanArray.h"
+#import "_460_LFU_Cache.h"
 
 
 
@@ -110,7 +111,7 @@
 //    [_821_Shortest_Distance_to_a_Character shortestToCharTest];
 //    [_46_LRU_Cache LRU_Cache_Test];
 //    longestPalindromeTest();
-    [_394_Decode_String decodeStringTest];
+//    [_394_Decode_String decodeStringTest];
 //    [_16_16Sub_Sort_LCCI subSortTest];
 //    [_151_Reverse_Words_in_a_String reverseWordsTest];
 //    [__LongestSubstringWithoutRepeatingCharacters lengthOfLongestSubstring_c_Test];
@@ -131,6 +132,7 @@
 //    [_316_RemoveDuplicateLetters removeDuplicateLettersTest];
 //    [_43_MultiplyStrings multiplyTest];
 //    findKthLargestTest();
+    [_460_LFU_Cache LFU_Cache_Test];
     
     
 }

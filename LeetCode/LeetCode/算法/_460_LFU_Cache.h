@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface _460_LFU_Cache : NSObject
 
 +(void)LFU_Cache_Test;
+
 @end
 
 NS_ASSUME_NONNULL_END
