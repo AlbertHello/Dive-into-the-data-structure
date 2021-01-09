@@ -132,7 +132,15 @@
 @end
 
 @implementation _460_LFU_Cache
-
+-(instancetype)initWithCapacity:(NSUInteger)capacity{
+    if (self=[super init]) {
+        self.key_value_map=[NSMutableDictionary dictionary];
+        self.freq_keys_map=[NSMutableDictionary dictionary];
+        self.capacity=capacity;
+        self.minFreq=0;
+    }
+    return self;
+}
 
 /**
  460. LFU 缓存 $
@@ -248,6 +256,48 @@
     NSString *key=delete_node.key;
     
     [self.key_value_map removeObjectForKey:key];
+}
+
++(void)LFU_Cache_Test{
+    
+    /**
+     cache.put(1, 1);
+     cache.put(2, 2);
+     cache.get(1);       // 返回  1
+     cache.put(3, 3);    // 该操作会使得关键字 2 作废
+     cache.get(2);       // 返回 -1 (未找到)
+     cache.put(4, 4);    // 该操作会使得关键字 1 作废
+     cache.get(1);       // 返回 -1 (未找到)
+     cache.get(3);       // 返回  3
+     cache.get(4);
+     */
+    
+    _460_LFU_Cache *cache=[[_460_LFU_Cache alloc] initWithCapacity:2];
+    
+    [cache put:@"1" value:1];
+    
+    [cache put:@"2" value:2];
+    
+    NSInteger num = [cache get:@"1"];
+    NSLog(@"%ld",(long)num);
+    
+    [cache put:@"3" value:3];
+    
+    num = [cache get:@"2"];
+    NSLog(@"%ld",(long)num);
+    
+    [cache put:@"4" value:4];
+    
+    num = [cache get:@"1"];
+    NSLog(@"%ld",(long)num);
+    
+    num = [cache get:@"3"];
+    NSLog(@"%ld",(long)num);
+    
+    num = [cache get:@"4"];
+    NSLog(@"%ld",(long)num);
+    
+//    [cache printCache];
 }
 
 @end
