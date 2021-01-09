@@ -108,9 +108,9 @@
 //    [_8_Implement_strStr locateSubstringTest];
 //    [_6_Plus_One plusOneTest];
 //    [_821_Shortest_Distance_to_a_Character shortestToCharTest];
-    [_46_LRU_Cache LRU_Cache_Test];
+//    [_46_LRU_Cache LRU_Cache_Test];
 //    longestPalindromeTest();
-//    [_394_Decode_String decodeStringTest];
+    [_394_Decode_String decodeStringTest];
 //    [_16_16Sub_Sort_LCCI subSortTest];
 //    [_151_Reverse_Words_in_a_String reverseWordsTest];
 //    [__LongestSubstringWithoutRepeatingCharacters lengthOfLongestSubstring_c_Test];
