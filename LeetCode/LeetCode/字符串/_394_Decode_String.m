@@ -162,7 +162,7 @@
     return NO;
 }
 -(BOOL)isDigit:(char )c{
-    return (c >= 48 && c <= 57);
+    return (c >= '0' && c <= '9'); // '0' = 48, '9' = 57
 }
 +(void)decodeStringTest{
     _394_Decode_String *ins=[[_394_Decode_String alloc]init];
