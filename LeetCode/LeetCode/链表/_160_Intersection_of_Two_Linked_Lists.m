@@ -17,9 +17,10 @@
 @implementation _160_Intersection_of_Two_Linked_Lists
 
 /**
- 160. 相交链表
+ 160. 相交链表 $
  编写一个程序，找到两个单链表相交的起始节点。
-
+ https://leetcode-cn.com/problems/intersection-of-two-linked-lists/
+ 
  如下面的两个链表：在节点 c1 开始相交。
  示例 1：
  输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3
@@ -62,5 +63,40 @@ Node_160 *getIntersectionNode(Node_160 *headA, Node_160 *headB) {
     return ptr_a;
 }
 
+
+/// 下面是 【如何求两个View的最近公共父类】
+/**
+ 每个类的所有父类组成了一个继承链，而在UIKit下，所有的UIView的最终父类也必然是NSObject，其实就相当于这两个类的继承链从NSObject开始向下一直是重合的，直到最后的一个公共父类才开始分开，这个最后的公共父类也是最近的公共父类，这是典型的倒Y字型链表组合。
+ */
+// 获取所有父类
+- (NSArray *)superClasses:(Class)class {
+    if (class == nil) {
+        return @[];
+    }
+    NSMutableArray *result = [NSMutableArray array];
+    while (class != nil) {
+        [result addObject:class];
+        class = [class superclass];
+    }
+    return [result copy];
+}
+//对两条链表进行比对
+- (Class)commonClass1:(Class)classA andClass:(Class)classB {
+    NSArray *arr1 = [self superClasses:classA];
+    NSArray *arr2 = [self superClasses:classB];
+    NSInteger count = arr1.count < arr2.count ? arr1.count : arr2.count;
+    Class resultClass;
+    for (NSUInteger i = 0; i < count; ++i) {
+        // 倒着取父类
+        Class classA = arr1[arr1.count - i - 1];
+        Class classB = arr2[arr2.count - i - 1];
+        if(classA == classB){
+            resultClass = classA;
+        }else{
+            break;
+        }
+    }
+    return resultClass;
+}
 
 @end
