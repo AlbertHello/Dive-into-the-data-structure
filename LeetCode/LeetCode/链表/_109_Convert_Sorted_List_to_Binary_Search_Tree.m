@@ -41,7 +41,7 @@
 @implementation _109_Convert_Sorted_List_to_Binary_Search_Tree
 
 /**
- 109. 有序链表转换二叉搜索树
+ 109. 有序链表转换二叉搜索树 $
  难度 中等
  https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/
  给定一个单链表，其中的元素按升序排序，将其转换为高度平衡的二叉搜索树。
