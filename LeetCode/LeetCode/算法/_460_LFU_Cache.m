@@ -306,7 +306,6 @@
      lFUCache.get(3);      // 返回 3
      lFUCache.get(4);      // 返回 4
      */
-    
     _460_LFU_Cache *cache=[[_460_LFU_Cache alloc] initWithCapacity:2];
     [cache put:1 value:1];
     [cache put:2 value:2];

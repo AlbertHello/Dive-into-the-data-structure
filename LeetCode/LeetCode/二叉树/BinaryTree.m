@@ -1048,7 +1048,7 @@ static NSMutableArray *result_113 = nil;
     return isSame;
 }
 #pragma mark - 100  相同的树
-//************************* 100. 相同的树 *************************
+//************************* 100. 相同的树 ¥ *************************
 /**
  100. 相同的树
  给定两个二叉树，编写一个函数来检验它们是否相同。
@@ -1126,7 +1126,7 @@ static NSMutableArray *result_113 = nil;
     return isSame;
 }
 #pragma mark - 236. 二叉树的最近公共祖先
-//************************* 236. 二叉树的最近公共祖先 *************************
+//************************* 236. 二叉树的最近公共祖先 ¥¥ *************************
 /**
  236. 二叉树的最近公共祖先 $$
  https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/
@@ -1174,6 +1174,8 @@ static NSMutableArray *result_113 = nil;
  难度 中等
  https://leetcode-cn.com/problems/largest-bst-subtree/
  注意：子树必须包含气所有后代
+ 难度 中等
+ https://leetcode-cn.com/problems/largest-bst-subtree/
  输入：[10,5,15,1,8,null,7]
     10
     / \
@@ -1250,7 +1252,7 @@ static NSMutableArray *result_113 = nil;
     return (li != nil) ? li : ri;
 }
 #pragma mark - 99. 恢复二叉搜索树
-//************************* 99. 恢复二叉搜索树 *************************
+//************************* 99. 恢复二叉搜索树 ¥ *************************
 /**
  99. 恢复二叉搜索树
  https://leetcode-cn.com/problems/recover-binary-search-tree/
@@ -1449,7 +1451,7 @@ static NSMutableArray *result_113 = nil;
     int maxv = [bt maxPathSum:root];
     NSLog(@"maxPathSum: %d",maxv);
 }
-#pragma mark - 98. 验证二叉搜索树
+#pragma mark - 98. 验证二叉搜索树 $$
 //************************* 98. 验证二叉搜索树 *************************
 /**
  98. 验证二叉搜索树
@@ -1479,19 +1481,47 @@ static NSMutableArray *result_113 = nil;
  */
 
 bool isValidBST(BTNode *root) {
-    return verifyBST(root, NULL, NULL);
+    return verifyBST(NULL, root, NULL);
 }
 /* 限定以 root 为根的子树节点必须满足 max.val > root.val > min.val */
-bool verifyBST(BTNode *root, BTNode * min, BTNode * max) {
+bool verifyBST(BTNode * min, BTNode *root, BTNode * max) {
     // base case
     if (root == NULL) return true;
     // 若 root.val 不符合 max 和 min 的限制，说明不是合法 BST
     if (min != NULL && root.data <= min.data) return false;
     if (max != NULL && root.data >= max.data) return false;
     // 限定左子树的最大值是 root.val，右子树的最小值是 root.val
-    return verifyBST(root.left, min, root) && verifyBST(root.right, root, max);
+    return verifyBST(min, root.left, root) && verifyBST(root, root.right, max);
 }
 
+// 迭代。中序遍历
+// 如果中序遍历得到的节点的值小于等于前一个节点的值，说明不是二叉搜索树
+bool isValidBST2(BTNode* root) {
+    if (root == NULL) {
+        return false;
+    }
+    MyStack *stack=[[MyStack alloc]init];
+    int preVal = INT_MIN; // 前一个节点。
+    BTNode *n=root;
+    while (true) {
+        if (n != NULL) {
+            [stack push_obj:n];
+            // 向左走,一直把所有最左侧的节点入栈，知道最左侧的节点为null
+            n = n.left;
+        } else if (stack.size == 0) {
+            break;
+        } else { //最左侧的节点为null时
+            n=stack.pop_obj; //取出栈顶元素，此时这个node正好是为空的那个节点的父节点。
+            if (root.data < preVal) {
+                return false;
+            }
+            preVal = n.data;
+            // 让右节点进行中序遍历
+            n = n.right; //在赋值栈顶节点的右节点，下一轮开始
+        }
+    }
+    return true;
+}
 
 #pragma mark - 在 BST 中搜索一个数
 //************************* 在 BST 中搜索一个数 *************************
