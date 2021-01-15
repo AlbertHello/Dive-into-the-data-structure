@@ -117,7 +117,7 @@ int maxProfit(int* prices, int pricesSize){
      if (i - 1 == -1) {
          dp[i][0] = 0;
          // 解释：
-         //   dp[i][0]
+         //   dp[i][0
          // = max(dp[-1][0], dp[-1][1] + prices[i])
          // = max(0, -infinity + prices[i]) = 0
          dp[i][1] = -prices[i];
@@ -280,6 +280,7 @@ int maxProfit_k_any(int max_k, int *prices, int pricesSize) {
                  */
                 dp[i][k][0] = dp[i][0][0] = 0;
                 dp[i][k][1] = dp[i][0][1] = INT_MIN;
+                continue;
             }
             dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i]);
             dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i]);
@@ -311,6 +312,7 @@ int maxProfit_k_any(int max_k, int *prices, int pricesSize) {
                  */
                 res[i][k][0] = res[i][0][0] = @(0);
                 res[i][k][1] = res[i][0][1] = @(INT_MIN);
+                continue;
             }
             int max1=max(res[i-1][k][0].intValue, res[i-1][k][1].intValue + prices[i].intValue);
             res[i][k][0] = @(max1);

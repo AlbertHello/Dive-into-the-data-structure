@@ -118,6 +118,14 @@ int strStr2(char *haystack, char *needle) {
     }
     return -1;
 }
+/// 实现字符串拷贝的方法
+char *my_strcpy(char *strDest, const char *strSrc){
+    if ( strDest == NULL || strSrc == NULL) return NULL ;
+    if ( strDest == strSrc) return strDest ;
+    char *tempptr = strDest ;
+    while( (*strDest++ = *strSrc++) != '\0');
+    return tempptr;
+}
 //char *longestPalindromeDp(char *s) {
 //    if (s == NULL) return NULL;
 //    int len = (int)strlen(s);
