@@ -118,7 +118,6 @@ char * reverseWords(char * s){
     free(temp);
     return final;
 }
-
 +(void)reverseWordsTest{
     char *original="a good   example";
     printf("原长度： %lu 原串: _%s_\n",strlen(original),original);
