@@ -45,6 +45,27 @@ typedef int(*Comparator)(int first,int second);
 -(void)heapifyWith:(NSArray *)array;
 
 
+
+/// C 实现 创建一个二叉堆
+void create_heap(int capacity, bool big);
+/// C 实现 添加元素
+void add_top(int ele);
+/// C 实现 删除堆顶元素
+int remove_top(void);
+/// C 实现 获取堆顶元素
+int get_top(void);
+/// C 实现 获取堆大小
+int get_heap_size(void);
+/// C 实现 获取结果
+int *get_result(void);
+/// C 实现 小顶堆 上滤
+void shiftUp_C_for_small_heap(int index);
+/// C 实现 小顶堆 下滤
+void shiftdown_C_for_small_heap(int index);
+/// C 实现 大顶堆 上滤
+void shiftUp_C_for_big_heap(int index);
+/// C 实现 大顶堆 下滤
+void shiftdown_C_for_big_heap(int index);
 @end
 
 NS_ASSUME_NONNULL_END

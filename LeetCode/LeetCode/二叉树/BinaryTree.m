@@ -218,7 +218,7 @@ static id object = NULL;
 #pragma mark - 116 填充二叉树节点的右侧指针
 //************************* 116 填充二叉树节点的右侧指针 *************************
 /**
- 116. 填充每个节点的下一个右侧节点指针
+ 116. 填充每个节点的下一个右侧节点指针 ¥
  难度 中等
  https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node/
 给定一个完美二叉树，其所有叶子节点都在同一层，每个父节点都有两个子节点。二叉树定义如下：
@@ -256,7 +256,7 @@ static id object = NULL;
 #pragma mark - 114 二叉树展开为连表
 //************************* 114 二叉树展开为连表 *************************
 /**
- 114. 二叉树展开为链表
+ 114. 二叉树展开为链表 ¥
  https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/
 给定一个二叉树，原地将它展开为一个单链表。
  例如，给定二叉树
@@ -454,7 +454,7 @@ int *parentIndexes(int *nums, int length) {
 #pragma mark - 105. 从前序与中序遍历序列构造二叉树
 //************************* 105. 从前序与中序遍历序列构造二叉树 *************************
 /**
- 105. 从前序与中序遍历序列构造二叉树
+ 105. 从前序与中序遍历序列构造二叉树 ¥¥¥¥¥
  难度 中等
  https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
  根据一棵树的前序遍历与中序遍历构造二叉树。
@@ -525,9 +525,9 @@ int *parentIndexes(int *nums, int length) {
                     inStart:inStart
                       inEnd:index-1];
     
-    // 递归构造左子树
-    //preorder 左子树[preStart + leftSize + 1,  preEnd]
-    //inorder 左子树[index + 1,  inEnd]
+    // 递归构造右子树
+    //preorder 右子树[preStart + leftSize + 1,  preEnd]
+    //inorder 右子树[index + 1,  inEnd]
     root.right = [self build:preorder
                     preStart:preStart + leftSize + 1
                       preEnd:preEnd
@@ -609,9 +609,9 @@ int *parentIndexes(int *nums, int length) {
                   postStart:postStart
                     postEnd:postStart+leftSize-1];
     
-    // 递归构造左子树
-    //inorder   左子树[index+1,  inEnd]
-    //postorder 左子树[postStart+leftSize, postEnd]
+    // 递归构造右子树
+    //inorder   右子树[index+1,  inEnd]
+    //postorder 右子树[postStart+leftSize, postEnd]
     root.right = [self build:inorder
                      inStart:index+1
                        inEnd:inEnd
@@ -764,7 +764,7 @@ static int result = 0;
 #pragma mark - 112. 路径总和
 //************************* 112. 路径总和 *************************
 /**
- 112. 路径总和
+ 112. 路径总和 ¥¥¥¥
  给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。
  说明: 叶子节点是指没有子节点的节点。
  示例:
@@ -930,7 +930,7 @@ static NSMutableArray *result_113 = nil;
     [self traversal_113:root count:sum-root.data];
     return result_113;
 }
-#pragma mark - 101 二叉树是否对称
+#pragma mark - 101 二叉树是否对称 ¥¥
 //************************* 101 二叉树是否对称 *************************
 /**
  101. 对称二叉树 ¥¥
@@ -1174,8 +1174,6 @@ static NSMutableArray *result_113 = nil;
  难度 中等
  https://leetcode-cn.com/problems/largest-bst-subtree/
  注意：子树必须包含气所有后代
- 难度 中等
- https://leetcode-cn.com/problems/largest-bst-subtree/
  输入：[10,5,15,1,8,null,7]
     10
     / \
@@ -1452,7 +1450,7 @@ static NSMutableArray *result_113 = nil;
     NSLog(@"maxPathSum: %d",maxv);
 }
 #pragma mark - 98. 验证二叉搜索树 $$
-//************************* 98. 验证二叉搜索树 *************************
+//************************* 98. 验证二叉搜索树 ¥¥ *************************
 /**
  98. 验证二叉搜索树
  难度 中等
@@ -1611,7 +1609,7 @@ BTNode *getRightMin(BTNode * node) {
 }
 
 #pragma mark - 222. 完全二叉树的节点个数¥¥
-//************************* 222. 完全二叉树的节点个数 *************************
+//************************* 222. 完全二叉树的节点个数¥ *************************
 /**
  222. 完全二叉树的节点个数
  难度 中等

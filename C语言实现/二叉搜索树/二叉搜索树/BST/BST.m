@@ -489,6 +489,7 @@ int* inorderTraversal(struct TreeNode* root, int* returnSize){
     return root;
 }
 
+// 中序遍历递归
 -(BSTNode *)invertTree2:(BSTNode *)root{
     if (root == NULL) return root;
     [self invertTree2:root.left];

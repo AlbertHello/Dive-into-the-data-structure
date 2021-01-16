@@ -131,33 +131,83 @@ int findKthLargest(int* nums, int numsSize, int k) {
 /**
  解法2 二叉堆
  */
-
-
-// 小顶堆比较器
-int comparator1(int first,int second){
-    return second-first;
-}
-// 大顶堆比较器
-int comparator2(int first,int second){
-    return first-second;
-}
+// 找到数组中第k大的元素，用小顶堆
 -(int)findKthLargest2:(int *)nums size:(int)numsSize k:(int)k{
-    
     // 小顶堆，堆顶是最小元素，最后留下k个元素，堆顶就是第k个最大的元素
-    BinaryHeap *small_heap=[[BinaryHeap alloc]init];
-    small_heap.comparator=comparator1; // 小顶堆比较器
-    
+    create_heap(k+1,false);
     for(int i=0; i<numsSize; i++){
         // 每个元素都要过一遍二叉堆
-        [small_heap add:nums[i]];
+        add_top(nums[i]);
         // 堆中元素多于 k 个时，删除堆顶元素
-        if ([small_heap size] > k) {
-            [small_heap removeEle];
+        if (get_heap_size() > k) {
+            remove_top();
         }
     }
     // pq 中剩下的是 nums 中 k 个最大元素，
     // 堆顶是最小的那个，即第 k 个最大元素
-    return [small_heap getElement];
+    return get_top();
+}
+
+// 找到数组中第k小的元素，用大顶堆
+-(int)findKthSmallest:(int *)nums size:(int)numsSize k:(int)k{
+    // 小顶堆，堆顶是最小元素，最后留下k个元素，堆顶就是第k个最大的元素
+    create_heap(k+1,true);
+    for(int i=0; i<numsSize; i++){
+        // 每个元素都要过一遍二叉堆
+        add_top(nums[i]);
+        // 堆中元素多于 k 个时，删除堆顶元素
+        if (get_heap_size() > k) {
+            remove_top();
+        }
+    }
+    // pq 中剩下的是 nums 中 k 个最大元素，
+    // 堆顶是最小的那个，即第 k 个最大元素
+    return get_top();
+}
+// top K 用小顶堆
+-(void)findTopK:(int *)nums size:(int)numsSize k:(int)k{
+    // 创建大顶堆
+    create_heap(k,false);
+    for (int i=0; i<k; i++) {
+        // 先把前K个加入
+        add_top(nums[i]);
+    }
+    for(int i=k; i<numsSize; i++){
+        // 大于堆顶元素时，现删除堆顶，再新添加
+        if (nums[i] > get_top()) {
+            remove_top();
+            add_top(nums[i]);
+        }
+    }
+    // 打印
+    int *res=get_result();
+    for (int i=0; i<k; i++) {
+        printf("%d ",res[i]);
+    }
+    printf("\n");
+}
+
+// bottom K 用大顶堆
+-(void)findBottomK:(int *)nums size:(int)numsSize k:(int)k{
+    // 创建大顶堆
+    create_heap(k,true);
+    for (int i=0; i<k; i++) {
+        // 先把前K个加入
+        add_top(nums[i]);
+    }
+    for(int i=k; i<numsSize; i++){
+        // 大于堆顶元素时，现删除堆顶，再新添加
+        if (nums[i] < get_top()) {
+            remove_top();
+            add_top(nums[i]);
+        }
+    }
+    // 打印
+    int *res=get_result();
+    for (int i=0; i<k; i++) {
+        printf("%d ",res[i]);
+    }
+    printf("\n");
 }
 
 
@@ -184,7 +234,14 @@ void findKthLargestTest(){
     
     // 解法2
     _215_KthLargestElementinanArray *ssss=[[_215_KthLargestElementinanArray alloc]init];
-    NSLog(@"%d",[ssss findKthLargest2:nums size:numsSize k:4]);
+    
+//    NSLog(@"%d",[ssss findKthLargest2:nums size:numsSize k:2]);
+    
+//    NSLog(@"%d",[ssss findKthSmallest:nums size:numsSize k:2]);
+    
+    [ssss findTopK:nums size:numsSize k:5];
+    
+    [ssss findBottomK:nums size:numsSize k:5];
 }
 
 
