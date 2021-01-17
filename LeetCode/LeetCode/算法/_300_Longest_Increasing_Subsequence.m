@@ -11,7 +11,7 @@
 @implementation _300_Longest_Increasing_Subsequence
 
 /**
- 300. 最长递增子序列
+ 300. 最长递增子序列 ¥¥¥¥
  难度 中等
  https://leetcode-cn.com/problems/longest-increasing-subsequence/
  给你一个整数数组 nums ，找到其中最长严格递增子序列的长度。
