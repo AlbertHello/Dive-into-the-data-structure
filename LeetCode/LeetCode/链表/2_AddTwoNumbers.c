@@ -190,8 +190,10 @@ char *addStrings(char *num1, char *num2) {
     int len1=(int)strlen(num1);
     int len2=(int)strlen(num2);
     int len = (len1 > len2)? len1 : len2;
+    
     char *res=(char *)malloc(sizeof(char)*(len + 2));
     memset(res, 0, sizeof(char)*(len + 2));
+    
     int i = len1 - 1, j = len2 - 1, carry = 0;
     int k=0;
     while(i >= 0 || j >= 0){
