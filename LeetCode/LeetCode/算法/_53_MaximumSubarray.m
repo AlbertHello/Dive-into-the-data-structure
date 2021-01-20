@@ -66,10 +66,6 @@
  如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的分治法求解。
  */
 
-int find_max(int num1, int num2){
-    return num1>=num2 ? num1:num2;
-}
-
 //时间复杂度：O(n)，其中n 为 nums 数组的长度。我们只需要遍历一遍数组即可求得答案。
 //空间复杂度：O(1)。我们只需要常数空间存放若干变量。
 int maxSubArray(int* nums, int numsSize){
@@ -79,11 +75,11 @@ int maxSubArray(int* nums, int numsSize){
         //拿前面加过的数和当前数相加，然后再和该数比较
         //如果pre + num的和比pre小，说明num是负数。
         //无论pre重新赋值为pre + num还是num逗比原先pre要小了
-        pre = find_max(pre + num, num);
+        pre = max(pre + num, num);
         //maxAns保存的是连续子数组元素之和最大值，pre计算完后和maxAns比较，
         //如果上一步出现了num为负数，那么maxAns和pre的比较肯定保留的是maxAns
         //有点儿像滚动数组的意思
-        maxAns = find_max(maxAns, pre);
+        maxAns = max(maxAns, pre);
     }
     return maxAns;
 }

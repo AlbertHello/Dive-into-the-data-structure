@@ -174,6 +174,56 @@ SingleNode_1 *addTwoNumbers3(SingleNode_1* l1, SingleNode_1* l2){
 }
 
 
+/**
+ 415. 字符串相加 ¥¥¥
+ 难度 简单
+ https://leetcode-cn.com/problems/add-strings/
+ 给定两个字符串形式的非负整数 num1 和num2 ，计算它们的和。
+ 提示：
+ num1 和num2 的长度都小于 5100
+ num1 和num2 都只包含数字 0-9
+ num1 和num2 都不包含任何前导零
+ 你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式
+ */
+
+char *addStrings(char *num1, char *num2) {
+    int len1=(int)strlen(num1);
+    int len2=(int)strlen(num2);
+    int len = (len1 > len2)? len1 : len2;
+    
+    char *res=(char *)malloc(sizeof(char)*(len + 2));
+    memset(res, 0, sizeof(char)*(len + 2));
+    
+    int i = len1 - 1, j = len2 - 1, carry = 0;
+    int k=0;
+    while(i >= 0 || j >= 0){
+        int n1 = i >= 0 ? num1[i] - '0' : 0;
+        int n2 = j >= 0 ? num2[j] - '0' : 0;
+        carry = n1 + n2 + (carry>=10 ? 1: 0);
+        int val = carry % 10;
+        res[k++] = (char)('0' + val);
+        i--;
+        j--;
+    }
+    i=0;
+    j=len-1;
+    if(carry >= 10) {
+        res[k]= '1';
+        j=len;
+    }
+    // 反转
+    while (i<j) {
+        char temp=res[i];
+        res[i]=res[j];
+        res[j]=temp;
+        i++;
+        j--;
+    }
+    return res;
+}
+
+
+
 void add_two_numbers_test(void){
     SingleNode_1 *link1=(SingleNode_1 *)malloc(sizeof(SingleNode_1));
     link1->val=5;
