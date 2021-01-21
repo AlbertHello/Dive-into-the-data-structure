@@ -62,7 +62,7 @@
 		37667170257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3766716F257BB0320034C561 /* _121_Best_Time_to_Buy_and_Sell_Stock.m */; };
 		3776CDCA2546DA70003C8105 /* 1_TwoSums.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDC92546DA70003C8105 /* 1_TwoSums.m */; };
 		3776CDCF2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDCE2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m */; };
-		3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDD22547CC4B003C8105 /* 146_LRU_Cache.m */; };
+		3776CDD32547CC4C003C8105 /* 146_LRU_Cache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3776CDD22547CC4B003C8105 /* 146_LRU_Cache.mm */; };
 		37898B0B259D78D200688E37 /* _200_NumberofIslands.m in Sources */ = {isa = PBXBuildFile; fileRef = 37898B0A259D78D200688E37 /* _200_NumberofIslands.m */; };
 		378C998B2549112D00B64B92 /* HeapSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C998A2549112D00B64B92 /* HeapSort.m */; };
 		378C99AE254925FD00B64B92 /* SelectSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C99AD254925FD00B64B92 /* SelectSort.m */; };
@@ -221,6 +221,7 @@
 		370E302A25550C86007FC789 /* UnionFind_QF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnionFind_QF.h; sourceTree = "<group>"; };
 		370E306425556C3E007FC789 /* _394_Decode_String.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _394_Decode_String.h; sourceTree = "<group>"; };
 		370E306525556C3F007FC789 /* _394_Decode_String.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _394_Decode_String.m; sourceTree = "<group>"; };
+		37169A4325B94DAB00B2E9F1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3721396F25667DBA00739C1D /* _23_Merge_k_Sorted_Lists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _23_Merge_k_Sorted_Lists.h; sourceTree = "<group>"; };
 		3721397025667DBA00739C1D /* _23_Merge_k_Sorted_Lists.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _23_Merge_k_Sorted_Lists.m; sourceTree = "<group>"; };
 		373632C825413C7C0039E4A6 /* 3_LongestSubstringWithoutRepeatingCharacters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 3_LongestSubstringWithoutRepeatingCharacters.h; sourceTree = "<group>"; };
@@ -248,7 +249,7 @@
 		3776CDCD2546EF5E003C8105 /* 149_Max_Points_on_a_Line.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 149_Max_Points_on_a_Line.h; sourceTree = "<group>"; };
 		3776CDCE2546EF5E003C8105 /* 149_Max_Points_on_a_Line.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 149_Max_Points_on_a_Line.m; sourceTree = "<group>"; };
 		3776CDD12547CC4B003C8105 /* 146_LRU_Cache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = 146_LRU_Cache.h; sourceTree = "<group>"; };
-		3776CDD22547CC4B003C8105 /* 146_LRU_Cache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = 146_LRU_Cache.m; sourceTree = "<group>"; };
+		3776CDD22547CC4B003C8105 /* 146_LRU_Cache.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = 146_LRU_Cache.mm; sourceTree = "<group>"; };
 		37898B09259D78D200688E37 /* _200_NumberofIslands.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _200_NumberofIslands.h; sourceTree = "<group>"; };
 		37898B0A259D78D200688E37 /* _200_NumberofIslands.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _200_NumberofIslands.m; sourceTree = "<group>"; };
 		378C99892549112D00B64B92 /* HeapSort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeapSort.h; sourceTree = "<group>"; };
@@ -563,6 +564,7 @@
 				37CF43882538357900CBBDEF /* SceneDelegate.m */,
 				37CF438A2538357900CBBDEF /* ViewController.h */,
 				37CF438B2538357900CBBDEF /* ViewController.m */,
+				37169A4325B94DAB00B2E9F1 /* PrefixHeader.pch */,
 				37CF438D2538357900CBBDEF /* Main.storyboard */,
 				37CF43902538357A00CBBDEF /* Assets.xcassets */,
 				37CF43922538357A00CBBDEF /* LaunchScreen.storyboard */,
@@ -617,7 +619,7 @@
 				378C9FA1254BC40500B64B92 /* 75_Sort_Colors.h */,
 				378C9FA2254BC40500B64B92 /* 75_Sort_Colors.m */,
 				3776CDD12547CC4B003C8105 /* 146_LRU_Cache.h */,
-				3776CDD22547CC4B003C8105 /* 146_LRU_Cache.m */,
+				3776CDD22547CC4B003C8105 /* 146_LRU_Cache.mm */,
 				37B98EE425A741B800C284B8 /* _460_LFU_Cache.h */,
 				37B98EE525A741B800C284B8 /* _460_LFU_Cache.m */,
 				373B97B62591B4C100054150 /* _153_FindMinimuminRotatedSortedArray.h */,
@@ -896,7 +898,7 @@
 				3564FE55254E4A4800230505 /* BinarySearch.m in Sources */,
 				3564FE5D254E719500230505 /* QuickSort.m in Sources */,
 				37898B0B259D78D200688E37 /* _200_NumberofIslands.m in Sources */,
-				3776CDD32547CC4C003C8105 /* 146_LRU_Cache.m in Sources */,
+				3776CDD32547CC4C003C8105 /* 146_LRU_Cache.mm in Sources */,
 				37A8F7982599828E00F44465 /* _191_Number_of_1_Bits.m in Sources */,
 				3538BE3325A1C3EC00FC330A /* _43_MultiplyStrings.m in Sources */,
 				37A8F7BB2599984E00F44465 /* _190_Reverse_Bits.m in Sources */,
