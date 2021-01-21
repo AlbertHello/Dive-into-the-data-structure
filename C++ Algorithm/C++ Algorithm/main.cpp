@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "LRU_Cache_CPP.hpp"
+#include "Sort.hpp"
 
 
 void leetcodeTest(void);
@@ -19,5 +20,6 @@ int main(int argc, const char * argv[]) {
 }
 
 void leetcodeTest(void){
-    LRU_Cache_CPP::LRU_Cache_CPP_Test();
+//    LRU_Cache_CPP::LRU_Cache_CPP_Test();
+    Sort::SortTest();
 }
