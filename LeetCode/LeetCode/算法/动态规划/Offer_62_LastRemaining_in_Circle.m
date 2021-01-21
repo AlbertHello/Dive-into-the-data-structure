@@ -9,7 +9,7 @@
 
 @implementation Offer_62_LastRemaining_in_Circle
 /**
- 剑指 Offer 62. 圆圈中最后剩下的数字
+ 剑指 Offer 62. 圆圈中最后剩下的数字 ¥
  难度
  简单
 0,1,,n-1这n个数字排成一个圆圈，从数字0开始，每次从这个圆圈里删除第m个数字。
