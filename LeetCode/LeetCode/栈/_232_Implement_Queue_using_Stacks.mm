@@ -105,7 +105,8 @@
         // s2空时：
         while (self.stack1.count != 0) {
             [self.stack2 addObject:self.stack1.lastObject];
-            [self.stack1 removeLastObject];
+            [self
+             .stack1 removeLastObject];
         }
         NSNumber *top=(NSNumber *)self.stack2.lastObject;
         return top.intValue;
@@ -119,7 +120,44 @@
 }
 
 
-
-
-
 @end
+
+
+Implement_MyQueue_using_Stacks_CPP::Implement_MyQueue_using_Stacks_CPP(){
+    stack1 = new stack<int>;
+    stack2 = new stack<int>;
+}
+Implement_MyQueue_using_Stacks_CPP::~Implement_MyQueue_using_Stacks_CPP(){
+    if (stack1) {
+        delete stack1;
+        stack1=nullptr;
+    }
+    if (stack2) {
+        delete stack2;
+        stack2=nullptr;
+    }
+}
+void Implement_MyQueue_using_Stacks_CPP::myQueue_enqueue(int val){
+    stack2->push(val);
+}
+int Implement_MyQueue_using_Stacks_CPP::myQueue_dequeue(void){
+    if (!stack2->empty()) {
+        int val =  stack2->top();
+        stack2->pop();
+        return val;
+    }
+    while (!stack1->empty()) {
+        int val =  stack1->top();
+        stack2->push(val);
+        stack1->pop();
+    }
+    if (!stack2->empty()) {
+        int val =  stack2->top();
+        stack2->pop();
+        return val;
+    }
+    return -1;
+}
+bool Implement_MyQueue_using_Stacks_CPP::myQueue_empty(void){
+    return stack1->empty() && stack2->empty();
+}
