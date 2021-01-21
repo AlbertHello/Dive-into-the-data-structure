@@ -10,6 +10,8 @@
 		37169A5925B9587C00B2E9F1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37169A5825B9587C00B2E9F1 /* main.cpp */; };
 		37AB02E725B99DD500B60A89 /* LRU_Cache_CPP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37AB02E525B99DD400B60A89 /* LRU_Cache_CPP.cpp */; };
 		37AB02EB25B99EBA00B60A89 /* Sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37AB02E925B99EBA00B60A89 /* Sort.cpp */; };
+		37AB02EF25B9A7D700B60A89 /* ReverseLink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37AB02ED25B9A7D700B60A89 /* ReverseLink.cpp */; };
+		37AB02F725B9AECB00B60A89 /* BiniaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37AB02F525B9AECB00B60A89 /* BiniaryTree.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,10 @@
 		37AB02E625B99DD400B60A89 /* LRU_Cache_CPP.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LRU_Cache_CPP.hpp; sourceTree = "<group>"; };
 		37AB02E925B99EBA00B60A89 /* Sort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sort.cpp; sourceTree = "<group>"; };
 		37AB02EA25B99EBA00B60A89 /* Sort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sort.hpp; sourceTree = "<group>"; };
+		37AB02ED25B9A7D700B60A89 /* ReverseLink.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ReverseLink.cpp; sourceTree = "<group>"; };
+		37AB02EE25B9A7D700B60A89 /* ReverseLink.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ReverseLink.hpp; sourceTree = "<group>"; };
+		37AB02F525B9AECB00B60A89 /* BiniaryTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BiniaryTree.cpp; sourceTree = "<group>"; };
+		37AB02F625B9AECB00B60A89 /* BiniaryTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BiniaryTree.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,10 @@
 				37AB02E625B99DD400B60A89 /* LRU_Cache_CPP.hpp */,
 				37AB02E925B99EBA00B60A89 /* Sort.cpp */,
 				37AB02EA25B99EBA00B60A89 /* Sort.hpp */,
+				37AB02ED25B9A7D700B60A89 /* ReverseLink.cpp */,
+				37AB02EE25B9A7D700B60A89 /* ReverseLink.hpp */,
+				37AB02F525B9AECB00B60A89 /* BiniaryTree.cpp */,
+				37AB02F625B9AECB00B60A89 /* BiniaryTree.hpp */,
 			);
 			path = "C++";
 			sourceTree = "<group>";
@@ -136,8 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37AB02F725B9AECB00B60A89 /* BiniaryTree.cpp in Sources */,
 				37AB02EB25B99EBA00B60A89 /* Sort.cpp in Sources */,
 				37AB02E725B99DD500B60A89 /* LRU_Cache_CPP.cpp in Sources */,
+				37AB02EF25B9A7D700B60A89 /* ReverseLink.cpp in Sources */,
 				37169A5925B9587C00B2E9F1 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
