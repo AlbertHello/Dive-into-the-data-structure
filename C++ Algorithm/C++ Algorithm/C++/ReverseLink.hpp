@@ -18,13 +18,8 @@ class ListNode{
 public:
     int val;
     ListNode *next;
-    ListNode(int val){
-        this->val=val;
-        this->next=nullptr;
-    }
-    ~ListNode(){
-        
-    }
+    ListNode(int val):val(val),next(nullptr){}
+    ~ListNode(){}
 };
 class Solution {
 public:
