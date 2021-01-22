@@ -9,9 +9,15 @@
 #include "LRU_Cache_CPP.hpp"
 #include "Sort.hpp"
 #include "ReverseLink.hpp"
+#include <list>
+#include <deque>
+
+
 
 
 void leetcodeTest(void);
+void testList(void);
+void testDeque(void);
 
 int main(int argc, const char * argv[]) {
     
@@ -23,10 +29,120 @@ int main(int argc, const char * argv[]) {
 void leetcodeTest(void){
 //    LRU_Cache_CPP::LRU_Cache_CPP_Test();
 //    Sort::SortTest();
-    ReverseLink::Solution::ReverseLinkTest();
+//    ReverseLink::Solution::ReverseLinkTest();
+//    testList();
+    testDeque();
+    
+}
+
+void testDeque(void){
+/**
+ deque容器为一个给定类型的元素进行线性处理，像向量一样，它能够快速地随机访问任一个元素，并且能够高效地插入和删除容器的尾部元素。但它又与vector不同，deque支持高效插入和删除容器的头部元素，因此也叫做双端队列
+ 
+ deque的创建和初始化：
+ 导入#include <deque>
+ std::deque<int> dq;    //创建一个empty的int型队列
+ std::deque<int> dq(8);  //创建一个有8个元素的int型队列，默认初始化值(value)为0
+ std::deque<int> dq(8, 50);  //创建一个有8个元素的int型队列，默认初始化值(value)都设为50
+ std::deque<int> dq(dq.begin(), dq.end()); //通过迭代器创建队列
+ std::deque<int> dq1(dq);    //通过拷贝构造创建队列
+ 
+ 1. 有关增加元素的函数方法
+ push_back();      //在队列末尾增加一个元素， 参数为拷贝或移动的元素
+ push_front();      //在队列头部增加一个元素，参数可以是拷贝或移动的元素
+ emplace();        //在队列指定的元素位置前插入新的元素
+ emplace_back();    //在队列尾部增加新的元素
+ emplace_front();// 在队列头部增加新的元素
+ iterator insert(iterator it,const T& x):双端队列中某一元素前增加一个元素x
+ void insert(iterator it,int n,const T& x):双端队列中某一元素前增加n个相同的元素x
+ void insert(iterator it,const_iterator first,const_iteratorlast):双端队列中某一元素前插入另一个相同类型向量的[forst,last)间的数据
+ emplac_back/front和push_back/front功能是一样的都是用来增加新元素到队列，前者在效率上要好一些。因为emplace_back/front只调用构造函数，没有调用移动构造函数，也没有调用拷贝构造函数.
+ 
+ 2. 有关删除元素的函数方法
+ pop_front()    //从队列头部移除第一个元素
+ pop_back()  //从队列尾部移除最末尾的元素
+ erase(); //从队列指定的元素位置删除元素，可以指定一个范围删除。
+ clear();    //清空队列所有元素，size将为0
+ 
+ 3. iterator函数 - 遍历
+ begin();    //从队列返回第一个元素的位置指针
+ end();        //从队列返回最后一个元素的结束位置，但不是最后一个元素位置
+ 
+ 4. 其他有关函数
+at()        // 在队列中返回指定索引元素的引用
+front()        // 在队列中返回头部第一个元素的引用
+back()        //在队列中返回尾部最后一个元素的引用
+size()        //返回队列中元素的个数
+max_size()    //返回队列最大容量
+resize()    // 重新扩展容器大小， 如果重新扩展的容量小于现在的容量，多出的将会丢失，如果大于现在的容量，将会在现在容量的基础
+ */
+    
+    std::deque<int> dq;
+    std::deque<int> dq1(8);
+    std::deque<int> dq2(8, 50);
+    std::deque<int> dq3(dq2.begin(), dq2.end());
+    std::deque<int> dq4(dq3);
+
+    std::cout << "dq output: ";
+    for(auto i : dq) std::cout << i << ", ";
+    std::cout << '\n';
+    
+    std::cout << "dq1 output: ";
+    for(auto i : dq1) std::cout << i << ", ";
+    std::cout << '\n';
+
+    std::cout << "dq2 output: ";
+    for(auto i : dq2) std::cout << i << ", ";
+    std::cout << '\n';
+    
+    std::cout << "dq3 output: ";
+    for(auto i : dq3) std::cout << i << ", ";
+    std::cout << '\n';
+    
+    std::cout << "dq4 output: ";
+    for(auto i : dq4) std::cout << i << ", ";
+    std::cout << '\n';
+    
+    
+    int a=30;
+    // 末尾追加
+    dq.push_back(10);    // 10
+    dq.push_back(20);    // 10, 20
+    //头部追加
+    dq.push_front(5);      // 5, 10, 20
+    // 末尾追加copy
+    dq.push_back(a);    // 5, 10, 20, 30
+    a = 40;
+    // 末尾追加moved
+    dq.push_back(std::move(a)); // 5, 10, 20, 30, 40
+
+    std::cout << "dq output: ";
+    for(auto i : dq) std::cout << i << ", ";
+    std::cout << '\n';
+
+    //std::deque<int>::iterator it = dq.begin();
+    auto it = dq.begin();
+    ++it;
+    // 在指定的迭代position前进行插入新的元素
+    dq.insert(it, 6);            //5, 6, 10, 20, 30, 40
+    // 在指定的迭代position前插入2个元素，值都为7
+    dq.insert(it, 2, 7);        //5, 6, 7, 7, 10, 20, 30, 40
+    dq1.push_back(60);    // 50, 60
+    dq1.push_back(70);    // 50, 60, 70
+    // 在指定的迭代position前指定一个迭代器的范围进行插入
+    dq.insert(it, dq1.begin(), dq1.end());
+
+    std::cout << "dq output: ";
+    
+    for (int i=0; i< dq.size(); i++){
+        // 按照索引访问
+        std::cout << dq[i] << ", ";
+    }
+    std::cout << '\n';
     
     
 }
+
 
 /// List 的练习
 void testList(void){
