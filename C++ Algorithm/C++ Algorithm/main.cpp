@@ -28,6 +28,102 @@ void leetcodeTest(void){
     
 }
 
+/// List 的练习
+void testList(void){
+/**
+ STL list 容器，又称双向链表容器，即该容器的底层是以双向链表的形式实现的。这意味着，list 容器中的元素可以分散存储在内存空间里，而不是必须存储在一整块连续的内存空间中。这样，list实际上就构成了一个双向循环链。由于list元素节点并不要求在一段连续的内存中，显然在list中是不支持快速随机存取的，因此对于迭代器，只能通过“++”或“--”操作将迭代器移动到后继/前驱节点元素处。而不能对迭代器进行+n或-n的操作，这点，是与vector等不同的地方。
+ deque： deque是一个double-ended queue，它的具体实现不太清楚，但知道它具有以下两个特点：它支持[]操作符，也就是支持随即存取，并且和vector的效率相差无几，它支持在两端的操作：push_back,push_front,pop_back,pop_front等，并且在两端操作上与list的效率也差不多。
+ 因此在实际使用时，如何选择这三个容器中哪一个，应根据你的需要而定，具体可以遵循下面的原则：
+ 1. 如果你需要高效的随即存取，而不在乎插入和删除的效率，使用vector
+ 2. 如果你需要大量的插入和删除，而不关心随即存取，则应使用list
+ 3. 如果你需要随即存取，而且关心两端数据的插入和删除，则应使用deque。
+ 
+ 
+ list 容器以模板类 list<T>（T 为存储元素的类型）的形式在<list>头文件中，并位于 std 命名空间中。因此，在使用该容器之前，代码中需要包含下面两行代码：
+ 纯文本复制
+ #include <list>
+ using namespace std;
+ 
+ list容器的创建
+ 根据不同的使用场景，有以下 5 种创建 list 容器的方式供选择。
+ 1) 创建一个没有任何元素的空 list 容器：
+ std::list<int> values;和空 array 容器不同，空的 list 容器在创建之后仍可以添加元素，因此创建 list 容器的方式很常用。
+ 
+ 2) 创建一个包含 n 个元素的 list 容器：
+ std::list<int> values(10);通过此方式创建 values 容器，其中包含 10 个元素，每个元素的值都为相应类型的默认值（int类型的默认值为 0）。
+
+ 3) 创建一个包含 n 个元素的 list 容器，并为每个元素指定初始值。例如：
+ std::list<int> values(10, 5); 如此就创建了一个包含 10 个元素并且值都为 5 个 values 容器。
+
+ 4) 在已有 list 容器的情况下，通过拷贝该容器可以创建新的 list 容器。例如：
+ std::list<int> value1(10);
+ std::list<int> value2(value1); 注意，采用此方式，必须保证新旧容器存储的元素类型一致。
+
+ 5) 通过拷贝其他类型容器（或者普通数组）中指定区域内的元素，可以创建新的 list 容器。例如：纯文本复制
+ //拷贝普通数组，创建list容器
+ int a[] = { 1,2,3,4,5 };
+ std::list<int> values(a, a+5);
+ //拷贝其它类型的容器，创建 list 容器
+ std::array<int, 5>arr{ 11,12,13,14,15 };
+ std::list<int>values(arr.begin()+2, arr.end());//拷贝arr容器中的{13,14,15}
+ 
+ 成员函数    功能
+ begin()    返回指向容器中第一个元素的双向迭代器。
+ end()    返回指向容器中最后一个元素所在位置的下一个位置的双向迭代器。
+ rbegin()    返回指向最后一个元素的反向双向迭代器。
+ rend()    返回指向第一个元素所在位置前一个位置的反向双向迭代器。
+ cbegin()    和 begin() 功能相同，只不过在其基础上，增加了 const 属性，不能用于修改元素。
+ cend()    和 end() 功能相同，只不过在其基础上，增加了 const 属性，不能用于修改元素。
+ crbegin()     和 rbegin() 功能相同，只不过在其基础上，增加了 const 属性，不能用于修改元素。
+ crend()    和 rend() 功能相同，只不过在其基础上，增加了 const 属性，不能用于修改元素。
+ empty()    判断容器中是否有元素，若无元素，则返回 true；反之，返回 false。
+ size()    返回当前容器实际包含的元素个数。
+ max_size()    返回容器所能包含元素个数的最大值。这通常是一个很大的值，一般是 232-1，所以我们很少会用到这个函数。
+ front()    返回第一个元素的引用。
+ back()    返回最后一个元素的引用。
+ assign()    用新元素替换容器中原有内容。
+ emplace_front()    在容器头部生成一个元素。该函数和 push_front() 的功能相同，但效率更高。
+ push_front()    在容器头部插入一个元素。
+ pop_front()    删除容器头部的一个元素。
+ emplace_back()    在容器尾部直接生成一个元素。该函数和 push_back() 的功能相同，但效率更高。
+ push_back()    在容器尾部插入一个元素。
+ pop_back()    删除容器尾部的一个元素。
+ emplace()    在容器中的指定位置插入元素。该函数和 insert() 功能相同，但效率更高。
+ insert()     在容器中的指定位置插入元素。
+ erase()    删除容器中一个或某区域内的元素。
+ swap()    交换两个容器中的元素，必须保证这两个容器中存储的元素类型是相同的。
+ resize()    调整容器的大小。
+ clear()    删除容器存储的所有元素。
+ splice()    将一个 list 容器中的元素插入到另一个容器的指定位置。
+ remove(val)    删除容器中所有等于 val 的元素。
+ remove_if()    删除容器中满足条件的元素。
+ unique()    删除容器中相邻的重复元素，只保留一个。
+ merge()    合并两个事先已排好序的 list 容器，并且合并之后的 list 容器依然是有序的。
+ sort()    通过更改容器中元素的位置，将它们进行排序。
+ reverse()    反转容器中元素的顺序。
+ */
+    
+    //创建空的 list 容器
+    std::list<int> values;
+    //向容器后面添加元素
+    values.push_back(1);
+    // 在前面插入
+    values.push_front(2);
+    
+    values.push_back(3);
+    values.push_back(4);
+    
+    cout << "values size：" << values.size() << endl;
+    //对容器中的元素进行排序
+//    values.sort();
+    //使用迭代器输出list容器中的元素
+    for (auto it = values.begin(); it != values.end(); ++it) {
+        std::cout << *it << " ";
+   }
+    cout << endl;
+    
+}
+
 
 // 自定义降序
 bool down_cmp(const int &a,const int &b){
