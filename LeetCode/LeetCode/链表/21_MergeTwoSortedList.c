@@ -103,10 +103,15 @@ SingleNode_1* mergeTwoLists2(SingleNode_1* l1, SingleNode_1* l2){
 }
 
 /**
- 合并两个有序数组1
+ 88. 合并两个有序数组 ¥
+ https://leetcode-cn.com/problems/merge-sorted-array/
+ 难度 简单
+ 给你两个有序整数数组 nums1 和 nums2，请你将 nums2 合并到 nums1 中，使 nums1 成为一个有序数组。
+ 初始化 nums1 和 nums2 的元素数量分别为 m 和 n 。你可以假设 nums1 的空间大小等于 m + n，这样它就有足够的空间保存来自 nums2 的元素。
+ 
+ 解法1 双指针倒序
  时间：O（n）
  空间：O（1）
- 双指针倒序
  */
 void merge2sortArray(int* nums1, int m, int* nums2, int n) {
     // two get pointers for nums1 and nums2
@@ -123,10 +128,9 @@ void merge2sortArray(int* nums1, int m, int* nums2, int n) {
     memcpy(nums1, nums2, p2+1);
 }
 /**
- 合并两个有序数组2
+ 解法1 双指针正序
  时间：O（n）
  空间：O（1）
- 双指针正序
  */
 void merge2sortArray2(int* nums1, int m, int* nums2, int n) {
     // Make a copy of nums1.
