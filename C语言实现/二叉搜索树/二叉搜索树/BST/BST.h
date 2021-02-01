@@ -59,6 +59,10 @@ NS_ASSUME_NONNULL_BEGIN
 //后序遍历
 -(void)print_tree_postorder:(BSTNode *)node;
 -(void)print_tree_postorder_no_recurse:(BSTNode *)node;
+// 层序遍历
+-(void)print_tree_levelorder;
+// 之字形遍历
+-(void)zigzag_levelorder;
 
 #pragma mark - 打印相关
 

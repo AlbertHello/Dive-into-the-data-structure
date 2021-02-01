@@ -424,6 +424,43 @@ int* inorderTraversal(struct TreeNode* root, int* returnSize){
     }
 }
 
+//层序遍历变形 - 之字形遍历二叉树
+-(void)zigzag_levelorder{
+    if (self.root == NULL) return ;
+    // 树的高度
+    NSUInteger height = 0;
+    NSMutableArray *res=[NSMutableArray array];
+    NSMutableArray *queue=[NSMutableArray array];
+    [queue addObject:self.root];
+    while (queue.count != 0) {
+        NSUInteger size = queue.count;
+        NSMutableArray *temp=[NSMutableArray array];
+        
+        for (NSUInteger i=0;i<size;i++) {
+            
+            BSTNode *node = queue.firstObject;
+            [queue removeObjectAtIndex:0];
+            
+            if (node.left != NULL) {
+                [queue addObject:node.left];
+            }
+            if (node.right != NULL) {
+                [queue addObject:node.right];
+            }
+            
+            if(height % 2 == 0){
+                [temp addObject:@(node.data)];
+            }else{
+                [temp insertObject:@(node.data) atIndex:0];
+            }
+        }
+        height++;
+        [res addObjectsFromArray:temp];
+    }
+    NSLog(@"%@",res);
+}
+
+
 #pragma mark - 打印协议
 /**
  * who is the root node

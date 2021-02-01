@@ -73,6 +73,11 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize){
  使用哈希表，可以将寻找 target - x 的时间复杂度降低到从O(N) 降低到O(1)。
  这样我们创建一个哈希表，对于每一个 x，我们首先查询哈希表中是否存在 target - x，然后将 x 插入到哈希表中，即可保证不会让 x 和自己匹配。
  
+ 注意：
+ 如果是已排序好的数组，应该用双指针法， begin=0 和 end=numsSize-1
+ 头尾两个数相加，如果 (nums[begin] + nums[end])  >  target，那么让end--
+ 如果 (nums[begin] + nums[end])  <  target，那么让begin++，如果相等就找到了nums[begin] 和 nums[end] 两个数了
+ 否则结束条件就是begin > end。
  */
 
 

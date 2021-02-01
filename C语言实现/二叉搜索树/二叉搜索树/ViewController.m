@@ -40,9 +40,11 @@
     [MJBinaryTrees print:bst];
     
 //    [bst print_tree_preorder_no_recurse:bst.root];
-    [bst print_tree_preorder_no_recurse2:bst.root];
+//    [bst print_tree_preorder_no_recurse2:bst.root];
 //    [bst print_tree_inorder_no_recurse:bst.root];
 //    [bst print_tree_postorder_no_recurse:bst.root];
+    
+    [bst zigzag_levelorder];
 }
 
 -(void)testLowestCommonAncestor{
