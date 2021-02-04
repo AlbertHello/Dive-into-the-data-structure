@@ -570,4 +570,39 @@ int* inorderTraversal(struct TreeNode* root, int* returnSize){
 }
 
 
+// 以下是由前序和中序，推出后序遍历，由后序和中序推出前序的实现
+int preNums[] = {1, 2, 3, 4, 5, 6};
+int midNums[] = {3, 2, 4, 1, 6, 5};
+int postNums[] = {3,4, 2, 6, 5, 1};
+//         1
+//       /   \
+//      /     \
+//     2       5
+//    / \     /
+//   /   \   /
+//  3     4 6
+
+// 根据前序中序求后序
+// root是前序列表中代表根节点的点的下标 start，end是中序遍历中当前处理的树的开始与结尾
+void get_post_from_pre_and_mid(int root, int start, int end){
+    if(start > end) return ;
+    int i = start;
+    while(i < end && midNums[i] != preNums[root]) i++;  //定位根在中序的位置
+    get_post_from_pre_and_mid(root + 1, start, i - 1);  //递归处理左子树
+    get_post_from_pre_and_mid(root + 1 + i - start, i + 1, end);  //递归处理右子树
+    printf("%d ",midNums[i]); // 打印
+}
+
+// 根据后序中序输出前序
+// root是后序列表中代表根节点的点的下标 start，end是中序遍历中当前处理的树的开始与结尾
+void get_pre_from_post_and_mid(int root, int start, int end){
+    if(start > end) return ;
+    int i = start;
+    while(i < end && midNums[i] != postNums[root]) i++;  //定位根在中序的位置
+    printf("%d ",midNums[i]); // 打印
+    get_pre_from_post_and_mid(root-1-(end-i), start, i - 1);  //递归处理左子树
+    get_pre_from_post_and_mid(root-1, i + 1, end);  //递归处理右子树
+}
+
+
 @end
