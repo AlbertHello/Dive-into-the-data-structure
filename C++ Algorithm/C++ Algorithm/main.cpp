@@ -11,6 +11,8 @@
 #include "ReverseLink.hpp"
 #include <list>
 #include <deque>
+#include "BiniaryTree.hpp"
+
 
 
 
@@ -21,7 +23,10 @@ void testDeque(void);
 
 int main(int argc, const char * argv[]) {
     
-    leetcodeTest();
+    
+    BiniaryTree::Solution::BiniaryTreeTest();
+    
+//    leetcodeTest();
     
     return 0;
 }

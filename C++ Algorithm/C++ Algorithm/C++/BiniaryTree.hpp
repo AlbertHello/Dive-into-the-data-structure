@@ -13,6 +13,7 @@
 namespace BiniaryTree {
 
 class Solution{
+public:
     static void BiniaryTreeTest(void);
 };
 
